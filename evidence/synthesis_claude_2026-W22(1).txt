@@ -1,123 +1,15 @@
-R3/R4/R5 SYNTHESIS — WEEK 22 (June 1–5, 2026)
-LLM Synthesis Agent (R6) — Claude
-================================================
-
-OVERALL FORECAST: RANGE-BOUND, BIAS TOWARD DOWNSIDE PRESSURE
-Confidence: Low-Medium
-
-
-SIGNAL SUMMARY BY DIMENSION
------------------------------
-
-Technical (Neutral-Bullish)
-  EMA structure intact across SPX, NDX, IWM — but extended
-  Confidence: Medium
-
-Macro (Binary-Risk)
-  Jobs data and oil price are the swing factors this week
-  Confidence: Medium
-
-Almanac/Seasonal (Cautiously Bearish)
-  Midterm election year weak spot; Memorial Day week headwind
-  Confidence: Low-Medium
-
-
-BULL CASE
-----------
-- SPX / NDX / IWM all trading above their weekly 8 EMA and 21 EMA
-- Technology and semiconductors continue to lead; Dell AI earnings beat consensus by 57%
-- 10-year Treasury yield is falling, providing relief for tech and REITs
-- Fed hold probability at 99.4% for the June 17 FOMC meeting
-- Post-options-expiration week is historically bullish (up 30 of 45 occurrences, avg +0.40%)
-
-
-BEAR CASE
-----------
-- WTI crude oil surged +7.45% in a single week; Middle East escalation (US/Iran strikes near Kuwait)
-  raises risk of Strait of Hormuz supply disruption
-- Rising oil + strengthening dollar = stagflation risk signal
-- Midterm election year May historical average: -0.7% (S&P 500)
-- Day after Memorial Day historically down 8 of the last 10 occurrences
-- Rally is narrow — driven almost entirely by technology; small caps (IWM) not broadly confirming
-- NDX is significantly extended above its 21 EMA; elevated pullback risk
-
-
-KEY VARIABLES THIS WEEK
-------------------------
-
-1. Friday NFP / Unemployment Rate (most important)
-   Expected unemployment: 4.3% (unchanged from prior)
-   Weaker-than-expected data → dovish repricing → bullish
-   Stronger-than-expected data → rate hike fears return → bearish
-
-2. Middle East / Oil Price
-   If Strait of Hormuz risk persists, oil stays elevated and compresses equity multiples
-   Watch WTI above $95 as a key sentiment threshold
-
-3. NDX holding 30,000
-   Tech leadership is the only thing sustaining broad index strength
-   A weekly close below 28,745 (8 EMA) would structurally weaken the bull case
-
-
-KEY PRICE LEVELS
------------------
-
-S&P 500 (SPX — last close ~7,579)
-  Resistance 1: 7,600
-  Resistance 2: 7,700
-  Support 1:    7,350  (near 8 EMA — bull/bear line)
-  Support 2:    7,080  (near 21 EMA — trend invalidation)
-
-Nasdaq 100 (NDX — last close ~30,267)
-  Resistance 1: 30,500
-  Resistance 2: 31,000
-  Support 1:    30,000  (psychological level)
-  Support 2:    28,745  (8 EMA — bull/bear line)
-
-Russell 2000 (IWM — last close ~286.92)
-  Resistance 1: 290
-  Resistance 2: 295
-  Support 1:    280  (8 EMA — bull/bear line)
-  Support 2:    268  (21 EMA — trend invalidation)
-
-Invalidation of bullish view:
-  SPX weekly close below 7,350
-  NDX weekly close below 28,745
-  IWM weekly close below 280
-
-
-FINAL SYNTHESIS
-----------------
-Direction: Range-bound this week; downside pressure is present but a single-direction selloff
-is not the base case.
-
-The technical structure has not broken down. However, three headwinds converge simultaneously:
-
-  (1) Oil price shock from geopolitical escalation — a genuine stagflation signal
-  (2) Narrow market breadth — the rally depends almost entirely on large-cap tech
-  (3) Seasonal tailwind turning to headwind in a midterm election year Q2-Q3 weak cycle
-
-The Fed will not cut in June (99.4% hold). There is no near-term policy catalyst to push
-markets meaningfully higher. The most probable scenario is that markets consolidate at
-current levels through mid-week, then take directional cues from Friday's jobs report.
-
-A weak NFP print could re-ignite rate-cut expectations and send markets higher.
-A strong NFP print, particularly if accompanied by further oil price gains,
-would likely trigger a risk-off move and technical support tests.
-
-Sectors to watch:
-  LONG bias: Technology (XLK) — seasonal support through July
-  AVOID:     Banking (seasonal short May-July), Materials (seasonal short May-Oct),
-             Gold/Silver (seasonal short mid-May to late June)
-
-
-AGENT SOURCES
---------------
-  Almanac Agent (R3) — Stock Trader's Almanac seasonality data
-  Macro Agent (R4)   — CME FedWatch, Treasury.gov, Finviz Futures, TradingEconomics,
-                       Earnings Whispers, Reuters/AP; data accessed June 1, 2026
-  Technical Agent (R5) — Weekly EMA charts (SPX, NDX, IWM), Finviz 1W heatmaps
-  Synthesis (R6)     — Claude (Anthropic), June 1, 2026
-
-File: synthesis_claude_2026-W22.txt
-================================================
+1. Weekly regime	Neutral
+Range-bound consolidation is the base case. No single-direction breakout expected.
+2. Confidence score	Low-Medium. Three dimensions send conflicting signals: technical structure is intact (bullish) but extended; macro is binary-risk around Friday NFP; seasonal bias is cautiously bearish in a midterm year.
+3. Key supporting evidence	① SPX, NDX, and IWM all hold above their weekly 8 EMA and 21 EMA — trend structure is intact
+② 10-year Treasury yield is falling, relieving pressure on tech valuations and REITs
+③ Dell AI server revenue beat by 57% — confirms AI infrastructure demand remains the primary growth driver
+4. Key contradictions	① WTI crude +7.45% in a single week + DXY strengthening = stagflation signal; compresses equity multiples
+② Rally breadth is extremely narrow — driven almost entirely by large-cap tech; IWM not broadly confirming
+5. Invalidation conditions	Bull case weakens on a weekly close below: SPX 7,350 / NDX 28,745 / IWM 280
+View flips bearish if: strong NFP print + further oil spike above $95 triggers hawkish repricing
+6. Predicted % move	SPX: −1.0% to +0.5% — range-bound, slight downside bias
+NDX: −1.5% to +0.8% — elevated; downside risk exceeds upside
+IWM: −2.0% to +1.0% — most vulnerable; small caps face largest downside pressure
+7. Plain-English brief	Markets are likely to tread water near current levels through mid-week. The biggest threat is the oil price surge tied to Middle East tensions, but the tech-driven trend has not broken down yet. Everything hinges on Friday's jobs report — a weak number could reignite rate-cut hopes and push stocks higher, while a strong number alongside elevated oil would likely trigger a pullback to support levels.
+8. Disclaimer	This analysis is for informational purposes only and does not constitute financial advice. Past seasonal patterns and technical signals do not guarantee future results. Always do your own research.
