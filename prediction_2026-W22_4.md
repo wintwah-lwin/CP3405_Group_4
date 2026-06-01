@@ -21,8 +21,8 @@ XLY: Flat   XLP: Down   XLI: Flat   XLB: Down
 XLRE: Flat   XLU: Flat   XLC: Up
  
 
-Top sector: XLK — Robust demand verified by major hardware earnings beats (Dell) and positive seasonal extensions support tech leadership.
-Bottom sector: XLF — Marked by explicit historical sector seasonality short rules advising market participants to avoid banking from May to July.  
+Top sector: XLK - Robust demand verified by major hardware earnings beats (Dell) and positive seasonal extensions support tech leadership.
+Bottom sector: XLF - Marked by explicit historical sector seasonality short rules advising market participants to avoid banking from May to July.  
 
 --- REASONING ---
 Key evidence (3 points):
@@ -43,4 +43,4 @@ Human Score total: -1
 Wild card insight: 
 The market is likely underestimating a heavy cluster of high-importance economic reports (ISM, JOLTS, Jobless Claims, and Unemployment) arriving this week alongside $93+ oil, creating sudden vulnerability if labor data triggers renewed inflation fears.
 
-LLM consensus: Mixed — The models avoid clear directional conviction, presenting a neutral-to-choppy outlook where strong tech leadership balances near-term macro and seasonal risks.
+LLM consensus: Mixed - The models avoid clear directional conviction, presenting a neutral-to-choppy outlook where strong tech leadership balances near-term macro and seasonal risks.
