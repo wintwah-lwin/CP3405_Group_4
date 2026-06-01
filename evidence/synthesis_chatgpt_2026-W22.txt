@@ -1,29 +1,27 @@
-Weekly Plan: Slightly Bullish
+1. Weekly Regime: Bullish
 
-Confidence: Medium
+2. Confidence Score: Medium
+The technical evidence is bullish because SPX, NDX, and IWM are all above their 8 EMA and 21 EMA. However, seasonal evidence is cautious and macro risk remains high because of oil prices and labour data.
 
-Reasoning: The overall technical trend remains positive, with SPX, NDX,
-and IWM all trading above their 8 EMA and 21 EMA, indicating bullish
-momentum. Technology remains the strongest sector seasonally and
-continues to be supported by strong AI-related earnings and demand.
-Falling Treasury yields and a 99.4% probability of a Fed hold are also
-supportive for equities, particularly growth stocks. However, rising oil
-prices, geopolitical tensions, and upcoming U.S. labor market data
-create downside risks. Overall, the bullish factors slightly outweigh
-the bearish ones.
+3. Key Supporting Evidence:
+- SPX, NDX, and IWM remain above key EMA levels, showing positive momentum.
+- Technology remains the strongest sector and supports Nasdaq.
+- Fed hold probability is very high, and falling Treasury yields support growth stocks.
 
-SPX Forecast: +0.2% to +1.0% NDX Forecast: +0.5% to +1.5% IWM Forecast:
-0.0% to +1.0%
+4. Key Contradictions:
+- Almanac evidence is cautiously bearish-neutral, while technical evidence is bullish.
+- Oil and geopolitical risks may increase inflation pressure, even though falling yields support equities.
 
-Key Support: Strong technology leadership, falling yields, bullish EMA
-structure.
+5. Invalidation Conditions:
+The bullish view would weaken if SPX closes below 7,350, NDX closes below 28,745, or IWM closes below 280. A stronger-than-expected labour report or further oil spike could also shift the view more bearish.
 
-Main Risk: Higher oil prices, geopolitical escalation, or
-stronger-than-expected labor data causing renewed inflation concerns.
+6. Predicted % Move:
+SPX (S&P 500): +0.2% to +1.0% — upward, modest range
+NDX (Nasdaq 100): +0.5% to +1.5% — upward, strongest range
+IWM (Russell 2000): 0.0% to +0.8% — flat to slightly upward, weaker range
 
-Invalidation: A break below SPX 7,350, NDX 28,745, or IWM 280 would
-weaken the bullish outlook.
+7. Plain-English Brief:
+The market looks slightly bullish because the technical trend is still positive and technology stocks are leading. However, seasonal data and oil-related risks mean the team should stay cautious rather than fully bullish.
 
-Summary: The market remains cautiously bullish, led by technology, but
-investors should monitor labor data and geopolitical developments
-closely.
+8. Disclaimer:
+This is not financial advice.
