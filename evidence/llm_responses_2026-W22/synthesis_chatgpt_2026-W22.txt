@@ -1,0 +1,36 @@
+1. **Weekly Regime:** **Neutral**
+
+2. **Confidence Score:** **Medium** — Technicals remain bullish across SPX, NDX, and IWM, but this is being offset by unfavorable midterm-year seasonality, rising oil prices, geopolitical risk, and a high-impact labor data week that could quickly shift Fed expectations.
+
+3. **Key Supporting Evidence:**
+
+   * All three major indices remain above their 8 EMA and 21 EMA on weekly charts, maintaining bullish trend structures, with Nasdaq showing the strongest momentum.
+   * Technology remains the strongest seasonal sector (March–July), and recent AI-related earnings from Dell and nCino reinforce continued tech leadership.
+   * Falling 10-year Treasury yields and a near-certain June Fed hold provide support for growth stocks and reduce immediate rate-pressure concerns.
+
+4. **Key Contradictions:**
+
+   * Almanac seasonality is bearish-neutral due to the midterm-year "Weak Spot" and a modestly bearish Memorial Day pattern.
+   * Oil has surged sharply due to Middle East tensions, increasing inflation and stagflation risks at a time when markets are already technically extended.
+
+5. **Invalidation Conditions:**
+
+   * Bullish case weakens if:
+
+     * SPX closes below **7,350**
+     * NDX closes below **28,745**
+     * IWM closes below **280**
+   * Regime shifts more bullish if labor data comes in soft enough to support future Fed cuts while oil stabilizes.
+   * Regime shifts bearish if employment data is hotter than expected and/or oil continues accelerating higher, causing renewed inflation concerns and higher yields.
+
+6. **Predicted % Move**
+
+   * **SPX (S&P 500):** **−0.5% to +1.0%**
+   * **NDX (Nasdaq 100):** **0.0% to +1.5%**
+   * **IWM (Russell 2000):** **−1.0% to +1.0%**
+
+7. **Plain-English Brief:**
+   The market's longer-term trend is still upward, especially in technology stocks, but several risks are preventing a stronger bullish outlook. Rising oil prices, geopolitical tensions, and this week's important jobs data could create volatility. The most likely outcome is a choppy week with technology holding up better than the broader market.
+
+8. **Disclaimer:**
+   This assessment is an analytical synthesis of seasonal, macroeconomic, and technical evidence and is **not financial advice**. Markets can react unpredictably to new economic data, geopolitical developments, and company-specific news.
