@@ -1,49 +1,38 @@
-Based on the three reports provided (Macro, Almanac, Technical), here is the forecast for the US stock market (S&P 500 as the proxy) for the week of May 26, 2026, with reasoning.
 
----
+## 1. Weekly Regime:
+**Uncertain** (leaning Bearish)
 
-Forecast: Slightly Down / Range-Bound with Bearish Lean
+## 2. Confidence Score:
+**Medium** – Signals are mixed: technicals are bullish but extended, seasonality is bearish-leaning, and macro is binary with significant downside risk from oil/geopolitics.
 
-Primary Reasons
+## 3. Key Supporting Evidence:
+- **Technicals remain bullish but extended**: SPX above 8/21 EMA, but near resistance at 7,600 and showing narrow breadth (tech-only leadership).
+- **Macro stagflation risk rising**: WTI crude oil +7.45% to $93.80 + falling yields = classic stagflation signal, negative for equities.
+- **Seasonality bearish for midterm May**: S&P 500 averages -0.7% in midterm election year Mays; Memorial Day week has bearish historical tendency.
 
-1. Macro Factors: Binary Risk Tilted to the Downside
-- Stagflation risk is rising: WTI Crude Oil jumped +7.45% to $93.80 while bond yields fell. This combination is typical of stagflation, which pressures equity valuations and corporate margins.
-- Geopolitical tension escalated: Kuwait came under fire as US and Iran traded blows. Oil prices rose more than 3% on supply disruption fears, including potential Strait of Hormuz risks.
-- Key data this week is labor-focused (ISM, JOLTS, Unemployment). With oil spiking, a hot jobs report could reprice rate hikes, while a weak report could trigger recession fears. The macro report explicitly calls this "Binary-risk" with downside risk larger than upside.
+## 4. Key Contradictions:
+- **Bullish technicals vs. bearish seasonality**: Weekly EMA structure is bullish across SPX, NDX, IWM, but the Almanac calls for cautious/bearish-neutral.
+- **Dovish Fed pricing vs. rising oil**: Fed hold probability is 99.4% (dovish), but surging oil prices and geopolitical risk could quickly re-inflate inflation expectations, creating market confusion.
 
-2. Technicals: Bullish but Extended, Near Resistance
-- S&P 500 closed at ~7,579, just below resistance at 7,600.
-- Price is well above the 8 EMA (7,352), indicating the rally is extended and a pullback is plausible.
-- Market breadth is mixed — Nasdaq is strong but Russell 2000 is not confirming broad strength. The rally is too concentrated in tech.
-- Technical bias is Neutral-Bullish but extended, with first support at 7,350. A break below would turn the view bearish.
+## 5. Invalidation Conditions:
+This view would turn **Bullish** if:  
+- SPX closes weekly above **7,600** with strong breadth and oil reverses below $88.
 
-3. Seasonality & Cycle: Bearish-Leaning
-- 2026 is a midterm election year. Q2–Q3 is the "Weak Spot" of the 4-year cycle. The midterm May average for S&P 500 is -0.7%.
-- Memorial Day week has a bearish lean (moderate strength signal). The day after Memorial Day has been down 8 of the last 10 years.
-- Sector seasonality: Banking (SHORT), Materials (SHORT), Gold/Silver (SHORT) through May–July. Technology is the only bright spot.
-- Almanac conclusion: Cautiously bearish-neutral with low-medium confidence due to conflicting patterns.
+This view would turn **Bearish** if:  
+- SPX closes weekly below **7,350**, or unemployment spikes above 4.3% triggering recession fears, or oil breaks above $96.
 
-4. Cross-Asset Implication
-- Rising oil + falling yields = stagflation concern, historically negative for equities.
-- Dollar strengthening (+0.45%) adds further headwind for commodities and multinational earnings.
+## 6. Predicted % Moves
 
----
+| Index | Predicted Move | Direction & Range |
+|--------|----------------|-------------------|
+| SPX (S&P 500) | **-0.8% to +0.5%** | Slightly down to flat |
+| NDX (Nasdaq 100) | **-0.5% to +1.2%** | Tech holds up better |
+| IWM (Russell 2000) | **-1.5% to +0.0%** | Weakest, seasonal headwinds |
 
-Summary Table
+## 7. Plain-English Brief
 
-| Factor | Signal | Direction |
-|--------|--------|------------|
-| Macro (Stagflation + Geopolitics) | Binary risk, downside larger | Bearish |
-| Technical | Bullish but extended, near resistance | Pullback risk |
-| Seasonality | Midterm weak spot + Memorial Day week | Bearish-leaning |
-| Market Breadth | Tech-only rally, small caps weak | Not healthy |
+The market looks mixed this week. Stocks are technically in an uptrend, but they've run up a lot and are near resistance. Oil prices are spiking due to Middle East tensions, which could hurt the economy, and history says late May in a midterm year is usually weak. Expect a mostly flat to slightly down week, with big moves only if jobs data surprises.
 
----
+## 8. Disclaimer
 
-Final Verdict
-
-S&P 500 is expected to trade in the 7,350–7,600 range, with a bias toward testing the lower end. A modest decline or sideways consolidation is more likely than a breakout higher.
-
-Invalidation scenarios:
-- Bullish view would strengthen if SPX closes weekly above 7,600 with strong breadth.
-- Bearish view would be confirmed if SPX closes below 7,350 on the weekly chart.
+**This is not financial advice. This synthesis is based on historical data, technical indicators, and publicly available news. All trading and investment decisions involve risk. You are solely responsible for your own actions.**
