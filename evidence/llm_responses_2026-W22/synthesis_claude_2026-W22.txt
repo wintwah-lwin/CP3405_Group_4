@@ -1,0 +1,61 @@
+1.  Weekly regime: Uncertain / Neutral Three frameworks are pointing in
+    genuinely different directions, which makes a clean directional call
+    impossible.
+
+2.  Confidence: Medium Technical structure is cleanly bullish — all
+    three indices are above both EMAs on the weekly chart — but that
+    bullishness runs directly into a midterm-year seasonal weak spot,
+    oil spiking on a live geopolitical conflict, and a binary Friday
+    labour print that hasn’t happened yet. The signal set is split
+    rather than scattered.
+
+3.  Key supporting evidence
+
+• All three indices (SPX, NDX, IWM) are above their 8 and 21 EMAs on the
+weekly chart. The trend structure is intact. • Technology retains a
+seasonal long bias through July per the almanac, and the Dell earnings
+beat confirmed that AI infrastructure demand is real. •
+Post-options-expiration weeks are historically bullish (30 of 45 weeks,
++0.40% avg), providing a partial offset to the Memorial Day bearish
+tendency.
+
+4.  Key contradictions
+
+• WTI crude surged over 7% on the week, and US–Iran strikes near Kuwait
+have escalated regional risk. A sustained oil spike re-ignites inflation
+expectations and undercuts the current Fed hold narrative. • The 4-year
+midterm cycle’s Q2–Q3 weak spot, the Memorial Day week bearish tendency
+(down 8 of last 10 day-after patterns), and seasonal shorts on Banking,
+Gold, and Materials all point away from a clean continuation.
+
+5.  Invalidation conditions The bullish view weakens materially on
+    weekly closes below SPX 7,350 / NDX 28,745 / IWM 280. The cautious
+    view is abandoned if Friday’s jobs data disappoints (higher
+    unemployment) or if geopolitical de-escalation drives oil sharply
+    lower.
+
+6.  Predicted weekly % moves
+
+• SPX: −1.0% to +0.8% (slight bearish skew; binary labour data Friday) •
+NDX: −0.8% to +1.5% (wider upside; tech seasonal and AI momentum intact)
+• IWM: −1.5% to +0.5% (most exposed to macro/rate uncertainty; small-cap
+confirmation still absent)
+
+7.  Plain-English brief The stock market’s internal trend is still
+    healthy — prices are above their moving averages and tech earnings
+    remain strong — but two big uncertainties loom over the week ahead:
+    an oil spike tied to Middle East tensions that could reignite
+    inflation fears, and Friday’s US jobs report which will either
+    confirm the current “rates on hold” calm or force a repricing. With
+    seasonal patterns also mixed for late May in a midterm year, this is
+    a week to watch rather than press hard in either direction, with
+    technology being the relative bright spot.
+
+8.  Disclaimer This output is a synthesis of publicly available market
+    data, seasonal research, and technical analysis. It is produced by
+    an AI system and is intended for informational and educational
+    purposes only. It is not financial advice, does not constitute a
+    recommendation to buy or sell any security, and should not be relied
+    upon for investment decisions. Always do your own research and
+    consult a qualified financial professional before making any
+    investment.
