@@ -1,0 +1,36 @@
+Weekly Regime: Bearish
+
+Confidence: Medium
+
+Reasoning:
+Historical seasonality indicates a negative lean as June marks the start of the weaker summer period in a midterm election year, where the S&P 500 averages a -2.1% decline. This seasonal headwind coincides with severe macro binary risks driven by escalating U.S.-Iran military clashes near critical global energy routes and highly anticipated U.S. inflation data releases. On the technical front, short-term momentum has weakened significantly across all major indices, with SPX, NDX, and RUT all closing below their respective 8 EMAs. The Nasdaq 100 experienced the steepest weekly drop of 4.54%, signaling an immediate softening in technology leadership. While the long-term broader trends remain structurally intact, all three indices are currently testing critical near-term support zones that must hold to prevent deeper corrections.
+
+SPX Forecast: [-2.5% to +0.8%]
+NDX Forecast: [-6.8% to +1.6%]
+IWM Forecast: [-4.7% to +1.0%]
+
+Key Supporting Evidence:
+
+1. June historically marks the beginning of the summer doldrums during midterm election years, with the S&P 500 averaging a negative return of -2.1%.
+2. Ongoing military engagements and missile strikes between the U.S. and Iran in the Strait of Hormuz threaten global logistics and risk compounding stagflation pressures ahead of key CPI and PPI data.
+3. All three major indices broke below their 8 EMAs and are entering cautious trend zones with weakened short-term momentum.
+
+Key Contradictions:
+
+1. The technology sector remains a seasonally supported long bright spot until mid-July, reinforced by massive corporate earnings beats from companies like Rubrik and Okta.
+2. The broader long-term market trends remain constructive with healthy year-to-date gains, and the Fed interest rate hold probability sits at a highly stable 95.4% with a slight dovish shift.
+
+Key Support:
+Critical support levels rest at 7,350 and 7,200 for the SPX, 28,900 and 27,000 for the NDX, and 2,830 and 2,700 for the RUT.
+
+Main Risk:
+The primary risk is a combination of higher-than-expected CPI/PPI inflation prints and an escalation of Middle East fighting that disrupts oil transit through major shipping lanes.
+
+Invalidation:
+The defensive outlook would be invalidated by daily closes back above the 21 EMAs, including 7,445 for SPX, 29,427 for NDX, and 2,862 for RUT, or if inflation reports come in lower than expected alongside a cooling of geopolitical conflicts.
+
+Summary:
+The stock market is experiencing a short-term pullback due to weakening price momentum and a historically slow summer season. Recent military clashes in the Middle East and upcoming inflation data create a risky environment that could trigger sudden price swings. However, the broader long-term market trends remain healthy and are supported by positive corporate earnings.
+
+Disclaimer:
+This is not financial advice.

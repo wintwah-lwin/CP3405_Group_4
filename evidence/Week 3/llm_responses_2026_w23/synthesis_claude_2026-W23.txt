@@ -1,0 +1,36 @@
+Weekly Regime: Bearish
+
+Confidence: Medium
+
+Reasoning:
+All three analytical frameworks are aligned on a cautious-to-bearish lean for the week of 8-12 June 2026. Technically, SPX, NDX, and RUT each closed last week below both their 8 and 21 EMAs, with NDX suffering the sharpest weekly decline (-4.54%) and now testing a critical support at 28,900 — the clearest momentum breakdown of the three indices. From a macro perspective, the week features a high-stakes binary event: U.S. CPI on Wednesday (expected 4.2% vs. 3.8% prior) and PPI on Thursday (expected 6.8% vs. 6.0% prior) arrive simultaneously with an active U.S.-Iran military exchange near the Strait of Hormuz, compressing risk appetite into a single binary window. Seasonally, the Almanac flags June in a midterm year as the beginning of the historically weak summer period, with the S&P 500's midterm-year June average running at -2.1%, and most major sectors (XLF, XLB, XLE, Gold) now in seasonal short windows. The one meaningful offset is that XLK (Technology) carries a seasonal long signal through mid-July, though that tailwind is being overwhelmed by the current technical breakdown in NDX and macro uncertainty. Overall, the convergence of weakening technicals, binary macro risk, and unfavorable seasonality justifies a Bearish regime label; however, the medium confidence reflects that a benign CPI print or a de-escalation in the Gulf could rapidly reverse this posture.
+
+SPX Forecast: -1.5% to +0.8%
+NDX Forecast: -2.0% to +1.0%
+IWM Forecast: -1.8% to +0.8%
+
+Key Supporting Evidence:
+
+1. Almanac Agent — June in a midterm year is historically the worst seasonal month for the S&P 500, with a midterm-year average of -2.1%. The summer doldrums are beginning. Sectors including Banking (XLF), Materials (XLB), Oil (XLE), and Gold are all in confirmed seasonal short windows. The week-level pattern for 8-12 June is flagged as mixed/bearish-neutral, and the VIX rose last week while all major indices (Nasdaq 100, S&P 500, Russell 2000, Bitcoin) declined — real-time data confirming the seasonal signal.
+2. Macro Agent — Simultaneous U.S. CPI (expected 4.2%) and PPI (expected 6.8%) releases land Wednesday-Thursday during an active military escalation between the U.S. and Iran in the Strait of Hormuz. WTI crude has already risen +3.64% on the week. The macro agent classifies the overall bias as "Binary-Risk," with medium confidence, noting that 95.4% of the market expects a Fed hold — but a hotter inflation print or a shipping disruption could force a hawkish re-pricing.
+3. Technical Agent — All three major indices (SPX, NDX, RUT) closed last week below both their 8 EMA and 21 EMA, placing each in Zone 2 (Caution). NDX registered the biggest weekly drop at -4.54% and is now testing support at 28,900 with Medium-High bearish confidence. SPX is resting on the 7,350 support level; RUT is at 2,830. A breach of any of these supports opens significantly larger downside targets across all three (SPX -> 7,200; NDX -> 27,000; RUT -> 2,700).
+
+Key Contradictions:
+
+1. Bullish offset — Technology seasonal tailwind intact: The Almanac explicitly identifies XLK (Technology) as having a seasonal LONG signal through mid-July. NDX's long-term trend remains constructive (YTD +13.45%, 1-Year +32.94%), and the broader uptrend from the April 2026 low (~23,000 -> 30,800) remains structurally unbroken. A softer-than-expected CPI could trigger a sharp reversal and tech rotation.
+2. Mixed signal — EMA structure still bullish at the intermediate level: Despite all three indices sitting below their short-term EMAs, the 8 EMA remains above the 21 EMA across SPX, NDX, and RUT. This means the intermediate trend structure is technically still intact (Zone 2, not Zone 3). The current weakness is a pullback within a broader uptrend, not a confirmed trend reversal — making the regime call sensitive to just one or two positive catalysts this week.
+
+Key Support:
+SPX 7,350 (must hold to prevent a test of 7,200); NDX 28,900 (critical — a close below opens 27,000); RUT 2,830 (next major level is 2,700). Longer-term, the April 2026 uptrend remains the structural floor for all three.
+
+Main Risk:
+A CPI print at or above 4.2% combined with continued U.S.-Iran military exchange near the Strait of Hormuz. This combination would simultaneously confirm stagflation fears (oil rising, inflation above forecast), pressure the Fed toward a hawkish hold signal, and compress risk assets across all indices. A shipping disruption in the Strait of Hormuz would be a tail-risk amplifier.
+
+Invalidation:
+The bearish view weakens materially if: (1) CPI comes in below 4.0% (dovish surprise), (2) military activity near the Strait of Hormuz de-escalates before Wednesday, or (3) SPX closes back above 7,445 (21 EMA) on a daily basis. Any one of these would shift the regime toward Neutral; all three together would be a Bullish reversal signal.
+
+Summary:
+The market is entering a risky week where bad inflation news and a Middle East conflict meet at the same time, and most technical signals are already flashing caution. History also works against the bulls — this time of year in a midterm election year tends to be one of the weakest stretches for stocks. The most important things to watch are whether inflation data surprises to the upside or downside on Wednesday and Thursday, and whether key price support levels hold across the S&P 500, Nasdaq, and small caps.
+
+Disclaimer:
+This is not financial advice. This synthesis is based solely on the three uploaded agent output files and is intended for informational and analytical purposes only. Past market patterns do not guarantee future results.

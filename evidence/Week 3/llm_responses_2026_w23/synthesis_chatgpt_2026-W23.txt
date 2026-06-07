@@ -1,0 +1,36 @@
+Weekly Regime: Bearish
+
+Confidence: Medium
+
+Reasoning:
+The overall market view is bearish because all three evidence streams point toward caution for the coming week. The Almanac Agent gives a bearish-neutral seasonal bias, noting that June in a midterm year often begins a weaker summer period. The Macro Agent shows a binary-risk environment, with important U.S. CPI and PPI data arriving during a period of heightened geopolitical tension near major oil shipping routes. The Technical Agent also supports a bearish view because SPX, NDX, and RUT have all fallen below their 8 EMA, while NDX shows the clearest deterioration after a sharp weekly decline. However, confidence is only medium because the broader long-term trend remains constructive, the Fed hold probability is high, and technology still has some seasonal support.
+
+SPX Forecast: -1.5% to +0.3%
+NDX Forecast: -2.5% to +0.5%
+IWM Forecast: -1.7% to +0.4%
+
+Key Supporting Evidence:
+
+1. The Almanac Agent gives a bearish-neutral seasonal bias because June 2026 falls in a midterm-year weak spot, with weaker historical Q2–Q3 performance and several bearish sector windows.
+2. The Macro Agent identifies a binary-risk environment driven by upcoming U.S. CPI and PPI data, rising oil prices, a stronger dollar, and geopolitical escalation near the Strait of Hormuz.
+3. The Technical Agent shows weakening momentum across SPX, NDX, and RUT, with all three indices trading below their 8 EMA and NDX showing the strongest bearish deterioration.
+
+Key Contradictions:
+
+1. Technology still has supportive seasonality until mid-July, which conflicts with the bearish technical signal in NDX.
+2. Falling Treasury yields and a high probability of a Fed hold could support equities, but inflation data and geopolitical risks make the outlook uncertain.
+
+Key Support:
+The most important support levels are SPX 7,350, NDX 28,900, and RUT/IWM proxy support near 2,830. If these levels hold, the market may stabilize despite bearish short-term momentum.
+
+Main Risk:
+The biggest risk is that hotter-than-expected CPI or PPI data combines with further Middle East escalation, pushing oil higher and increasing inflation or stagflation concerns.
+
+Invalidation:
+The bearish view would weaken if SPX closes back above 7,445, NDX closes above 29,427, and RUT closes above 2,862. The outlook would also become less bearish if inflation data comes in lower than expected or geopolitical tensions calm down. A break below SPX 7,350, NDX 28,900, or RUT 2,830 would instead confirm deeper downside risk.
+
+Summary:
+The market looks cautious and slightly bearish for the coming week. Technical momentum has weakened across major indices, while inflation data and geopolitical risks could cause volatility. However, the market could stabilize if key support levels hold and inflation data is not worse than expected.
+
+Disclaimer:
+This is not financial advice.
