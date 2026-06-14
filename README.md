@@ -1,3 +1,24 @@
+# CP3405 Group 4 — Trading Intelligence
+
+## TradeKyaMal (Main Application)
+
+The team's data collection dashboard lives in the **`TradeKyaMal/`** folder:
+
+- **Frontend:** Next.js dashboard (Vercel)
+- **Backend:** Express API (Render)
+- **Data sources:** [Finviz Futures](https://finviz.com/futures_performance), [Yahoo Sectors](https://finance.yahoo.com/sectors/), [TradingEconomics Calendar](https://tradingeconomics.com/calendar)
+
+Quick start:
+
+```bash
+cd TradeKyaMal/backend && npm install && npm run dev
+cd TradeKyaMal/frontend && npm install && npm run dev
+```
+
+See `TradeKyaMal/README.md` and `TradeKyaMal/API_GUIDE.md` for full setup and deployment.
+
+---
+
 ## Roles
 Week 3
 Tasks:
