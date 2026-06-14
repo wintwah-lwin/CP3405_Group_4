@@ -1,0 +1,37 @@
+1. Weekly Regime: Slightly Bullish
+
+2. Confidence Score: Medium
+The confidence level is Medium because technical indicators remain strongly positive, with SPX, NDX, and IWM all trading above their 8 EMA and 21 EMA, showing continued bullish momentum. However, seasonal weakness during the 2026 midterm year and the upcoming FOMC meeting create uncertainty and may increase short-term volatility.
+
+3. Key Supporting Evidence:
+- Technical strength: SPX, NDX, and IWM are all in a bullish Zone 1 EMA structure, with prices above both 8 EMA and 21 EMA. The broader uptrend from the April 2026 low remains intact.
+- Supportive macro conditions: Falling Treasury yields, weaker oil prices, and a stable Fed expectation (97.4% probability of holding rates) provide a supportive environment for equities.
+- Improving market breadth: Russell 2000 shows strong participation, while financials, industrials, and semiconductor stocks are supporting the rally beyond only mega-cap technology companies.
+
+4. Key Contradictions:
+- Seasonal weakness risk: 2026 is a U.S. midterm election year, and historical Q2-Q3 periods tend to be weaker, creating a bearish seasonal background.
+- Technology divergence and event risk: Mega-cap technology stocks such as MSFT, AAPL, GOOGL, and META have weakened, while the FOMC meeting may cause additional market volatility.
+
+5. Invalidation Conditions: what would change this view
+- A weekly close below key technical support levels:
+  - SPX below 7,336 (8 EMA) would weaken the bullish structure.
+  - NDX below 28,717 (8 EMA) would indicate declining momentum.
+  - IWM below 282 (8 EMA) would signal small-cap weakness.
+- A more hawkish-than-expected Federal Reserve outlook, rising Treasury yields, stronger inflation data, or renewed geopolitical risks causing oil prices to rise significantly would shift the view toward bearish.
+
+6. Predicted % move
+
+SPX (S&P 500): [+0.3% to +1.2%] - Direction: Slightly Up
+Expected to move higher gradually as technical momentum and supportive macro conditions outweigh seasonal weakness. The main resistance level is around 7,500-7,650.
+
+NDX (Nasdaq 100): [+0.2% to +1.5%] - Direction: Slightly Up
+Expected to gain moderately, supported by semiconductor strength and lower yields. However, weak mega-cap technology performance may limit upside.
+
+IWM (Russell 2000): [+0.8% to +2.0%] - Direction: Up
+Expected to be the strongest performer because small-cap participation is improving and the index is approaching the important 300 resistance level.
+
+7. Plain-English brief:
+The market is expected to move slightly higher next week because the overall trend remains positive and economic conditions are supportive. However, investors should expect larger price movements because of the Federal Reserve meeting and seasonal market weakness.
+
+8. Disclaimer:
+This market outlook is based on the provided technical, macroeconomic, and seasonal evidence. It is for informational purposes only and is not financial advice. Investors should conduct their own research and consider their individual risk tolerance before making investment decisions.

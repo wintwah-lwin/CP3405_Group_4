@@ -1,0 +1,87 @@
+MULTI-LLM SYNTHESIS — WEEK OF 15 JUNE 2026
+Prepared: 14 June 2026
+Methodology: Four AI models received identical prompt with Almanac, Macro/News, and Technical agent outputs.
+
+==================================================
+STEP 1 — THREE AGENT OUTPUTS (Summary)
+==================================================
+
+ALMANAC AGENT
+- Month: June 2026
+- Cycle: Midterm election year; Q2–Q3 is weak phase of 4-year cycle
+- June stats (midterm avg): S&P -2.1%, Nasdaq +1.0%, Russell +0.8%
+- Week patterns: FOMC (16-17 Jun), Triple Witching (18 Jun), Juneteenth holiday (19 Jun)
+- Sector seasonals: Tech long (support), Financials/Energy/Materials short (caution)
+- Seasonal bias: Bearish-neutral / high volatility
+- Confidence: Medium — seasonal headwind partly offset by recent momentum
+
+MACRO/NEWS AGENT
+- Fed rate: 3.50%-3.75%
+- FOMC 17 June: 97.4% probability of no change
+- Yields: 2yr 4.09%, 10yr 4.48% (falling), 30yr 4.97%
+- Commodities (1W): WTI -6.25%, Gold -2.90%, DXY weakening
+- Key events: Retail Sales (Wed), FOMC + projections (Thu), Triple Witching (Thu), holiday (Fri)
+- Confirmed news: Iran-US preliminary deal — oil pressure easing
+- Macro bias: Neutral
+- Confidence: High — rate hold priced in
+- Invalidation: Hawkish Fed surprise, oil spike >5%, strong retail beat
+
+TECHNICAL AGENT
+- SPX: 7,431.46 — above 8 EMA (7,336) and 21 EMA (7,098). 8>21. Zone 1 Bullish.
+  Resistance: 7,500 / 7,650; Support: 7,336 / 7,098
+- NDX: 29,635.95 — above 8 EMA (28,717) and 21 EMA (27,105). 8>21. Wide gap.
+  Resistance: 30,000 / 30,800; Support: 28,717 / 27,105
+- IWM: 292.95 — above 8 EMA (282) and 21 EMA (270). 8>21. Best breadth.
+  Resistance: 300 / 305; Support: 282 / 270
+- Technical bias: Neutral-Bullish (SPX, NDX), Bullish (IWM)
+- Confidence: Medium (split tech: semis strong, software weak)
+- Invalidation: Weekly close below 8 EMA on SPX or NDX; IWM below 282
+
+==================================================
+STEP 2 — MULTI-LLM COMPARISON TABLE
+==================================================
+
+All four models received identical prompt on 14 June 2026.
+
+| Dimension        | Claude          | ChatGPT     | Gemini    | DeepSeek      |
+|------------------|-----------------|-------------|-----------|---------------|
+| Weekly Regime    | Neutral-Bullish | Bullish     | Neutral   | Neutral-Bullish|
+| Confidence       | Medium          | Medium      | Medium    | Medium        |
+| SPX % move       | +0.3% to +1.2%  | +0.5% to +1.5% | 0.0% to +1.0% | +0.2% to +1.1% |
+| NDX % move       | +0.5% to +1.8%  | +0.8% to +2.0% | -0.5% to +1.5% | +0.3% to +1.7% |
+| IWM % move       | +0.8% to +2.2%  | +1.0% to +2.5% | +0.5% to +2.0% | +0.7% to +2.1% |
+| Key Support      | Technicals + falling yields + IWM breadth | Same + FOMC priced in | EMAs + oil drop + IWM | EMAs + macro easing + FOMC |
+| Key Contradictions | Seasonals vs tech; semi vs software | Techs vs midterm weakness | Bullish EMAs vs summer weakness | Split tech + midterm year |
+| Invalidation     | Close below 8 EMA; hawkish FOMC | Same | Hawkish FOMC or close below 8 EMA | Close below 8 EMA; oil spike; hawkish Fed |
+
+==================================================
+STEP 3 — TEAM CONSENSUS
+==================================================
+
+WEEKLY REGIME: Neutral-Bullish
+CONFIDENCE: Medium
+
+KEY SUPPORTING EVIDENCE:
+1. All three indices (SPX, NDX, IWM) in Zone 1 Bullish — above rising 8 and 21 EMA.
+2. Falling 10-year yields, weaker oil (-6.25%), and softer USD support growth stocks.
+3. IWM shows best breadth (financials, industrials, energy participating) — rally not just mega-cap.
+
+KEY CONTRADICTIONS:
+1. Strong technicals vs. historical midterm Q2–Q3 weakness (Almanac seasonal headwind).
+2. Tech split: semiconductors surging (INTC +25%, KLAC +31%) while software mega-caps (MSFT -6%, AAPL -5%) decline.
+
+INVALIDATION CONDITIONS (would change this view):
+- Weekly close below SPX 7,336 (8 EMA) or NDX 28,717 (8 EMA)
+- Unexpectedly hawkish FOMC guidance (dot plot signaling later/fewer cuts)
+- Oil price spike >5% due to renewed geopolitical tensions
+
+PREDICTED % MOVES (Week of 15–19 June 2026):
+- S&P 500 (SPX): +0.2% to +1.2%
+- Nasdaq 100 (NDX): +0.3% to +1.8%
+- Russell 2000 (IWM): +0.7% to +2.2%
+
+PLAIN-ENGLISH BRIEF (2–3 sentences):
+The market technicals remain bullish and short-term macro is favorable (lower yields, oil, dollar). However, seasonal midterm weakness and a split within technology (semiconductors up, software down) prevent high conviction. Small-caps (IWM) look strongest, while Nasdaq needs software stocks to recover before breaking 30,000.
+
+DISCLAIMER:
+This analysis is based on historical data, public information, and multi-model outputs only. It does not constitute financial advice. Past performance does not guarantee future results. All trading decisions are your own responsibility.
