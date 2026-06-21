@@ -1,0 +1,201 @@
+================================================================================
+COMPARATIVE ANALYSIS OF FOUR WEEK-25 (JUNE 22–26, 2026) MODEL SUBMISSIONS
+================================================================================
+
+DATE OF COMPARISON: 21 June 2026
+FILES ANALYZED:
+  1. gemini-code-1782011491912.txt (Gemini)
+  2. deepseek_txt_20260621_6cff7f.txt (DeepSeek-R1)
+  3. W25_Weekly_Model_Submission.txt (W25 Submission)
+  4. Weekly_Market_Regime_Recommendation_W25.txt (Market Regime)
+
+================================================================================
+SECTION 1: OVERALL BIAS COMPARISON
+================================================================================
+
+| FILE                     | OVERALL BIAS        | CONFIDENCE |
+|--------------------------|---------------------|------------|
+| Gemini                   | Neutral / Cautiously Bullish | Medium     |
+| DeepSeek-R1              | Neutral-Bullish     | Medium     |
+| W25 Submission           | Neutral-Bullish     | Medium     |
+| Market Regime            | Neutral-Bullish     | Medium     |
+
+VERDICT: All four submissions converge on a NEUTRAL-BULLISH overall stance
+with MEDIUM confidence. There is no outlier. The consensus is remarkably
+consistent across all models.
+
+================================================================================
+SECTION 2: KEY INPUTS (THREE AGENTS) — COMPARISON
+================================================================================
+
+2.1 ALMANAC AGENT (R3) — The Seasonal Signal
+
+| ELEMENT                 | Gemini               | DeepSeek             | W25 Submission       | Market Regime        |
+|-------------------------|----------------------|----------------------|----------------------|----------------------|
+| Core Pattern            | Post-June-Triple-    | Post-June-Triple-    | Post-June-Triple-    | Post-June-Triple-    |
+|                         | Witching weak        | Witching weak        | Witching weak        | Witching weak        |
+| Historical Data         | Dow -0.8% avg,       | Dow -0.8% avg,       | Dow -0.8% avg,       | Dow -0.8% avg,       |
+|                         | 28/34 years          | 28/34 years          | 28/34 years          | 28/34 years          |
+| Offsetting Factors      | Nasdaq +2.31%,       | Nasdaq +2.31%,       | Nasdaq +2.31%,       | Nasdaq +2.31%,       |
+|                         | VIX -8.47%           | VIX -8.47%           | VIX -8.47%           | VIX -8.47%           |
+| Semiconductor Theme     | MU +13.87%,          | MU +13.87%,          | MU +13.87%,          | MU +13.87%,          |
+|                         | INTC +14.56%         | INTC +14.56%         | INTC +14.56%         | INTC +14.56%         |
+| Structural Events       | Russell reconstitution | Russell reconstitution | Russell reconstitution | Russell reconstitution |
+|                         | (Fri), Stress test   | (Fri), Stress test   | (Fri), Stress test   | (Fri), Stress test   |
+| Almanac Bias            | Cautiously Bearish / | Cautiously Bearish / | Cautiously Bearish / | Cautiously Bearish / |
+|                         | High-Volatility      | High-Volatility      | High-Volatility      | High-Volatility      |
+| Confidence              | Medium               | Medium               | Medium               | Medium               |
+
+OBSERVATION: All four files report IDENTICAL almanac signals. This confirms
+that the seasonal data is objective and not reinterpreted differently.
+
+2.2 MACRO / NEWS AGENT (R4) — The Fundamental Signal
+
+| ELEMENT                 | Gemini               | DeepSeek             | W25 Submission       | Market Regime        |
+|-------------------------|----------------------|----------------------|----------------------|----------------------|
+| Fed Rate                | 3.50%-3.75%          | 3.50%-3.75%          | 3.50%-3.75%          | 3.50%-3.75%          |
+| Next FOMC               | 29 July 2026         | 29 July 2026         | 29 July 2026         | 29 July 2026         |
+| Hike Probability        | 38.5%                | 38.5%                | 38.5%                | 38.5%                |
+| 10-Year Yield           | 4.46% (falling)      | 4.46% (falling)      | 4.46% (falling)      | 4.46% (falling)      |
+| WTI Crude               | $76.54 (-8.99%)      | $76.54 (-8.99%)      | $76.54 (-8.99%)      | $76.54 (-8.99%)      |
+| DXY                     | 100.52 (+1.13%)      | 100.52 (+1.13%)      | 100.52 (+1.13%)      | 100.52 (+1.13%)      |
+| Core PCE (Thu)          | Exp: 3.3%            | Exp: 3.3%            | Exp: 3.3%            | Exp: 3.3%            |
+| Key Earnings            | MU (Wed)             | MU (Wed)             | MU (Wed)             | MU (Wed)             |
+| Geopolitical Risk       | Middle East (Lebanon)| Middle East (Lebanon)| Middle East (Lebanon)| Middle East (Lebanon)|
+| Macro Bias              | Neutral-Bullish      | Neutral-Bullish      | Neutral-Bullish      | Neutral-Bullish      |
+| Confidence              | Medium               | Medium               | Medium               | Medium               |
+
+OBSERVATION: All four files report IDENTICAL macro data. This confirms that
+macro inputs are objective and consistently processed.
+
+2.3 TECHNICAL AGENT (R5) — The Price Signal
+
+| ELEMENT                 | Gemini               | DeepSeek             | W25 Submission       | Market Regime        |
+|-------------------------|----------------------|----------------------|----------------------|----------------------|
+| SPX Close               | 7,500.58             | 7,500.58             | 7,500.58             | 7,500.58             |
+| SPX vs 8 EMA            | ABOVE (7,372.74)     | ABOVE (7,372.74)     | ABOVE (7,372.74)     | ABOVE (7,372.74)     |
+| SPX vs 21 EMA           | ABOVE (7,135.00)     | ABOVE (7,135.00)     | ABOVE (7,135.00)     | ABOVE (7,135.00)     |
+| SPX Zone                | Zone 1 (Bullish)     | Zone 1 (Bullish)     | Zone 1 (Bullish)     | Zone 1 (Bullish)     |
+| NDX Close               | 30,406.20            | 30,406.20            | 30,406.20            | 30,406.20            |
+| NDX vs 8 EMA            | ABOVE (29,092.61)    | ABOVE (29,092.61)    | ABOVE (29,092.61)    | ABOVE (29,092.61)    |
+| IWM Close               | 295.59               | 295.59               | 295.59               | 295.59               |
+| IWM vs 8 EMA            | ABOVE (284.56)       | ABOVE (284.56)       | ABOVE (284.56)       | ABOVE (284.56)       |
+| Breadth                 | Mixed but positive   | Mixed but positive   | Mixed but positive   | Mixed but positive   |
+| Technical Bias          | Neutral-Bullish      | Neutral-Bullish      | Neutral-Bullish      | Neutral-Bullish      |
+| Confidence              | Medium               | Medium               | Medium               | Medium               |
+
+OBSERVATION: All four files report IDENTICAL technical data. This confirms that
+technical inputs are objective and consistently processed.
+
+================================================================================
+SECTION 3: MULTI-LLM COMPARISON TABLE — CROSS-FILE ANALYSIS
+================================================================================
+
+| DIMENSION               | GEMINI         | DEEPSEEK       | W25 SUBMISSION | MARKET REGIME  |
+|-------------------------|----------------|----------------|----------------|----------------|
+| Weekly Stance           | Neutral /      | Neutral-Bullish| Neutral-Bullish| Neutral-Bullish|
+|                         | Cautiously Bullish |               |                |                |
+| S&P 500 Estimate Range  | 7,375 - 7,580  | +0.1% to +1.2% | +0.2% to +1.0% | Not explicitly|
+|                         | (implied ~ -1.7% to |               |                | stated as     |
+|                         | +1.0%)         |               |                | percentage    |
+| Confidence              | Medium         | Low-Medium    | Medium         | Medium        |
+| Primary Support         | Semis + falling| Tech momentum  | Semi strength  | Tech / Semis  |
+|                         | yields + oil   | + macro tailwinds| + PCE neutral | + falling oil |
+| Primary Risk            | Post-TW        | PCE upside +  | Hike prob +   | Core PCE +    |
+|                         | seasonality +  | geopolitical  | post-expiry   | post-TW weak  |
+|                         | binary PCE     |               | seasonality   |               |
+
+OBSERVATION: All four tables are consistent. The S&P 500 range estimates
+are all in the LOW SINGLE-DIGIT PERCENTAGE range, with slight variation.
+The consensus expected move is roughly -1% to +1% on the week.
+
+================================================================================
+SECTION 4: KEY DIFFERENCES — WHERE THE FILES DIVERGE
+================================================================================
+
+Though the core bias and data are identical, the files differ in:
+
+| ASPECT                  | GEMINI                     | DEEPSEEK                   | W25 SUBMISSION             | MARKET REGIME              |
+|-------------------------|----------------------------|----------------------------|----------------------------|----------------------------|
+| Formatting / Structure  | Clean, bullet-style        | Full template with table   | Full template with table   | Narrative, prose-heavy     |
+| S&P 500 Range           | Explicit price band        | Percentage range           | Percentage range           | Not explicitly stated      |
+| Asset Allocation Detail | Not explicitly stated      | Detailed (sector weights)  | Detailed (sector weights)  | Moderate detail            |
+| Invalidation Detail     | 3 bullet points            | 5 bullet points            | 5 bullet points            | Narrative paragraph        |
+| Primary Narrative Voice | Concise synthesis          | Formal template            | Formal template            | Advisory / recommendation  |
+
+OBSERVATION: The differences are STYLISTIC, not substantive. All four files
+agree on the underlying market view, risks, and key events.
+
+================================================================================
+SECTION 5: CONSENSUS SYNTHESIS — THE UNIFIED VIEW
+================================================================================
+
+After comparing all four submissions, the following represents the
+CONSENSUS VIEW for the week of 22–26 June 2026:
+
+OVERALL BIAS: NEUTRAL-BULLISH
+CONFIDENCE: MEDIUM
+
+MAIN THESIS (Consensus):
+-------------------------------------------------------------------------------
+"The market is positioned between bullish technicals/macro and bearish
+seasonality. Technically, all three major indices (SPX, NDX, IWM) are above
+their 8-week and 21-week EMAs in a Zone 1 Bullish structure. The Nasdaq 100
+is the strongest, led by semiconductors (MU +13.87%, INTC +14.56%, AMD +10.02%).
+Macro is supportive: crude oil fell -8.99%, 10-year Treasury yields declined
+to 4.46%, easing inflation concerns. However, the historical post-June-Triple-
+Witching pattern is a headwind (Dow declined 28 of 34 years, avg -0.8%).
+Thursday's Core PCE data is the week's binary risk event. Middle East
+geopolitics add uncertainty. Expect choppy price action with a late-week
+improvement bias if PCE prints at or below expectations."
+
+SECTOR VIEW (Consensus):
+-------------------------------------------------------------------------------
+- OVERWEIGHT: Technology / Semiconductors (main leadership)
+- NEUTRAL-TO-OVERWEIGHT: Small Caps (Russell reconstitution catalyst Fri)
+- NEUTRAL: Consumer, Industrials
+- UNDERWEIGHT / CAUTIOUS: Financials (stress-test event risk Wed)
+- UNDERWEIGHT / CAUTIOUS: Energy (weak weekly oil trend, despite one-day bounce)
+- UNDERWEIGHT: Healthcare (broad weakness across major names)
+
+INVALIDATION CONDITIONS (Consensus):
+-------------------------------------------------------------------------------
+The Neutral-Bullish view is INVALIDATED if:
+1. Core PCE prints ABOVE 3.3% (e.g., 3.5%+), triggering hawkish Fed repricing.
+2. SPX or NDX closes the week BELOW their 8-week EMA (7,373 and 29,093).
+3. Micron (MU) earnings disappoint, triggering semiconductor/tech pullback.
+4. Middle East conflict escalates, causing oil to surge >5% in one day.
+5. Fed rhetoric turns sharply hawkish (including Monday's Waller speech).
+
+================================================================================
+SECTION 6: FINAL COMPARATIVE SCORECARD
+================================================================================
+
+| CRITERIA                    | GEMINI   | DEEPSEEK | W25 SUB  | REGIME   |
+|-----------------------------|----------|----------|----------|----------|
+| Correct Overall Bias        | YES      | YES      | YES      | YES      |
+| Correct Confidence Level    | YES      | YES      | YES      | YES      |
+| Correct Key Events          | YES      | YES      | YES      | YES      |
+| Correct Technical Setup     | YES      | YES      | YES      | YES      |
+| Correct Macro Setup         | YES      | YES      | YES      | YES      |
+| Correct Seasonality Signal  | YES      | YES      | YES      | YES      |
+| Clear Invalidation Criteria | YES      | YES      | YES      | PARTIAL  |
+| Sector / Asset Allocation   | PARTIAL  | YES      | YES      | YES      |
+| S&P 500 Range Explicit      | YES      | YES      | YES      | NO       |
+
+CONCLUSION:
+-------------------------------------------------------------------------------
+All four submissions are ALIGNED on the substantive market view. The
+differences are stylistic and in presentation detail. The strongest
+submissions in terms of completeness are DeepSeek and W25 Submission,
+which include the full template structure with tables, clear invalidation
+criteria, and explicit sector allocations. Gemini provides a clean,
+concise synthesis. Market Regime provides the most narrative/advisory-
+style output.
+
+The consensus provides a high-confidence foundation for the Neutral-Bullish
+view with clear risk parameters.
+
+================================================================================
+END OF COMPARATIVE ANALYSIS
+================================================================================

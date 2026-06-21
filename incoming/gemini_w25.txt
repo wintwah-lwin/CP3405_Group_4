@@ -1,0 +1,60 @@
+================================================================================
+WEEKLY MARKET ANALYSIS & FORECAST — WEEK 25 (JUNE 22–26, 2026)
+================================================================================
+
+--------------------------------------------------------------------------------
+STEP 1: THREE AGENT OUTPUTS
+--------------------------------------------------------------------------------
+
+1. ALMANAC AGENT SPECIALIST REPORT
+- Core Pattern: Week after June Triple Witching.
+- Historical Data: The Dow Jones Industrial Average has declined in 28 of the last 34 post-June-Triple-Witching weeks, averaging a loss of approximately 0.8%. 
+- Late-Week Dynamics: The final three trading days of June historically demonstrate late-stage seasonal strength, particularly favoring Technology and Russell 2000 small-caps.
+- Key Structural Event: The FTSE Russell U.S. index reconstitution becomes effective after the market close on Friday, June 26, creating high volume and localized price volatility.
+- Almanac Bias: Cautiously Bearish / High-Volatility
+- Confidence Level: Medium (Positive completed-week momentum serves as a moderate bullish offset).
+
+2. MACRO & NEWS AGENT SPECIALIST REPORT
+- Interest Rates & Fed Watch: Fed funds rate sits at 3.50%–3.75%[cite: 3]. CME FedWatch tools price a 61.5% probability of a hold and a 38.5% probability of a rate hike at the July 29 FOMC meeting[cite: 4, 5, 6]. 
+- Yield Curve & Dollar: The 10-year Treasury yield fell to 4.46% [cite: 10, 13], offering modest equity support [cite: 14], while the U.S. Dollar Index (DXY) strengthened by +1.13% to 100.52[cite: 18].
+- Commodities: WTI Crude oil plummeted -8.99% to $76.54 [cite: 16], signaling significantly eased short-term inflationary input pressures[cite: 20]. Gold slipped -1.55% to $4,172.90[cite: 17].
+- High-Impact Economic Calendar: Core PCE Price Index YoY (May) releases on Thursday, June 25 (Expected: 3.3% vs. Previous: 3.3%)[cite: 36, 37, 38]. This is the premier data pivot of the week[cite: 44].
+- Corporate Earnings: Micron Technology (MU) reports on Wednesday, June 24, serving as a vital bellwether for AI memory demand and broader technology sentiment[cite: 46, 50]. FedEx (FDX) and Carnival Corp (CCL) report on Tuesday[cite: 47, 48].
+- Geopolitical Risk: Renewed friction and ceasefire threats between Israel and Lebanon keep Headline Risk elevated[cite: 52, 53].
+- Macro Bias: Neutral-Bullish [cite: 57]
+- Confidence Level: Medium [cite: 60]
+
+3. TECHNICAL AGENT SPECIALIST REPORT
+- S&P 500 (SPX): Closed at 7,500.58. It is trading above its weekly 8 EMA (7,372.74) and 21 EMA (7,135.00), keeping it firmly in Zone 1 (Fully Bullish Structure). Resistance sits at 7,550–7,600; key dynamic support rests at 7,373.
+- Nasdaq 100 (NDX): Closed at 30,406.20. It exhibits the strongest upward momentum, maintaining a wide gap above its weekly 8 EMA (29,092.61). Psychological resistance looms at 31,000.
+- Russell 2000 (IWM): Closed at 295.59. It maintains an intact weekly uptrend above its 8 EMA (284.56), eyeing psychological resistance at the 300 round number.
+- Market Breadth Note: Mixed but positive. All three major indexes sit in structurally bullish setups. Leadership remains concentrated heavily in Semiconductors (MU +13.87%, INTC +14.56%, AMD +10.02%), with selective Financial support. However, Healthcare (LLY -5.37%) and Energy (XOM -6.00%) act as noticeable index drags.
+- Technical Bias: Neutral-Bullish
+- Confidence Level: Medium (Uneven sector participation prevents a high-confidence designation).
+
+
+--------------------------------------------------------------------------------
+STEP 2: ENSEMBLE SYNTHESIS & MODEL COMPARISON
+--------------------------------------------------------------------------------
+
+| Metric / Dimension      | R3 Consolidated Thesis & Unified Outlook                     |
+|-------------------------|--------------------------------------------------------------|
+| Weekly Directional Bias | Neutral / Cautiously Bullish                                 |
+| S&P 500 Target Range    | 7,375 to 7,580                                               |
+| Confidence Level        | Medium                                                       |
+| Primary Market Support  | Resilient semiconductor trend, falling yields, crushed oil.   |
+| Primary Market Drag     | Post-Triple-Witching seasonality, binary Core PCE data risk. |
+
+CORE SYNTHESIS:
+The coming week represents a classic tug-of-war between unfavorable historical patterns and constructive modern data. Seasonally, the week after June Triple Witching is a notorious historical headwind for equities. However, the technical structural setup is robust—all major indices are holding firmly above their key weekly exponential moving averages. 
+
+Crucially, structural support stems from a sharp decline in energy costs and cooling Treasury yields. The market will likely experience a choppy, highly volatile opening half of the week, dictated by defensive positioning ahead of Thursday's high-stakes Core PCE inflation report and Micron's pivotal earnings. If inflation meets or prints softer than the projected 3.3%, the combination of month-end institutional window dressing and the Russell rebalancing window will likely catalyze a sharp late-week risk rally.
+
+--------------------------------------------------------------------------------
+STEP 3: INVALIDATION CONDITIONS
+--------------------------------------------------------------------------------
+
+The nuanced cautiously bullish outlook will be immediately invalidated if:
+1. Core PCE Inflation prints hotter than the expected 3.3% YoY [cite: 37, 64], triggering a hawkish reassessment of the July FOMC meeting where hike probabilities already sit at 38.5%[cite: 6, 62, 64].
+2. Mega-cap software weakness leaks heavily into the semiconductor ecosystem, or Micron (MU) provides a disappointing forward guidance outlook[cite: 50, 64].
+3. SPX suffers a definitive weekly close below its dynamic 8 EMA support line at 7,373.
