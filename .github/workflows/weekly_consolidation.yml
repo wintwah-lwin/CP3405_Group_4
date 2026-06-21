@@ -5,7 +5,7 @@ on:
     # Runs every Sunday at 13:00 UTC (9:00 PM Singapore Standard Time / SGT)
     - cron: '0 13 * * 0'
   workflow_dispatch: 
-    # Allows you to manually trigger this anytime from the GitHub UI for testing
+    # This line is what enables the "Run workflow" button in the UI
 
 jobs:
   organize-and-tag:
@@ -55,16 +55,16 @@ jobs:
             echo "changes_made=true" >> $GITHUB_OUTPUT
           fi
 
-          # 4. Cut and publish the required version tag
-          - name: Cut Weekly Git Tag
-            if: steps.commit_step.outputs.changes_made == 'true'
-            run: |
-              TAG_NAME="vW25"
-              
-              # Force overwrite the tag locally and remotely if it exists
-              git tag -d $TAG_NAME 2>/dev/null || true
-              git push origin :refs/tags/$TAG_NAME 2>/dev/null || true
-              
-              echo "Cutting the $TAG_NAME tag..."
-              git tag $TAG_NAME
-              git push origin $TAG_NAME
+      # 4. Cut and publish the required version tag
+      - name: Cut Weekly Git Tag
+        if: steps.commit_step.outputs.changes_made == 'true'
+        run: |
+          TAG_NAME="vW25"
+          
+          # Force overwrite the tag locally and remotely if it exists
+          git tag -d $TAG_NAME 2>/dev/null || true
+          git push origin :refs/tags/$TAG_NAME 2>/dev/null || true
+          
+          echo "Cutting the $TAG_NAME tag..."
+          git tag $TAG_NAME
+          git push origin $TAG_NAME
