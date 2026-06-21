@@ -7,6 +7,7 @@ export interface Agent {
   description: string;
   status: AgentStatus;
   lastRun?: string | null;
+  summary?: string | null;
 }
 
 export type DataSourceType =
@@ -41,4 +42,80 @@ export interface MarketQuote {
   changePercent: number | null;
   message?: string;
   timestamp: string;
+}
+
+export interface MacroCommodityItem {
+  name: string;
+  price: string;
+  weeklyChange: string;
+  direction: string;
+}
+
+export interface MacroCalendarItem {
+  date: string;
+  event: string;
+  expected: string;
+  previous: string;
+  importance: string;
+}
+
+export interface MacroEarningsItem {
+  company: string;
+  date: string;
+  sector: string;
+  watch: string;
+}
+
+export interface MacroNewsItem {
+  headline: string;
+  source: string;
+  date: string;
+  implication: string;
+}
+
+export interface MacroReport {
+  weekOf: string;
+  source: string;
+  fedRates: {
+    currentRate: string;
+    nextFomcDate: string;
+    holdProb: string;
+    hikeProb: string;
+    cutProb: string;
+    directionVsLastWeek: string;
+    yield2y: string;
+    yield10y: string;
+    yield30y: string;
+    yieldCurve: string;
+    yield10yDirection: string;
+    implication: string;
+  };
+  commodities: {
+    items: MacroCommodityItem[];
+    crossAssetImplication: string;
+  };
+  calendar: MacroCalendarItem[];
+  calendarKeyInsight: string;
+  earnings: MacroEarningsItem[];
+  earningsKeyInsight: string;
+  news: MacroNewsItem[];
+  newsKeyInsight: string;
+  macroBias: string;
+  primaryDriver: string;
+  confidence: string;
+  invalidation: string;
+  sourcesAccessed: string;
+}
+
+export interface MacroReportResponse {
+  report: MacroReport | null;
+  savedAt?: string;
+  runId?: string;
+}
+
+export interface MacroEvidence {
+  commodities: (MacroCommodityItem & { symbol?: string; fromDataCollection?: boolean })[];
+  calendar: (MacroCalendarItem & { fromDataCollection?: boolean })[];
+  finvizCollectedAt: string | null;
+  calendarCollectedAt: string | null;
 }

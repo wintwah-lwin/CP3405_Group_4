@@ -41,7 +41,7 @@ export function AgentCard({ agent }: AgentCardProps) {
 
       <h3 className="mt-4 text-sm font-semibold">{agent.name}</h3>
       <p className="mt-1.5 text-xs leading-relaxed text-text-secondary">
-        {agent.description}
+        {agent.summary ?? agent.description}
       </p>
 
       <div className="mt-4 flex items-center justify-between border-t border-border-subtle pt-4">

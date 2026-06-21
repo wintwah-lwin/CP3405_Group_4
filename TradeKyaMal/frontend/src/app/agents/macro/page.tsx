@@ -1,14 +1,14 @@
 import { PageHeader } from '@/components/PageHeader';
-import { AgentPlaceholder } from '@/components/AgentPlaceholder';
+import { MacroAgentReport } from '@/components/MacroAgentReport';
 
 export default function MacroAgentPage() {
   return (
     <div>
       <PageHeader
         title="Macro Agent"
-        description="Macroeconomic data monitoring and global market context."
+        description="Weekly macro report — rates, commodities, calendar, earnings, news, and market bias."
       />
-      <AgentPlaceholder agentId="macro" />
+      <MacroAgentReport />
     </div>
   );
 }
