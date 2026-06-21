@@ -2,8 +2,8 @@ name: Weekly Team File Consolidation
 
 on:
   schedule:
-    # Runs every Sunday at 13:00 UTC (9:00 PM Singapore Standard Time / SGT)
-    - cron: '0 13 * * 0'
+    # Runs every Sunday at 15:00 UTC (11:00 PM Singapore Standard Time / SGT)
+    - cron: '0 15 * * 0'
   workflow_dispatch: 
     # Allows you to manually trigger this anytime from the GitHub UI for testing
 
@@ -18,18 +18,24 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # 2. Consolidate markdown files from incoming/ into the evidence/Week 5 directory
+      # 2. Consolidate markdown and image files from incoming/ into the evidence/Week 5 directory
       - name: Move Files to Week Folder
         run: |
           TARGET_DIR="evidence/Week 5"
-          mkdir -p "$TOP_DIR" || mkdir -p "$TARGET_DIR"
+          mkdir -p "$TARGET_DIR"
 
-          # Check if there are any .md files in the staging folder
-          if [ -d "incoming" ] && [ "$(ls -A incoming/*.md 2>/dev/null)" ]; then
-            echo "Found team markdown files in incoming/. Consolidating to $TARGET_DIR..."
-            mv incoming/*.md "$TARGET_DIR/"
+          # Enable nullglob so empty matches expand to nothing instead of literal strings
+          shopt -s nullglob
+          
+          # Collect all target extensions (including case-insensitive variations for safety)
+          FILES=(incoming/*.md incoming/*.png incoming/*.jpg incoming/*.jpeg incoming/*.PNG incoming/*.JPG)
+
+          # Check if any files matching these extensions exist
+          if [ -d "incoming" ] && [ ${#FILES[@]} -gt 0 ]; then
+            echo "Found team files in incoming/. Consolidating ${#FILES[@]} file(s) to $TARGET_DIR..."
+            mv "${FILES[@]}" "$TARGET_DIR/"
           else
-            echo "No new markdown files found in incoming/ staging area."
+            echo "No new markdown or image files found in incoming/ staging area."
           fi
 
       # 3. Commit changes to generate the automated fetch log
