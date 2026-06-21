@@ -18,7 +18,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # 2. Consolidate markdown and image files from incoming/ into the evidence/Week 5 directory
+      # 2. Consolidate markdown, image, and text files from incoming/ into the evidence/Week 5 directory
       - name: Move Files to Week Folder
         run: |
           TARGET_DIR="evidence/Week 5"
@@ -28,14 +28,14 @@ jobs:
           shopt -s nullglob
           
           # Collect all target extensions (including case-insensitive variations for safety)
-          FILES=(incoming/*.md incoming/*.png incoming/*.jpg incoming/*.jpeg incoming/*.PNG incoming/*.JPG)
+          FILES=(incoming/*.md incoming/*.png incoming/*.jpg incoming/*.jpeg incoming/*.txt incoming/*.PNG incoming/*.JPG incoming/*.TXT)
 
           # Check if any files matching these extensions exist
           if [ -d "incoming" ] && [ ${#FILES[@]} -gt 0 ]; then
             echo "Found team files in incoming/. Consolidating ${#FILES[@]} file(s) to $TARGET_DIR..."
             mv "${FILES[@]}" "$TARGET_DIR/"
           else
-            echo "No new markdown or image files found in incoming/ staging area."
+            echo "No new markdown, image, or text files found in incoming/ staging area."
           fi
 
       # 3. Commit changes to generate the automated fetch log
