@@ -1,14 +1,14 @@
-name: Weekly Team File Consolidation & Tagging
+name: Weekly Team File Consolidation
 
 on:
   schedule:
     # Runs every Sunday at 13:00 UTC (9:00 PM Singapore Standard Time / SGT)
     - cron: '0 13 * * 0'
   workflow_dispatch: 
-    # This line is what enables the "Run workflow" button in the UI
+    # Allows you to manually trigger this anytime from the GitHub UI for testing
 
 jobs:
-  organize-and-tag:
+  organize-files:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -17,14 +17,12 @@ jobs:
       # 1. Pull the latest repository state
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 
 
       # 2. Consolidate markdown files from incoming/ into the evidence/Week 5 directory
       - name: Move Files to Week Folder
         run: |
           TARGET_DIR="evidence/Week 5"
-          mkdir -p "$TARGET_DIR"
+          mkdir -p "$TOP_DIR" || mkdir -p "$TARGET_DIR"
 
           # Check if there are any .md files in the staging folder
           if [ -d "incoming" ] && [ "$(ls -A incoming/*.md 2>/dev/null)" ]; then
@@ -36,7 +34,6 @@ jobs:
 
       # 3. Commit changes to generate the automated fetch log
       - name: Auto-Commit and Log
-        id: commit_step
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -46,25 +43,9 @@ jobs:
 
           if git diff-index --quiet HEAD --; then
             echo "No new files to consolidate."
-            echo "changes_made=false" >> $GITHUB_OUTPUT
           else
-            # Creates an automated timestamp tracking tag in Singapore Time
+            # Creates an automated timestamp tracking log in Singapore Time
             TIMESTAMP=$(date -u -d "+8 hours" +"%Y-%m-%d %H:%M:%S SGT")
             git commit -m "chore(pipeline): automated weekly file fetch & consolidation ($TIMESTAMP)"
             git push origin main
-            echo "changes_made=true" >> $GITHUB_OUTPUT
           fi
-
-      # 4. Cut and publish the required version tag
-      - name: Cut Weekly Git Tag
-        if: steps.commit_step.outputs.changes_made == 'true'
-        run: |
-          TAG_NAME="vW25"
-          
-          # Force overwrite the tag locally and remotely if it exists
-          git tag -d $TAG_NAME 2>/dev/null || true
-          git push origin :refs/tags/$TAG_NAME 2>/dev/null || true
-          
-          echo "Cutting the $TAG_NAME tag..."
-          git tag $TAG_NAME
-          git push origin $TAG_NAME
