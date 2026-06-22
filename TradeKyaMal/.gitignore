@@ -32,3 +32,6 @@ Thumbs.db
 
 # Vercel
 .vercel
+
+# Python script output (regenerated weekly)
+scripts/output/

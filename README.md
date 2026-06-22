@@ -17,6 +17,16 @@ cd TradeKyaMal/frontend && npm install && npm run dev
 
 See `TradeKyaMal/README.md` and `TradeKyaMal/API_GUIDE.md` for full setup and deployment.
 
+### Weekly data fetch (Python scripts)
+
+```bash
+cd TradeKyaMal/scripts
+pip install -r requirements.txt
+python run_weekly_fetch.py --week 24
+```
+
+This fetches Finviz + yfinance data and auto-commits to `evidence/Week 24/` on this repo.
+
 ---
 
 ## Roles
