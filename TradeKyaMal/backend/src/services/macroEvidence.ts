@@ -111,6 +111,15 @@ export async function getMacroEvidenceFromCollection() {
   let finvizCollectedAt: Date | null = null;
   let finvizTimeframe: string | null = null;
 
+  let futures: {
+    ticker: string;
+    label: string;
+    group: string;
+    weeklyChange: string;
+    direction: string;
+    value: number;
+  }[] = [];
+
   if (finvizEntries.length > 0) {
     const latestFinvizTime = finvizEntries[0].collectedAt.getTime();
     finvizCollectedAt = new Date(latestFinvizTime);
@@ -118,6 +127,17 @@ export async function getMacroEvidenceFromCollection() {
     const latestFinviz = finvizEntries.filter(
       (e) => e.collectedAt.getTime() === latestFinvizTime
     );
+
+    futures = latestFinviz
+      .map((e) => ({
+        ticker: e.symbol,
+        label: String(e.label).split(' — ')[0],
+        group: String(e.metadata?.group ?? ''),
+        weeklyChange: formatWeeklyChange(e.value),
+        direction: directionFromChange(e.value),
+        value: typeof e.value === 'number' ? e.value : parseFloat(String(e.value)),
+      }))
+      .sort((a, b) => b.value - a.value);
 
     const bySymbol = new Map<string, (typeof latestFinviz)[0]>();
     for (const e of latestFinviz) {
@@ -221,6 +241,7 @@ export async function getMacroEvidenceFromCollection() {
     commodities,
     calendar,
     sectors,
+    futures,
     finvizCollectedAt,
     finvizTimeframe,
     calendarCollectedAt,

@@ -117,6 +117,7 @@ export interface MacroEvidence {
   commodities: (MacroCommodityItem & { symbol?: string; fromDataCollection?: boolean })[];
   calendar: (MacroCalendarItem & { fromDataCollection?: boolean })[];
   sectors: (MacroSectorItem & { fromDataCollection?: boolean })[];
+  futures: MacroFutureItem[];
   finvizCollectedAt: string | null;
   finvizTimeframe: string | null;
   calendarCollectedAt: string | null;
@@ -129,6 +130,15 @@ export interface MacroSectorItem {
   price: string;
   dayReturn: string;
   direction: string;
+}
+
+export interface MacroFutureItem {
+  ticker: string;
+  label: string;
+  group: string;
+  weeklyChange: string;
+  direction: string;
+  value: number;
 }
 
 export interface MacroFetchLiveResponse {

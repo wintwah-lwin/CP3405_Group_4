@@ -102,6 +102,7 @@ export function hasLiveData(evidence: MacroEvidence): boolean {
   return (
     evidence.commodities.length > 0 ||
     (evidence.sectors?.length ?? 0) > 0 ||
+    (evidence.futures?.length ?? 0) > 0 ||
     evidence.calendar.length > 0
   );
 }
