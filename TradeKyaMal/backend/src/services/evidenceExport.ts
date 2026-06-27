@@ -198,7 +198,7 @@ export async function buildEvidenceBundle(week: number): Promise<EvidenceFile[]>
 
   if (finvizEntries.length > 0) {
     const { rows, stamp } = buildFinvizJson(finvizEntries);
-    const name = `finviz_futures_1W_${stamp}.json`;
+    const name = `macro_finviz_1w_${stamp}.json`;
     files.push({
       name,
       content: JSON.stringify(rows, null, 2),
@@ -208,7 +208,7 @@ export async function buildEvidenceBundle(week: number): Promise<EvidenceFile[]>
 
   if (sectorEntries.length > 0) {
     const { rows, stamp } = buildSectorsJson(sectorEntries);
-    const name = `yahoo_sectors_5D_${stamp}.json`;
+    const name = `macro_yahoo_sectors_${stamp}.json`;
     files.push({
       name,
       content: JSON.stringify(rows, null, 2),
@@ -244,7 +244,7 @@ export async function buildEvidenceBundle(week: number): Promise<EvidenceFile[]>
     : [];
 
   if (finvizRows.length > 0 || sectorRows.length > 0) {
-    const macroName = `macro_agent_data_W${week}.md`;
+    const macroName = `macro_report_w${week}.md`;
     files.push({
       name: macroName,
       content: buildMacroMarkdown(week, finvizRows, sectorRows, 'website'),

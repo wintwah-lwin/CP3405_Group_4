@@ -127,17 +127,30 @@ export function readPipelineOutput(week: number): {
   if (!fs.existsSync(outputDir)) return result;
 
   const stamp = new Date().toISOString().slice(0, 10);
-  const finvizFile = path.join(outputDir, `finviz_futures_1W_${stamp}.json`);
-  const sectorsFile = path.join(outputDir, `yahoo_sectors_5D_${stamp}.json`);
-  const macroFile = path.join(outputDir, `macro_agent_data_W${week}.md`);
+  const finvizCandidates = [
+    path.join(outputDir, `macro_finviz_1w_${stamp}.json`),
+    path.join(outputDir, `finviz_futures_1W_${stamp}.json`),
+  ];
+  const sectorsCandidates = [
+    path.join(outputDir, `macro_yahoo_sectors_${stamp}.json`),
+    path.join(outputDir, `yahoo_sectors_5D_${stamp}.json`),
+  ];
+  const macroCandidates = [
+    path.join(outputDir, `macro_report_w${week}.md`),
+    path.join(outputDir, `macro_agent_data_W${week}.md`),
+  ];
 
-  if (fs.existsSync(finvizFile)) {
+  const finvizFile = finvizCandidates.find((f) => fs.existsSync(f));
+  const sectorsFile = sectorsCandidates.find((f) => fs.existsSync(f));
+  const macroFile = macroCandidates.find((f) => fs.existsSync(f));
+
+  if (finvizFile) {
     result.finviz = JSON.parse(fs.readFileSync(finvizFile, 'utf8'));
   }
-  if (fs.existsSync(sectorsFile)) {
+  if (sectorsFile) {
     result.sectors = JSON.parse(fs.readFileSync(sectorsFile, 'utf8'));
   }
-  if (fs.existsSync(macroFile)) {
+  if (macroFile) {
     result.macroMarkdown = fs.readFileSync(macroFile, 'utf8');
   }
 

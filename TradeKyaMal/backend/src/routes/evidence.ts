@@ -150,12 +150,12 @@ router.post('/run', async (req: Request, res: Response) => {
     const files = await buildEvidenceBundle(week);
     if (
       output.macroMarkdown &&
-      !files.find((f) => f.name === `macro_agent_data_W${week}.md`)
+      !files.find((f) => f.name === `macro_report_w${week}.md`)
     ) {
       files.push({
-        name: `macro_agent_data_W${week}.md`,
+        name: `macro_report_w${week}.md`,
         content: output.macroMarkdown,
-        repoPath: `evidence/Week ${week}/macro_agent_data_W${week}.md`,
+        repoPath: `evidence/Week ${week}/macro_report_w${week}.md`,
       });
     }
 

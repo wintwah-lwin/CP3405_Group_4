@@ -7,7 +7,7 @@ export default function MacroAgentPage() {
     <div>
       <PageHeader
         title="Macro Agent"
-        description="Automated yfinance + Finviz fetch, weekly report, and evidence sync to the group GitHub repo."
+        description="Live fetch from Finviz + Yahoo — no fake data. Edit Fed, news, and bias manually."
       />
       <div className="mb-6">
         <MacroAutomationPanel />

@@ -1,70 +1,38 @@
-# Python Scripts — Weekly Data Fetch
+# Python Scripts — Macro Agent Live Fetch
 
-Matches **CP3405 Tier L2/L3**: scripts fetch data → save evidence → auto-commit to GitHub.
+All scripts fetch **live data from websites** — no pre-filled files.
 
-## What these scripts do
+## Scripts
 
-| Script | Source | Output |
-|--------|--------|--------|
-| `fetch_finviz.py` | [finviz.com/futures_performance](https://finviz.com/futures_performance) | JSON with all futures weekly % |
-| `fetch_yfinance.py` | yfinance (free) | Sector ETF returns + PNG charts |
-| **`run_macro_agent.py`** | **Macro Agent** — Finviz + yfinance | **`macro_agent_data_WX.md`** + JSON + charts |
-| `macro_report.py` | Shared template builder | Used by macro scripts |
-| `run_weekly_fetch.py` | Full weekly pipeline (alias) | Same as macro agent |
+| Script | Source website | Output file |
+|--------|----------------|-------------|
+| `fetch_macro_finviz.py` | [finviz.com/futures_performance](https://finviz.com/futures_performance) | `macro_finviz_1w_{date}.json` |
+| `fetch_macro_yahoo_sectors.py` | [finance.yahoo.com/sectors](https://finance.yahoo.com/sectors/) | `macro_yahoo_sectors_{date}.json` |
+| `run_macro_agent.py` | Both + report | `macro_report_w{week}.md` |
+| `macro_report.py` | Template builder | (used internally) |
 
-## Macro Agent (recommended)
+Legacy wrappers: `fetch_finviz.py`, `fetch_yfinance.py` → call the macro scripts above.
 
-```bash
-cd scripts
-pip install -r requirements.txt
-python run_macro_agent.py --week 24 --repo /path/to/CP3405_Group_4
-```
-
-With website import:
-
-```bash
-python run_macro_agent.py --week 24 --backend-url http://localhost:4000
-```
-
-Output: `scripts/output/` then copied to `CP3405_Group_4/evidence/Week 24/`.
-
-## Setup
+## Quick start
 
 ```bash
 cd scripts
 pip install -r requirements.txt
+python run_macro_agent.py --week 24 --repo ~/Desktop/CP3405_Group_4
 ```
 
-## Run locally (fetch only)
+## Website (same sources)
 
-```bash
-python fetch_finviz.py
-python fetch_yfinance.py
-```
+On **Agents → Macro** click **Fetch Live Data** — hits Finviz + Yahoo APIs directly (same as Data Collection).
 
-Output goes to `scripts/output/`.
-
-## Weekly workflow
+## Output folder
 
 ```
-Saturday after US close
-    ↓
-python run_macro_agent.py --week XX --repo path/to/CP3405_Group_4
-    ↓
-evidence/Week XX/  ← JSON + charts + macro_agent_data_WXX.md
-    ↓
-Macro Lead edits macro_agent_data_WXX.md (Fed, news, bias)
-    ↓
-Take screenshots → add to evidence folder
-    ↓
-Sunday submit prediction + GitHub release
+scripts/output/
+├── macro_finviz_1w_2026-06-22.json
+├── macro_yahoo_sectors_2026-06-22.json
+├── macro_report_w24.md
+└── macro_charts/
 ```
 
-## Web app + scripts
-
-| Tool | Purpose |
-|------|---------|
-| **TradeKyaMal web app** | Macro page UI, Pull from Fetched Data, sync to group repo |
-| **Python scripts** | Weekly evidence pipeline → `evidence/Week X/` on GitHub |
-
-The course deliverable is `evidence/Week X/macro_agent_data_WX.md`.
+Copied to `CP3405_Group_4/evidence/Week 24/` when using `--repo`.

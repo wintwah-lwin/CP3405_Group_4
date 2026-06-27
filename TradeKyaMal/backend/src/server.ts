@@ -43,6 +43,7 @@ app.get('/', (_req, res) => {
       'POST /api/evidence/run',
       'GET  /api/data-collection',
       'GET  /api/agents',
+      'POST /api/agents/macro/fetch-live',
     ],
   });
 });

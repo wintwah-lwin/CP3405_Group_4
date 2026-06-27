@@ -1,27 +1,16 @@
 #!/usr/bin/env python3
 """
-Macro Agent — automated weekly data fetch for CP3405 evidence.
+Macro Agent — fetch live from Finviz + Yahoo, build report, push to group repo.
 
-Fetches:
-  - Finviz futures 1W (commodities, dollar, indices)
-  - Yahoo sector ETFs via yfinance (returns + optional charts)
+Sources:
+  - https://finviz.com/futures_performance  (1W commodities / dollar)
+  - https://finance.yahoo.com/sectors/     (sector ETFs via yfinance)
 
-Outputs:
-  - scripts/output/finviz_futures_1W_{date}.json
-  - scripts/output/yahoo_sectors_5D_{date}.json
-  - scripts/output/macro_agent_data_W{week}.md   ← main Macro Agent deliverable
-  - scripts/output/charts/*.png
-
-Then copies to group repo:
-  - evidence/Week {week}/
-  - incoming/
-
-Usage:
-  python run_macro_agent.py --week 24
-  python run_macro_agent.py --week 24 --repo /path/to/CP3405_Group_4
-  python run_macro_agent.py --week 24 --no-push
-  python run_macro_agent.py --week 24 --backend-url http://localhost:4000
-  python run_macro_agent.py --week 24 --from-cache   # rebuild .md from existing JSON
+Outputs (scripts/output/):
+  - macro_finviz_1w_{date}.json
+  - macro_yahoo_sectors_{date}.json
+  - macro_report_w{week}.md
+  - macro_charts/macro_{symbol}_{date}.png
 """
 
 import argparse
@@ -37,13 +26,22 @@ try:
 except ImportError:
     requests = None
 
-from fetch_finviz import fetch_finviz_futures
-from fetch_yfinance import SECTOR_ETFS, fetch_sector_returns, save_sector_chart
+from fetch_macro_finviz import fetch_macro_finviz, save_macro_finviz
+from fetch_macro_yahoo_sectors import (
+    SECTOR_ETFS,
+    fetch_macro_yahoo_sectors,
+    save_macro_sector_chart,
+    save_macro_yahoo_sectors,
+)
 from macro_report import build_macro_report
 
 SCRIPTS_DIR = Path(__file__).parent
 OUTPUT_DIR = SCRIPTS_DIR / "output"
-CHARTS_DIR = OUTPUT_DIR / "charts"
+CHARTS_DIR = OUTPUT_DIR / "macro_charts"
+
+FINVIZ_JSON = "macro_finviz_1w_{stamp}.json"
+SECTORS_JSON = "macro_yahoo_sectors_{stamp}.json"
+REPORT_MD = "macro_report_w{week}.md"
 
 
 def detect_group_repo() -> Path | None:
@@ -54,17 +52,18 @@ def detect_group_repo() -> Path | None:
 
 
 def load_cached_json(stamp: str) -> tuple[list[dict], list[dict]]:
-    finviz_file = OUTPUT_DIR / f"finviz_futures_1W_{stamp}.json"
-    sectors_file = OUTPUT_DIR / f"yahoo_sectors_5D_{stamp}.json"
+    finviz_file = OUTPUT_DIR / FINVIZ_JSON.format(stamp=stamp)
+    sectors_file = OUTPUT_DIR / SECTORS_JSON.format(stamp=stamp)
 
     if not finviz_file.exists() or not sectors_file.exists():
         raise FileNotFoundError(
             f"No cached JSON for {stamp}. Run without --from-cache first."
         )
 
-    finviz_rows = json.loads(finviz_file.read_text(encoding="utf-8"))
-    sectors = json.loads(sectors_file.read_text(encoding="utf-8"))
-    return finviz_rows, sectors
+    return (
+        json.loads(finviz_file.read_text(encoding="utf-8")),
+        json.loads(sectors_file.read_text(encoding="utf-8")),
+    )
 
 
 def copy_macro_evidence(week: int, repo_path: Path) -> Path:
@@ -72,20 +71,20 @@ def copy_macro_evidence(week: int, repo_path: Path) -> Path:
     week_dir.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now().strftime("%Y-%m-%d")
 
-    for pattern in [f"finviz_futures_1W_{stamp}.json", f"yahoo_sectors_5D_{stamp}.json"]:
-        src = OUTPUT_DIR / pattern
+    for name in [
+        FINVIZ_JSON.format(stamp=stamp),
+        SECTORS_JSON.format(stamp=stamp),
+        REPORT_MD.format(week=week),
+    ]:
+        src = OUTPUT_DIR / name
         if src.exists():
-            shutil.copy2(src, week_dir / pattern)
+            shutil.copy2(src, week_dir / name)
 
-    charts_dest = week_dir / "charts"
+    charts_dest = week_dir / "macro_charts"
     charts_dest.mkdir(exist_ok=True)
     if CHARTS_DIR.exists():
         for chart in CHARTS_DIR.glob("*.png"):
             shutil.copy2(chart, charts_dest / chart.name)
-
-    macro_md = OUTPUT_DIR / f"macro_agent_data_W{week}.md"
-    if macro_md.exists():
-        shutil.copy2(macro_md, week_dir / f"macro_agent_data_W{week}.md")
 
     incoming = repo_path / "incoming"
     incoming.mkdir(exist_ok=True)
@@ -101,7 +100,7 @@ def copy_macro_evidence(week: int, repo_path: Path) -> Path:
 
 def git_push(repo_path: Path, week: int) -> None:
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M SGT")
-    msg = f"chore(macro): Macro Agent W{week} — Finviz + yfinance ({stamp})"
+    msg = f"chore(macro): live fetch W{week} — Finviz + Yahoo ({stamp})"
 
     subprocess.run(
         ["git", "add", f"evidence/Week {week}/", "incoming/"],
@@ -128,47 +127,28 @@ def push_to_backend(
     sync_to_repo: bool,
 ) -> None:
     if not requests:
-        print("  requests not installed — skip backend import (pip install requests)")
+        print("  requests not installed — skip backend import")
         return
 
     url = f"{backend_url.rstrip('/')}/api/evidence/import"
-    payload = {
-        "week": week,
-        "finviz": finviz_rows,
-        "sectors": sectors,
-        "syncToRepo": sync_to_repo,
-    }
-    res = requests.post(url, json=payload, timeout=120)
+    res = requests.post(
+        url,
+        json={"week": week, "finviz": finviz_rows, "sectors": sectors, "syncToRepo": sync_to_repo},
+        timeout=120,
+    )
     res.raise_for_status()
     data = res.json()
     print(f"  Website import: {data.get('imported', 0)} rows")
-    if data.get("sync"):
-        print(f"  Group repo sync: {data['sync'].get('message', 'done')}")
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Macro Agent — Finviz + yfinance fetch → macro report → group repo"
-    )
-    parser.add_argument("--week", type=int, required=True, help="Week number e.g. 24")
-    parser.add_argument("--repo", type=str, default="", help="Path to CP3405_Group_4 repo")
-    parser.add_argument("--no-push", action="store_true", help="Skip git commit/push")
-    parser.add_argument(
-        "--backend-url",
-        type=str,
-        default="",
-        help="Import to TradeKyaMal website + sync group repo via API",
-    )
-    parser.add_argument(
-        "--from-cache",
-        action="store_true",
-        help="Rebuild macro markdown from today's JSON in scripts/output/",
-    )
-    parser.add_argument(
-        "--no-charts",
-        action="store_true",
-        help="Skip yfinance PNG chart generation",
-    )
+    parser = argparse.ArgumentParser(description="Macro Agent live fetch pipeline")
+    parser.add_argument("--week", type=int, required=True)
+    parser.add_argument("--repo", type=str, default="")
+    parser.add_argument("--no-push", action="store_true")
+    parser.add_argument("--backend-url", type=str, default="")
+    parser.add_argument("--from-cache", action="store_true")
+    parser.add_argument("--no-charts", action="store_true")
     args = parser.parse_args()
 
     OUTPUT_DIR.mkdir(exist_ok=True)
@@ -176,69 +156,60 @@ def main() -> None:
     stamp = datetime.now().strftime("%Y-%m-%d")
 
     if args.from_cache:
-        print("=== Loading cached JSON ===")
+        print("=== Load cached macro JSON ===")
         finviz_rows, sectors = load_cached_json(stamp)
-        print(f"  {len(finviz_rows)} finviz rows, {len(sectors)} sectors")
     else:
-        print("=== Macro Agent Step 1: Finviz futures (1W) ===")
-        finviz_rows = fetch_finviz_futures("W")
-        finviz_json = OUTPUT_DIR / f"finviz_futures_1W_{stamp}.json"
-        finviz_json.write_text(json.dumps(finviz_rows, indent=2), encoding="utf-8")
-        print(f"  {len(finviz_rows)} rows → {finviz_json.name}")
+        print("=== Step 1: Finviz 1W (finviz.com) ===")
+        finviz_path = save_macro_finviz(OUTPUT_DIR, "W")
+        finviz_rows = json.loads(finviz_path.read_text(encoding="utf-8"))
+        print(f"  {len(finviz_rows)} rows → {finviz_path.name}")
 
-        print("=== Macro Agent Step 2: Yahoo sectors (yfinance) ===")
-        sectors = fetch_sector_returns()
-        sectors_json = OUTPUT_DIR / f"yahoo_sectors_5D_{stamp}.json"
-        sectors_json.write_text(json.dumps(sectors, indent=2), encoding="utf-8")
-        print(f"  {len(sectors)} sectors → {sectors_json.name}")
+        print("=== Step 2: Yahoo sectors (yfinance) ===")
+        sectors_path, sectors = save_macro_yahoo_sectors(OUTPUT_DIR)
+        print(f"  {len(sectors)} sectors → {sectors_path.name}")
 
         if not args.no_charts:
-            print("=== Macro Agent Step 3: Sector charts ===")
+            print("=== Step 3: Sector charts ===")
             for symbol, name in list(SECTOR_ETFS.items())[:4]:
-                path = save_sector_chart(CHARTS_DIR, symbol, name)
+                path = save_macro_sector_chart(CHARTS_DIR, symbol, name)
                 if path:
                     print(f"  {path.name}")
 
-    print("=== Macro Agent Step 4: Build report markdown ===")
+    print("=== Step 4: Macro report markdown ===")
     macro_md = build_macro_report(args.week, finviz_rows, sectors)
-    macro_path = OUTPUT_DIR / f"macro_agent_data_W{args.week}.md"
+    macro_path = OUTPUT_DIR / REPORT_MD.format(week=args.week)
     macro_path.write_text(macro_md, encoding="utf-8")
-    print(f"  Report → {macro_path}")
+    print(f"  → {macro_path.name}")
 
-    manifest = {
-        "agent": "macro",
-        "week": args.week,
-        "fetched_at": datetime.now().isoformat(),
-        "finviz_count": len(finviz_rows),
-        "sectors_count": len(sectors),
-        "macro_report": macro_path.name,
-    }
-    (OUTPUT_DIR / f"macro_manifest_W{args.week}.json").write_text(
-        json.dumps(manifest, indent=2), encoding="utf-8"
+    (OUTPUT_DIR / f"macro_manifest_w{args.week}.json").write_text(
+        json.dumps(
+            {
+                "agent": "macro",
+                "week": args.week,
+                "fetched_at": datetime.now().isoformat(),
+                "files": [
+                    FINVIZ_JSON.format(stamp=stamp),
+                    SECTORS_JSON.format(stamp=stamp),
+                    macro_path.name,
+                ],
+            },
+            indent=2,
+        ),
+        encoding="utf-8",
     )
 
     repo_arg = args.repo or (str(detect_group_repo()) if detect_group_repo() else "")
     used_local_repo = False
     if repo_arg:
         repo_path = Path(repo_arg).resolve()
-        if not repo_path.exists():
-            print(f"ERROR: Repo path not found: {repo_path}", file=sys.stderr)
-            sys.exit(1)
-
-        print(f"=== Macro Agent Step 5: Copy to {repo_path} ===")
-        week_dir = copy_macro_evidence(args.week, repo_path)
-        print(f"  evidence/Week {args.week}/ ← {week_dir}")
+        print(f"=== Step 5: Copy to {repo_path} ===")
+        copy_macro_evidence(args.week, repo_path)
         used_local_repo = True
-
         if not args.no_push:
-            print("=== Macro Agent Step 6: Git commit & push ===")
             git_push(repo_path, args.week)
-    else:
-        print("\nNo --repo specified. Output in scripts/output/")
-        print(f"  python run_macro_agent.py --week {args.week} --repo /path/to/CP3405_Group_4")
 
     if args.backend_url:
-        print("=== Macro Agent Step 7: Import to website ===")
+        print("=== Step 6: Import to website ===")
         push_to_backend(
             args.backend_url,
             args.week,
@@ -247,9 +218,7 @@ def main() -> None:
             sync_to_repo=not used_local_repo or args.no_push,
         )
 
-    print("\nMacro Agent done.")
-    print(f"  Next: Macro Lead edits {macro_path.name} (Fed, news, bias)")
-    print(f"  Then: add screenshots to evidence/Week {args.week}/")
+    print("\nDone. Edit macro_report_w{0}.md for Fed, news, bias.".format(args.week))
 
 
 if __name__ == "__main__":

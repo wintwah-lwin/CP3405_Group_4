@@ -131,6 +131,16 @@ export interface MacroSectorItem {
   direction: string;
 }
 
+export interface MacroFetchLiveResponse {
+  fetch: {
+    finviz: number;
+    sectors: number;
+    calendar: number;
+    errors: string[];
+  };
+  evidence: MacroEvidence;
+}
+
 export interface EvidenceSyncResult {
   method: 'github' | 'local' | 'skipped';
   week: number;

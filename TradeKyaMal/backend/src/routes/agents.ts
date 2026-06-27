@@ -2,6 +2,7 @@ import { Router, Request, Response } from 'express';
 import { AgentRun } from '../models/AgentRun';
 import { macroReportSchema } from '../schemas/macroReport';
 import { getMacroEvidenceFromCollection } from '../services/macroEvidence';
+import { fetchLiveMacroData } from '../services/macroFetch';
 
 const router = Router();
 
@@ -111,6 +112,16 @@ router.get('/macro/evidence', async (_req: Request, res: Response) => {
     res.json(evidence);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch macro evidence' });
+  }
+});
+
+router.post('/macro/fetch-live', async (_req: Request, res: Response) => {
+  try {
+    const { fetch: fetchResult, evidence } = await fetchLiveMacroData();
+    res.json({ fetch: fetchResult, evidence });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : 'Live fetch failed';
+    res.status(502).json({ error: message });
   }
 });
 
