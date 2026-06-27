@@ -8,7 +8,7 @@ import {
   getDefaultFieldValue,
   getFieldOptions,
 } from '@/lib/symbols';
-import type { DataCollectionEntry } from '@/lib/types';
+import type { DataCollectionEntry, EvidenceSyncResult } from '@/lib/types';
 
 interface ProviderField {
   name: string;
@@ -88,14 +88,20 @@ export function ApiFetchPanel({ onEntriesFetched }: ApiFetchPanelProps) {
       const result = await apiFetch<{
         count: number;
         entries: DataCollectionEntry[];
+        evidenceSync?: EvidenceSyncResult;
       }>('/api/fetch', {
         method: 'POST',
         body: JSON.stringify(body),
       });
 
       onEntriesFetched(result.entries);
+      const syncNote = result.evidenceSync
+        ? result.evidenceSync.method !== 'skipped'
+          ? ` · Group repo: ${result.evidenceSync.message}`
+          : ''
+        : '';
       setSuccess(
-        `Fetched and saved ${result.count} data point${result.count !== 1 ? 's' : ''} from ${active.name}`
+        `Fetched and saved ${result.count} data point${result.count !== 1 ? 's' : ''} from ${active.name}${syncNote}`
       );
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Fetch failed');

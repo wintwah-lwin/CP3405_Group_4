@@ -116,6 +116,36 @@ export interface MacroReportResponse {
 export interface MacroEvidence {
   commodities: (MacroCommodityItem & { symbol?: string; fromDataCollection?: boolean })[];
   calendar: (MacroCalendarItem & { fromDataCollection?: boolean })[];
+  sectors: (MacroSectorItem & { fromDataCollection?: boolean })[];
   finvizCollectedAt: string | null;
+  finvizTimeframe: string | null;
   calendarCollectedAt: string | null;
+  sectorsCollectedAt: string | null;
+}
+
+export interface MacroSectorItem {
+  symbol: string;
+  name: string;
+  price: string;
+  dayReturn: string;
+  direction: string;
+}
+
+export interface EvidenceSyncResult {
+  method: 'github' | 'local' | 'skipped';
+  week: number;
+  files: string[];
+  commitUrl?: string;
+  message: string;
+}
+
+export interface EvidenceStatus {
+  githubConfigured: boolean;
+  localPathConfigured: boolean;
+  githubRepo: string;
+  localPath: string | null;
+  defaultWeek: number;
+  autoSync: boolean;
+  pythonAvailable: boolean;
+  groupRepo: string;
 }

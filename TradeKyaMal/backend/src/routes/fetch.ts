@@ -2,6 +2,8 @@ import { Router, Request, Response } from 'express';
 import { z } from 'zod';
 import { getProviders } from '../services/providers';
 import { fetchAndStore } from '../services/fetchData';
+import { buildEvidenceBundle, getDefaultWeek } from '../services/evidenceExport';
+import { getEvidenceConfig, syncEvidenceFiles } from '../services/githubSync';
 
 const router = Router();
 
@@ -38,7 +40,28 @@ router.post('/', async (req: Request, res: Response) => {
     }
 
     const entries = await fetchAndStore(parsed.data);
-    res.status(201).json({ count: entries.length, entries });
+
+    let evidenceSync = null;
+    const config = getEvidenceConfig();
+    if (config.autoSync) {
+      try {
+        const week = getDefaultWeek();
+        const files = await buildEvidenceBundle(week);
+        evidenceSync = await syncEvidenceFiles(week, files, 'website_fetch');
+      } catch (syncErr) {
+        evidenceSync = {
+          method: 'skipped' as const,
+          week: getDefaultWeek(),
+          files: [],
+          message:
+            syncErr instanceof Error
+              ? syncErr.message
+              : 'Evidence sync failed after fetch',
+        };
+      }
+    }
+
+    res.status(201).json({ count: entries.length, entries, evidenceSync });
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Fetch failed';
     res.status(502).json({ error: message });

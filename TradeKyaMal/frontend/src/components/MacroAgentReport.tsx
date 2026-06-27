@@ -11,10 +11,11 @@ import {
   CalendarDays,
   Newspaper,
   TrendingUp,
+  Layers,
 } from 'lucide-react';
 import { apiFetch } from '@/lib/api';
 import { DEFAULT_MACRO_REPORT } from '@/lib/defaultMacroReport';
-import type { MacroEvidence, MacroReport, MacroReportResponse } from '@/lib/types';
+import type { MacroEvidence, MacroReport, MacroReportResponse, MacroSectorItem } from '@/lib/types';
 
 function biasColor(bias: string): string {
   const lower = bias.toLowerCase();
@@ -50,6 +51,7 @@ export function MacroAgentReport() {
   const [saving, setSaving] = useState(false);
   const [pulling, setPulling] = useState(false);
   const [savedAt, setSavedAt] = useState<string | null>(null);
+  const [sectors, setSectors] = useState<MacroSectorItem[]>([]);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
@@ -94,13 +96,14 @@ export function MacroAgentReport() {
         const next = { ...prev };
         if (evidence.commodities.length > 0) {
           next.commodities = {
-            ...prev.commodities,
             items: evidence.commodities.map((c) => ({
               name: c.name,
               price: c.price,
               weeklyChange: c.weeklyChange,
               direction: c.direction,
             })),
+            crossAssetImplication:
+              '[Edit after pull — Finviz gives % change only, not spot prices]',
           };
         }
         if (evidence.calendar.length > 0) {
@@ -115,10 +118,25 @@ export function MacroAgentReport() {
         return next;
       });
 
+      if (evidence.sectors?.length > 0) {
+        setSectors(evidence.sectors);
+      }
+
+      const parts: string[] = [];
+      if (evidence.commodities.length) parts.push('commodities');
+      if (evidence.sectors?.length) parts.push('sectors');
+      if (evidence.calendar.length) parts.push('calendar');
+
+      const tf = evidence.finvizTimeframe;
+      const tfNote =
+        tf && tf !== 'W'
+          ? ` Warning: Finviz was fetched as ${tf} not weekly — re-fetch with Weekly on Data Collection.`
+          : '';
+
       setSuccess(
-        evidence.commodities.length || evidence.calendar.length
-          ? 'Updated commodities/calendar from Data Collection'
-          : 'No Finviz or TradingEconomics data found — fetch on Data Collection first'
+        parts.length > 0
+          ? `Updated ${parts.join(', ')} from live fetch. Fed, earnings, news, and bias are NOT auto-updated — edit those manually.${tfNote}`
+          : 'No fetched data in database — go to Data Collection, fetch Finviz (Weekly) + Yahoo Sectors, then pull again'
       );
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Pull failed');
@@ -158,7 +176,7 @@ export function MacroAgentReport() {
             ) : (
               <RefreshCw className="h-3.5 w-3.5" />
             )}
-            Pull from Data Collection
+            Pull from Fetched Data
           </button>
           {editing ? (
             <>
@@ -306,6 +324,35 @@ export function MacroAgentReport() {
           {report.commodities.crossAssetImplication}
         </p>
       </Section>
+
+      {sectors.length > 0 && (
+        <Section title="US Sectors (yfinance / Yahoo)" icon={Layers}>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="border-b border-border-subtle text-xs text-text-muted">
+                  <th className="py-2 pr-4">ETF</th>
+                  <th className="py-2 pr-4">Sector</th>
+                  <th className="py-2 pr-4">Price</th>
+                  <th className="py-2 pr-4">Day</th>
+                  <th className="py-2">Direction</th>
+                </tr>
+              </thead>
+              <tbody>
+                {sectors.map((s) => (
+                  <tr key={s.symbol} className="border-b border-border-subtle last:border-0">
+                    <td className="py-2 pr-4 font-mono text-xs">{s.symbol}</td>
+                    <td className="py-2 pr-4 font-medium">{s.name}</td>
+                    <td className="py-2 pr-4 font-mono text-xs">{s.price}</td>
+                    <td className="py-2 pr-4 font-mono text-xs">{s.dayReturn}</td>
+                    <td className="py-2 text-text-secondary">{s.direction}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Section>
+      )}
 
       <Section title="Week-Ahead Calendar (TradingEconomics)" icon={CalendarDays}>
         <div className="space-y-2">

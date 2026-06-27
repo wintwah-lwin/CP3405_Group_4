@@ -46,7 +46,7 @@ const SELECT_CLASS =
 export { SELECT_CLASS };
 
 export function getDefaultFieldValue(fieldName: string, _providerId: string): string {
-  if (fieldName === 'timeframe') return FUTURES_TIMEFRAMES[0]?.value ?? 'D';
+  if (fieldName === 'timeframe') return 'W';
   if (fieldName === 'sector') return YAHOO_SECTORS[0]?.value ?? 'all';
   if (fieldName === 'country') return TE_COUNTRIES[0]?.value ?? 'united states';
   return '';

@@ -1,0 +1,262 @@
+import { DataCollection } from '../models/DataCollection';
+
+const MACRO_COMMODITIES: Record<string, string> = {
+  CL: 'WTI Crude Oil',
+  GC: 'Gold',
+  DX: 'DXY (Dollar)',
+};
+
+export interface EvidenceFile {
+  name: string;
+  content: string;
+  /** Path relative to group repo root, e.g. evidence/Week 24/file.json */
+  repoPath: string;
+}
+
+function dateStamp(d = new Date()): string {
+  return d.toISOString().slice(0, 10);
+}
+
+function formatWeeklyChange(value: string | number): string {
+  const num = typeof value === 'number' ? value : parseFloat(String(value));
+  if (isNaN(num)) return String(value);
+  const sign = num > 0 ? '+' : '';
+  return `${sign}${num.toFixed(2)}%`;
+}
+
+async function latestBatch(provider: string) {
+  const entries = await DataCollection.find({ 'metadata.provider': provider })
+    .sort({ collectedAt: -1 })
+    .limit(200)
+    .lean();
+
+  if (entries.length === 0) return [];
+
+  const latestTime = entries[0].collectedAt.getTime();
+  return entries.filter((e) => e.collectedAt.getTime() === latestTime);
+}
+
+function buildFinvizJson(
+  entries: Awaited<ReturnType<typeof latestBatch>>
+): { rows: Record<string, unknown>[]; stamp: string } {
+  const fetchedAt = entries[0]?.collectedAt.toISOString() ?? new Date().toISOString();
+  const rows = entries.map((e) => ({
+    ticker: e.symbol,
+    label: String(e.label).split(' — ')[0],
+    group: String(e.metadata?.group ?? ''),
+    perf_pct: typeof e.value === 'number' ? e.value : parseFloat(String(e.value)),
+    fetched_at: fetchedAt,
+    source: 'finviz.com/futures_performance',
+  }));
+  return { rows, stamp: dateStamp(new Date(fetchedAt)) };
+}
+
+function buildSectorsJson(
+  entries: Awaited<ReturnType<typeof latestBatch>>
+): { rows: Record<string, unknown>[]; stamp: string } {
+  const fetchedAt = entries[0]?.collectedAt.toISOString() ?? new Date().toISOString();
+  const rows = entries.map((e) => ({
+    symbol: e.symbol,
+    name: String(e.metadata?.sectorName ?? e.label).split(' — ')[0],
+    price: e.metadata?.price ?? null,
+    day_return_pct: typeof e.value === 'number' ? e.value : parseFloat(String(e.value)),
+    fetched_at: fetchedAt,
+    source: 'yfinance',
+  }));
+  return { rows, stamp: dateStamp(new Date(fetchedAt)) };
+}
+
+function buildFinvizMarkdown(rows: Record<string, unknown>[]): string {
+  const lines = [
+    '## Finviz Futures Performance (1W)',
+    '',
+    '| Ticker | Name | Group | Weekly % |',
+    '|--------|------|-------|----------|',
+  ];
+  const sorted = [...rows].sort(
+    (a, b) => Number(b.perf_pct) - Number(a.perf_pct)
+  );
+  for (const row of sorted) {
+    const pct = Number(row.perf_pct);
+    const sign = pct >= 0 ? '+' : '';
+    lines.push(
+      `| ${row.ticker} | ${row.label} | ${row.group} | ${sign}${pct.toFixed(2)}% |`
+    );
+  }
+  const fetched = rows[0]?.fetched_at ?? 'N/A';
+  lines.push('');
+  lines.push(`*Fetched: ${fetched} from finviz.com/futures_performance*`);
+  return lines.join('\n');
+}
+
+function buildCommoditiesSection(rows: Record<string, unknown>[]): string {
+  const lines = ['## Commodities & Dollar (Finviz Futures 1W)', ''];
+  const byTicker = Object.fromEntries(rows.map((r) => [String(r.ticker), r]));
+
+  for (const [ticker, name] of Object.entries(MACRO_COMMODITIES)) {
+    const row = byTicker[ticker];
+    if (row) {
+      const pct = Number(row.perf_pct);
+      const direction = pct > 0 ? 'Rising' : pct < 0 ? 'Falling' : 'Flat';
+      lines.push(
+        `- **${name}**: weekly change ${pct >= 0 ? '+' : ''}${pct.toFixed(2)}%, direction: ${direction}`
+      );
+    } else {
+      lines.push(`- **${name}**: not found in this week's fetch`);
+    }
+  }
+
+  lines.push('');
+  lines.push(
+    '> Macro Lead: add cross-asset implication, Fed rates, calendar, earnings, news, and bias below.'
+  );
+  return lines.join('\n');
+}
+
+function buildSectorsMarkdown(rows: Record<string, unknown>[]): string {
+  const lines = [
+    '## Yahoo Finance Sectors (5D via yfinance)',
+    '',
+    '| ETF | Sector | Price | Day Return % |',
+    '|-----|--------|-------|--------------|',
+  ];
+  const sorted = [...rows].sort(
+    (a, b) => Number(b.day_return_pct) - Number(a.day_return_pct)
+  );
+  for (const row of sorted) {
+    const pct = Number(row.day_return_pct);
+    const sign = pct >= 0 ? '+' : '';
+    lines.push(
+      `| ${row.symbol} | ${row.name} | ${row.price} | ${sign}${pct}% |`
+    );
+  }
+  const fetched = rows[0]?.fetched_at ?? 'N/A';
+  lines.push('');
+  lines.push(`*Fetched: ${fetched} via yfinance*`);
+  return lines.join('\n');
+}
+
+export function buildMacroMarkdown(
+  week: number,
+  finvizRows: Record<string, unknown>[],
+  sectorRows: Record<string, unknown>[],
+  source = 'website'
+): string {
+  const stamp = new Date().toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+
+  return `# MACRO AGENT DATA FETCH — WEEK ${week} — SOURCE: R4 (${source})
+
+*Auto-generated by TradeKyaMal on ${stamp}. Macro Lead must complete Fed, calendar, earnings, news, bias.*
+
+${buildCommoditiesSection(finvizRows)}
+
+## Fed & Rates (CME FedWatch + Treasury.gov)
+- Current Fed rate: [fill in]
+- Next FOMC date: [fill in]. Hold/Hike/Cut probabilities: [fill in]
+- 2Y / 10Y / 30Y yields: [fill in]
+- Implication: [fill in]
+
+## Week-Ahead Calendar (TradingEconomics)
+- [Add events — or attach screenshot from tradingeconomics.com/calendar]
+
+## Key Earnings (Earnings Whispers)
+- [Add earnings]
+
+## Confirmed News (Reuters / AP)
+- [Add news]
+
+## MACRO BIAS: [Neutral-Bullish / Neutral / Cautious]
+## PRIMARY DRIVER: [fill in]
+## CONFIDENCE: [Low / Medium / High]
+## INVALIDATION: [fill in]
+
+---
+
+${buildFinvizMarkdown(finvizRows)}
+
+---
+
+${buildSectorsMarkdown(sectorRows)}
+
+Sources accessed: ${stamp}. Finviz + yfinance fetched automatically. Remaining sections from approved tools.
+`;
+}
+
+export async function buildEvidenceBundle(week: number): Promise<EvidenceFile[]> {
+  const [finvizEntries, sectorEntries, teEntries] = await Promise.all([
+    latestBatch('finviz'),
+    latestBatch('yahoo_sectors'),
+    latestBatch('tradingeconomics'),
+  ]);
+
+  const files: EvidenceFile[] = [];
+  const weekFolder = `evidence/Week ${week}`;
+
+  if (finvizEntries.length > 0) {
+    const { rows, stamp } = buildFinvizJson(finvizEntries);
+    const name = `finviz_futures_1W_${stamp}.json`;
+    files.push({
+      name,
+      content: JSON.stringify(rows, null, 2),
+      repoPath: `${weekFolder}/${name}`,
+    });
+  }
+
+  if (sectorEntries.length > 0) {
+    const { rows, stamp } = buildSectorsJson(sectorEntries);
+    const name = `yahoo_sectors_5D_${stamp}.json`;
+    files.push({
+      name,
+      content: JSON.stringify(rows, null, 2),
+      repoPath: `${weekFolder}/${name}`,
+    });
+  }
+
+  if (teEntries.length > 0) {
+    const stamp = dateStamp(teEntries[0].collectedAt);
+    const rows = teEntries.map((e) => ({
+      event: e.label,
+      country: e.metadata?.country,
+      date: e.metadata?.date,
+      actual: e.metadata?.actual,
+      forecast: e.metadata?.forecast,
+      previous: e.metadata?.previous,
+      importance: e.metadata?.importance,
+      fetched_at: e.collectedAt.toISOString(),
+    }));
+    const name = `tradingeconomics_${stamp}.json`;
+    files.push({
+      name,
+      content: JSON.stringify(rows, null, 2),
+      repoPath: `${weekFolder}/${name}`,
+    });
+  }
+
+  const finvizRows = finvizEntries.length
+    ? buildFinvizJson(finvizEntries).rows
+    : [];
+  const sectorRows = sectorEntries.length
+    ? buildSectorsJson(sectorEntries).rows
+    : [];
+
+  if (finvizRows.length > 0 || sectorRows.length > 0) {
+    const macroName = `macro_agent_data_W${week}.md`;
+    files.push({
+      name: macroName,
+      content: buildMacroMarkdown(week, finvizRows, sectorRows, 'website'),
+      repoPath: `${weekFolder}/${macroName}`,
+    });
+  }
+
+  return files;
+}
+
+export function getDefaultWeek(): number {
+  const fromEnv = process.env.EVIDENCE_WEEK;
+  if (fromEnv && !isNaN(Number(fromEnv))) return Number(fromEnv);
+  return 24;
+}
