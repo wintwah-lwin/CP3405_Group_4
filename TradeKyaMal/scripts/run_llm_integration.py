@@ -204,7 +204,7 @@ def call_gemini(prompt):
     try:
         genai.configure(api_key=api_key)
 
-        model_name = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
+        model_name = os.getenv("GEMINI_MODEL", "gemini-3-flash-preview")
         model = genai.GenerativeModel(model_name)
 
         response = model.generate_content(prompt)
