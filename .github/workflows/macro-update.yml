@@ -2,8 +2,6 @@ name: Run Macro Agent Remote
 
 on:
   schedule:
-    # 1:00 AM UTC is exactly 9:00 AM Singapore Time (UTC+8)
-    # Minute (0) Hour (1) Day_of_Month (*) Month (*) Day_of_Week (6 = Saturday)
     - cron: '0 1 * * 6'
   workflow_dispatch:
     inputs:
@@ -11,6 +9,10 @@ on:
         description: 'Manual Week Number (e.g., 26)'
         required: true
         default: '26'
+  # Add this to trigger whenever you push to the macro-update branch
+  push:
+    branches:
+      - macro-update
 
 jobs:
   run-agent:
@@ -23,36 +25,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
+          ref: macro-update # Force the runner to check out your specific branch
           fetch-depth: 0
           persist-credentials: true
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          if [ -f TradeKyaMal/scripts/requirements.txt ]; then
-            pip install -r TradeKyaMal/scripts/requirements.txt
-          else
-            pip install pandas requests GitPython
-          fi
-
-      - name: Configure Git Credentials
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Execute Macro Agent
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            WEEK="${{ github.event.inputs.week }}"
-          else
-            WEEK=$(date +%V)
-          fi
-          
-          echo "Launching Macro Agent for Week: $WEEK"
-          
-          python TradeKyaMal/scripts/run_macro_agent.py --week "$WEEK" --repo .
+      # ... (Rest of your steps remain the same)
