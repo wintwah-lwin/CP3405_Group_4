@@ -1,0 +1,32 @@
+name: Run Macro Agent Remote
+
+on:
+  schedule:
+    - cron: '0 1 * * 6'
+  workflow_dispatch:
+    inputs:
+      week:
+        description: 'Manual Week Number (e.g., 26)'
+        required: true
+        default: '26'
+  # Add this to trigger whenever you push to the macro-update branch
+  push:
+    branches:
+      - macro-update
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: macro-update # Force the runner to check out your specific branch
+          fetch-depth: 0
+          persist-credentials: true
+
+      # ... (Rest of your steps remain the same)
