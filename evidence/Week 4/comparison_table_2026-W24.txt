@@ -1,0 +1,207 @@
+================================================================================
+MULTI-LLM COMPARISON TABLE — WEEK 25 (15-19 JUNE 2026)
+SOURCE FILES: synthesis_claude_2026-W25.txt | Weekly_Market_Regime_Recommendation.txt
+              market_intelligence_synthesis_W24.txt | deepseek_text_20260614_73aef6.txt
+COMPILED: 14 June 2026
+================================================================================
+
+NOTE ON FILE MAPPING
+--------------------------------------------------------------------------------
+File 1 — synthesis_claude_2026-W25.txt       → MODEL: Claude (claude.ai)
+File 2 — Weekly_Market_Regime_Recommendation → MODEL: ChatGPT (chat.openai.com)
+File 3 — market_intelligence_synthesis_W24   → MODEL: Gemini (gemini.google.com)
+File 4 — deepseek_text_20260614_73aef6.txt   → MODEL: DeepSeek (chat.deepseek.com)
+                                               [contains its own 4-model table in Step 2]
+
+
+================================================================================
+DIMENSION-BY-DIMENSION COMPARISON
+================================================================================
+
+--------------------------------------------------------------------------------
+1. WEEKLY REGIME
+--------------------------------------------------------------------------------
+Claude     | Neutral
+ChatGPT    | Slightly Bullish
+Gemini     | Neutral-Bullish
+DeepSeek   | Neutral-Bullish
+
+OBSERVATION: ChatGPT is the most cautious in label choice ("Slightly Bullish").
+             Gemini and DeepSeek align on Neutral-Bullish. Claude is the most
+             conservative, using "Neutral" without a bullish qualifier.
+
+--------------------------------------------------------------------------------
+2. CONFIDENCE SCORE
+--------------------------------------------------------------------------------
+Claude     | Medium
+ChatGPT    | Medium
+Gemini     | Medium
+DeepSeek   | Medium
+
+OBSERVATION: Full consensus — all four models independently arrived at Medium
+             confidence. No model was willing to go High given FOMC + Triple
+             Witching event risk stacked into a 4-session week.
+
+--------------------------------------------------------------------------------
+3. SPX (S&P 500) PREDICTED % MOVE
+--------------------------------------------------------------------------------
+Claude     | -0.8% to +1.2%   (wider range; includes downside)
+ChatGPT    | +0.3% to +1.2%   (no downside scenario)
+Gemini     | 0.0% to +1.5%    (flat floor; wider upside)
+DeepSeek   | +0.2% to +1.1%   (tightest range; most specific)
+
+OBSERVATION: Claude is the only model pricing in meaningful downside (-0.8%).
+             The other three skew upward. Upside consensus clusters around
+             +1.1% to +1.5%. DeepSeek gives the most precise estimate.
+
+--------------------------------------------------------------------------------
+4. NDX (Nasdaq 100) PREDICTED % MOVE
+--------------------------------------------------------------------------------
+Claude     | -1.2% to +1.5%   (widest range; notable downside risk)
+ChatGPT    | +0.2% to +1.5%   (no downside)
+Gemini     | -0.5% to +1.2%   (modest downside acknowledged)
+DeepSeek   | +0.3% to +1.7%   (bullish skew; highest upside)
+
+OBSERVATION: Claude and Gemini both acknowledge NDX downside risk, likely
+             due to mega-cap software weakness (MSFT -6.22%, AAPL -5.27%).
+             ChatGPT and DeepSeek skew more bullish on NDX.
+
+--------------------------------------------------------------------------------
+5. IWM (Russell 2000) PREDICTED % MOVE
+--------------------------------------------------------------------------------
+Claude     | -0.5% to +2.0%
+ChatGPT    | +0.8% to +2.0%
+Gemini     | +0.5% to +2.4%   (highest upside target)
+DeepSeek   | +0.7% to +2.1%
+
+OBSERVATION: Strong cross-model agreement — IWM is expected to be the best
+             performer of the three indices. Floor ranges from -0.5% (Claude)
+             to +0.8% (ChatGPT). Gemini sees the most upside at +2.4%.
+             All models align on IWM as the strongest setup.
+
+--------------------------------------------------------------------------------
+6. KEY SUPPORTING EVIDENCE
+--------------------------------------------------------------------------------
+Claude     | (a) All 3 indices in Zone 1 above 8 EMA and 21 EMA
+           | (b) Falling 10yr yields + WTI -6.25% + weak DXY
+           | (c) IWM breadth healthiest — rally not just mega-cap
+
+ChatGPT    | (a) SPX, NDX, IWM all in Zone 1 bullish EMA structure
+           | (b) Falling yields + stable Fed (97.4% hold) = supportive
+           | (c) Russell 2000 participation + financials + industrials
+
+Gemini     | (a) All 3 indices above rising weekly 8 EMA and 21 EMA
+           | (b) WTI -6.25% + weakening USD + falling 10yr (4.48%)
+           | (c) IWM +3.9% last week; financials and industrials rotating in
+
+DeepSeek   | (a) SPX, NDX, IWM in Zone 1 Bullish — above rising 8 and 21 EMA
+           | (b) Falling 10yr yields + WTI -6.25% + softer USD
+           | (c) IWM best breadth (financials, industrials, energy)
+
+OBSERVATION: Near-perfect alignment across all four models. All three supporting
+             evidence points are identical in substance: Zone 1 technicals,
+             macro relief (yields/oil/dollar), and IWM breadth confirmation.
+
+--------------------------------------------------------------------------------
+7. KEY CONTRADICTIONS
+--------------------------------------------------------------------------------
+Claude     | (a) NDX gains concentrated in semis; MSFT/AAPL/GOOGL down sharply
+           | (b) Midterm election year — Q2-Q3 historically -2.5% for S&P 500
+
+ChatGPT    | (a) Midterm year seasonal weakness (Q2-Q3 historically weak)
+           | (b) Tech divergence (MSFT, AAPL, GOOGL, META weak) + FOMC risk
+
+Gemini     | (a) Mega-cap software weakness vs semiconductor surge
+           | (b) June = onset of soft summer period; midterm Q2-Q3 headwind
+
+DeepSeek   | (a) Strong technicals vs historical midterm Q2-Q3 weakness
+           | (b) Tech split: semis surging (INTC +25%, KLAC +31%),
+           |     software declining (MSFT -6%, AAPL -5%)
+
+OBSERVATION: Perfect alignment — every model identifies the same two
+             contradictions: (1) the technology internal split between
+             semiconductors and software, and (2) midterm seasonal headwind.
+
+--------------------------------------------------------------------------------
+8. INVALIDATION CONDITIONS
+--------------------------------------------------------------------------------
+Claude     | - SPX weekly close below 7,336 (8 EMA)
+           | - Hawkish FOMC guidance; yields reverse higher
+           | - NDX fails 30,000; software names continue falling
+
+ChatGPT    | - SPX below 7,336 / NDX below 28,717 / IWM below 282
+           | - Hawkish Fed + rising yields + stronger inflation data
+           | - Geopolitical risk causing oil to surge
+
+Gemini     | - Weekly close below 8 EMA: SPX 7,336 / NDX 28,717 / IWM 282
+           | - Hawkish FOMC outcome or Middle East oil escalation
+
+DeepSeek   | - Weekly close below SPX 7,336 or NDX 28,717 (8 EMA)
+           | - Hawkish FOMC dot plot (later / fewer cuts signaled)
+           | - Oil price spike >5% from geopolitical tensions
+
+OBSERVATION: Identical invalidation triggers across all four models.
+             The 8 EMA levels (7,336 / 28,717 / 282) are cited by every model
+             as the hard technical stops. Hawkish FOMC is universally flagged.
+
+--------------------------------------------------------------------------------
+9. PLAIN-ENGLISH BRIEF SUMMARY
+--------------------------------------------------------------------------------
+Claude     | Healthy structure; all indices above key MAs; small-caps broad.
+           | High-stakes week: Fed decision + options expiry + 4-day week.
+           | Path leans slightly higher but will not be smooth.
+
+ChatGPT    | Market expected to move slightly higher; trend positive and
+           | conditions supportive. Larger price moves likely due to Fed
+           | meeting and seasonal weakness.
+
+Gemini     | Upward push powered by falling oil, cooling yields, small-cap
+           | participation. Top tech (MSFT, AAPL) lagging. Volatile week
+           | ahead: FOMC + expiry compressed into four days.
+
+DeepSeek   | Technicals bullish, macro favorable (lower yields/oil/dollar).
+           | Midterm seasonality and tech split (semis up, software down)
+           | prevent high conviction. IWM strongest; NDX needs software.
+
+OBSERVATION: Tone is consistent — modestly constructive but explicitly
+             cautious about event-driven volatility. All four highlight the
+             4-session week, FOMC, and tech divergence as key risk factors.
+
+
+================================================================================
+CONSENSUS SUMMARY
+================================================================================
+
+Weekly Regime (consensus):    Neutral to Neutral-Bullish
+Confidence (consensus):       Medium (unanimous)
+Direction bias:               Slightly upward, with elevated volatility
+Strongest index:              IWM (Russell 2000) — all 4 models agree
+Weakest risk area:            NDX mega-cap software (all 4 models flag)
+Primary event risk:           FOMC decision Thursday + Triple Witching
+Key technical floor:          SPX 7,336 / NDX 28,717 / IWM 282 (8 EMA)
+
+PREDICTED RANGE AVERAGES (simple average across 4 models):
+  SPX:  -0.1% to +1.3%
+  NDX:  -0.4% to +1.5%
+  IWM:  +0.4% to +2.1%
+
+AGREEMENT SCORE BY DIMENSION:
+  Weekly Regime        | MODERATE  — Claude more cautious; others lean bullish
+  Confidence Score     | FULL      — All 4 models: Medium
+  SPX % Range          | MODERATE  — Claude prices downside; others more bullish
+  NDX % Range          | MODERATE  — Claude/Gemini see downside; ChatGPT/DS bullish
+  IWM % Range          | HIGH      — All agree IWM is the strongest setup
+  Key Support Points   | FULL      — Identical across all 4 models
+  Key Contradictions   | FULL      — Identical across all 4 models
+  Invalidation Levels  | FULL      — Same EMA levels and FOMC trigger
+
+
+================================================================================
+DISCLAIMER
+================================================================================
+This comparison table is compiled from four AI model outputs for informational
+and educational purposes only. It does not constitute financial advice. Markets
+carry inherent risk. All investment decisions are your own responsibility.
+================================================================================
+END OF FILE — comparison_table_2026-W25.txt
+================================================================================

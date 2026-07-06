@@ -1,0 +1,27 @@
+Weekly Regime: Neutral
+
+Confidence Score: Medium — Strong technical trends provide a solid floor, but major macro crosswinds (a geopolitical oil shock risk) and mixed historical midterm seasonality limit directional conviction.
+
+Key Supporting Evidence:
+
+Strong Technical Trend Structure: All three major indices (SPX, NDX, IWM) remain firmly above their weekly 8 and 21 EMAs, indicating intact medium-term upward momentum.
+
+Robust Technology Earnings: Massive earnings beats from tech leaders, notably Dell smashing EPS estimates by over 57%, confirm that AI infrastructure demand is fully intact.
+
+Firm Fed Hold Expectations: A falling 10-year Treasury yield and a 99.4% probability of a Fed rate hold at the June FOMC meeting provide near-term policy certainty and relief for tech stocks.
+
+Key Contradictions:
+
+Geopolitical Stagflation Risk: Escalating US-Iran tensions in Kuwait pushed WTI crude oil up 7.45%, threatening to reignite inflation and introduce stagflationary pressures.
+
+Seasonal Headwinds & Mixed Breadth: The market is navigating the historical "Weak Spot" of the 4-year midterm cycle, compounded by mixed market breadth where small caps and non-tech sectors are lagging behind Nasdaq's leadership.
+
+Invalidation Conditions: A weekly close below key technical supports (SPX 7,350; NDX 28,745; IWM 280), an unexpectedly hot or weak Friday US employment report (NFP/Unemployment) that dramatically shifts Fed rate expectations, or further geopolitical escalation causing another crude oil spike.
+
+Predicted % move — SPX (S&P 500): [-1.2% to +0.8%] — Sideways chop / neutral
+Predicted % move — NDX (Nasdaq 100): [-1.5% to +1.5%] — Volatile but supported by tech strength
+Predicted % move — IWM (Russell 2000): [-2.0% to +1.0%] — Downside skew due to mixed breadth
+
+Plain-English brief: Markets are currently caught in a tug-of-war between strong upward momentum in technology stocks and rising outside risks. While excellent corporate earnings and steady interest rates are keeping prices stable, rising oil prices from Middle East tensions and major upcoming employment data mean investors are staying cautious. Expect choppy, sideways trading until Friday's jobs report provides a clearer economic picture.
+
+Disclaimer: This analysis is for informational and educational purposes only and does not constitute financial advice. Always conduct your own due diligence or consult a professional before making investment decisions.

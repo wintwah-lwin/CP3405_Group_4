@@ -1,0 +1,38 @@
+
+## 1. Weekly Regime:
+**Uncertain** (leaning Bearish)
+
+## 2. Confidence Score:
+**Medium** – Signals are mixed: technicals are bullish but extended, seasonality is bearish-leaning, and macro is binary with significant downside risk from oil/geopolitics.
+
+## 3. Key Supporting Evidence:
+- **Technicals remain bullish but extended**: SPX above 8/21 EMA, but near resistance at 7,600 and showing narrow breadth (tech-only leadership).
+- **Macro stagflation risk rising**: WTI crude oil +7.45% to $93.80 + falling yields = classic stagflation signal, negative for equities.
+- **Seasonality bearish for midterm May**: S&P 500 averages -0.7% in midterm election year Mays; Memorial Day week has bearish historical tendency.
+
+## 4. Key Contradictions:
+- **Bullish technicals vs. bearish seasonality**: Weekly EMA structure is bullish across SPX, NDX, IWM, but the Almanac calls for cautious/bearish-neutral.
+- **Dovish Fed pricing vs. rising oil**: Fed hold probability is 99.4% (dovish), but surging oil prices and geopolitical risk could quickly re-inflate inflation expectations, creating market confusion.
+
+## 5. Invalidation Conditions:
+This view would turn **Bullish** if:  
+- SPX closes weekly above **7,600** with strong breadth and oil reverses below $88.
+
+This view would turn **Bearish** if:  
+- SPX closes weekly below **7,350**, or unemployment spikes above 4.3% triggering recession fears, or oil breaks above $96.
+
+## 6. Predicted % Moves
+
+| Index | Predicted Move | Direction & Range |
+|--------|----------------|-------------------|
+| SPX (S&P 500) | **-0.8% to +0.5%** | Slightly down to flat |
+| NDX (Nasdaq 100) | **-0.5% to +1.2%** | Tech holds up better |
+| IWM (Russell 2000) | **-1.5% to +0.0%** | Weakest, seasonal headwinds |
+
+## 7. Plain-English Brief
+
+The market looks mixed this week. Stocks are technically in an uptrend, but they've run up a lot and are near resistance. Oil prices are spiking due to Middle East tensions, which could hurt the economy, and history says late May in a midterm year is usually weak. Expect a mostly flat to slightly down week, with big moves only if jobs data surprises.
+
+## 8. Disclaimer
+
+**This is not financial advice. This synthesis is based on historical data, technical indicators, and publicly available news. All trading and investment decisions involve risk. You are solely responsible for your own actions.**

@@ -1,0 +1,18 @@
+1. Weekly Regime: Neutral-Bullish
+2. Confidence Score: Medium — The underlying weekly trend structures remain firmly bullish across all indices, but upcoming high-impact events (FOMC meeting and Triple Witching) mixed with historical midterm election year seasonal headwinds limit overall directional conviction.
+3. Key Supporting Evidence:
+- Zone 1 Bullish Technical Structure: All three major indices (SPX, NDX, IWM) are trading above their rising weekly 8 and 21 EMAs, showing strong medium-term upward momentum.
+- Macro Alignment (Yields & Inflation Falling): WTI crude oil fell sharply by -6.25% alongside a weakening US Dollar and falling 10-year Treasury yields (4.48%), heavily easing equity valuation constraints.
+- Healthy Small-Cap and Cyclical Breadth: The Russell 2000 (IWM) surged +3.9% last week with balanced sector rotation across financials and industrials, confirming the rally is not solely dependent on a few mega-cap names.
+4. Key Contradictions:
+- Mega-Cap Technology Split: Deep weakness in software giants like Microsoft (-6.22%) and Apple (-5.27%) contrasts heavily against massive isolated gains in semiconductor hardware names.
+- Negative Seasonal Background: June marks the historical onset of the softer summer period, further pressured by the broader historical weakness typical of Q2–Q3 in US midterm election years.
+5. Invalidation Conditions:
+- A weekly close below the short-term 8 EMA line on the key indices (specifically below 7,336 on SPX, 28,717 on NDX, or 282 on IWM).
+- An unexpectedly hawkish FOMC outcome or projection path, or a major escalation in Middle East geopolitical tensions causing oil prices to surge.
+6. Predicted % move:
+- SPX (S&P 500): [+0.0% to +1.5%] — Consolidation or modest gains testing resistance at 7,500.
+- NDX (Nasdaq 100): [-0.5% to +1.2%] — Highly volatile trading focused around the 30,000 psychological level.
+- IWM (Russell 2000): [+0.5% to +2.4%] — Continued attempts to push past and hold above the major 300 resistance zone.
+7. Plain-English brief: The stock market is enjoying an upward push powered by falling oil prices, cooling bond yields, and great participation from smaller companies. However, top tech heavyweights like Microsoft and Apple are lagging, and we are entering a historically slower summer period. Expect a volatile week ahead as investors navigate a pivotal Federal Reserve interest rate decision and major options expiration compressed into a four-day trading week.
+8. Disclaimer: This report is for informational and educational purposes only and does not constitute financial or investment advice. Please consult a registered financial professional before making any investment decisions.
