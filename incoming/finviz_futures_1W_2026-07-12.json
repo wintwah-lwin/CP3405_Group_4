@@ -4,7 +4,7 @@
     "label": "Cocoa",
     "group": "SOFTS",
     "perf_pct": 20.43,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -13,7 +13,7 @@
     "label": "Heating Oil",
     "group": "ENERGY",
     "perf_pct": 11.66,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -22,7 +22,7 @@
     "label": "Coffee",
     "group": "SOFTS",
     "perf_pct": 10.97,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -31,7 +31,7 @@
     "label": "Wheat",
     "group": "GRAINS",
     "perf_pct": 6.75,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -40,7 +40,7 @@
     "label": "Oats",
     "group": "GRAINS",
     "perf_pct": 6.42,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -49,7 +49,7 @@
     "label": "Cotton",
     "group": "SOFTS",
     "perf_pct": 5.73,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -58,7 +58,7 @@
     "label": "Soybean oil",
     "group": "GRAINS",
     "perf_pct": 5.53,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -67,7 +67,7 @@
     "label": "Crude Oil Brent",
     "group": "ENERGY",
     "perf_pct": 5.39,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -76,7 +76,7 @@
     "label": "Canola",
     "group": "GRAINS",
     "perf_pct": 5.31,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -85,7 +85,7 @@
     "label": "Soybeans",
     "group": "GRAINS",
     "perf_pct": 4.88,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -94,7 +94,7 @@
     "label": "Soybean Meal",
     "group": "GRAINS",
     "perf_pct": 4.88,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -103,7 +103,7 @@
     "label": "Rough Rice",
     "group": "GRAINS",
     "perf_pct": 4.3,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -112,7 +112,7 @@
     "label": "Crude Oil WTI",
     "group": "ENERGY",
     "perf_pct": 3.96,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -121,7 +121,7 @@
     "label": "Corn",
     "group": "GRAINS",
     "perf_pct": 3.9,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -130,7 +130,7 @@
     "label": "Gasoline RBOB",
     "group": "ENERGY",
     "perf_pct": 2.31,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -139,7 +139,7 @@
     "label": "Ethanol",
     "group": "ENERGY",
     "perf_pct": 2.26,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -148,7 +148,7 @@
     "label": "Copper",
     "group": "METALS",
     "perf_pct": 1.83,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -157,7 +157,7 @@
     "label": "Lumber",
     "group": "SOFTS",
     "perf_pct": 1.75,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -166,7 +166,7 @@
     "label": "Nasdaq 100",
     "group": "INDICES",
     "perf_pct": 1.61,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -175,7 +175,7 @@
     "label": "Nikkei 225",
     "group": "INDICES",
     "perf_pct": 1.32,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -184,7 +184,7 @@
     "label": "S&P 500",
     "group": "INDICES",
     "perf_pct": 1.22,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -193,7 +193,7 @@
     "label": "NZD",
     "group": "CURRENCIES",
     "perf_pct": 1.15,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -202,7 +202,7 @@
     "label": "Bitcoin",
     "group": "CURRENCIES",
     "perf_pct": 0.82,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -211,7 +211,7 @@
     "label": "AUD",
     "group": "CURRENCIES",
     "perf_pct": 0.49,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -220,7 +220,7 @@
     "label": "GBP",
     "group": "CURRENCIES",
     "perf_pct": 0.38,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -229,7 +229,7 @@
     "label": "Palladium",
     "group": "METALS",
     "perf_pct": 0.3,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -238,7 +238,7 @@
     "label": "Lean Hogs",
     "group": "MEATS",
     "perf_pct": 0.25,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -247,7 +247,7 @@
     "label": "Sugar",
     "group": "SOFTS",
     "perf_pct": 0.2,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -256,7 +256,7 @@
     "label": "CAD",
     "group": "CURRENCIES",
     "perf_pct": 0.17,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -265,7 +265,7 @@
     "label": "USD",
     "group": "CURRENCIES",
     "perf_pct": 0.13,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -274,7 +274,7 @@
     "label": "Platinum",
     "group": "METALS",
     "perf_pct": 0.06,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -283,7 +283,7 @@
     "label": "2 Year Note",
     "group": "BONDS",
     "perf_pct": -0.14,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -292,7 +292,7 @@
     "label": "EUR",
     "group": "CURRENCIES",
     "perf_pct": -0.18,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -301,7 +301,7 @@
     "label": "Gold",
     "group": "METALS",
     "perf_pct": -0.29,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -310,7 +310,7 @@
     "label": "5 Year Note",
     "group": "BONDS",
     "perf_pct": -0.34,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -319,7 +319,7 @@
     "label": "JPY",
     "group": "CURRENCIES",
     "perf_pct": -0.46,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -328,7 +328,7 @@
     "label": "10 Year Note",
     "group": "BONDS",
     "perf_pct": -0.5,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -337,7 +337,7 @@
     "label": "DJIA",
     "group": "INDICES",
     "perf_pct": -0.52,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -346,7 +346,7 @@
     "label": "Russell 2000",
     "group": "INDICES",
     "perf_pct": -0.67,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -355,7 +355,7 @@
     "label": "CHF",
     "group": "CURRENCIES",
     "perf_pct": -0.69,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -364,7 +364,7 @@
     "label": "30 Year Bond",
     "group": "BONDS",
     "perf_pct": -1.14,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -373,7 +373,7 @@
     "label": "Silver",
     "group": "METALS",
     "perf_pct": -1.47,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -382,7 +382,7 @@
     "label": "Feeder Cattle",
     "group": "MEATS",
     "perf_pct": -1.67,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -391,7 +391,7 @@
     "label": "Live Cattle",
     "group": "MEATS",
     "perf_pct": -1.68,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -400,7 +400,7 @@
     "label": "Euro Stoxx 50",
     "group": "INDICES",
     "perf_pct": -2.34,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -409,7 +409,7 @@
     "label": "DAX",
     "group": "INDICES",
     "perf_pct": -2.88,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -418,7 +418,7 @@
     "label": "VIX",
     "group": "INDICES",
     "perf_pct": -5.29,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -427,7 +427,7 @@
     "label": "Natural Gas",
     "group": "ENERGY",
     "perf_pct": -8.01,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   },
@@ -436,7 +436,7 @@
     "label": "Orange Juice",
     "group": "SOFTS",
     "perf_pct": -16.72,
-    "fetched_at": "2026-07-11T18:26:31.851097+00:00",
+    "fetched_at": "2026-07-11T18:36:19.740691+00:00",
     "source": "finviz.com/futures_performance",
     "source_url": "https://finviz.com/futures_performance"
   }

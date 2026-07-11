@@ -2,7 +2,7 @@
 ## Forecast for the Week of 06 July 2026 — W7
 
 **Prepared on:** 12 Jul 2026  
-**Fresh market data collected:** 12 July 2026, 02:26 AM  
+**Fresh market data collected:** 12 July 2026, 02:36 AM  
 **Completed market period used:** Latest available 1-week market data  
 **Forecast period:** 2026-07-06 to 2026-07-10  
 
