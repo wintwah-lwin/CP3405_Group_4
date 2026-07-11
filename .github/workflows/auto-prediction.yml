@@ -10,22 +10,28 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      PYTHONPATH: ${{ github.workspace }}/scripts
+      PYTHONPATH: ${{ github.workspace }}/TradeKyaMal/scripts
+      MPLBACKEND: Agg
+      TZ: Asia/Singapore
 
     permissions:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
-      - uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r scripts/requirements.txt
+          pip install -r TradeKyaMal/scripts/requirements.txt
 
       - name: Compute project week
         id: week
@@ -41,27 +47,27 @@ jobs:
 
       - name: 1. Automated Fetch (R6)
         run: |
-          python scripts/run_weekly_fetch.py \
+          python TradeKyaMal/scripts/run_weekly_fetch.py \
             --week ${{ steps.week.outputs.week }} \
             --repo "${{ github.workspace }}" \
             --no-push
 
       - name: 2. Run Agents (R3, R4, R5)
         run: |
-          python scripts/run_almanac_agent.py --week ${{ steps.week.outputs.week }}
-          python scripts/run_macro_agent.py --week ${{ steps.week.outputs.week }} --repo "${{ github.workspace }}" --no-push
-          python scripts/run_technical_agent.py --week ${{ steps.week.outputs.week }}
+          python TradeKyaMal/scripts/run_almanac_agent.py --week ${{ steps.week.outputs.week }}
+          python TradeKyaMal/scripts/run_macro_agent.py --week ${{ steps.week.outputs.week }} --repo "${{ github.workspace }}" --no-push
+          python TradeKyaMal/scripts/run_technical_agent.py --week ${{ steps.week.outputs.week }}
 
       - name: 3. LLM API Synthesis (R8)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          python scripts/run_llm_integration.py --week ${{ steps.week.outputs.week }}
+          python TradeKyaMal/scripts/run_llm_integration.py --week ${{ steps.week.outputs.week }}
 
       - name: 4. Generate Final Prediction
         run: |
-          python scripts/run_final_prediction.py --week ${{ steps.week.outputs.week }}
+          python TradeKyaMal/scripts/run_final_prediction.py --week ${{ steps.week.outputs.week }}
 
       - name: 5. Auto-Commit and Push
         run: |
@@ -69,4 +75,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add evidence/ incoming/
           git diff --staged --quiet || git commit -m "Auto-commit: Sprint 6 Pipeline execution (Week ${{ steps.week.outputs.week }})"
-          git push
+          git push origin "HEAD:${{ github.ref_name }}"
