@@ -22,6 +22,11 @@ jobs:
   run-pipeline:
     runs-on: ubuntu-latest
     
+    # ADDED: This injects your repository root into the system path 
+    # so your TradeKyaMal Python scripts don't throw a ModuleNotFoundError.
+    env:
+      PYTHONPATH: ${{ github.workspace }}
+    
     permissions:
       contents: write 
 
@@ -43,7 +48,10 @@ jobs:
         run: |
           # Anchor to the Monday of Project Week 1
           START_DATE="2026-05-25"
-          CURRENT_DATE=$(date +%F)
+          
+          # ADDED: Force timezone to Singapore to avoid UTC date drift 
+          # which would log your data with yesterday's date.
+          CURRENT_DATE=$(TZ='Asia/Singapore' date +%F)
           
           # Convert dates to seconds to calculate days elapsed
           START_SECS=$(date -d "$START_DATE" +%s)
@@ -72,6 +80,11 @@ jobs:
           python TradeKyaMal/scripts/run_llm_integration.py
           
       - name: 4. Generate Final Prediction
+        # ADDED: Passed the API keys here just in case run_final_prediction.py 
+        # needs LLM access. If it doesn't, this won't hurt anything.
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} 
         run: |
           python TradeKyaMal/scripts/run_final_prediction.py
 
