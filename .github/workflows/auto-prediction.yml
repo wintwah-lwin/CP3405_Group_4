@@ -1,4 +1,4 @@
-name: Sprint 6 Automated Pipeline
+name: Auto Prediction
 
 on:
   schedule:
