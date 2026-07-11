@@ -1,0 +1,12 @@
+[
+  {
+    "model": "openai",
+    "ok": false,
+    "text": "OpenAI package not installed. Run: /usr/local/bin/python3 -m pip install openai"
+  },
+  {
+    "model": "gemini",
+    "ok": false,
+    "text": "Gemini package not installed. Run: /usr/local/bin/python3 -m pip install google-generativeai"
+  }
+]
