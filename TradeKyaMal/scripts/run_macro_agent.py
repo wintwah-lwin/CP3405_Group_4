@@ -218,7 +218,7 @@ def main() -> None:
             sync_to_repo=not used_local_repo or args.no_push,
         )
 
-    print("\nDone. Edit macro_report_w{0}.md for Fed, news, bias.".format(args.week))
+    print("\nDone. Macro report generated with automated Fed rate, FOMC date, and macro bias.")
 
 
 if __name__ == "__main__":

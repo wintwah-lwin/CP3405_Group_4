@@ -1,0 +1,74 @@
+name: Sprint 6 Automated Pipeline
+
+on:
+  schedule:
+    # ---------------------------------------------------------
+    # TIMEZONE NOTE: GitHub Actions uses UTC. 
+    # SGT is UTC+8. Therefore, 4:00 AM SGT = 20:00 UTC the day before.
+    # ---------------------------------------------------------
+    
+    # SUNDAY 4 AM SGT (Your request) = Saturday 20:00 UTC
+    - cron: '0 20 * * 6' 
+    
+    # SATURDAY 4 AM SGT (Sprint 6 Brief requirement) = Friday 20:00 UTC
+    # To use this instead, comment out the line above and uncomment the line below:
+    # - cron: '0 20 * * 5'
+
+  # 'workflow_dispatch' allows you to manually click a "Run workflow" 
+  # button in GitHub to test it without waiting for the scheduled time.
+  workflow_dispatch: 
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write 
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r TradeKyaMal/scripts/requirements.txt
+        
+      - name: 1. Automated Fetch (R6)
+        run: |
+          python TradeKyaMal/scripts/run_weekly_fetch.py
+          
+      - name: 2. Run Agents (R3, R4, R5)
+        run: |
+          python TradeKyaMal/scripts/run_almanac_agent.py
+          python TradeKyaMal/scripts/run_macro_agent.py
+          python TradeKyaMal/scripts/run_technical_agent.py
+
+      - name: 3. LLM API Synthesis (R8)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} 
+        run: |
+          python TradeKyaMal/scripts/run_llm_integration.py
+          
+      - name: 4. Generate Final Prediction
+        run: |
+          python TradeKyaMal/scripts/run_final_prediction.py
+
+      - name: 5. Auto-Commit and Push (DoD Requirement)
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Stage all generated evidence and script outputs
+          git add evidence/
+          git add TradeKyaMal/
+          
+          # Commit only if there are changes to avoid workflow failure
+          git commit -m "Auto-commit: Sprint 6 Pipeline execution" || echo "No changes to commit"
+          git push
