@@ -2,20 +2,20 @@ name: Auto Prediction
 
 on:
   schedule:
-    - cron: '0 20 * * 6'   # Sunday 4 AM SGT
+    - cron: '0 20 * * 6' # Sunday 4:00 AM SGT
   workflow_dispatch:
 
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     env:
       PYTHONPATH: ${{ github.workspace }}/TradeKyaMal/scripts
       MPLBACKEND: Agg
       TZ: Asia/Singapore
-
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout repository
@@ -27,6 +27,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+          cache: pip
+          cache-dependency-path: TradeKyaMal/scripts/requirements.txt
 
       - name: Install dependencies
         run: |
@@ -35,44 +37,95 @@ jobs:
 
       - name: Compute project week
         id: week
+        shell: bash
         run: |
           START_DATE="2026-05-25"
-          CURRENT_DATE=$(TZ='Asia/Singapore' date +%F)
+          CURRENT_DATE=$(date +%F)
+
           START_SECS=$(date -d "$START_DATE" +%s)
           CURRENT_SECS=$(date -d "$CURRENT_DATE" +%s)
           DAYS_PASSED=$(( (CURRENT_SECS - START_SECS) / 86400 ))
           PROJECT_WEEK=$(( (DAYS_PASSED / 7) + 1 ))
-          echo "week=$PROJECT_WEEK" >> "$GITHUB_OUTPUT"
-          echo "Running for Project Week: $PROJECT_WEEK"
 
-      - name: 1. Automated Fetch (R6)
+          if [ "$PROJECT_WEEK" -lt 1 ]; then
+            echo "Invalid project week: $PROJECT_WEEK"
+            exit 1
+          fi
+
+          echo "week=$PROJECT_WEEK" >> "$GITHUB_OUTPUT"
+          echo "Running Project Week: $PROJECT_WEEK"
+
+      - name: Run automated fetch (R6)
         run: |
           python TradeKyaMal/scripts/run_weekly_fetch.py \
-            --week ${{ steps.week.outputs.week }} \
+            --week "${{ steps.week.outputs.week }}" \
             --repo "${{ github.workspace }}" \
             --no-push
 
-      - name: 2. Run Agents (R3, R4, R5)
+      - name: Run Almanac Agent (R3)
         run: |
-          python TradeKyaMal/scripts/run_almanac_agent.py --week ${{ steps.week.outputs.week }}
-          python TradeKyaMal/scripts/run_macro_agent.py --week ${{ steps.week.outputs.week }} --repo "${{ github.workspace }}" --no-push
-          python TradeKyaMal/scripts/run_technical_agent.py --week ${{ steps.week.outputs.week }}
+          python TradeKyaMal/scripts/run_almanac_agent.py \
+            --week "${{ steps.week.outputs.week }}" \
+            --repo "${{ github.workspace }}" \
+            --no-push
 
-      - name: 3. LLM API Synthesis (R8)
+      - name: Run Macro Agent (R4)
+        run: |
+          python TradeKyaMal/scripts/run_macro_agent.py \
+            --week "${{ steps.week.outputs.week }}" \
+            --repo "${{ github.workspace }}" \
+            --no-push
+
+      - name: Run Technical Agent (R5)
+        run: |
+          python TradeKyaMal/scripts/run_technical_agent.py \
+            --week "${{ steps.week.outputs.week }}" \
+            --repo "${{ github.workspace }}" \
+            --no-push
+
+      - name: Run LLM synthesis (R8)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          python TradeKyaMal/scripts/run_llm_integration.py --week ${{ steps.week.outputs.week }}
+          python TradeKyaMal/scripts/run_llm_integration.py \
+            --week "${{ steps.week.outputs.week }}" \
+            --repo "${{ github.workspace }}" \
+            --no-push
 
-      - name: 4. Generate Final Prediction
+      - name: Generate final prediction
         run: |
-          python TradeKyaMal/scripts/run_final_prediction.py --week ${{ steps.week.outputs.week }}
+          python TradeKyaMal/scripts/run_final_prediction.py \
+            --week "${{ steps.week.outputs.week }}" \
+            --repo "${{ github.workspace }}" \
+            --no-push
 
-      - name: 5. Auto-Commit and Push
+      - name: Verify generated files
+        shell: bash
+        run: |
+          WEEK="${{ steps.week.outputs.week }}"
+          WEEK_DIR="evidence/Week $WEEK"
+
+          test -f "$WEEK_DIR/almanac_agent_2026-W$WEEK.md"
+          test -f "$WEEK_DIR/macro_report_w$WEEK.md"
+          test -f "$WEEK_DIR/technical_agent_2026-W$WEEK.md"
+          test -f "$WEEK_DIR/llm_integration_2026-W$WEEK.md"
+          test -f "$WEEK_DIR/final_prediction_2026-W$WEEK.md"
+
+          echo "All required Week $WEEK reports were generated."
+
+      - name: Auto-commit and push
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add evidence/ incoming/
-          git diff --staged --quiet || git commit -m "Auto-commit: Sprint 6 Pipeline execution (Week ${{ steps.week.outputs.week }})"
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Auto-commit: Pipeline execution (Week ${{ steps.week.outputs.week }})"
           git push origin "HEAD:${{ github.ref_name }}"
