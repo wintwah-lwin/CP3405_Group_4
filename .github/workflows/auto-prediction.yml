@@ -41,7 +41,22 @@ jobs:
         
       - name: 1. Automated Fetch (R6)
         run: |
-          python TradeKyaMal/scripts/run_weekly_fetch.py
+          # Anchor to the Monday of Project Week 1
+          START_DATE="2026-05-25"
+          CURRENT_DATE=$(date +%F)
+          
+          # Convert dates to seconds to calculate days elapsed
+          START_SECS=$(date -d "$START_DATE" +%s)
+          CURRENT_SECS=$(date -d "$CURRENT_DATE" +%s)
+          DAYS_PASSED=$(( (CURRENT_SECS - START_SECS) / 86400 ))
+          
+          # Compute current project week
+          PROJECT_WEEK=$(( (DAYS_PASSED / 7) + 1 ))
+          
+          echo "Automated execution running for Project Week: $PROJECT_WEEK"
+          
+          # Pass the dynamic week straight into your script
+          python TradeKyaMal/scripts/run_weekly_fetch.py --week $PROJECT_WEEK
           
       - name: 2. Run Agents (R3, R4, R5)
         run: |
