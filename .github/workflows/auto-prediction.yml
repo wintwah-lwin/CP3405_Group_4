@@ -2,7 +2,7 @@ name: Auto Prediction
 
 on:
   schedule:
-    - cron: '0 20 * * 6' # Sunday 4:00 AM SGT
+    - cron: '0 20 * * 5' # Saturday 4:00 AM SGT
   workflow_dispatch:
 
 jobs:
