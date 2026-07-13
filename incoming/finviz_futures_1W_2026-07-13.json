@@ -1,0 +1,443 @@
+[
+  {
+    "ticker": "CC",
+    "label": "Cocoa",
+    "group": "SOFTS",
+    "perf_pct": 20.43,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "HO",
+    "label": "Heating Oil",
+    "group": "ENERGY",
+    "perf_pct": 11.34,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "KC",
+    "label": "Coffee",
+    "group": "SOFTS",
+    "perf_pct": 10.97,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "QA",
+    "label": "Crude Oil Brent",
+    "group": "ENERGY",
+    "perf_pct": 9.95,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "CL",
+    "label": "Crude Oil WTI",
+    "group": "ENERGY",
+    "perf_pct": 8.53,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ZO",
+    "label": "Oats",
+    "group": "GRAINS",
+    "perf_pct": 6.18,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "RS",
+    "label": "Canola",
+    "group": "GRAINS",
+    "perf_pct": 5.31,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ZL",
+    "label": "Soybean oil",
+    "group": "GRAINS",
+    "perf_pct": 4.91,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ZW",
+    "label": "Wheat",
+    "group": "GRAINS",
+    "perf_pct": 4.85,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ZR",
+    "label": "Rough Rice",
+    "group": "GRAINS",
+    "perf_pct": 4.45,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "CT",
+    "label": "Cotton",
+    "group": "SOFTS",
+    "perf_pct": 3.6,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ZM",
+    "label": "Soybean Meal",
+    "group": "GRAINS",
+    "perf_pct": 2.59,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "VX",
+    "label": "VIX",
+    "group": "INDICES",
+    "perf_pct": 2.31,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ZK",
+    "label": "Ethanol",
+    "group": "ENERGY",
+    "perf_pct": 2.26,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "RB",
+    "label": "Gasoline RBOB",
+    "group": "ENERGY",
+    "perf_pct": 1.94,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "LB",
+    "label": "Lumber",
+    "group": "SOFTS",
+    "perf_pct": 1.75,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ZC",
+    "label": "Corn",
+    "group": "GRAINS",
+    "perf_pct": 1.65,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ZS",
+    "label": "Soybeans",
+    "group": "GRAINS",
+    "perf_pct": 1.2,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "6N",
+    "label": "NZD",
+    "group": "CURRENCIES",
+    "perf_pct": 0.88,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "6C",
+    "label": "CAD",
+    "group": "CURRENCIES",
+    "perf_pct": 0.34,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "DX",
+    "label": "USD",
+    "group": "CURRENCIES",
+    "perf_pct": 0.28,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "LH",
+    "label": "Lean Hogs",
+    "group": "MEATS",
+    "perf_pct": 0.25,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "SB",
+    "label": "Sugar",
+    "group": "SOFTS",
+    "perf_pct": 0.2,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "6J",
+    "label": "JPY",
+    "group": "CURRENCIES",
+    "perf_pct": -0.05,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "6B",
+    "label": "GBP",
+    "group": "CURRENCIES",
+    "perf_pct": -0.1,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ES",
+    "label": "S&P 500",
+    "group": "INDICES",
+    "perf_pct": -0.15,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ZT",
+    "label": "2 Year Note",
+    "group": "BONDS",
+    "perf_pct": -0.19,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "6A",
+    "label": "AUD",
+    "group": "CURRENCIES",
+    "perf_pct": -0.38,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "6E",
+    "label": "EUR",
+    "group": "CURRENCIES",
+    "perf_pct": -0.39,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "HG",
+    "label": "Copper",
+    "group": "METALS",
+    "perf_pct": -0.39,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ZF",
+    "label": "5 Year Note",
+    "group": "BONDS",
+    "perf_pct": -0.47,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ZN",
+    "label": "10 Year Note",
+    "group": "BONDS",
+    "perf_pct": -0.64,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "6S",
+    "label": "CHF",
+    "group": "CURRENCIES",
+    "perf_pct": -0.66,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "NQ",
+    "label": "Nasdaq 100",
+    "group": "INDICES",
+    "perf_pct": -1.01,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ZB",
+    "label": "30 Year Bond",
+    "group": "BONDS",
+    "perf_pct": -1.25,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "YM",
+    "label": "DJIA",
+    "group": "INDICES",
+    "perf_pct": -1.26,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "PA",
+    "label": "Palladium",
+    "group": "METALS",
+    "perf_pct": -1.58,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "FC",
+    "label": "Feeder Cattle",
+    "group": "MEATS",
+    "perf_pct": -1.67,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "LC",
+    "label": "Live Cattle",
+    "group": "MEATS",
+    "perf_pct": -1.68,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "BTC",
+    "label": "Bitcoin",
+    "group": "CURRENCIES",
+    "perf_pct": -1.71,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "ER2",
+    "label": "Russell 2000",
+    "group": "INDICES",
+    "perf_pct": -1.83,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "PL",
+    "label": "Platinum",
+    "group": "METALS",
+    "perf_pct": -2.28,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "GC",
+    "label": "Gold",
+    "group": "METALS",
+    "perf_pct": -2.5,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "EX",
+    "label": "Euro Stoxx 50",
+    "group": "INDICES",
+    "perf_pct": -2.99,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "DY",
+    "label": "DAX",
+    "group": "INDICES",
+    "perf_pct": -3.98,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "NKD",
+    "label": "Nikkei 225",
+    "group": "INDICES",
+    "perf_pct": -4.43,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "SI",
+    "label": "Silver",
+    "group": "METALS",
+    "perf_pct": -6.06,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "NG",
+    "label": "Natural Gas",
+    "group": "ENERGY",
+    "perf_pct": -10.57,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  },
+  {
+    "ticker": "JO",
+    "label": "Orange Juice",
+    "group": "SOFTS",
+    "perf_pct": -16.72,
+    "fetched_at": "2026-07-13T04:45:57.892776+00:00",
+    "source": "finviz.com/futures_performance",
+    "source_url": "https://finviz.com/futures_performance"
+  }
+]
