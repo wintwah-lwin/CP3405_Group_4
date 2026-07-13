@@ -4,7 +4,7 @@
     "name": "Technology",
     "price": 185.78,
     "day_return_pct": 0.23,
-    "fetched_at": "2026-07-13T04:45:57.893767+00:00",
+    "fetched_at": "2026-07-13T05:24:50.024643+00:00",
     "source": "yfinance",
     "source_url": "https://finance.yahoo.com/sectors/"
   },
@@ -13,7 +13,7 @@
     "name": "Financial Services",
     "price": 55.71,
     "day_return_pct": 0.31,
-    "fetched_at": "2026-07-13T04:45:57.893767+00:00",
+    "fetched_at": "2026-07-13T05:24:50.024643+00:00",
     "source": "yfinance",
     "source_url": "https://finance.yahoo.com/sectors/"
   },
@@ -22,7 +22,7 @@
     "name": "Communication Services",
     "price": 111.64,
     "day_return_pct": 1.02,
-    "fetched_at": "2026-07-13T04:45:57.893767+00:00",
+    "fetched_at": "2026-07-13T05:24:50.024643+00:00",
     "source": "yfinance",
     "source_url": "https://finance.yahoo.com/sectors/"
   },
@@ -31,7 +31,7 @@
     "name": "Consumer Cyclical",
     "price": 117.24,
     "day_return_pct": 0.33,
-    "fetched_at": "2026-07-13T04:45:57.893767+00:00",
+    "fetched_at": "2026-07-13T05:24:50.024643+00:00",
     "source": "yfinance",
     "source_url": "https://finance.yahoo.com/sectors/"
   },
@@ -40,7 +40,7 @@
     "name": "Industrials",
     "price": 181.92,
     "day_return_pct": 0.45,
-    "fetched_at": "2026-07-13T04:45:57.893767+00:00",
+    "fetched_at": "2026-07-13T05:24:50.024643+00:00",
     "source": "yfinance",
     "source_url": "https://finance.yahoo.com/sectors/"
   },
@@ -49,7 +49,7 @@
     "name": "Healthcare",
     "price": 160.84,
     "day_return_pct": -0.82,
-    "fetched_at": "2026-07-13T04:45:57.893767+00:00",
+    "fetched_at": "2026-07-13T05:24:50.024643+00:00",
     "source": "yfinance",
     "source_url": "https://finance.yahoo.com/sectors/"
   },
@@ -58,7 +58,7 @@
     "name": "Energy",
     "price": 55.08,
     "day_return_pct": 0.47,
-    "fetched_at": "2026-07-13T04:45:57.893767+00:00",
+    "fetched_at": "2026-07-13T05:24:50.024643+00:00",
     "source": "yfinance",
     "source_url": "https://finance.yahoo.com/sectors/"
   },
@@ -67,7 +67,7 @@
     "name": "Consumer Defensive",
     "price": 84.12,
     "day_return_pct": 1.11,
-    "fetched_at": "2026-07-13T04:45:57.893767+00:00",
+    "fetched_at": "2026-07-13T05:24:50.024643+00:00",
     "source": "yfinance",
     "source_url": "https://finance.yahoo.com/sectors/"
   },
@@ -76,7 +76,7 @@
     "name": "Basic Materials",
     "price": 50.89,
     "day_return_pct": 1.25,
-    "fetched_at": "2026-07-13T04:45:57.893767+00:00",
+    "fetched_at": "2026-07-13T05:24:50.024643+00:00",
     "source": "yfinance",
     "source_url": "https://finance.yahoo.com/sectors/"
   },
@@ -85,7 +85,7 @@
     "name": "Real Estate",
     "price": 44.45,
     "day_return_pct": 0.5,
-    "fetched_at": "2026-07-13T04:45:57.893767+00:00",
+    "fetched_at": "2026-07-13T05:24:50.024643+00:00",
     "source": "yfinance",
     "source_url": "https://finance.yahoo.com/sectors/"
   },
@@ -94,7 +94,7 @@
     "name": "Utilities",
     "price": 45.41,
     "day_return_pct": 0.62,
-    "fetched_at": "2026-07-13T04:45:57.893767+00:00",
+    "fetched_at": "2026-07-13T05:24:50.024643+00:00",
     "source": "yfinance",
     "source_url": "https://finance.yahoo.com/sectors/"
   }

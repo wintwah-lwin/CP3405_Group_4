@@ -2,7 +2,7 @@
 ## Forecast for the Week of 13 July 2026 — W8
 
 **Prepared on:** 13 Jul 2026  
-**Fresh market data collected:** 13 July 2026, 12:46 PM  
+**Fresh market data collected:** 13 July 2026, 01:24 PM  
 **Completed market period used:** Latest available 1-week market data  
 **Forecast period:** 2026-07-13 to 2026-07-17  
 
@@ -20,10 +20,10 @@
 | S&P 500 | +1.23% | Positive |
 | Dow Jones | +0.63% | Positive |
 | VIX | -6.93% | Lower fear |
-| WTI Crude Oil | +8.55% | Positive |
-| Brent Crude Oil | +9.96% | Positive |
-| Gold | -2.20% | Negative |
-| U.S. Dollar | +0.24% | Positive |
+| WTI Crude Oil | +8.71% | Positive |
+| Brent Crude Oil | +10.28% | Positive |
+| Gold | -1.88% | Negative |
+| U.S. Dollar | +0.19% | Positive |
 
 ---
 

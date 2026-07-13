@@ -4,9 +4,9 @@
 
 ## Commodities & Dollar
 
-- **WTI Crude Oil**: weekly change +8.56%, direction: Rising
-- **Gold**: weekly change -2.50%, direction: Falling
-- **DXY Dollar Index**: weekly change +0.28%, direction: Rising
+- **WTI Crude Oil**: weekly change +8.71%, direction: Rising
+- **Gold**: weekly change -2.15%, direction: Falling
+- **DXY Dollar Index**: weekly change +0.22%, direction: Rising
 
 ---
 
@@ -95,15 +95,15 @@
 
 ## Macro Signal Reasons
 
-- S&P 500 futures weak at -0.15%
-- Nasdaq futures weak at -1.01%
-- Small caps weak at -1.83%
-- Oil rising at +8.56%, increasing inflation pressure
-- Dollar rising at +0.28%, pressure on risk assets
+- S&P 500 futures weak at -0.12%
+- Nasdaq futures weak at -0.87%
+- Small caps weak at -1.75%
+- Oil rising at +8.71%, increasing inflation pressure
+- Dollar rising at +0.22%, pressure on risk assets
 - Technology sector positive at +0.23%
 
 ## MACRO BIAS: Cautious
-## PRIMARY DRIVER: S&P 500 futures weak at -0.15%
+## PRIMARY DRIVER: S&P 500 futures weak at -0.12%
 ## CONFIDENCE: Medium
 ## INVALIDATION: Bias may change if inflation, Fed expectations, oil prices, dollar, or equity futures move strongly in the opposite direction.
 
@@ -114,56 +114,56 @@
 | Ticker | Name | Group | Weekly % |
 |--------|------|-------|----------|
 | CC | Cocoa | SOFTS | +20.43% |
-| HO | Heating Oil | ENERGY | +11.34% |
+| HO | Heating Oil | ENERGY | +11.48% |
 | KC | Coffee | SOFTS | +10.97% |
-| QA | Crude Oil Brent | ENERGY | +9.96% |
-| CL | Crude Oil WTI | ENERGY | +8.56% |
+| QA | Crude Oil Brent | ENERGY | +10.15% |
+| CL | Crude Oil WTI | ENERGY | +8.71% |
 | ZO | Oats | GRAINS | +6.18% |
 | RS | Canola | GRAINS | +5.31% |
-| ZL | Soybean oil | GRAINS | +4.91% |
-| ZW | Wheat | GRAINS | +4.85% |
+| ZL | Soybean oil | GRAINS | +5.06% |
+| ZW | Wheat | GRAINS | +5.05% |
 | ZR | Rough Rice | GRAINS | +4.45% |
-| CT | Cotton | SOFTS | +3.60% |
-| ZM | Soybean Meal | GRAINS | +2.59% |
-| VX | VIX | INDICES | +2.31% |
+| CT | Cotton | SOFTS | +3.69% |
+| ZM | Soybean Meal | GRAINS | +2.62% |
 | ZK | Ethanol | ENERGY | +2.26% |
-| RB | Gasoline RBOB | ENERGY | +1.94% |
+| RB | Gasoline RBOB | ENERGY | +2.19% |
+| ZC | Corn | GRAINS | +1.77% |
 | LB | Lumber | SOFTS | +1.75% |
-| ZC | Corn | GRAINS | +1.65% |
-| ZS | Soybeans | GRAINS | +1.20% |
-| 6N | NZD | CURRENCIES | +0.88% |
-| 6C | CAD | CURRENCIES | +0.34% |
-| DX | USD | CURRENCIES | +0.28% |
+| VX | VIX | INDICES | +1.73% |
+| ZS | Soybeans | GRAINS | +1.29% |
+| 6N | NZD | CURRENCIES | +0.99% |
+| 6C | CAD | CURRENCIES | +0.37% |
 | LH | Lean Hogs | MEATS | +0.25% |
+| DX | USD | CURRENCIES | +0.22% |
 | SB | Sugar | SOFTS | +0.20% |
-| 6J | JPY | CURRENCIES | -0.05% |
-| 6B | GBP | CURRENCIES | -0.10% |
-| ES | S&P 500 | INDICES | -0.15% |
-| ZT | 2 Year Note | BONDS | -0.19% |
-| 6A | AUD | CURRENCIES | -0.38% |
-| 6E | EUR | CURRENCIES | -0.39% |
-| HG | Copper | METALS | -0.39% |
+| 6J | JPY | CURRENCIES | -0.02% |
+| 6B | GBP | CURRENCIES | -0.06% |
+| HG | Copper | METALS | -0.08% |
+| ES | S&P 500 | INDICES | -0.12% |
+| ZT | 2 Year Note | BONDS | -0.20% |
+| 6A | AUD | CURRENCIES | -0.27% |
+| 6E | EUR | CURRENCIES | -0.34% |
 | ZF | 5 Year Note | BONDS | -0.47% |
-| ZN | 10 Year Note | BONDS | -0.64% |
-| 6S | CHF | CURRENCIES | -0.66% |
-| NQ | Nasdaq 100 | INDICES | -1.01% |
+| 6S | CHF | CURRENCIES | -0.60% |
+| ZN | 10 Year Note | BONDS | -0.66% |
+| NQ | Nasdaq 100 | INDICES | -0.87% |
+| PA | Palladium | METALS | -1.03% |
+| YM | DJIA | INDICES | -1.23% |
 | ZB | 30 Year Bond | BONDS | -1.25% |
-| YM | DJIA | INDICES | -1.26% |
-| PA | Palladium | METALS | -1.58% |
+| BTC | Bitcoin | CURRENCIES | -1.49% |
+| PL | Platinum | METALS | -1.67% |
 | FC | Feeder Cattle | MEATS | -1.67% |
 | LC | Live Cattle | MEATS | -1.68% |
-| BTC | Bitcoin | CURRENCIES | -1.71% |
-| ER2 | Russell 2000 | INDICES | -1.83% |
-| PL | Platinum | METALS | -2.28% |
-| GC | Gold | METALS | -2.50% |
-| EX | Euro Stoxx 50 | INDICES | -2.96% |
-| DY | DAX | INDICES | -3.98% |
-| NKD | Nikkei 225 | INDICES | -4.43% |
-| SI | Silver | METALS | -6.06% |
-| NG | Natural Gas | ENERGY | -10.57% |
+| ER2 | Russell 2000 | INDICES | -1.75% |
+| GC | Gold | METALS | -2.15% |
+| EX | Euro Stoxx 50 | INDICES | -2.97% |
+| DY | DAX | INDICES | -3.94% |
+| NKD | Nikkei 225 | INDICES | -4.27% |
+| SI | Silver | METALS | -5.54% |
+| NG | Natural Gas | ENERGY | -10.51% |
 | JO | Orange Juice | SOFTS | -16.72% |
 
-*Fetched: 2026-07-13T04:46:11.511225+00:00 from Finviz*
+*Fetched: 2026-07-13T05:24:59.633182+00:00 from Finviz*
 
 ---
 
@@ -183,6 +183,6 @@
 | XLK | Technology | 185.78 | +0.23% |
 | XLV | Healthcare | 160.84 | -0.82% |
 
-*Fetched: 2026-07-13T04:46:11.512409+00:00 via yfinance*
+*Fetched: 2026-07-13T05:24:59.634673+00:00 via yfinance*
 
 Sources used: Finviz, Yahoo Finance, Nasdaq, FRED, U.S. Treasury, Federal Reserve, CNBC RSS, MarketWatch RSS.

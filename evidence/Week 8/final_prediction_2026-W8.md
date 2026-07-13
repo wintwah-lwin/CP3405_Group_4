@@ -1,6 +1,6 @@
 # Final Weekly Prediction — W8
 
-**Generated:** 13 July 2026, 12:46 PM  
+**Generated:** 13 July 2026, 01:25 PM  
 **Output Type:** Automated final prediction after Macro, Almanac, Technical, LLM and Human Score review.
 
 ---
@@ -8,8 +8,8 @@
 ## 1. Executive Summary
 
 **FINAL MARKET BIAS:** Neutral-Bullish  
-**CONFIDENCE:** Medium  
-**MODEL SCORE:** 1.27
+**CONFIDENCE:** Low-Medium  
+**MODEL SCORE:** 0.97
 
 The final prediction combines the automated Macro Agent, Almanac Agent, Technical Agent, LLM Integration output and the manual Human Score override. The Human Score is weighted more heavily because it represents final team judgement after reviewing the automated outputs.
 
@@ -19,10 +19,10 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 
 | Source | Bias / Verdict | Confidence | Primary Driver |
 |---|---|---|---|
-| Macro | Cautious | Medium | S&P 500 futures weak at -0.15% |
+| Macro | Cautious | Medium | S&P 500 futures weak at -0.12% |
 | Almanac | Neutral / Mixed | Medium | > The Almanac Agent combines live index momentum, volatility, sector returns, weekly breadth, current-week calendar events and date-based seasonal patterns. The final bias is gener... |
 | Technical | Neutral-Bullish | Medium-High | Mixed signals |
-| Llm | Neutral to Bullish | Medium | Conflict between strong weekly technical trend (Zone 1 bullishness) and immediate macro pressures including rising oil (+8.56%), a stronger dollar (+0.28%), and weak equity futures... |
+| Llm | Neutral-Bullish, with cautious undertones | Medium | Divergence between bullish technical trend structures and weak index futures, compounded by significant inflationary pressure from rising WTI Crude Oil (+8.71%). |
 | Human | Missing | Missing | Report not found |
 
 ---
@@ -34,9 +34,9 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 | Macro | Cautious | Medium | -1.0 |
 | Almanac | Neutral / Mixed | Medium | 0.0 |
 | Technical | Neutral-Bullish | Medium-High | 1.07 |
-| Llm | Neutral to Bullish | Medium | 1.2 |
+| Llm | Neutral-Bullish, with cautious undertones | Medium | 0.9 |
 | Human | Missing | Missing | 0.0 |
-| **Total** |  |  | **1.27** |
+| **Total** |  |  | **0.97** |
 
 ---
 
@@ -48,14 +48,14 @@ The automated system gives a final **Neutral-Bullish** outlook for Week 8. This 
 
 ## 5. Key Risks to Monitor
 
-- **WTI Crude Oil**: weekly change +8.56%, direction: Rising
+- **WTI Crude Oil**: weekly change +8.71%, direction: Rising
 - | Rate / Yield | Value | Date |
 - | 2-Year Treasury Yield | 4.21% | 2026-07-10 |
 - | 10-Year Treasury Yield | 4.56% | 2026-07-10 |
 - | 30-Year Treasury Yield | 5.06% | 2026-07-10 |
 - *Source: U.S. Treasury Daily Treasury Yield Curve Rates*
 - *Source: Nasdaq Earnings Calendar*
-- Oil rising at +8.56%, increasing inflation pressure
+- Oil rising at +8.71%, increasing inflation pressure
 
 ---
 
@@ -88,6 +88,6 @@ The final prediction should be reviewed again if:
 
 ## 9. Final Recommendation
 
-**Recommendation:** Maintain a **Neutral-Bullish** market stance with **Medium** confidence.
+**Recommendation:** Maintain a **Neutral-Bullish** market stance with **Low-Medium** confidence.
 
 This report is ready to be used as the final weekly prediction input for the later calibration suite.
