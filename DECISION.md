@@ -1,3 +1,20 @@
+W29:
+# Sprint Goal
+To show prediction report data on TradeKyaMal & calibration suite added
+
+## W9 DoD
+- Show reports & data on TradeKyaMal
+- Update pipeline workflow to run agents in parallel 
+- Auto delta report calculation for the week
+- Calibration suite
+- GitHub action scheduled on Saturday 4AM
+- Human score intervention on Saturday/Sunday
+- Release tag on sunday 11:59PM
+
+_____________________________________________________________________________________________________
+
+
+W28:
 Sprint Goal:
 To automate all agents outputs & LLM API analysis, directly called from automated GitHub Actions
 
