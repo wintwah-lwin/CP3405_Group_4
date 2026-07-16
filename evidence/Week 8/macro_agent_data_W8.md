@@ -4,9 +4,9 @@
 
 ## Commodities & Dollar
 
-- **WTI Crude Oil**: weekly change +8.77%, direction: Rising
-- **Gold**: weekly change -2.74%, direction: Falling
-- **DXY Dollar Index**: weekly change +0.32%, direction: Rising
+- **WTI Crude Oil**: 79.34, weekly change: -0.29%, direction: Falling
+- **Gold**: 3992.40, weekly change: -1.46%, direction: Falling
+- **DXY Dollar Index**: 100.58, weekly change: +0.31%, direction: Strengthening
 
 ---
 
@@ -57,7 +57,8 @@
 | 2026-07-14 | French 12-Month BTF Auction | &nbsp; | N/A | 2.548% |
 | 2026-07-14 | French 3-Month BTF Auction | &nbsp; | N/A | 2.374% |
 | 2026-07-14 | French 6-Month BTF Auction | &nbsp; | N/A | 2.455% |
-
+| 2026-07-20 | CB Leading Index MoM (Jun) | 0.2% | N/A | 0.1% |
+| 2026-07-24 | S&P Global Composite PMI Flash (Jul) | 51.5 | N/A | 51.5 |
 *Source: Nasdaq Economic Calendar*
 
 ---
@@ -88,6 +89,10 @@
 - **These are America’s 10 worst states to live in for 2026**
   - Date: Sat, 11 Jul 2026 13:00:01 GMT
   - Source: https://www.cnbc.com/2026/07/11/worst-states-to-live-in-america-2026.html
+- **Iran threatens to close the Red Sea gateway if the U.S. strikes its power infrastructure**
+  - Source: Reuters, Date: 17 Jul 2026
+- **Trump warns Iran over infrastructure targets amid rising tensions**
+  - Source: Reuters, Date: 17 Jul 2026
 
 *Sources: CNBC RSS, MarketWatch RSS, Yahoo Finance RSS*
 
