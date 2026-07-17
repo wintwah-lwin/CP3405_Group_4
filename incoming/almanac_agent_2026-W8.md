@@ -1,8 +1,8 @@
 # R3 Almanac Agent Output
 ## Forecast for the Week of 13 July 2026 — W8
 
-**Prepared on:** 13 Jul 2026  
-**Fresh market data collected:** 13 July 2026, 02:17 PM  
+**Prepared on:** 18 Jul 2026  
+**Fresh market data collected:** 18 July 2026, 04:50 AM  
 **Completed market period used:** Latest available 1-week market data  
 **Forecast period:** 2026-07-13 to 2026-07-17  
 
@@ -15,15 +15,15 @@
 
 | Market / Asset | 1-Week Change | R3 Reading |
 |---|---:|---|
-| Nasdaq 100 | +0.05% | Positive |
-| Russell 2000 | -1.15% | Negative |
-| S&P 500 | +1.23% | Positive |
-| Dow Jones | +0.63% | Positive |
-| VIX | -6.93% | Lower fear |
-| WTI Crude Oil | +8.90% | Positive |
-| Brent Crude Oil | +10.32% | Positive |
-| Gold | -2.45% | Negative |
-| U.S. Dollar | +0.29% | Positive |
+| Nasdaq 100 | -3.82% | Negative |
+| Russell 2000 | -1.01% | Negative |
+| S&P 500 | -1.14% | Negative |
+| Dow Jones | -0.65% | Negative |
+| VIX | +18.50% | Higher fear |
+| WTI Crude Oil | +14.49% | Positive |
+| Brent Crude Oil | +15.93% | Positive |
+| Gold | -2.17% | Negative |
+| U.S. Dollar | -0.20% | Negative |
 
 ---
 
@@ -32,17 +32,17 @@
 
 | Sector | Return | Immediate Signal |
 |---|---:|---|
-| Energy | +3.67% | Positive |
-| Communication Services | +1.30% | Positive |
-| Technology | +1.20% | Positive |
-| Real Estate | +0.36% | Positive |
-| Utilities | +0.24% | Positive |
-| Consumer Staples | +0.02% | Positive |
-| Consumer Discretionary | -0.65% | Negative |
-| Healthcare | -0.69% | Negative |
-| Financials | -0.77% | Negative |
-| Industrials | -1.96% | Negative |
-| Materials | -2.10% | Negative |
+| Energy | +1.66% | Positive |
+| Real Estate | +1.61% | Positive |
+| Consumer Staples | +0.71% | Positive |
+| Financials | +0.34% | Positive |
+| Materials | -0.10% | Negative |
+| Healthcare | -0.20% | Negative |
+| Consumer Discretionary | -0.52% | Negative |
+| Industrials | -0.53% | Negative |
+| Communication Services | -0.84% | Negative |
+| Utilities | -1.20% | Negative |
+| Technology | -3.14% | Negative |
 
 ---
 
@@ -50,24 +50,24 @@
 *(Automated using selected major stock returns from Yahoo Finance)*
 
 ### Strong areas
-- META +9.19%
-- AVGO +8.29%
-- AAPL +7.11%
-- NVDA +6.77%
-- CVX +6.46%
-- ADBE +6.00%
-- AMD +3.14%
-- BAC +2.24%
+- CVX +7.66%
+- XOM +7.20%
+- ADBE +6.56%
+- AAPL +5.54%
+- BAC +3.41%
+- MSFT +2.46%
+- META +2.30%
+- JPM +1.68%
 
 ### Weak areas
-- JPM +0.72%
-- MSFT +0.21%
-- LLY -0.27%
-- GOOGL -1.12%
-- CAT -3.93%
-- GE -4.18%
-- MU -5.13%
-- INTC -13.53%
+- LLY -3.11%
+- GOOGL -3.38%
+- NOW -5.15%
+- CAT -6.19%
+- AVGO -7.55%
+- AMD -9.32%
+- MU -14.39%
+- INTC -15.55%
 
 ---
 
@@ -85,6 +85,9 @@
 | Date | Event | Forecast | Previous |
 |---|---|---|---|
 | 2026-07-13 | Performance of Services Index | N/A | 48.0 |
+| 2026-07-14 | Exports (USD) | N/A | 45.20B |
+| 2026-07-14 | Imports (USD) | N/A | 73.41B |
+| 2026-07-14 | Trade Balance | N/A | -28.21B |
 | 2026-07-14 | FOMC Member Bowman Speaks | N/A | &nbsp; |
 | 2026-07-14 | German 12-Month Bubill Auction | N/A | 2.478% |
 | 2026-07-14 | German 6-Month Bubill Auction | N/A | 2.331% |
@@ -92,37 +95,34 @@
 | 2026-07-14 | German Buba Monthly Report | N/A | &nbsp; |
 | 2026-07-14 | CPI | N/A | 3.93% |
 | 2026-07-14 | BCB Focus Market Readout | N/A | &nbsp; |
-| 2026-07-14 | German Current Account Balance n.s.a | N/A | 13.8B |
-| 2026-07-14 | French 12-Month BTF Auction | N/A | 2.548% |
-| 2026-07-14 | French 3-Month BTF Auction | N/A | 2.374% |
-| 2026-07-14 | French 6-Month BTF Auction | N/A | 2.455% |
+| 2026-07-14 | German Current Account Balance n.s.a | N/A | 16.6B |
 
 ---
 
 ## 6. INDEX AND SECTOR IMPLICATIONS
 
 ### S&P 500
-- Latest weekly change: +1.23%.
+- Latest weekly change: -1.14%.
 - R3 view is generated from broad-market momentum and almanac pattern.
 
 ### Nasdaq / NDX
-- Latest weekly change: +0.05%.
+- Latest weekly change: -3.82%.
 - Relative strength is assessed from Nasdaq performance versus other indexes.
 
 ### Russell 2000 / IWM
-- Latest weekly change: -1.15%.
+- Latest weekly change: -1.01%.
 - Small-cap participation is used as a risk appetite signal.
 
 ### Sector Summary
 - Strongest latest sector: Energy
-- Weakest latest sector: Materials
+- Weakest latest sector: Technology
 
 
 ---
 
 ## 7. FINAL R3 OUTPUT
 
-**ALMANAC BIAS:** Neutral / Mixed
+**ALMANAC BIAS:** Cautiously Bearish / High-Volatility
 
 **CONFIDENCE:** Medium
 
@@ -131,10 +131,10 @@
 
 **AUTOMATED REASONS:**
 
-- S&P 500 gained +1.23%, supporting risk appetite.
-- Nasdaq 100 gained +0.05%, showing growth/tech strength.
-- Russell 2000 fell -1.15%, showing weak small-cap participation.
-- VIX fell -6.93%, supporting a calmer volatility environment.
+- S&P 500 fell -1.14%, showing weaker broad-market tone.
+- Nasdaq 100 fell -3.82%, reducing tech confidence.
+- Russell 2000 fell -1.01%, showing weak small-cap participation.
+- VIX rose +18.50%, warning of higher volatility.
 - Almanac pattern: No major special almanac pattern detected gives a Neutral signal.
 
 **INVALIDATION:**
@@ -150,4 +150,4 @@
 - Built-in Almanac rule engine for seasonal patterns.
 - Python scoring model for final R3 bias.
 
-**Prepared and accessed:** 13 Jul 2026
+**Prepared and accessed:** 18 Jul 2026

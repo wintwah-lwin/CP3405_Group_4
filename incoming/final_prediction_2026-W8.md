@@ -1,15 +1,15 @@
 # Final Weekly Prediction — W8
 
-**Generated:** 13 July 2026, 02:18 PM  
+**Generated:** 18 July 2026, 04:51 AM  
 **Output Type:** Automated final prediction after Macro, Almanac, Technical, LLM and Human Score review.
 
 ---
 
 ## 1. Executive Summary
 
-**FINAL MARKET BIAS:** Neutral-Bullish  
+**FINAL MARKET BIAS:** Neutral / Mixed  
 **CONFIDENCE:** Low-Medium  
-**MODEL SCORE:** 0.97
+**MODEL SCORE:** -0.03
 
 The final prediction combines the automated Macro Agent, Almanac Agent, Technical Agent, LLM Integration output and the manual Human Score override. The Human Score is weighted more heavily because it represents final team judgement after reviewing the automated outputs.
 
@@ -19,10 +19,10 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 
 | Source | Bias / Verdict | Confidence | Primary Driver |
 |---|---|---|---|
-| Macro | Cautious | Medium | S&P 500 futures weak at -0.16% |
-| Almanac | Neutral / Mixed | Medium | > The Almanac Agent combines live index momentum, volatility, sector returns, weekly breadth, current-week calendar events and date-based seasonal patterns. The final bias is gener... |
+| Macro | Cautious | Medium | S&P 500 futures weak at -1.65% |
+| Almanac | Cautiously Bearish / High-Volatility | Medium | > The Almanac Agent combines live index momentum, volatility, sector returns, weekly breadth, current-week calendar events and date-based seasonal patterns. The final bias is gener... |
 | Technical | Neutral-Bullish | Medium-High | Mixed signals |
-| Llm | Neutral-Bullish | Medium | Technical trend alignment (all indices above weekly 8/21 EMAs) competing against macro headwinds (rising Oil/Dollar) and geopolitical uncertainty (death of Sen. Lindsey Graham). |
+| Llm | Cautiously Bearish with Neutral-Bullish Technical Signals | Medium | Sharp decline in Technology/Nasdaq momentum combined with a spike in volatility (VIX +18.5%) and inflationary pressure from surging Crude Oil prices (+15.58%). |
 | Human | Missing | Missing | Report not found |
 
 ---
@@ -32,30 +32,30 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 | Source | Bias | Confidence | Weighted Score |
 |---|---|---|---:|
 | Macro | Cautious | Medium | -1.0 |
-| Almanac | Neutral / Mixed | Medium | 0.0 |
+| Almanac | Cautiously Bearish / High-Volatility | Medium | -1.0 |
 | Technical | Neutral-Bullish | Medium-High | 1.07 |
-| Llm | Neutral-Bullish | Medium | 0.9 |
+| Llm | Cautiously Bearish with Neutral-Bullish Technical Signals | Medium | 0.9 |
 | Human | Missing | Missing | 0.0 |
-| **Total** |  |  | **0.97** |
+| **Total** |  |  | **-0.03** |
 
 ---
 
 ## 4. Final Market View
 
-The automated system gives a final **Neutral-Bullish** outlook for Week 8. This means the final stance is based on the combined evidence from live market data, technical structure, seasonal context, LLM reasoning and human review.
+The automated system gives a final **Neutral / Mixed** outlook for Week 8. This means the final stance is based on the combined evidence from live market data, technical structure, seasonal context, LLM reasoning and human review.
 
 ---
 
 ## 5. Key Risks to Monitor
 
-- **WTI Crude Oil**: weekly change +8.77%, direction: Rising
+- **WTI Crude Oil**: weekly change +15.58%, direction: Rising
 - | Rate / Yield | Value | Date |
-- | 2-Year Treasury Yield | 4.21% | 2026-07-10 |
-- | 10-Year Treasury Yield | 4.56% | 2026-07-10 |
-- | 30-Year Treasury Yield | 5.06% | 2026-07-10 |
+- | 2-Year Treasury Yield | 4.18% | 2026-07-17 |
+- | 10-Year Treasury Yield | 4.55% | 2026-07-17 |
+- | 30-Year Treasury Yield | 5.06% | 2026-07-17 |
 - *Source: U.S. Treasury Daily Treasury Yield Curve Rates*
 - *Source: Nasdaq Earnings Calendar*
-- Oil rising at +8.77%, increasing inflation pressure
+- **Oil tankers face 'worst case scenario' in Hormuz as Iran steps up attacks on ships, maritime risk CEO says**
 
 ---
 
@@ -88,6 +88,6 @@ The final prediction should be reviewed again if:
 
 ## 9. Final Recommendation
 
-**Recommendation:** Maintain a **Neutral-Bullish** market stance with **Low-Medium** confidence.
+**Recommendation:** Maintain a **Neutral / Mixed** market stance with **Low-Medium** confidence.
 
 This report is ready to be used as the final weekly prediction input for the later calibration suite.
