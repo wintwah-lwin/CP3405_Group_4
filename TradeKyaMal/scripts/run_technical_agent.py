@@ -355,18 +355,13 @@ def copy_outputs(week, repo_path):
     week_dir = repo_path / "evidence" / f"Week {week}"
     week_dir.mkdir(parents=True, exist_ok=True)
 
-    incoming = repo_path / "incoming"
-    incoming.mkdir(exist_ok=True)
-
     report_name = REPORT_MD.format(week=week)
     src = OUTPUT_DIR / report_name
 
     shutil.copy2(src, week_dir / report_name)
-    shutil.copy2(src, incoming / report_name)
 
     for chart in OUTPUT_DIR.glob(f"technical_*_W{week}.png"):
         shutil.copy2(chart, week_dir / chart.name)
-        shutil.copy2(chart, incoming / chart.name)
 
 
 def main():

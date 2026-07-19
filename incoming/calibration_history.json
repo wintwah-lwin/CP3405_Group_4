@@ -1,0 +1,60 @@
+{
+  "W26": {
+    "Macro": {
+      "prediction": "Neutral",
+      "accuracy": 50.0,
+      "correct": 0,
+      "partial": 3,
+      "wrong": 0,
+      "no_score": 0
+    },
+    "Almanac": {
+      "prediction": "Bullish",
+      "accuracy": 100.0,
+      "correct": 3,
+      "partial": 0,
+      "wrong": 0,
+      "no_score": 0
+    },
+    "Technical": {
+      "prediction": "Neutral-Bullish",
+      "accuracy": 50.0,
+      "correct": 0,
+      "partial": 3,
+      "wrong": 0,
+      "no_score": 0
+    },
+    "Human": {
+      "prediction": "Neutral-Bullish",
+      "accuracy": 50.0,
+      "correct": 0,
+      "partial": 3,
+      "wrong": 0,
+      "no_score": 0
+    },
+    "Final Prediction": {
+      "prediction": "Bullish",
+      "accuracy": 100.0,
+      "correct": 3,
+      "partial": 0,
+      "wrong": 0,
+      "no_score": 0
+    },
+    "GPT": {
+      "prediction": "Neutral-Bullish",
+      "accuracy": 50.0,
+      "correct": 0,
+      "partial": 3,
+      "wrong": 0,
+      "no_score": 0
+    },
+    "Gemini": {
+      "prediction": "Neutral-Bullish",
+      "accuracy": 50.0,
+      "correct": 0,
+      "partial": 3,
+      "wrong": 0,
+      "no_score": 0
+    }
+  }
+}
