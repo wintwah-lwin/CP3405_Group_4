@@ -359,12 +359,8 @@ def save_outputs(week, repo_path, responses, llm_report, agreement_matrix):
         week_dir = repo_path / "evidence" / f"Week {week}"
         week_dir.mkdir(parents=True, exist_ok=True)
 
-        incoming = repo_path / "incoming"
-        incoming.mkdir(exist_ok=True)
-
         for filename in [llm_name, agreement_name, log_name]:
             shutil.copy2(OUTPUT_DIR / filename, week_dir / filename)
-            shutil.copy2(OUTPUT_DIR / filename, incoming / filename)
 
 
 def main():

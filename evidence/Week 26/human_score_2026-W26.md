@@ -1,5 +1,11 @@
 # Human Override & Calibration Matrix
 
+## Overall Human Assessment
+
+**HUMAN FINAL BIAS:** Neutral-Bullish
+
+**CONFIDENCE:** Medium
+
 ### Macro / News Weight
 
 **AI Score: +1 | Team Score: +1**
