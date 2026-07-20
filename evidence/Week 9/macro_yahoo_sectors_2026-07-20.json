@@ -1,0 +1,101 @@
+[
+  {
+    "symbol": "XLK",
+    "name": "Technology",
+    "price": 175.59,
+    "day_return_pct": -1.09,
+    "fetched_at": "2026-07-20T06:22:01.098926+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLF",
+    "name": "Financial Services",
+    "price": 56.26,
+    "day_return_pct": -0.86,
+    "fetched_at": "2026-07-20T06:22:01.098926+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLC",
+    "name": "Communication Services",
+    "price": 110.65,
+    "day_return_pct": -1.78,
+    "fetched_at": "2026-07-20T06:22:01.098926+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLY",
+    "name": "Consumer Cyclical",
+    "price": 115.44,
+    "day_return_pct": -1.62,
+    "fetched_at": "2026-07-20T06:22:01.098926+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLI",
+    "name": "Industrials",
+    "price": 179.41,
+    "day_return_pct": -0.41,
+    "fetched_at": "2026-07-20T06:22:01.098926+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLV",
+    "name": "Healthcare",
+    "price": 161.09,
+    "day_return_pct": -0.44,
+    "fetched_at": "2026-07-20T06:22:01.098926+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLE",
+    "name": "Energy",
+    "price": 57.68,
+    "day_return_pct": 1.16,
+    "fetched_at": "2026-07-20T06:22:01.098926+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLP",
+    "name": "Consumer Defensive",
+    "price": 85.19,
+    "day_return_pct": -0.72,
+    "fetched_at": "2026-07-20T06:22:01.098926+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLB",
+    "name": "Basic Materials",
+    "price": 50.53,
+    "day_return_pct": -0.71,
+    "fetched_at": "2026-07-20T06:22:01.098926+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLRE",
+    "name": "Real Estate",
+    "price": 45.42,
+    "day_return_pct": -0.09,
+    "fetched_at": "2026-07-20T06:22:01.098926+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLU",
+    "name": "Utilities",
+    "price": 45.17,
+    "day_return_pct": -0.66,
+    "fetched_at": "2026-07-20T06:22:01.098926+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  }
+]
