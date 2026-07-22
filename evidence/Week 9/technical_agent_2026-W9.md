@@ -84,11 +84,11 @@ Can SPX hold above the 8 EMA around 7439.54 and continue toward the 7620.9–769
 The confidence level is generated from weekly EMA alignment, price position and distance from support/resistance.
 
 **INVALIDATION:**
-- A weekly close below 29142.6 would weaken the bullish view.
-- A weekly close below 27986.69 would shift the bias toward Bearish.
+- The price is currently below the weekly **8 EMA (29142.60)**, indicating weaker short-term momentum.
+- A weekly close below **27986.69 (21 EMA)** would shift the bias toward **Bearish**.
 
 **WATCH THIS WEEK:**  
-Can NDX hold above the 8 EMA around 29142.6 and continue toward the 30762.2–31069.82 resistance zone?
+Can NDX reclaim the weekly **8 EMA around 29142.60** and continue toward the **30762.20–31069.82** resistance zone?
 
 **Evidence chart:** `technical_NDX_W9.png`
 ---## INSTRUMENT: Russell 2000 / IWM (IWM), Weekly Chart
