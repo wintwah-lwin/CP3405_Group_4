@@ -177,12 +177,14 @@ The final technical bias is generated automatically from weekly EMA alignment ac
 **CONFIDENCE:** Medium
 
 **INVALIDATION:**
+
 - SPX: A weekly close below 7439.54 would weaken the bullish view.
-- NDX: A weekly close below 29142.6 would weaken the bullish view.
+- NDX: The price is currently below the weekly 8 EMA (29142.60), indicating weaker short-term momentum. A weekly close below 27986.69 (21 EMA) would shift the bias toward Bearish.
 - IWM: A weekly close below 292.18 would weaken the bullish view.
 
-**WATCH THIS WEEK:**  
-For the market to maintain bullish structure, SPX, NDX and IWM need to hold above their weekly 8 EMAs.
+**WATCH THIS WEEK:**
+
+For the market to maintain a Neutral-Bullish structure, SPX and IWM need to hold above their weekly 8 EMAs, while NDX needs to reclaim its weekly 8 EMA.
 
 
 ---
