@@ -1,6 +1,6 @@
 # Final Weekly Prediction — W9
 
-**Generated:** 25 July 2026, 05:05 AM  
+**Generated:** 20 July 2026, 02:22 PM  
 **Output Type:** Automated final prediction after Macro, Almanac, Technical, LLM and Human Score review.
 
 ---
@@ -19,7 +19,7 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 
 | Source | Bias / Verdict | Confidence | Primary Driver |
 |---|---|---|---|
-| Macro | Cautious | Medium | S&P 500 futures weak at -0.67% |
+| Macro | Cautious | Medium | S&P 500 futures weak at -0.89% |
 | Almanac | Cautiously Bearish / High-Volatility | Medium | > The Almanac Agent combines live index momentum, volatility, sector returns, weekly breadth, current-week calendar events and date-based seasonal patterns. The final bias is gener... |
 | Technical | Neutral-Bullish | Medium-High | Mixed signals |
 | Llm | Cautious Neutral-Bearish | Medium | Geopolitical escalation in the Middle East driving a surge in Energy prices (+8.43% in WTI) vs. a technical breakdown in the Technology sector (NDX). |
@@ -48,14 +48,14 @@ The automated system gives a final **Neutral-Bearish** outlook for Week 9. This 
 
 ## 5. Key Risks to Monitor
 
-- **WTI Crude Oil**: weekly change +9.21%, direction: Rising
+- **WTI Crude Oil**: weekly change +8.43%, direction: Rising
 - | Rate / Yield | Value | Date |
-- | 2-Year Treasury Yield | 4.33% | 2026-07-24 |
-- | 10-Year Treasury Yield | 4.69% | 2026-07-24 |
-- | 30-Year Treasury Yield | 5.16% | 2026-07-24 |
+- | 2-Year Treasury Yield | 4.18% | 2026-07-17 |
+- | 10-Year Treasury Yield | 4.55% | 2026-07-17 |
+- | 30-Year Treasury Yield | 5.06% | 2026-07-17 |
 - *Source: U.S. Treasury Daily Treasury Yield Curve Rates*
 - *Source: Nasdaq Earnings Calendar*
-- **Oil shipments are under attack on multiple fronts as fighting escalates in Red Sea, Hormuz and Black Sea**
+- **Brent breaches $90 as Middle East risks mount with U.S-Iran tensions on the rise **
 
 ---
 

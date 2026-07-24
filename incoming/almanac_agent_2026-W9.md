@@ -1,8 +1,8 @@
 # R3 Almanac Agent Output
 ## Forecast for the Week of 20 July 2026 — W9
 
-**Prepared on:** 20 Jul 2026  
-**Fresh market data collected:** 20 July 2026, 02:22 PM  
+**Prepared on:** 25 Jul 2026  
+**Fresh market data collected:** 25 July 2026, 05:04 AM  
 **Completed market period used:** Latest available 1-week market data  
 **Forecast period:** 2026-07-20 to 2026-07-24  
 
@@ -15,15 +15,15 @@
 
 | Market / Asset | 1-Week Change | R3 Reading |
 |---|---:|---|
-| Nasdaq 100 | -3.82% | Negative |
-| Russell 2000 | -1.01% | Negative |
-| S&P 500 | -1.14% | Negative |
-| Dow Jones | -0.65% | Negative |
-| VIX | +18.50% | Higher fear |
-| WTI Crude Oil | +7.52% | Positive |
-| Brent Crude Oil | +9.08% | Positive |
-| Gold | +0.40% | Positive |
-| U.S. Dollar | -0.52% | Negative |
+| Nasdaq 100 | -3.09% | Negative |
+| Russell 2000 | -1.50% | Negative |
+| S&P 500 | -1.62% | Negative |
+| Dow Jones | -1.15% | Negative |
+| VIX | +11.06% | Higher fear |
+| WTI Crude Oil | +9.76% | Positive |
+| Brent Crude Oil | +11.70% | Positive |
+| Gold | +1.08% | Positive |
+| U.S. Dollar | +0.72% | Positive |
 
 ---
 
@@ -32,17 +32,17 @@
 
 | Sector | Return | Immediate Signal |
 |---|---:|---|
-| Energy | +1.66% | Positive |
-| Real Estate | +1.61% | Positive |
-| Consumer Staples | +0.71% | Positive |
-| Financials | +0.34% | Positive |
-| Materials | -0.10% | Negative |
-| Healthcare | -0.20% | Negative |
-| Consumer Discretionary | -0.52% | Negative |
-| Industrials | -0.53% | Negative |
-| Communication Services | -0.84% | Negative |
-| Utilities | -1.20% | Negative |
-| Technology | -3.14% | Negative |
+| Utilities | +3.00% | Positive |
+| Energy | +2.90% | Positive |
+| Industrials | +2.55% | Positive |
+| Materials | +2.46% | Positive |
+| Healthcare | +2.08% | Positive |
+| Real Estate | +1.59% | Positive |
+| Financials | +0.48% | Positive |
+| Technology | +0.10% | Positive |
+| Consumer Staples | -0.86% | Negative |
+| Communication Services | -4.06% | Negative |
+| Consumer Discretionary | -4.54% | Negative |
 
 ---
 
@@ -50,24 +50,24 @@
 *(Automated using selected major stock returns from Yahoo Finance)*
 
 ### Strong areas
-- CVX +7.66%
-- XOM +7.20%
-- ADBE +6.56%
-- AAPL +5.54%
-- BAC +3.41%
-- MSFT +2.46%
-- META +2.30%
-- JPM +1.68%
+- MU +7.94%
+- XOM +7.53%
+- CVX +5.94%
+- JNJ +5.37%
+- AMD +4.19%
+- JPM +2.93%
+- GE +2.31%
+- LLY +2.30%
 
 ### Weak areas
-- LLY -3.11%
-- GOOGL -3.38%
-- NOW -5.15%
-- CAT -6.19%
-- AVGO -7.55%
-- AMD -9.32%
-- MU -14.39%
-- INTC -15.55%
+- NVDA -0.27%
+- ADBE -4.33%
+- INTC -4.81%
+- MSFT -4.84%
+- NOW -5.03%
+- AMZN -7.12%
+- GOOGL -9.80%
+- META -10.44%
 
 ---
 
@@ -94,7 +94,7 @@
 | 2026-07-20 | PBoC Loan Prime Rate | N/A | 3.00% |
 | 2026-07-21 | German PPI | N/A | 2.2% |
 | 2026-07-21 | German PPI | N/A | 0.3% |
-| 2026-07-21 | Construction Output | N/A | 0.57% |
+| 2026-07-21 | Construction Output | N/A | 0.10% |
 | 2026-07-21 | BCB Focus Market Readout | N/A | &nbsp; |
 
 ---
@@ -102,20 +102,20 @@
 ## 6. INDEX AND SECTOR IMPLICATIONS
 
 ### S&P 500
-- Latest weekly change: -1.14%.
+- Latest weekly change: -1.62%.
 - R3 view is generated from broad-market momentum and almanac pattern.
 
 ### Nasdaq / NDX
-- Latest weekly change: -3.82%.
+- Latest weekly change: -3.09%.
 - Relative strength is assessed from Nasdaq performance versus other indexes.
 
 ### Russell 2000 / IWM
-- Latest weekly change: -1.01%.
+- Latest weekly change: -1.50%.
 - Small-cap participation is used as a risk appetite signal.
 
 ### Sector Summary
-- Strongest latest sector: Energy
-- Weakest latest sector: Technology
+- Strongest latest sector: Utilities
+- Weakest latest sector: Consumer Discretionary
 
 
 ---
@@ -131,10 +131,10 @@
 
 **AUTOMATED REASONS:**
 
-- S&P 500 fell -1.14%, showing weaker broad-market tone.
-- Nasdaq 100 fell -3.82%, reducing tech confidence.
-- Russell 2000 fell -1.01%, showing weak small-cap participation.
-- VIX rose +18.50%, warning of higher volatility.
+- S&P 500 fell -1.62%, showing weaker broad-market tone.
+- Nasdaq 100 fell -3.09%, reducing tech confidence.
+- Russell 2000 fell -1.50%, showing weak small-cap participation.
+- VIX rose +11.06%, warning of higher volatility.
 - Almanac pattern: No major special almanac pattern detected gives a Neutral signal.
 
 **INVALIDATION:**
@@ -150,4 +150,4 @@
 - Built-in Almanac rule engine for seasonal patterns.
 - Python scoring model for final R3 bias.
 
-**Prepared and accessed:** 20 Jul 2026
+**Prepared and accessed:** 25 Jul 2026

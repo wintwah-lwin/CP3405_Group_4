@@ -2,14 +2,14 @@
 
 | Model | API Success | Extracted Bias | Extracted Confidence |
 |---|---|---|---|
-| gpt-4.1-mini | True | Neutral-Bullish | Medium |
+| gpt-4.1-mini | True | Neutral-Bearish | Medium |
 | gemini-3-flash-preview | True | Neutral-Bullish | Medium |
 
 ## Agreement Check
 
-- Bias Agreement: Yes
+- Bias Agreement: No
 - Confidence Agreement: Yes
-- Disagreement Zone Flagged: No
+- Disagreement Zone Flagged: Yes
 
 ## Human Review Trigger
 
