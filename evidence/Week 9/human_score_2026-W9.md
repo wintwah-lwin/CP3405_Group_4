@@ -7,7 +7,6 @@ AI Score: -1 | Team Score: -1
 We generally agree with the macro assessment.
 
 The macro environment remains cautious. Major indices declined during the week, while market volatility increased significantly as the VIX rose. Ongoing geopolitical tensions and uncertainty surrounding inflation continue to pressure investor sentiment. Although the macro outlook remains cautious, geopolitical tensions in the Middle East continue to add uncertainty that may not yet be fully reflected in market pricing.
----
 
 ## Technical Structure
 
