@@ -6,15 +6,14 @@ AI Score: -1 | Team Score: -1
 
 We generally agree with the macro assessment.
 
-The macro environment remains cautious. Major indices declined during the week, while market volatility increased significantly as the VIX rose. Ongoing geopolitical tensions and uncertainty surrounding inflation continue to pressure investor sentiment. Although some sectors remain resilient, the overall macro outlook remains slightly bearish.
-
+The macro environment remains cautious. Major indices declined during the week, while market volatility increased significantly as the VIX rose. Ongoing geopolitical tensions and uncertainty surrounding inflation continue to pressure investor sentiment. Although the macro outlook remains cautious, geopolitical tensions in the Middle East continue to add uncertainty that may not yet be fully reflected in market pricing.
 ---
 
 ## Technical Structure
 
 AI Score: +1 | Team Score: +1
 
-We agree with the technical assessment.
+Technical indicators remain constructive, but momentum appears less decisive as investors wait for new catalysts such as earnings and macroeconomic data.
 
 The technical structure remains relatively constructive. Although SPX, NDX and IWM are currently trading below the 8 EMA, the 8 EMA is still above the 21 EMA across the major indices, suggesting that the longer-term trend has not yet broken down. Therefore, we maintain a Neutral-Bullish technical view.
 
@@ -42,9 +41,7 @@ Both GPT and Gemini reached a similar conclusion, indicating a Neutral-Bearish o
 
 ## Wild Card
 
-Human judgement also considers geopolitical risks that may not be fully captured by AI models. The renewed military operation in the West Bank highlights ongoing uncertainty in the Middle East. Although the current market impact appears limited, any escalation could quickly increase risk aversion, support safe-haven assets, and weaken equity sentiment. Therefore, geopolitical developments should continue to be monitored alongside technical and macro indicators.
-
----
+Although most AI models focused on macroeconomic and technical indicators, geopolitical developments remain an important source of uncertainty. During this week, tensions in the Middle East increased as military conflict involving the United States, Iran, and Israel continued. Any further escalation could affect energy prices, investor confidence, and overall market sentiment. This type of event is difficult for AI models to quantify immediately, making human judgement an important complement to automated analysis.
 
 # Final Human Score Summary
 
