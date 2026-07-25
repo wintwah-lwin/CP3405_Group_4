@@ -42,11 +42,7 @@ Both GPT and Gemini reached a similar conclusion, indicating a Neutral-Bearish o
 
 ## Wild Card
 
-AI Score: 0 | Team Score: 0
-
-We partially agree with the AI assessment.
-
-One additional factor that may not be fully reflected in the AI analysis is the possibility of unexpected geopolitical developments over the weekend. Any further escalation in global tensions or unexpected economic announcements could quickly affect oil prices, investor sentiment and overall market volatility. Therefore, we keep the Wild Card score neutral while remaining alert to breaking news.
+Human judgement also considers geopolitical risks that may not be fully captured by AI models. The renewed military operation in the West Bank highlights ongoing uncertainty in the Middle East. Although the current market impact appears limited, any escalation could quickly increase risk aversion, support safe-haven assets, and weaken equity sentiment. Therefore, geopolitical developments should continue to be monitored alongside technical and macro indicators.
 
 ---
 
