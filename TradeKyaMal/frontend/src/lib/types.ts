@@ -1,4 +1,4 @@
-export type AgentType = 'almanac' | 'macro' | 'technical';
+export type AgentType = 'almanac' | 'macro' | 'technical' | 'llm' | 'final';
 export type AgentStatus = 'idle' | 'running' | 'completed' | 'error';
 
 export interface Agent {
@@ -8,6 +8,114 @@ export interface Agent {
   status: AgentStatus;
   lastRun?: string | null;
   summary?: string | null;
+  week?: number | null;
+  scriptAvailable?: boolean;
+}
+
+export interface AgentPipelineReport {
+  filename: string;
+  markdown: string;
+  bias?: string;
+  repoPath?: string;
+  extras?: Record<string, string>;
+}
+
+export interface AgentReportResponse {
+  week: number;
+  source?: 'scripts_output' | 'public_github' | 'github' | 'local_repo';
+  report: AgentPipelineReport | null;
+  availableWeeks?: number[];
+  message?: string;
+}
+
+export interface AgentRunResponse {
+  week: number;
+  runId?: string;
+  bias?: string | null;
+  report?: {
+    filename: string;
+    markdown: string;
+    extras?: Record<string, string>;
+  } | null;
+  pipeline?: {
+    message: string;
+    stdout: string;
+  };
+}
+
+export interface PipelineStatus {
+  pythonAvailable: boolean;
+  projectWeek: number;
+  defaultWeek: number;
+  availableWeeks?: number[];
+  githubConfigured: boolean;
+  evidenceRepo: string;
+  canRunAgentsOnServer: boolean;
+  canViewEvidenceFromGitHub: boolean;
+  evidenceSource?: string;
+  agents: { id: string; scriptAvailable: boolean }[];
+}
+
+export interface EvidenceFileEntry {
+  name: string;
+  path: string;
+  type: 'file' | 'dir';
+  size?: number;
+  downloadUrl?: string;
+}
+
+export interface EvidenceCommitInfo {
+  message: string;
+  date: string;
+}
+
+export interface AgentWeekSummary {
+  id: AgentType;
+  label: string;
+  bias: string | null;
+  confidence: string | null;
+  reportMarkdown: string | null;
+}
+
+export interface WeekDashboardData {
+  week: number;
+  availableWeeks: number[];
+  updatedAt: string | null;
+  finalBias: string | null;
+  finalConfidence: string | null;
+  modelScore: string | null;
+  agents: AgentWeekSummary[];
+  sourceRows: Array<{ source: string; bias: string; confidence: string; driver?: string }>;
+  indexRows: Array<{ asset: string; change: string; signal: string }>;
+  sectors: Array<{ name: string; symbol: string; pct: number }>;
+  technicalCharts: Array<{ label: string; url: string }>;
+  macroCharts: Array<{ label: string; url: string }>;
+  risks: string[];
+  agreementMarkdown: string | null;
+  calibrationLog: string | null;
+  learningLog: string | null;
+  llmHorserace: string | null;
+  pastAccuracyLog: string | null;
+  humanScoreMarkdown: string | null;
+}
+
+export interface HumanScoreSection {
+  aiScore: number;
+  teamScore: number;
+  notes: string;
+}
+
+export interface HumanScoreData {
+  week: number;
+  macro: HumanScoreSection;
+  technical: HumanScoreSection;
+  almanac: HumanScoreSection;
+  llmConsensus: HumanScoreSection;
+  finalBias: string;
+  confidence: string;
+  markdown?: string;
+  updatedAt?: string;
+  source?: 'saved' | 'github';
 }
 
 export type DataSourceType =

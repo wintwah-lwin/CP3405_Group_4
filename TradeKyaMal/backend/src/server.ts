@@ -7,6 +7,7 @@ import fetchRoutes from './routes/fetch';
 import agentsRoutes from './routes/agents';
 import marketRoutes from './routes/market';
 import evidenceRoutes from './routes/evidence';
+import humanScoreRoutes from './routes/humanScore';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 4000;
@@ -57,6 +58,7 @@ app.use('/api/fetch', fetchRoutes);
 app.use('/api/agents', agentsRoutes);
 app.use('/api/market', marketRoutes);
 app.use('/api/evidence', evidenceRoutes);
+app.use('/api/human-score', humanScoreRoutes);
 
 async function start() {
   await connectDB(MONGODB_URI);
