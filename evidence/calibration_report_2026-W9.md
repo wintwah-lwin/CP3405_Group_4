@@ -1,6 +1,6 @@
 # Calibration Suite Report — W9
 
-**Generated:** 26 July 2026, 08:29 PM  
+**Generated:** 26 July 2026, 12:46 PM  
 **Mode:** Test mode uses latest available market data. Re-run after Friday market close for final W9 calibration.  
 
 ---
@@ -31,12 +31,12 @@
 | Predictor | Extracted Direction |
 |---|---|
 | Macro | Unknown |
-| Almanac | Unknown |
-| Technical | Unknown |
-| Human | Unknown |
-| Final Prediction | Unknown |
-| GPT | Unknown |
-| Gemini | Unknown |
+| Almanac | Bearish |
+| Technical | Neutral-Bullish |
+| Human | Bearish |
+| Final Prediction | Neutral-Bullish |
+| GPT | Neutral-Bullish |
+| Gemini | Neutral-Bullish |
 
 ---
 
@@ -44,16 +44,16 @@
 
 | Rank | Predictor | Prediction | Correct | Partial | Wrong | Accuracy |
 |---:|---|---|---:|---:|---:|---:|
-| 1 | Macro | Unknown | 0 | 0 | 0 | 0.0% |
-| 2 | Almanac | Unknown | 0 | 0 | 0 | 0.0% |
-| 3 | Technical | Unknown | 0 | 0 | 0 | 0.0% |
-| 4 | Human | Unknown | 0 | 0 | 0 | 0.0% |
-| 5 | Final Prediction | Unknown | 0 | 0 | 0 | 0.0% |
-| 6 | GPT | Unknown | 0 | 0 | 0 | 0.0% |
-| 7 | Gemini | Unknown | 0 | 0 | 0 | 0.0% |
+| 1 | Almanac | Bearish | 3 | 0 | 0 | 100.0% |
+| 2 | Human | Bearish | 3 | 0 | 0 | 100.0% |
+| 3 | Technical | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
+| 4 | Final Prediction | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
+| 5 | GPT | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
+| 6 | Gemini | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
+| 7 | Macro | Unknown | 0 | 0 | 0 | 0.0% |
 
-**Best Performer:** Macro  
-**Lowest Performer:** Gemini
+**Best Performer:** Almanac  
+**Lowest Performer:** Macro
 
 ---
 
@@ -73,65 +73,70 @@
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Unknown | Bearish | -0.42% | No Score | 0 |
-| NDX | Unknown | Bearish | -1.66% | No Score | 0 |
-| IWM | Unknown | Bearish | -0.39% | No Score | 0 |
+| SPX | Bearish | Bearish | -0.42% | Correct | 100 |
+| NDX | Bearish | Bearish | -1.66% | Correct | 100 |
+| IWM | Bearish | Bearish | -0.39% | Correct | 100 |
 
-**Accuracy:** 0.0%
+**Accuracy:** 100.0%
 
 ### Technical
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Unknown | Bearish | -0.42% | No Score | 0 |
-| NDX | Unknown | Bearish | -1.66% | No Score | 0 |
-| IWM | Unknown | Bearish | -0.39% | No Score | 0 |
+| SPX | Neutral-Bullish | Bearish | -0.42% | Partial | 50 |
+| NDX | Neutral-Bullish | Bearish | -1.66% | Partial | 50 |
+| IWM | Neutral-Bullish | Bearish | -0.39% | Partial | 50 |
 
-**Accuracy:** 0.0%
+**Accuracy:** 50.0%
 
 ### Human
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Unknown | Bearish | -0.42% | No Score | 0 |
-| NDX | Unknown | Bearish | -1.66% | No Score | 0 |
-| IWM | Unknown | Bearish | -0.39% | No Score | 0 |
+| SPX | Bearish | Bearish | -0.42% | Correct | 100 |
+| NDX | Bearish | Bearish | -1.66% | Correct | 100 |
+| IWM | Bearish | Bearish | -0.39% | Correct | 100 |
 
-**Accuracy:** 0.0%
+**Accuracy:** 100.0%
 
 ### Final Prediction
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Unknown | Bearish | -0.42% | No Score | 0 |
-| NDX | Unknown | Bearish | -1.66% | No Score | 0 |
-| IWM | Unknown | Bearish | -0.39% | No Score | 0 |
+| SPX | Neutral-Bullish | Bearish | -0.42% | Partial | 50 |
+| NDX | Neutral-Bullish | Bearish | -1.66% | Partial | 50 |
+| IWM | Neutral-Bullish | Bearish | -0.39% | Partial | 50 |
 
-**Accuracy:** 0.0%
+**Accuracy:** 50.0%
 
 ### GPT
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Unknown | Bearish | -0.42% | No Score | 0 |
-| NDX | Unknown | Bearish | -1.66% | No Score | 0 |
-| IWM | Unknown | Bearish | -0.39% | No Score | 0 |
+| SPX | Neutral-Bullish | Bearish | -0.42% | Partial | 50 |
+| NDX | Neutral-Bullish | Bearish | -1.66% | Partial | 50 |
+| IWM | Neutral-Bullish | Bearish | -0.39% | Partial | 50 |
 
-**Accuracy:** 0.0%
+**Accuracy:** 50.0%
 
 ### Gemini
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Unknown | Bearish | -0.42% | No Score | 0 |
-| NDX | Unknown | Bearish | -1.66% | No Score | 0 |
-| IWM | Unknown | Bearish | -0.39% | No Score | 0 |
+| SPX | Neutral-Bullish | Bearish | -0.42% | Partial | 50 |
+| NDX | Neutral-Bullish | Bearish | -1.66% | Partial | 50 |
+| IWM | Neutral-Bullish | Bearish | -0.39% | Partial | 50 |
 
-**Accuracy:** 0.0%
+**Accuracy:** 50.0%
 
 
 ---
 
 ## 5. Files Used
 
-- **LLM:** `main\evidence\Week 9\llm_horserace_2026-W9.md`
+- **Macro:** `evidence/Week 9/macro_agent_2026-W9.md`
+- **Almanac:** `evidence/Week 9/almanac_agent_2026-W9.md`
+- **Technical:** `evidence/Week 9/technical_agent_2026-W9.md`
+- **LLM:** `evidence/Week 9/llm_integration_2026-W9.md`
+- **Human:** `evidence/Week 9/human_score_2026-W9.md`
+- **Final Prediction:** `evidence/Week 8/final_prediction_2026-W8.md`

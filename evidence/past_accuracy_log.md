@@ -1,5 +1,34 @@
-# Past Accuracy Log
+# Past Accuracy Report
 
-| Week | Macro | Almanac | Technical | GPT | Gemini | Human | Final Prediction |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| W9 | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% |
+This report aggregates the weekly calibration, learning, and LLM horse-race evidence into a single historical log.
+
+## Weekly Summary
+
+| Week | Direction Accuracy | Magnitude Accuracy | Confidence Calibration | Overall Score |
+|---|---|---|---|---|
+| W1 | N/A | N/A | N/A | N/A |
+| W2 | N/A | N/A | N/A | N/A |
+| W3 | 1/10 | 1/10 | 1/10 | 0.6/10 |
+| W4 | 0/10 | 0/10 | 0/10 | 0.3/10 |
+| W5 | 1/10 | 1/10 | 1/10 | 0.9/10 |
+| W6 | N/A | N/A | N/A | N/A |
+| W7 | N/A | N/A | N/A | N/A |
+| W8 | N/A | N/A | N/A | N/A |
+| W9 | 5/10 | 0/10 | 7/10 | 4.0/10 |
+| W10 | N/A | N/A | N/A | N/A |
+| W11 | N/A | N/A | N/A | N/A |
+| W12 | N/A | N/A | N/A | N/A |
+| W13 | N/A | N/A | N/A | N/A |
+| W14 | N/A | N/A | N/A | N/A |
+| W15 | N/A | N/A | N/A | N/A |
+| W16 | N/A | N/A | N/A | N/A |
+| W17 | N/A | N/A | N/A | N/A |
+| W18 | N/A | N/A | N/A | N/A |
+| W19 | N/A | N/A | N/A | N/A |
+| W20 | N/A | N/A | N/A | N/A |
+| W21 | N/A | N/A | N/A | N/A |
+| W22 | N/A | N/A | N/A | N/A |
+| W23 | N/A | N/A | N/A | N/A |
+| W24 | N/A | N/A | N/A | N/A |
+| W25 | N/A | N/A | N/A | N/A |
+| W26 | N/A | N/A | N/A | N/A |
