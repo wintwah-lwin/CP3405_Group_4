@@ -489,11 +489,7 @@ def copy_outputs(week, repo_path):
     week_dir = repo_path / "evidence" / f"Week {week}"
     week_dir.mkdir(parents=True, exist_ok=True)
 
-    incoming = repo_path / "incoming"
-    incoming.mkdir(exist_ok=True)
-
     shutil.copy2(src, week_dir / report_name)
-    shutil.copy2(src, incoming / report_name)
 
 
 def main():
