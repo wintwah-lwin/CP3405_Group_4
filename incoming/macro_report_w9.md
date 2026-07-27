@@ -4,8 +4,8 @@
 
 ## Commodities & Dollar
 
-- **WTI Crude Oil**: weekly change +2.87%, direction: Rising
-- **Gold**: weekly change +1.92%, direction: Rising
+- **WTI Crude Oil**: weekly change +2.97%, direction: Rising
+- **Gold**: weekly change +1.90%, direction: Rising
 - **DXY Dollar Index**: weekly change +0.26%, direction: Rising
 
 ---
@@ -95,16 +95,16 @@
 
 ## Macro Signal Reasons
 
-- S&P 500 futures positive at +0.28%
-- Nasdaq futures weak at -0.48%
+- S&P 500 futures positive at +0.29%
+- Nasdaq futures weak at -0.47%
 - Small caps positive at +0.65%
-- Oil rising at +2.87%, increasing inflation pressure
+- Oil rising at +2.97%, increasing inflation pressure
 - Dollar rising at +0.26%, pressure on risk assets
-- Gold rising at +1.92%, showing defensive demand
-- Technology sector weak at -1.44%
+- Gold rising at +1.90%, showing defensive demand
+- Technology sector weak at +nan%
 
 ## MACRO BIAS: Cautious
-## PRIMARY DRIVER: S&P 500 futures positive at +0.28%
+## PRIMARY DRIVER: S&P 500 futures positive at +0.29%
 ## CONFIDENCE: Medium
 ## INVALIDATION: Bias may change if inflation, Fed expectations, oil prices, dollar, or equity futures move strongly in the opposite direction.
 
@@ -114,57 +114,57 @@
 
 | Ticker | Name | Group | Weekly % |
 |--------|------|-------|----------|
-| SI | Silver | METALS | +4.49% |
-| QA | Crude Oil Brent | ENERGY | +3.34% |
+| SI | Silver | METALS | +4.41% |
+| QA | Crude Oil Brent | ENERGY | +3.44% |
 | LB | Lumber | SOFTS | +3.07% |
-| CL | Crude Oil WTI | ENERGY | +2.87% |
+| CL | Crude Oil WTI | ENERGY | +2.97% |
 | JO | Orange Juice | SOFTS | +2.57% |
 | ZM | Soybean Meal | GRAINS | +2.09% |
 | ZC | Corn | GRAINS | +1.95% |
 | CT | Cotton | SOFTS | +1.94% |
-| GC | Gold | METALS | +1.92% |
+| GC | Gold | METALS | +1.90% |
 | DY | DAX | INDICES | +1.84% |
-| PL | Platinum | METALS | +1.68% |
+| PL | Platinum | METALS | +1.70% |
 | EX | Euro Stoxx 50 | INDICES | +1.39% |
 | LC | Live Cattle | MEATS | +0.82% |
-| ZS | Soybeans | GRAINS | +0.80% |
-| YM | DJIA | INDICES | +0.76% |
+| ZS | Soybeans | GRAINS | +0.78% |
+| YM | DJIA | INDICES | +0.75% |
 | LH | Lean Hogs | MEATS | +0.71% |
 | ER2 | Russell 2000 | INDICES | +0.65% |
 | FC | Feeder Cattle | MEATS | +0.62% |
 | ZW | Wheat | GRAINS | +0.52% |
 | ZK | Ethanol | ENERGY | +0.40% |
-| RS | Canola | GRAINS | +0.38% |
-| ES | S&P 500 | INDICES | +0.28% |
+| RS | Canola | GRAINS | +0.33% |
+| ES | S&P 500 | INDICES | +0.29% |
 | DX | USD | CURRENCIES | +0.26% |
-| BTC | Bitcoin | CURRENCIES | +0.24% |
+| BTC | Bitcoin | CURRENCIES | +0.20% |
 | PA | Palladium | METALS | +0.10% |
-| HG | Copper | METALS | +0.06% |
+| HG | Copper | METALS | +0.09% |
 | ZR | Rough Rice | GRAINS | +0.00% |
-| 6A | AUD | CURRENCIES | -0.03% |
-| 6E | EUR | CURRENCIES | -0.11% |
-| ZT | 2 Year Note | BONDS | -0.12% |
-| ZF | 5 Year Note | BONDS | -0.19% |
+| 6A | AUD | CURRENCIES | -0.04% |
+| 6E | EUR | CURRENCIES | -0.12% |
+| ZT | 2 Year Note | BONDS | -0.13% |
 | 6C | CAD | CURRENCIES | -0.20% |
-| ZN | 10 Year Note | BONDS | -0.22% |
+| ZF | 5 Year Note | BONDS | -0.20% |
 | ZB | 30 Year Bond | BONDS | -0.23% |
+| ZN | 10 Year Note | BONDS | -0.23% |
 | SB | Sugar | SOFTS | -0.40% |
 | NKD | Nikkei 225 | INDICES | -0.44% |
-| NQ | Nasdaq 100 | INDICES | -0.48% |
+| NQ | Nasdaq 100 | INDICES | -0.47% |
 | HO | Heating Oil | ENERGY | -0.61% |
 | 6B | GBP | CURRENCIES | -0.62% |
 | 6S | CHF | CURRENCIES | -0.70% |
 | 6J | JPY | CURRENCIES | -0.70% |
-| 6N | NZD | CURRENCIES | -0.74% |
-| NG | Natural Gas | ENERGY | -1.98% |
+| 6N | NZD | CURRENCIES | -0.76% |
+| NG | Natural Gas | ENERGY | -1.88% |
 | KC | Coffee | SOFTS | -2.03% |
-| ZL | Soybean oil | GRAINS | -2.49% |
+| ZL | Soybean oil | GRAINS | -2.56% |
 | CC | Cocoa | SOFTS | -2.84% |
 | RB | Gasoline RBOB | ENERGY | -2.95% |
 | ZO | Oats | GRAINS | -4.46% |
 | VX | VIX | INDICES | -6.41% |
 
-*Fetched: 2026-07-27T05:14:47.765062+00:00 from Finviz*
+*Fetched: 2026-07-27T05:16:53.098462+00:00 from Finviz*
 
 ---
 
@@ -172,18 +172,18 @@
 
 | ETF | Sector | Price | Day Return % |
 |-----|--------|-------|--------------|
-| XLRE | Real Estate | 45.95 | +2.22% |
-| XLB | Basic Materials | 51.26 | +1.93% |
-| XLP | Consumer Defensive | 84.13 | +1.11% |
-| XLC | Communication Services | 106.3 | +0.87% |
-| XLF | Financial Services | 56.31 | +0.86% |
-| XLV | Healthcare | 162.57 | +0.7% |
-| XLY | Consumer Cyclical | 109.41 | +0.6% |
-| XLI | Industrials | 182.66 | +0.4% |
-| XLE | Energy | 59.62 | +0.4% |
-| XLU | Utilities | 46.29 | +0.22% |
-| XLK | Technology | 175.88 | -1.44% |
+| XLK | Technology | nan | nan% |
+| XLF | Financial Services | nan | nan% |
+| XLC | Communication Services | nan | nan% |
+| XLY | Consumer Cyclical | nan | nan% |
+| XLI | Industrials | nan | nan% |
+| XLV | Healthcare | nan | nan% |
+| XLE | Energy | nan | nan% |
+| XLP | Consumer Defensive | nan | nan% |
+| XLB | Basic Materials | nan | nan% |
+| XLRE | Real Estate | nan | nan% |
+| XLU | Utilities | nan | nan% |
 
-*Fetched: 2026-07-27T05:14:47.767139+00:00 via yfinance*
+*Fetched: 2026-07-27T05:16:53.099972+00:00 via yfinance*
 
 Sources used: Finviz, Yahoo Finance, Nasdaq, FRED, U.S. Treasury, Federal Reserve, CNBC RSS, MarketWatch RSS.
