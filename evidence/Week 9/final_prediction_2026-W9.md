@@ -1,15 +1,15 @@
 # Final Weekly Prediction — W9
 
-**Generated:** 25 July 2026, 05:05 AM  
+**Generated:** 27 July 2026, 12:19 PM  
 **Output Type:** Automated final prediction after Macro, Almanac, Technical, LLM and Human Score review.
 
 ---
 
 ## 1. Executive Summary
 
-**FINAL MARKET BIAS:** Neutral-Bearish  
-**CONFIDENCE:** Medium  
-**MODEL SCORE:** -1.83
+**FINAL MARKET BIAS:** Bearish  
+**CONFIDENCE:** High  
+**MODEL SCORE:** -4.33
 
 The final prediction combines the automated Macro Agent, Almanac Agent, Technical Agent, LLM Integration output and the manual Human Score override. The Human Score is weighted more heavily because it represents final team judgement after reviewing the automated outputs.
 
@@ -21,9 +21,9 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 |---|---|---|---|
 | Macro | Cautious | Medium | S&P 500 futures weak at -0.67% |
 | Almanac | Cautiously Bearish / High-Volatility | Medium | > The Almanac Agent combines live index momentum, volatility, sector returns, weekly breadth, current-week calendar events and date-based seasonal patterns. The final bias is gener... |
-| Technical | Neutral-Bullish | Medium-High | Mixed signals |
-| Llm | Cautious Neutral-Bearish | Medium | Geopolitical escalation in the Middle East driving a surge in Energy prices (+8.43% in WTI) vs. a technical breakdown in the Technology sector (NDX). |
-| Human | Missing | Missing | Report not found |
+| Technical | Neutral / Caution | Medium | Mixed signals |
+| Llm | Cautiously Bearish with Neutral-Caution Technical Overlay | Medium | Breakdown in Mega-cap Technology momentum, rising VIX (+11.06%), and mounting geopolitical/macro risks (Oil +9.21%, Trump tariff threats, and AI capex anxiety). |
+| Human | Neutral-Bearish | Medium | Mixed signals |
 
 ---
 
@@ -33,16 +33,16 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 |---|---|---|---:|
 | Macro | Cautious | Medium | -1.0 |
 | Almanac | Cautiously Bearish / High-Volatility | Medium | -1.0 |
-| Technical | Neutral-Bullish | Medium-High | 1.07 |
-| Llm | Cautious Neutral-Bearish | Medium | -0.9 |
-| Human | Missing | Missing | 0.0 |
-| **Total** |  |  | **-1.83** |
+| Technical | Neutral / Caution | Medium | 0.0 |
+| Llm | Cautiously Bearish with Neutral-Caution Technical Overlay | Medium | -1.2 |
+| Human | Neutral-Bearish | Medium | -1.12 |
+| **Total** |  |  | **-4.33** |
 
 ---
 
 ## 4. Final Market View
 
-The automated system gives a final **Neutral-Bearish** outlook for Week 9. This means the final stance is based on the combined evidence from live market data, technical structure, seasonal context, LLM reasoning and human review.
+The automated system gives a final **Bearish** outlook for Week 9. This means the final stance is based on the combined evidence from live market data, technical structure, seasonal context, LLM reasoning and human review.
 
 ---
 
@@ -83,11 +83,12 @@ The final prediction should be reviewed again if:
 - Technical: `technical_agent_2026-W9.md`
 - Llm: `llm_integration_2026-W9.md`
 - Agreement: `agreement_matrix_2026-W9.md`
+- Human: `human_score_2026-W9.md`
 
 ---
 
 ## 9. Final Recommendation
 
-**Recommendation:** Maintain a **Neutral-Bearish** market stance with **Medium** confidence.
+**Recommendation:** Maintain a **Bearish** market stance with **High** confidence.
 
 This report is ready to be used as the final weekly prediction input for the later calibration suite.

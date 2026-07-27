@@ -123,7 +123,7 @@
 | ZC | Corn | GRAINS | +2.22% |
 | CT | Cotton | SOFTS | +2.12% |
 | GC | Gold | METALS | +1.91% |
-| PL | Platinum | METALS | +1.61% |
+| PL | Platinum | METALS | +1.62% |
 | DY | DAX | INDICES | +1.60% |
 | EX | Euro Stoxx 50 | INDICES | +1.18% |
 | ZS | Soybeans | GRAINS | +0.94% |
@@ -135,8 +135,8 @@
 | ER2 | Russell 2000 | INDICES | +0.47% |
 | ZK | Ethanol | ENERGY | +0.40% |
 | RS | Canola | GRAINS | +0.39% |
+| PA | Palladium | METALS | +0.38% |
 | BTC | Bitcoin | CURRENCIES | +0.31% |
-| PA | Palladium | METALS | +0.30% |
 | DX | USD | CURRENCIES | +0.25% |
 | ES | S&P 500 | INDICES | +0.22% |
 | HG | Copper | METALS | +0.11% |
@@ -164,7 +164,7 @@
 | ZO | Oats | GRAINS | -4.24% |
 | VX | VIX | INDICES | -6.15% |
 
-*Fetched: 2026-07-27T04:18:40.759814+00:00 from Finviz*
+*Fetched: 2026-07-27T04:18:31.055209+00:00 from Finviz*
 
 ---
 
@@ -184,6 +184,6 @@
 | XLU | Utilities | 46.29 | +0.22% |
 | XLK | Technology | 175.88 | -1.44% |
 
-*Fetched: 2026-07-27T04:18:40.761397+00:00 via yfinance*
+*Fetched: 2026-07-27T04:18:31.056412+00:00 via yfinance*
 
 Sources used: Finviz, Yahoo Finance, Nasdaq, FRED, U.S. Treasury, Federal Reserve, CNBC RSS, MarketWatch RSS.

@@ -1,6 +1,6 @@
 # Calibration Suite Report — W9
 
-**Generated:** 26 July 2026, 12:46 PM  
+**Generated:** 27 July 2026, 12:19 PM  
 **Mode:** Test mode uses latest available market data. Re-run after Friday market close for final W9 calibration.  
 
 ---
@@ -134,9 +134,9 @@
 
 ## 5. Files Used
 
-- **Macro:** `evidence/Week 9/macro_agent_2026-W9.md`
-- **Almanac:** `evidence/Week 9/almanac_agent_2026-W9.md`
-- **Technical:** `evidence/Week 9/technical_agent_2026-W9.md`
-- **LLM:** `evidence/Week 9/llm_integration_2026-W9.md`
-- **Human:** `evidence/Week 9/human_score_2026-W9.md`
-- **Final Prediction:** `evidence/Week 8/final_prediction_2026-W8.md`
+- **Macro:** `/home/runner/work/CP3405_Group_4/CP3405_Group_4/evidence/Week 9/macro_agent_2026-W9.md`
+- **Almanac:** `/home/runner/work/CP3405_Group_4/CP3405_Group_4/evidence/Week 9/almanac_agent_2026-W9.md`
+- **Technical:** `/home/runner/work/CP3405_Group_4/CP3405_Group_4/evidence/Week 9/technical_agent_2026-W9.md`
+- **LLM:** `/home/runner/work/CP3405_Group_4/CP3405_Group_4/evidence/Week 9/llm_integration_2026-W9.md`
+- **Human:** `/home/runner/work/CP3405_Group_4/CP3405_Group_4/evidence/Week 9/human_score_2026-W9.md`
+- **Final Prediction:** `/home/runner/work/CP3405_Group_4/CP3405_Group_4/evidence/Week 8/final_prediction_2026-W8.md`

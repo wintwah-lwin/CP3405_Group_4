@@ -6,9 +6,13 @@ This report aggregates the weekly calibration, learning, and LLM horse-race evid
 
 | Week | Direction Accuracy | Magnitude Accuracy | Confidence Calibration | Overall Score |
 |---|---|---|---|---|
-| W4 | 4/10 | 5/10 | 3/10 | 4.0/10 |
-| W5 | 10/10 | 8/10 | 8/10 | 8.7/10 |
+| W1 | N/A | N/A | N/A | N/A |
+| W2 | N/A | N/A | N/A | N/A |
+| W3 | 1/10 | 1/10 | 1/10 | 0.6/10 |
+| W4 | 0/10 | 0/10 | 0/10 | 0.3/10 |
+| W5 | 1/10 | 1/10 | 1/10 | 0.9/10 |
 | W6 | N/A | N/A | N/A | N/A |
-| W7 | 9/10 | 8/10 | 8/10 | 8.3/10 |
-| W8 | 8/10 | 7/10 | 8/10 | 7.7/10 |
+| W7 | N/A | N/A | N/A | N/A |
+| W8 | N/A | N/A | N/A | N/A |
 | W9 | 5/10 | 0/10 | 7/10 | 4.0/10 |
+| W10 | 5/10 | 0/10 | 5/10 | 3.3/10 |
