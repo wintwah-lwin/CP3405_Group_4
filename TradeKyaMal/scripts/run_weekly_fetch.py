@@ -70,16 +70,6 @@ def copy_to_repo(week: int, repo_path: Path) -> Path:
     if macro_md.exists():
         shutil.copy2(macro_md, week_dir / f"macro_agent_data_W{week}.md")
 
-    # Also stage in incoming/ for GitHub Actions workflow
-    incoming = repo_path / "incoming"
-    incoming.mkdir(exist_ok=True)
-    for f in week_dir.iterdir():
-        if f.is_file():
-            shutil.copy2(f, incoming / f.name)
-    if charts_dest.exists():
-        for chart in charts_dest.glob("*.png"):
-            shutil.copy2(chart, incoming / chart.name)
-
     return week_dir
 
 
@@ -87,7 +77,7 @@ def git_push(repo_path: Path, week: int) -> None:
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M SGT")
     msg = f"chore(data): weekly fetch W{week} — Finviz + yfinance ({stamp})"
 
-    subprocess.run(["git", "add", f"evidence/Week {week}/", "incoming/"], cwd=repo_path, check=True)
+    subprocess.run(["git", "add", f"evidence/Week {week}/"], cwd=repo_path, check=True)
 
     status = subprocess.run(["git", "status", "--porcelain"], cwd=repo_path, capture_output=True, text=True)
     if not status.stdout.strip():
