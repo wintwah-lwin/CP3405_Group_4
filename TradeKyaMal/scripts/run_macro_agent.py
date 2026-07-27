@@ -86,10 +86,6 @@ def copy_macro_evidence(week: int, repo_path: Path) -> Path:
         for chart in CHARTS_DIR.glob("*.png"):
             shutil.copy2(chart, charts_dest / chart.name)
 
-    if charts_dest.exists():
-        for chart in charts_dest.glob("*.png"):
-            shutil.copy2(chart, incoming / chart.name)
-
     return week_dir
 
 
