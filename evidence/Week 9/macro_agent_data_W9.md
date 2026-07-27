@@ -114,7 +114,7 @@
 
 | Ticker | Name | Group | Weekly % |
 |--------|------|-------|----------|
-| SI | Silver | METALS | +4.32% |
+| SI | Silver | METALS | +4.26% |
 | QA | Crude Oil Brent | ENERGY | +3.40% |
 | LB | Lumber | SOFTS | +3.07% |
 | CL | Crude Oil WTI | ENERGY | +2.84% |
@@ -157,14 +157,14 @@
 | NKD | Nikkei 225 | INDICES | -0.78% |
 | 6N | NZD | CURRENCIES | -0.81% |
 | KC | Coffee | SOFTS | -2.03% |
-| NG | Natural Gas | ENERGY | -2.26% |
+| NG | Natural Gas | ENERGY | -2.22% |
 | RB | Gasoline RBOB | ENERGY | -2.49% |
 | ZL | Soybean oil | GRAINS | -2.49% |
 | CC | Cocoa | SOFTS | -2.84% |
 | ZO | Oats | GRAINS | -4.46% |
 | VX | VIX | INDICES | -6.41% |
 
-*Fetched: 2026-07-27T04:42:10.758247+00:00 from Finviz*
+*Fetched: 2026-07-27T04:41:59.514650+00:00 from Finviz*
 
 ---
 
@@ -184,6 +184,6 @@
 | XLRE | Real Estate | nan | nan% |
 | XLU | Utilities | nan | nan% |
 
-*Fetched: 2026-07-27T04:42:10.759938+00:00 via yfinance*
+*Fetched: 2026-07-27T04:41:59.516172+00:00 via yfinance*
 
 Sources used: Finviz, Yahoo Finance, Nasdaq, FRED, U.S. Treasury, Federal Reserve, CNBC RSS, MarketWatch RSS.

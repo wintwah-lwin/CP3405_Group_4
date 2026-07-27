@@ -1,8 +1,8 @@
 # TECHNICAL AGENT OUTPUT — W9
 
 **Source:** R5 Technical Agent  
-**Report Date:** 25 July 2026  
-**Trading Week Covered:** 2026-07-20–2026-07-24 (W9)
+**Report Date:** 27 July 2026  
+**Trading Week Covered:** 2026-07-27–2026-07-31 (W9)
 
 **Evidence Used:**
 - Automatically generated weekly EMA charts for SPX, NDX and IWM
@@ -141,28 +141,28 @@ Can IWM hold above the 8 EMA around 291.96 and continue toward the 302.72–305.
 The strongest individual leadership from the selected breadth universe is currently led by **STX**.
 
 ### Strong areas
-- STX +14.25%
-- WDC +11.35%
-- MU +7.94%
-- XOM +7.53%
-- COP +6.58%
-- CVX +5.94%
-- JNJ +5.37%
-- AMD +4.19%
-- JPM +2.93%
-- MRK +2.70%
+- STX +22.52%
+- WDC +19.60%
+- MU +16.06%
+- AMD +7.74%
+- XOM +7.50%
+- COP +6.52%
+- CVX +5.74%
+- AVGO +4.81%
+- JNJ +3.72%
+- INTC +3.35%
 
 ### Weak areas
-- QCOM -2.13%
-- AMAT -4.40%
-- INTC -4.81%
-- MSFT -4.84%
-- NFLX -5.73%
-- TMUS -6.62%
-- AMZN -7.12%
-- AXP -9.79%
-- GOOGL -9.80%
-- META -10.44%
+- AMGN -0.02%
+- BAC -0.34%
+- AAPL -3.48%
+- MSFT -4.87%
+- AXP -5.73%
+- AMZN -6.49%
+- NFLX -7.34%
+- META -8.79%
+- GOOGL -10.37%
+- TMUS -11.63%
 
 **Is market breadth strong, mixed, or weak?**  
 Market breadth is generated automatically from selected large-cap, semiconductor, financial, energy and healthcare tickers. If leadership is concentrated in only a few groups, breadth is treated as mixed. If most key groups are positive, breadth improves.
@@ -194,4 +194,4 @@ For the market to maintain bullish structure, SPX, NDX and IWM need to hold abov
 - Python-generated support and resistance levels.
 - Python-generated breadth ranking from selected large-cap and sector-relevant tickers.
 
-**Prepared and accessed:** 25 July 2026
+**Prepared and accessed:** 27 July 2026

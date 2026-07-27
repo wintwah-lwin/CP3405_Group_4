@@ -1,0 +1,101 @@
+[
+  {
+    "symbol": "XLK",
+    "name": "Technology",
+    "price": NaN,
+    "day_return_pct": NaN,
+    "fetched_at": "2026-07-27T04:42:10.759938+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLF",
+    "name": "Financial Services",
+    "price": NaN,
+    "day_return_pct": NaN,
+    "fetched_at": "2026-07-27T04:42:10.759938+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLC",
+    "name": "Communication Services",
+    "price": NaN,
+    "day_return_pct": NaN,
+    "fetched_at": "2026-07-27T04:42:10.759938+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLY",
+    "name": "Consumer Cyclical",
+    "price": NaN,
+    "day_return_pct": NaN,
+    "fetched_at": "2026-07-27T04:42:10.759938+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLI",
+    "name": "Industrials",
+    "price": NaN,
+    "day_return_pct": NaN,
+    "fetched_at": "2026-07-27T04:42:10.759938+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLV",
+    "name": "Healthcare",
+    "price": NaN,
+    "day_return_pct": NaN,
+    "fetched_at": "2026-07-27T04:42:10.759938+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLE",
+    "name": "Energy",
+    "price": NaN,
+    "day_return_pct": NaN,
+    "fetched_at": "2026-07-27T04:42:10.759938+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLP",
+    "name": "Consumer Defensive",
+    "price": NaN,
+    "day_return_pct": NaN,
+    "fetched_at": "2026-07-27T04:42:10.759938+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLB",
+    "name": "Basic Materials",
+    "price": NaN,
+    "day_return_pct": NaN,
+    "fetched_at": "2026-07-27T04:42:10.759938+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLRE",
+    "name": "Real Estate",
+    "price": NaN,
+    "day_return_pct": NaN,
+    "fetched_at": "2026-07-27T04:42:10.759938+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  },
+  {
+    "symbol": "XLU",
+    "name": "Utilities",
+    "price": NaN,
+    "day_return_pct": NaN,
+    "fetched_at": "2026-07-27T04:42:10.759938+00:00",
+    "source": "yfinance",
+    "source_url": "https://finance.yahoo.com/sectors/"
+  }
+]
