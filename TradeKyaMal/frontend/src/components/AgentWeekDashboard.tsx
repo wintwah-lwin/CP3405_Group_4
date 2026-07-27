@@ -9,7 +9,6 @@ import { HumanScorePanel } from '@/components/HumanScorePanel';
 import {
   fetchPipelineStatus,
   formatRelativeTime,
-  getProjectWeek,
   loadWeekDashboard,
 } from '@/lib/evidenceClient';
 import type { AgentType, WeekDashboardData } from '@/lib/types';
@@ -172,7 +171,6 @@ export function AgentWeekDashboard({
   const hasAgentData = Boolean(
     data?.agents.some((agent) => agent.bias || agent.reportMarkdown)
   );
-  const calendarWeek = getProjectWeek();
   const latestEvidenceWeek = availableWeeks[0] ?? null;
 
   const showTechnical = useMemo(() => {
@@ -224,9 +222,9 @@ export function AgentWeekDashboard({
               ))}
             </select>
           </label>
-          {calendarWeek !== week && (
+          {latestEvidenceWeek && week !== latestEvidenceWeek && (
             <span className="text-xs text-text-muted">
-              Calendar week W{calendarWeek} · showing latest evidence W{week}
+              Latest evidence: W{latestEvidenceWeek}
             </span>
           )}
           {data?.updatedAt && (

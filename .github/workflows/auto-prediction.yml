@@ -47,7 +47,7 @@ jobs:
           START_SECS=$(date -d "$START_DATE" +%s)
           CURRENT_SECS=$(date -d "$CURRENT_DATE" +%s)
           DAYS_PASSED=$(( (CURRENT_SECS - START_SECS) / 86400 ))
-          PROJECT_WEEK=$(( (DAYS_PASSED / 7) + 1 ))
+          PROJECT_WEEK=$(( (DAYS_PASSED - 1) / 7 + 1 ))
 
           if [ "$PROJECT_WEEK" -lt 1 ]; then
             echo "Invalid project week: $PROJECT_WEEK"

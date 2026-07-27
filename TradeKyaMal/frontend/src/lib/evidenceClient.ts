@@ -11,8 +11,28 @@ import type {
 export const EVIDENCE_REPO = 'wintwah-lwin/CP3405_Group_4';
 export const EVIDENCE_BRANCH = 'main';
 const PROJECT_START = '2026-05-25';
+const SINGAPORE_TZ = 'Asia/Singapore';
 
-type EvidenceAgentId = AgentType;
+function getSingaporeDateParts(): { year: number; month: number; day: number } {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: SINGAPORE_TZ,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(new Date());
+
+  const lookup = (type: string) => Number(parts.find((part) => part.type === type)?.value ?? 0);
+  return { year: lookup('year'), month: lookup('month'), day: lookup('day') };
+}
+
+export function getProjectWeek(): number {
+  const { year, month, day } = getSingaporeDateParts();
+  const start = new Date(`${PROJECT_START}T00:00:00`);
+  const now = new Date(`${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}T00:00:00`);
+  const days = Math.floor((now.getTime() - start.getTime()) / 86_400_000);
+  // Week 1 starts on project start date; roll over after each 7-day block (SGT).
+  return Math.max(1, Math.floor((days - 1) / 7) + 1);
+}
 
 const REPORT_CANDIDATES: Record<EvidenceAgentId, (week: number) => string[]> = {
   almanac: (week) => [`almanac_agent_2026-W${week}.md`],
@@ -37,12 +57,7 @@ export const AGENT_FILE_PATTERNS: Record<EvidenceAgentId, RegExp[]> = {
   final: [/^final_prediction/i],
 };
 
-export function getProjectWeek(): number {
-  const start = new Date(`${PROJECT_START}T00:00:00`);
-  const now = new Date();
-  const days = Math.floor((now.getTime() - start.getTime()) / 86_400_000);
-  return Math.max(1, Math.floor(days / 7) + 1);
-}
+type EvidenceAgentId = AgentType;
 
 function extractBiasFromMarkdown(markdown: string): string | null {
   const patterns = [
