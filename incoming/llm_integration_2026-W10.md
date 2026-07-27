@@ -1,0 +1,121 @@
+# W10 — LLM Integration + Calibration Suite
+
+**Generated:** 27 Jul 2026, 11:51 AM
+
+## Models Called
+
+- gpt-4.1-mini: Success
+- gemini-3-flash-preview: Success
+
+---
+
+## Model Responses
+
+### gpt-4.1-mini
+
+# LLM Market Prediction — W10
+
+## 1. Executive Summary
+- Overall Market Bias: Cautiously Neutral-Bearish
+- Confidence: Medium
+- Primary Driver: Mixed signals from index futures and technicals; macro environment cautious due to rising oil and dollar pressures combined with weak tech and volatile equity futures.
+
+## 2. Index Predictions
+| Instrument | Direction | Confidence | Reason |
+|---|---|---|---|
+| SPX | Neutral-Bearish | Medium | Macro shows cautious bias with slightly positive S&P futures but rising oil and dollar raising inflation concerns; Technical shows price below 8 EMA but 8 EMA above 21 EMA indicating mixed momentum; Almanac strongly negative last week with VIX rising sharply. |
+| NDX | Bearish | Medium | Macro reports weak Nasdaq futures (-0.57%) and weak tech sector performance; Technical shows price below 8 EMA with mixed EMA alignment; Almanac signals very negative Nasdaq 100 recent return (-3.09%) and weak tech stock breadth. |
+| IWM | Neutral-Bearish | Medium | Macro notes small caps positive but weak participation; Technical sees price just below 8 EMA with EMA alignment cautionary; Almanac index performance was negative (-1.50%) indicating weak small-cap appetite. |
+
+## 3. Sector Predictions
+| Sector | Direction | Confidence | Reason |
+|---|---|---|---|
+| Technology | Bearish | Medium | Macro and Almanac report weak tech sector performance with -1.44% and recent large tech stock declines; Technical shows tech stocks mostly weak; breadth weak. |
+| Financials | Neutral | Medium | Macro shows slightly positive financial ETFs (+0.86%) and modest recent returns (+0.48%); Almanac positive sector return but cautious tone. |
+| Healthcare | Neutral-Bullish | Medium | Macro has weak positive healthcare ETF returns (+0.7%); Almanac signals positive healthcare sector return (+2.08%) with strong stock-level breadth (JNJ +5.37%, LLY +2.30%, MRK +2.70%). |
+| Energy | Bullish | Medium-High | Macro shows oil prices rising (+3.19%) supporting energy; Almanac positive energy sector (+2.90%) and strong stock performance (XOM +7.53%, CVX +5.94%); breadth strong. |
+| Industrials | Bullish | Medium | Macro shows industrials +0.4% day return; Almanac positive and strong technical stock breadth (GE +2.31%); technical breadth mixed but sector showing some strength. |
+| Utilities | Bullish | Medium | Almanac highest sector return (+3.00%) and positive; Macro shows only slight positive move in utilities (+0.22%) but aligns with broader defensive demand. |
+| Real Estate | Bullish | Medium | Macro shows significant real estate ETF move (+2.22%); Almanac also positive (+1.59%); supportive of defensive positioning. |
+| Materials | Bullish | Medium | Macro and Almanac report materials up ~2%; strong positive sector overall. |
+| Consumer Discretionary | Bearish | Medium | Almanac signals weakest sector last week (-4.54%); macro signals weak performance and technical breadth shows large negative stock returns. |
+| Consumer Staples | Neutral-Bearish | Medium | Macro shows positive but weak (+1.11%); Almanac negative sector return (-0.86%) indicating defensive rotation mixed. |
+| Communication Services | Bearish | Medium | Macro and Almanac show weak sector with -4.06% last week; technical breadth weak with large declines in key names (GOOGL -9.80%, META -10.44%). |
+
+## 4. Key Agreement / Disagreement
+- Where Macro, Almanac and Technical agree:
+  - Technology sector weakness.
+  - Elevated volatility and caution are pervasive.
+  - Energy and Utilities sectors show strength driven by rising oil prices and defensive flows.
+  - Small caps/IWM are cautious with mixed short-term momentum.
+- Where they disagree:
+  - Macro shows slightly positive S&P futures and small caps, whereas Almanac and Technical report recent strong weakness and negative momentum.
+- Main risk:
+  - Rising inflation pressure from higher oil and dollar paired with fragile tech sector could trigger further market volatility or downside if support levels fail.
+
+## 5. Final Prediction
+- Final Bias: Cautiously Neutral-Bearish — with close monitoring of key weekly EMA support levels on SPX, NDX, and IWM.
+- Human Review Needed: Yes
+- Reason: Mixed signals from futures, technical EMAs, and sector rotation with vol spike warrant discretionary judgment and updated data through the week.
+
+---
+
+### gemini-3-flash-preview
+
+# LLM Market Prediction — W10
+
+## 1. Executive Summary
+- **Overall Market Bias:** Cautious / Neutral-Bearish
+- **Confidence:** Medium
+- **Primary Driver:** Sharp decline in mega-cap technology momentum and rising volatility (VIX +11.06%), coupled with inflationary pressure from rising energy prices.
+
+## 2. Index Predictions
+| Instrument | Direction | Confidence | Reason |
+|---|---|---|---|
+| SPX | Neutral | Medium | Price (7411.98) is below the 8-week EMA (7433.42). While the EMA structure is still positive (8 > 21), momentum is negative (-1.62% weekly). |
+| NDX | Bearish | High | Significant weekly decline (-3.09%) and price is ~788 points below the 8-week EMA. Significant weakness in heavyweights like META (-10.44%) and GOOGL (-9.80%). |
+| IWM | Neutral/Bearish | Medium | Weekly decline of -1.50% and price is just below the 8-week EMA (291.96). Weak small-cap participation indicates lower risk appetite. |
+
+## 3. Sector Predictions
+| Sector | Direction | Confidence | Reason |
+|---|---|---|---|
+| Technology | Bearish | High | Sector return -1.44%; heavy weakness in semiconductor/software breadth (MSFT, INTC, NVDA). |
+| Financials | Neutral | Medium | Mixed signals: sector up +0.48%, but high-profile names like AXP are down significantly (-9.79%). |
+| Healthcare | Bullish | Medium | Positive sector return (+2.08%) with strength in JNJ (+5.37%) and LLY (+2.30%). |
+| Energy | Bullish | High | Strong performance (+2.90%) driven by rising Crude Oil (+3.19%) and Brent (+3.84%). |
+| Industrials | Bullish | Medium | Almanac shows +2.55% immediate positive signal; GE up +2.31%. |
+| Utilities | Bullish | High | Strongest sector performance (+3.00%) as investors move toward defensive assets. |
+| Real Estate | Bullish | Medium | Macro report shows +2.22% return; strongest individual sector performance in the Yahoo snapshot. |
+| Materials | Bullish | Medium | Strong weekly performance (+2.46% in Almanac, +1.93% in Macro) and strength in gold. |
+| Consumer Discretionary | Bearish | High | Weakest sector performance according to Almanac (-4.54%) and AMZN down -7.12%. |
+| Consumer Staples | Neutral/Bearish | Medium | Almanac reports -0.86% return; divergent from Macro (+1.11%), showing mixed defensive sentiment. |
+| Communication Services | Bearish | High | Sector hit by significant losses in META and GOOGL; Almanac signal is -4.06%. |
+
+## 4. Key Agreement / Disagreement
+- **Where Macro, Almanac and Technical agree:** There is a clear consensus that the Technology and Consumer Discretionary sectors are under heavy pressure, and that Energy/Defensive sectors (Utilities, Healthcare) are the current leaders.
+- **Where they disagree:** Technical Agent maintains a "Neutral-Bullish" structural bias because the 8 EMA is still above the 21 EMA, whereas the Almanac Agent is "Cautiously Bearish" due to immediate price momentum and rising VIX.
+- **Main risk:** Geopolitical tensions (Ukraine/Iran conflict) and rising yields (10-Year at 4.69%) could further suppress risk assets and increase inflation via energy costs.
+
+## 5. Final Prediction
+- **Final Bias:** Cautious / Neutral-Bearish. The market is undergoing a rotation out of growth/tech and into defensives and commodities.
+- **Human Review Needed:** Yes.
+- **Reason:** There is a notable divergence between the long-term EMA trend (still structurally bullish) and the immediate price action (below short-term EMAs with high volatility). Significant geopolitical news regarding Iran and Ukraine may cause rapid price shifts not yet fully reflected in EMA lag.
+
+---
+
+# LLM Agreement Matrix — W10
+
+| Model | API Success | Extracted Bias | Extracted Confidence |
+|---|---|---|---|
+| gpt-4.1-mini | True | Neutral-Bullish | Medium |
+| gemini-3-flash-preview | True | Neutral-Bullish | Medium |
+
+## Agreement Check
+
+- Bias Agreement: Yes
+- Confidence Agreement: Yes
+- Disagreement Zone Flagged: No
+
+## Human Review Trigger
+
+Human review is required if model bias or confidence differs, or if one model API fails.
