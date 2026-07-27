@@ -86,11 +86,6 @@ def copy_macro_evidence(week: int, repo_path: Path) -> Path:
         for chart in CHARTS_DIR.glob("*.png"):
             shutil.copy2(chart, charts_dest / chart.name)
 
-    incoming = repo_path / "incoming"
-    incoming.mkdir(exist_ok=True)
-    for f in week_dir.iterdir():
-        if f.is_file():
-            shutil.copy2(f, incoming / f.name)
     if charts_dest.exists():
         for chart in charts_dest.glob("*.png"):
             shutil.copy2(chart, incoming / chart.name)
@@ -103,7 +98,7 @@ def git_push(repo_path: Path, week: int) -> None:
     msg = f"chore(macro): live fetch W{week} — Finviz + Yahoo ({stamp})"
 
     subprocess.run(
-        ["git", "add", f"evidence/Week {week}/", "incoming/"],
+        ["git", "add", f"evidence/Week {week}/"],
         cwd=repo_path,
         check=True,
     )
