@@ -4,9 +4,9 @@
 
 ## Commodities & Dollar
 
-- **WTI Crude Oil**: weekly change +3.07%, direction: Rising
-- **Gold**: weekly change +1.91%, direction: Rising
-- **DXY Dollar Index**: weekly change +0.25%, direction: Rising
+- **WTI Crude Oil**: weekly change +2.84%, direction: Rising
+- **Gold**: weekly change +1.89%, direction: Rising
+- **DXY Dollar Index**: weekly change +0.27%, direction: Rising
 
 ---
 
@@ -70,24 +70,24 @@
 - **China memory chipmaker CXMT skyrockets 500% in blockbuster Shanghai debut **
   - Date: Mon, 27 Jul 2026 03:29:54 GMT
   - Source: https://www.cnbc.com/2026/07/27/cxmt-china-market-debut-chipmaker-ipo.html
-- **Ukraine strikes Iranian vessels in Caspian Sea, Tehran accuses Kyiv of 'hostile and criminal act'**
-  - Date: Sun, 26 Jul 2026 17:11:36 GMT
-  - Source: https://www.cnbc.com/2026/07/26/ukraine-strikes-iranian-vessels-tehran-accuses-kyiv-of-hostile-act.html
 - **China industrial profit growth slows again in June as retreating oil prices sap earnings lift**
   - Date: Mon, 27 Jul 2026 02:02:04 GMT
   - Source: https://www.cnbc.com/2026/07/27/china-industrial-profit-growth-exports-oil-drops.html
-- **How AI wealth could be distributed to all Americans**
-  - Date: Sun, 26 Jul 2026 14:06:53 GMT
-  - Source: https://www.cnbc.com/2026/07/26/how-can-ai-wealth-be-shared-with-all-americans.html
+- **Ukraine strikes Iranian vessels in Caspian Sea, Tehran accuses Kyiv of 'hostile and criminal act'**
+  - Date: Sun, 26 Jul 2026 17:11:36 GMT
+  - Source: https://www.cnbc.com/2026/07/26/ukraine-strikes-iranian-vessels-tehran-accuses-kyiv-of-hostile-act.html
 - **Here's the tech stock to buy in a market losing patience with tech**
   - Date: Sun, 26 Jul 2026 23:39:46 GMT
   - Source: https://www.cnbc.com/2026/07/26/jim-cramer-heres-the-tech-stock-to-buy-in-a-market-losing-patience-with-tech.html
+- **How AI wealth could be distributed to all Americans**
+  - Date: Sun, 26 Jul 2026 14:06:53 GMT
+  - Source: https://www.cnbc.com/2026/07/26/how-can-ai-wealth-be-shared-with-all-americans.html
 - **100 days until midterm election: DCCC Chair DelBene says Democrats have the momentum**
   - Date: Sun, 26 Jul 2026 12:00:01 GMT
   - Source: https://www.cnbc.com/2026/07/26/election-midterms-dccc-chair-delbene-democrats.html
-- **Top Wall Street analysts back these 3 stocks for their long-term growth potential**
-  - Date: Sun, 26 Jul 2026 11:33:11 GMT
-  - Source: https://www.cnbc.com/2026/07/26/top-analysts-back-these-3-stocks-for-their-long-term-growth-potential.html
+- **For Gen X investors, dotcom bubble haunts stock market portfolios closing in on retirement **
+  - Date: Sun, 26 Jul 2026 14:44:29 GMT
+  - Source: https://www.cnbc.com/2026/07/26/gen-x-investors-dotcom-bubble-retirement-portfolio.html
 
 *Sources: CNBC RSS, MarketWatch RSS, Yahoo Finance RSS*
 
@@ -96,12 +96,12 @@
 ## Macro Signal Reasons
 
 - S&P 500 futures positive at +0.22%
-- Nasdaq futures weak at -0.58%
-- Small caps positive at +0.47%
-- Oil rising at +3.07%, increasing inflation pressure
-- Dollar rising at +0.25%, pressure on risk assets
-- Gold rising at +1.91%, showing defensive demand
-- Technology sector weak at -1.44%
+- Nasdaq futures weak at -0.56%
+- Small caps positive at +0.49%
+- Oil rising at +2.84%, increasing inflation pressure
+- Dollar rising at +0.27%, pressure on risk assets
+- Gold rising at +1.89%, showing defensive demand
+- Technology sector weak at +nan%
 
 ## MACRO BIAS: Cautious
 ## PRIMARY DRIVER: S&P 500 futures positive at +0.22%
@@ -114,57 +114,57 @@
 
 | Ticker | Name | Group | Weekly % |
 |--------|------|-------|----------|
-| SI | Silver | METALS | +4.32% |
-| QA | Crude Oil Brent | ENERGY | +3.53% |
+| SI | Silver | METALS | +4.26% |
+| QA | Crude Oil Brent | ENERGY | +3.40% |
 | LB | Lumber | SOFTS | +3.07% |
-| CL | Crude Oil WTI | ENERGY | +3.07% |
+| CL | Crude Oil WTI | ENERGY | +2.84% |
 | JO | Orange Juice | SOFTS | +2.57% |
-| ZM | Soybean Meal | GRAINS | +2.34% |
-| ZC | Corn | GRAINS | +2.22% |
-| CT | Cotton | SOFTS | +2.12% |
-| GC | Gold | METALS | +1.91% |
-| PL | Platinum | METALS | +1.62% |
-| DY | DAX | INDICES | +1.60% |
-| EX | Euro Stoxx 50 | INDICES | +1.18% |
-| ZS | Soybeans | GRAINS | +0.94% |
+| ZM | Soybean Meal | GRAINS | +2.15% |
+| ZC | Corn | GRAINS | +2.06% |
+| CT | Cotton | SOFTS | +2.03% |
+| GC | Gold | METALS | +1.89% |
+| DY | DAX | INDICES | +1.72% |
+| PL | Platinum | METALS | +1.63% |
+| EX | Euro Stoxx 50 | INDICES | +1.23% |
+| ZS | Soybeans | GRAINS | +0.84% |
 | LC | Live Cattle | MEATS | +0.82% |
-| ZW | Wheat | GRAINS | +0.74% |
 | LH | Lean Hogs | MEATS | +0.71% |
 | YM | DJIA | INDICES | +0.69% |
 | FC | Feeder Cattle | MEATS | +0.62% |
-| ER2 | Russell 2000 | INDICES | +0.47% |
+| ZW | Wheat | GRAINS | +0.52% |
+| ER2 | Russell 2000 | INDICES | +0.49% |
 | ZK | Ethanol | ENERGY | +0.40% |
-| RS | Canola | GRAINS | +0.39% |
-| PA | Palladium | METALS | +0.38% |
-| BTC | Bitcoin | CURRENCIES | +0.31% |
-| DX | USD | CURRENCIES | +0.25% |
+| DX | USD | CURRENCIES | +0.27% |
+| BTC | Bitcoin | CURRENCIES | +0.24% |
 | ES | S&P 500 | INDICES | +0.22% |
-| HG | Copper | METALS | +0.11% |
+| RS | Canola | GRAINS | +0.19% |
+| PA | Palladium | METALS | +0.14% |
+| HG | Copper | METALS | +0.01% |
 | ZR | Rough Rice | GRAINS | +0.00% |
-| 6A | AUD | CURRENCIES | -0.03% |
+| 6A | AUD | CURRENCIES | -0.08% |
 | HO | Heating Oil | ENERGY | -0.09% |
-| 6E | EUR | CURRENCIES | -0.11% |
+| 6E | EUR | CURRENCIES | -0.12% |
 | ZT | 2 Year Note | BONDS | -0.13% |
-| 6C | CAD | CURRENCIES | -0.20% |
 | ZF | 5 Year Note | BONDS | -0.21% |
-| ZN | 10 Year Note | BONDS | -0.23% |
-| ZB | 30 Year Bond | BONDS | -0.25% |
+| 6C | CAD | CURRENCIES | -0.21% |
+| ZB | 30 Year Bond | BONDS | -0.23% |
+| ZN | 10 Year Note | BONDS | -0.24% |
 | SB | Sugar | SOFTS | -0.40% |
-| NQ | Nasdaq 100 | INDICES | -0.58% |
-| 6B | GBP | CURRENCIES | -0.60% |
-| 6S | CHF | CURRENCIES | -0.67% |
-| 6J | JPY | CURRENCIES | -0.69% |
-| NKD | Nikkei 225 | INDICES | -0.81% |
-| 6N | NZD | CURRENCIES | -0.83% |
+| NQ | Nasdaq 100 | INDICES | -0.56% |
+| 6B | GBP | CURRENCIES | -0.62% |
+| 6S | CHF | CURRENCIES | -0.70% |
+| 6J | JPY | CURRENCIES | -0.71% |
+| NKD | Nikkei 225 | INDICES | -0.78% |
+| 6N | NZD | CURRENCIES | -0.81% |
 | KC | Coffee | SOFTS | -2.03% |
-| NG | Natural Gas | ENERGY | -2.09% |
-| ZL | Soybean oil | GRAINS | -2.40% |
+| NG | Natural Gas | ENERGY | -2.22% |
 | RB | Gasoline RBOB | ENERGY | -2.49% |
+| ZL | Soybean oil | GRAINS | -2.49% |
 | CC | Cocoa | SOFTS | -2.84% |
-| ZO | Oats | GRAINS | -4.24% |
-| VX | VIX | INDICES | -6.15% |
+| ZO | Oats | GRAINS | -4.46% |
+| VX | VIX | INDICES | -6.41% |
 
-*Fetched: 2026-07-27T04:18:31.055209+00:00 from Finviz*
+*Fetched: 2026-07-27T04:41:59.514650+00:00 from Finviz*
 
 ---
 
@@ -172,18 +172,18 @@
 
 | ETF | Sector | Price | Day Return % |
 |-----|--------|-------|--------------|
-| XLRE | Real Estate | 45.95 | +2.22% |
-| XLB | Basic Materials | 51.26 | +1.93% |
-| XLP | Consumer Defensive | 84.13 | +1.11% |
-| XLC | Communication Services | 106.3 | +0.87% |
-| XLF | Financial Services | 56.31 | +0.86% |
-| XLV | Healthcare | 162.57 | +0.7% |
-| XLY | Consumer Cyclical | 109.41 | +0.6% |
-| XLI | Industrials | 182.66 | +0.4% |
-| XLE | Energy | 59.62 | +0.4% |
-| XLU | Utilities | 46.29 | +0.22% |
-| XLK | Technology | 175.88 | -1.44% |
+| XLK | Technology | nan | nan% |
+| XLF | Financial Services | nan | nan% |
+| XLC | Communication Services | nan | nan% |
+| XLY | Consumer Cyclical | nan | nan% |
+| XLI | Industrials | nan | nan% |
+| XLV | Healthcare | nan | nan% |
+| XLE | Energy | nan | nan% |
+| XLP | Consumer Defensive | nan | nan% |
+| XLB | Basic Materials | nan | nan% |
+| XLRE | Real Estate | nan | nan% |
+| XLU | Utilities | nan | nan% |
 
-*Fetched: 2026-07-27T04:18:31.056412+00:00 via yfinance*
+*Fetched: 2026-07-27T04:41:59.516172+00:00 via yfinance*
 
 Sources used: Finviz, Yahoo Finance, Nasdaq, FRED, U.S. Treasury, Federal Reserve, CNBC RSS, MarketWatch RSS.

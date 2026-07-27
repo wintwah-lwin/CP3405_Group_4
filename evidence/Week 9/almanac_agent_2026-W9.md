@@ -2,7 +2,7 @@
 ## Forecast for the Week of 27 July 2026 — W9
 
 **Prepared on:** 27 Jul 2026  
-**Fresh market data collected:** 27 July 2026, 12:18 PM  
+**Fresh market data collected:** 27 July 2026, 12:42 PM  
 **Completed market period used:** Latest available 1-week market data  
 **Forecast period:** 2026-07-27 to 2026-07-31  
 
@@ -15,15 +15,15 @@
 
 | Market / Asset | 1-Week Change | R3 Reading |
 |---|---:|---|
-| Nasdaq 100 | -3.09% | Negative |
-| Russell 2000 | -1.50% | Negative |
-| S&P 500 | -1.62% | Negative |
-| Dow Jones | -1.15% | Negative |
-| VIX | +11.06% | Higher fear |
-| WTI Crude Oil | +2.14% | Positive |
-| Brent Crude Oil | +3.52% | Positive |
-| Gold | +2.06% | Positive |
-| U.S. Dollar | +0.21% | Positive |
+| Nasdaq 100 | -1.97% | Negative |
+| Russell 2000 | -1.16% | Negative |
+| S&P 500 | -1.67% | Negative |
+| Dow Jones | -1.60% | Negative |
+| VIX | +11.78% | Higher fear |
+| WTI Crude Oil | +1.89% | Positive |
+| Brent Crude Oil | +3.42% | Positive |
+| Gold | +2.04% | Positive |
+| U.S. Dollar | +0.22% | Positive |
 
 ---
 
@@ -32,17 +32,17 @@
 
 | Sector | Return | Immediate Signal |
 |---|---:|---|
-| Utilities | +3.00% | Positive |
-| Energy | +2.90% | Positive |
-| Industrials | +2.55% | Positive |
-| Materials | +2.46% | Positive |
-| Healthcare | +2.08% | Positive |
-| Real Estate | +1.59% | Positive |
-| Financials | +0.48% | Positive |
-| Technology | +0.10% | Positive |
-| Consumer Staples | -0.86% | Negative |
-| Communication Services | -4.06% | Negative |
-| Consumer Discretionary | -4.54% | Negative |
+| Utilities | +2.78% | Positive |
+| Energy | +2.49% | Positive |
+| Industrials | +2.14% | Positive |
+| Technology | +1.56% | Positive |
+| Healthcare | +1.38% | Positive |
+| Materials | +0.52% | Positive |
+| Financials | -0.37% | Negative |
+| Real Estate | -0.62% | Negative |
+| Consumer Staples | -1.94% | Negative |
+| Communication Services | -4.89% | Negative |
+| Consumer Discretionary | -5.10% | Negative |
 
 ---
 
@@ -50,24 +50,24 @@
 *(Automated using selected major stock returns from Yahoo Finance)*
 
 ### Strong areas
-- MU +7.94%
-- XOM +7.53%
-- CVX +5.94%
-- JNJ +5.37%
-- AMD +4.19%
-- JPM +2.93%
-- GE +2.31%
-- LLY +2.30%
+- MU +16.06%
+- AMD +7.74%
+- XOM +7.50%
+- CVX +5.74%
+- AVGO +4.81%
+- JNJ +3.72%
+- INTC +3.35%
+- CAT +1.98%
 
 ### Weak areas
-- NVDA -0.27%
-- ADBE -4.33%
-- INTC -4.81%
-- MSFT -4.84%
-- NOW -5.03%
-- AMZN -7.12%
-- GOOGL -9.80%
-- META -10.44%
+- BAC -0.34%
+- AAPL -3.48%
+- MSFT -4.87%
+- AMZN -6.49%
+- META -8.79%
+- ADBE -9.83%
+- GOOGL -10.37%
+- NOW -11.60%
 
 ---
 
@@ -102,15 +102,15 @@
 ## 6. INDEX AND SECTOR IMPLICATIONS
 
 ### S&P 500
-- Latest weekly change: -1.62%.
+- Latest weekly change: -1.67%.
 - R3 view is generated from broad-market momentum and almanac pattern.
 
 ### Nasdaq / NDX
-- Latest weekly change: -3.09%.
+- Latest weekly change: -1.97%.
 - Relative strength is assessed from Nasdaq performance versus other indexes.
 
 ### Russell 2000 / IWM
-- Latest weekly change: -1.50%.
+- Latest weekly change: -1.16%.
 - Small-cap participation is used as a risk appetite signal.
 
 ### Sector Summary
@@ -131,10 +131,10 @@
 
 **AUTOMATED REASONS:**
 
-- S&P 500 fell -1.62%, showing weaker broad-market tone.
-- Nasdaq 100 fell -3.09%, reducing tech confidence.
-- Russell 2000 fell -1.50%, showing weak small-cap participation.
-- VIX rose +11.06%, warning of higher volatility.
+- S&P 500 fell -1.67%, showing weaker broad-market tone.
+- Nasdaq 100 fell -1.97%, reducing tech confidence.
+- Russell 2000 fell -1.16%, showing weak small-cap participation.
+- VIX rose +11.78%, warning of higher volatility.
 - Almanac pattern: No major special almanac pattern detected gives a Neutral signal.
 
 **INVALIDATION:**

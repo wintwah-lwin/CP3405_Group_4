@@ -1,6 +1,6 @@
 # Final Weekly Prediction — W9
 
-**Generated:** 27 July 2026, 12:19 PM  
+**Generated:** 27 July 2026, 12:42 PM  
 **Output Type:** Automated final prediction after Macro, Almanac, Technical, LLM and Human Score review.
 
 ---
@@ -22,7 +22,7 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 | Macro | Cautious | Medium | S&P 500 futures weak at -0.67% |
 | Almanac | Cautiously Bearish / High-Volatility | Medium | > The Almanac Agent combines live index momentum, volatility, sector returns, weekly breadth, current-week calendar events and date-based seasonal patterns. The final bias is gener... |
 | Technical | Neutral / Caution | Medium | Mixed signals |
-| Llm | Cautiously Bearish with Neutral-Caution Technical Overlay | Medium | Breakdown in Mega-cap Technology momentum, rising VIX (+11.06%), and mounting geopolitical/macro risks (Oil +9.21%, Trump tariff threats, and AI capex anxiety). |
+| Llm | Cautiously Bearish to Neutral-Cautious | Medium | Weakening technical momentum (prices breaking below weekly 8 EMA) coupled with rising geopolitical tensions and trade tariff threats. |
 | Human | Neutral-Bearish | Medium | Mixed signals |
 
 ---
@@ -34,7 +34,7 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 | Macro | Cautious | Medium | -1.0 |
 | Almanac | Cautiously Bearish / High-Volatility | Medium | -1.0 |
 | Technical | Neutral / Caution | Medium | 0.0 |
-| Llm | Cautiously Bearish with Neutral-Caution Technical Overlay | Medium | -1.2 |
+| Llm | Cautiously Bearish to Neutral-Cautious | Medium | -1.2 |
 | Human | Neutral-Bearish | Medium | -1.12 |
 | **Total** |  |  | **-4.33** |
 
