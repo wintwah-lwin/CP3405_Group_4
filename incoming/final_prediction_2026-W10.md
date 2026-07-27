@@ -1,6 +1,6 @@
 # Final Weekly Prediction — W10
 
-**Generated:** 27 July 2026, 11:51 AM  
+**Generated:** 27 July 2026, 12:02 PM  
 **Output Type:** Automated final prediction after Macro, Almanac, Technical, LLM and Human Score review.
 
 ---
@@ -8,8 +8,8 @@
 ## 1. Executive Summary
 
 **FINAL MARKET BIAS:** Bearish  
-**CONFIDENCE:** Medium  
-**MODEL SCORE:** -2.9
+**CONFIDENCE:** High  
+**MODEL SCORE:** -3.2
 
 The final prediction combines the automated Macro Agent, Almanac Agent, Technical Agent, LLM Integration output and the manual Human Score override. The Human Score is weighted more heavily because it represents final team judgement after reviewing the automated outputs.
 
@@ -22,7 +22,7 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 | Macro | Cautious | Medium | S&P 500 futures positive at +0.20% |
 | Almanac | Cautiously Bearish / High-Volatility | Medium | > The Almanac Agent combines live index momentum, volatility, sector returns, weekly breadth, current-week calendar events and date-based seasonal patterns. The final bias is gener... |
 | Technical | Neutral / Caution | Medium | Mixed signals |
-| Llm | Cautiously Neutral-Bearish | Medium | Sharp decline in mega-cap technology momentum and rising volatility (VIX +11.06%), coupled with inflationary pressure from rising energy prices. |
+| Llm | Cautiously Bearish to Neutral | Medium | Sector rotation away from Technology and Communication Services into defensive/value sectors (Utilities, Energy, Healthcare) amidst rising volatility (VIX +11.06%) and geopolitical... |
 | Human | Missing | Missing | Report not found |
 
 ---
@@ -34,9 +34,9 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 | Macro | Cautious | Medium | -1.0 |
 | Almanac | Cautiously Bearish / High-Volatility | Medium | -1.0 |
 | Technical | Neutral / Caution | Medium | 0.0 |
-| Llm | Cautiously Neutral-Bearish | Medium | -0.9 |
+| Llm | Cautiously Bearish to Neutral | Medium | -1.2 |
 | Human | Missing | Missing | 0.0 |
-| **Total** |  |  | **-2.9** |
+| **Total** |  |  | **-3.2** |
 
 ---
 
@@ -88,6 +88,6 @@ The final prediction should be reviewed again if:
 
 ## 9. Final Recommendation
 
-**Recommendation:** Maintain a **Bearish** market stance with **Medium** confidence.
+**Recommendation:** Maintain a **Bearish** market stance with **High** confidence.
 
 This report is ready to be used as the final weekly prediction input for the later calibration suite.

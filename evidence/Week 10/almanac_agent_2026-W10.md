@@ -2,7 +2,7 @@
 ## Forecast for the Week of 27 July 2026 — W10
 
 **Prepared on:** 27 Jul 2026  
-**Fresh market data collected:** 27 July 2026, 11:50 AM  
+**Fresh market data collected:** 27 July 2026, 12:01 PM  
 **Completed market period used:** Latest available 1-week market data  
 **Forecast period:** 2026-07-27 to 2026-07-31  
 
@@ -20,10 +20,10 @@
 | S&P 500 | -1.62% | Negative |
 | Dow Jones | -1.15% | Negative |
 | VIX | +11.06% | Higher fear |
-| WTI Crude Oil | +2.29% | Positive |
-| Brent Crude Oil | +3.86% | Positive |
-| Gold | +2.01% | Positive |
-| U.S. Dollar | +0.23% | Positive |
+| WTI Crude Oil | +7.31% | Positive |
+| Brent Crude Oil | +8.47% | Positive |
+| Gold | +1.43% | Positive |
+| U.S. Dollar | +0.48% | Positive |
 
 ---
 
@@ -52,9 +52,9 @@
 ### Strong areas
 - MU +7.94%
 - XOM +7.53%
-- CVX +5.94%
-- JNJ +5.37%
+- CVX +5.74%
 - AMD +4.19%
+- JNJ +3.72%
 - JPM +2.93%
 - GE +2.31%
 - LLY +2.30%

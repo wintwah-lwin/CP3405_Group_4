@@ -5,7 +5,7 @@
 ## Commodities & Dollar
 
 - **WTI Crude Oil**: weekly change +3.38%, direction: Rising
-- **Gold**: weekly change +1.88%, direction: Rising
+- **Gold**: weekly change +1.89%, direction: Rising
 - **DXY Dollar Index**: weekly change +0.26%, direction: Rising
 
 ---
@@ -100,7 +100,7 @@
 - Small caps positive at +0.46%
 - Oil rising at +3.38%, increasing inflation pressure
 - Dollar rising at +0.26%, pressure on risk assets
-- Gold rising at +1.88%, showing defensive demand
+- Gold rising at +1.89%, showing defensive demand
 - Technology sector weak at -1.44%
 
 ## MACRO BIAS: Cautious
@@ -114,7 +114,7 @@
 
 | Ticker | Name | Group | Weekly % |
 |--------|------|-------|----------|
-| SI | Silver | METALS | +4.41% |
+| SI | Silver | METALS | +4.42% |
 | QA | Crude Oil Brent | ENERGY | +4.02% |
 | CL | Crude Oil WTI | ENERGY | +3.38% |
 | LB | Lumber | SOFTS | +3.07% |
@@ -122,7 +122,7 @@
 | ZM | Soybean Meal | GRAINS | +2.40% |
 | ZC | Corn | GRAINS | +2.22% |
 | CT | Cotton | SOFTS | +2.07% |
-| GC | Gold | METALS | +1.88% |
+| GC | Gold | METALS | +1.89% |
 | DY | DAX | INDICES | +1.60% |
 | PL | Platinum | METALS | +1.52% |
 | EX | Euro Stoxx 50 | INDICES | +1.17% |
@@ -142,7 +142,7 @@
 | HG | Copper | METALS | +0.09% |
 | HO | Heating Oil | ENERGY | +0.03% |
 | ZR | Rough Rice | GRAINS | +0.00% |
-| 6A | AUD | CURRENCIES | -0.05% |
+| 6A | AUD | CURRENCIES | -0.04% |
 | 6E | EUR | CURRENCIES | -0.11% |
 | ZT | 2 Year Note | BONDS | -0.13% |
 | 6C | CAD | CURRENCIES | -0.19% |
@@ -164,7 +164,7 @@
 | ZO | Oats | GRAINS | -4.61% |
 | VX | VIX | INDICES | -6.15% |
 
-*Fetched: 2026-07-27T04:01:06.878314+00:00 from Finviz*
+*Fetched: 2026-07-27T04:01:19.179718+00:00 from Finviz*
 
 ---
 
@@ -181,9 +181,9 @@
 | XLY | Consumer Cyclical | 109.41 | +0.6% |
 | XLI | Industrials | 182.66 | +0.4% |
 | XLE | Energy | 59.62 | +0.4% |
-| XLU | Utilities | 46.29 | +0.22% |
 | XLK | Technology | 175.88 | -1.44% |
+| XLU | Utilities | nan | nan% |
 
-*Fetched: 2026-07-27T04:01:06.879704+00:00 via yfinance*
+*Fetched: 2026-07-27T04:01:19.181530+00:00 via yfinance*
 
 Sources used: Finviz, Yahoo Finance, Nasdaq, FRED, U.S. Treasury, Federal Reserve, CNBC RSS, MarketWatch RSS.
