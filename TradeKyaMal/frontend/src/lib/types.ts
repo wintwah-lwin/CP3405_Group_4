@@ -111,8 +111,10 @@ export interface HumanScoreData {
   technical: HumanScoreSection;
   almanac: HumanScoreSection;
   llmConsensus: HumanScoreSection;
+  wildcard: HumanScoreSection;
   finalBias: string;
   confidence: string;
+  recommendation: string;
   markdown?: string;
   updatedAt?: string;
   source?: 'saved' | 'github';

@@ -12,8 +12,10 @@ export interface IHumanScore extends Document {
   technical: HumanScoreSection;
   almanac: HumanScoreSection;
   llmConsensus: HumanScoreSection;
+  wildcard: HumanScoreSection;
   finalBias: string;
   confidence: string;
+  recommendation: string;
   markdown: string;
   updatedAt: Date;
 }
@@ -34,8 +36,10 @@ const humanScoreSchema = new Schema<IHumanScore>(
     technical: { type: sectionSchema, default: () => ({}) },
     almanac: { type: sectionSchema, default: () => ({}) },
     llmConsensus: { type: sectionSchema, default: () => ({}) },
+    wildcard: { type: sectionSchema, default: () => ({}) },
     finalBias: { type: String, default: '' },
     confidence: { type: String, default: 'Medium' },
+    recommendation: { type: String, default: '' },
     markdown: { type: String, default: '' },
   },
   { timestamps: true }
