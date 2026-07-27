@@ -8,9 +8,9 @@ The team expected the market to remain broadly directional with a Neutral-Bullis
 
 The weekly actual performance settled at:
 
-- SPX: +nan%
-- NDX: +nan%
-- IWM: +nan%
+- SPX: -0.42%
+- NDX: -1.66%
+- IWM: -0.39%
 
 ## What We Learned
 

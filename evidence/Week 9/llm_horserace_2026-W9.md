@@ -8,7 +8,7 @@
 
 ### 2. Gemini
 - Accuracy: 50.0%
-- Extracted Bias: Neutral-Bullish
+- Extracted Bias: Neutral
 
 ## Who's the Winner
 

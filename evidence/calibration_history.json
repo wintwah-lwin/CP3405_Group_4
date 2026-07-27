@@ -3,8 +3,8 @@
     "summary_scores": {
       "direction_accuracy": "5/10",
       "magnitude_accuracy": "0/10",
-      "confidence_calibration": "7/10",
-      "overall_score": "4.0/10"
+      "confidence_calibration": "5/10",
+      "overall_score": "3.3/10"
     },
     "predictors": {
       "Macro": {
@@ -17,9 +17,9 @@
       },
       "Almanac": {
         "prediction": "Bearish",
-        "accuracy": 50.0,
-        "correct": 0,
-        "partial": 3,
+        "accuracy": 100.0,
+        "correct": 3,
+        "partial": 0,
         "wrong": 0,
         "no_score": 0
       },
@@ -33,9 +33,9 @@
       },
       "Human": {
         "prediction": "Bearish",
-        "accuracy": 50.0,
-        "correct": 0,
-        "partial": 3,
+        "accuracy": 100.0,
+        "correct": 3,
+        "partial": 0,
         "wrong": 0,
         "no_score": 0
       },
@@ -56,7 +56,7 @@
         "no_score": 0
       },
       "Gemini": {
-        "prediction": "Neutral-Bullish",
+        "prediction": "Neutral",
         "accuracy": 50.0,
         "correct": 0,
         "partial": 3,
