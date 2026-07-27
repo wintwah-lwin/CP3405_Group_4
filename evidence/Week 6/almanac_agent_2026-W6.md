@@ -1,5 +1,5 @@
 # R3 Almanac Agent Output
-## Forecast for the Week of 06 July 2026 — W26
+## Forecast for the Week of 06 July 2026 — W6
 
 **Prepared on:** 06 Jul 2026  
 **Fresh market data collected:** 06 July 2026, 08:06 PM  

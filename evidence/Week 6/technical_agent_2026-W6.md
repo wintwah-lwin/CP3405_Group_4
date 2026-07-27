@@ -1,4 +1,4 @@
-# TECHNICAL AGENT OUTPUT — W26
+# TECHNICAL AGENT OUTPUT — W6
 
 **Source:** R5 Technical Agent  
 **Report Date:** 06 July 2026  

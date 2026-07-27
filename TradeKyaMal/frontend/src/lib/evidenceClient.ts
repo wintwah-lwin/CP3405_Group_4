@@ -1,3 +1,11 @@
+import {
+  evidenceFolderPath,
+  evidencePathsForProjectWeek,
+  folderAndFileWeekToProjectWeek,
+  LEGACY_W6_FOLDER,
+  parseFileWeekFromName,
+  projectWeekToEvidenceTarget,
+} from '@/lib/weekMapping';
 import type {
   AgentReportResponse,
   AgentType,
@@ -96,18 +104,23 @@ async function fetchPublicRaw(repoPath: string): Promise<string | null> {
   return res.text();
 }
 
-async function weekHasEvidence(week: number): Promise<boolean> {
-  const path = `${weekFolderPath(week)}/almanac_agent_2026-W${week}.md`;
-  try {
-    const res = await fetch(rawFileUrl(path), { method: 'HEAD' });
-    return res.ok;
-  } catch {
-    return false;
+async function weekHasEvidence(projectWeek: number): Promise<boolean> {
+  const { fileWeek } = projectWeekToEvidenceTarget(projectWeek);
+  const filename = `almanac_agent_2026-W${fileWeek}.md`;
+
+  for (const path of evidencePathsForProjectWeek(projectWeek, filename)) {
+    try {
+      const res = await fetch(rawFileUrl(path), { method: 'HEAD' });
+      if (res.ok) return true;
+    } catch {
+      // try next path
+    }
   }
+  return false;
 }
 
 async function probeEvidenceWeeks(maxWeek?: number): Promise<number[]> {
-  const upper = maxWeek ?? Math.max(getProjectWeek(), 26);
+  const upper = maxWeek ?? getProjectWeek() + 2;
   const found: number[] = [];
 
   await Promise.all(
@@ -119,6 +132,63 @@ async function probeEvidenceWeeks(maxWeek?: number): Promise<number[]> {
   return found.sort((a, b) => b - a);
 }
 
+async function listEvidenceFolderNumbers(): Promise<number[]> {
+  const res = await fetch(repoApiUrl('evidence'), {
+    headers: {
+      Accept: 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+    },
+  });
+
+  if (!res.ok) return [];
+
+  const entries = (await res.json()) as { name: string }[];
+  return entries
+    .map((entry) => {
+      const match = entry.name.match(/^Week (\d+)$/);
+      return match ? Number(match[1]) : null;
+    })
+    .filter((value): value is number => value !== null);
+}
+
+async function listFolderFiles(folder: number, subPath = ''): Promise<EvidenceFileEntry[]> {
+  const folderPath = evidenceFolderPath(folder, subPath);
+  const res = await fetch(repoApiUrl(folderPath), {
+    headers: {
+      Accept: 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+    },
+  });
+
+  if (!res.ok) return [];
+
+  const entries = (await res.json()) as {
+    name: string;
+    path: string;
+    type: 'file' | 'dir';
+    size?: number;
+    download_url?: string;
+  }[];
+
+  return entries.map((entry) => ({
+    name: entry.name,
+    path: entry.path,
+    type: entry.type,
+    size: entry.size,
+    downloadUrl: entry.download_url,
+  }));
+}
+
+async function detectProjectWeekForFolder(folder: number): Promise<number | null> {
+  const files = await listFolderFiles(folder);
+  const almanac = files.find((file) => /almanac_agent/i.test(file.name));
+  if (almanac) {
+    const fileWeek = parseFileWeekFromName(almanac.name);
+    if (fileWeek) return folderAndFileWeekToProjectWeek(folder, fileWeek);
+  }
+  return null;
+}
+
 export async function findLatestWeekWithEvidence(fromWeek?: number): Promise<number> {
   const start = fromWeek ?? getProjectWeek();
   for (let week = start; week >= 1; week -= 1) {
@@ -128,33 +198,25 @@ export async function findLatestWeekWithEvidence(fromWeek?: number): Promise<num
 }
 
 export async function listEvidenceWeeks(): Promise<number[]> {
-  const res = await fetch(repoApiUrl('evidence'), {
-    headers: {
-      Accept: 'application/vnd.github+json',
-      'X-GitHub-Api-Version': '2022-11-28',
-    },
-  });
+  const folderNums = await listEvidenceFolderNumbers();
+  const projectWeeks = new Set<number>();
 
-  const weeks = new Set<number>();
-  if (res.ok) {
-    const entries = (await res.json()) as { name: string }[];
-    for (const entry of entries) {
-      const match = entry.name.match(/^Week (\d+)$/);
-      if (match) weeks.add(Number(match[1]));
-    }
-  }
-
-  if (weeks.size === 0) {
+  if (folderNums.length === 0) {
     return probeEvidenceWeeks();
   }
 
-  // GitHub API can miss folders when rate-limited partially — verify high weeks too
-  for (const week of [26, 22, 8, 7, 5, 4, 3]) {
-    if (weeks.has(week)) continue;
-    if (await weekHasEvidence(week)) weeks.add(week);
+  await Promise.all(
+    folderNums.map(async (folder) => {
+      const projectWeek = await detectProjectWeekForFolder(folder);
+      if (projectWeek) projectWeeks.add(projectWeek);
+    })
+  );
+
+  for (let week = 1; week <= getProjectWeek() + 1; week += 1) {
+    if (await weekHasEvidence(week)) projectWeeks.add(week);
   }
 
-  return [...weeks].sort((a, b) => b - a);
+  return [...projectWeeks].sort((a, b) => b - a);
 }
 
 export async function getDefaultEvidenceWeek(availableWeeks: number[]): Promise<number> {
@@ -164,15 +226,15 @@ export async function getDefaultEvidenceWeek(availableWeeks: number[]): Promise<
   // Fall back to newest week near the current project week, not highest folder number (e.g. W26)
   const projectWeek = getProjectWeek();
   const nearCurrent = availableWeeks
-    .filter((week) => week <= projectWeek + 1)
+    .filter((week) => week <= projectWeek)
     .sort((a, b) => b - a)[0];
 
   return nearCurrent ?? latestPipelineWeek;
 }
 
-export function weekFolderPath(week: number, subPath = ''): string {
-  const base = `evidence/Week ${week}`;
-  return subPath ? `${base}/${subPath}` : base;
+export function weekFolderPath(projectWeek: number, subPath = ''): string {
+  const { folder } = projectWeekToEvidenceTarget(projectWeek);
+  return evidenceFolderPath(folder, subPath);
 }
 
 export async function listWeekEvidenceFiles(
@@ -285,25 +347,34 @@ export async function fetchEvidenceFileContent(path: string): Promise<string | n
 
 export async function fetchEvidenceReport(
   agentId: EvidenceAgentId,
-  week: number
+  projectWeek: number
 ): Promise<AgentReportResponse> {
-  const weekFolder = weekFolderPath(week);
+  const { folder, fileWeek } = projectWeekToEvidenceTarget(projectWeek);
+  const weekFolder = evidenceFolderPath(folder);
   const filenames = REPORT_CANDIDATES[agentId];
 
-  for (const filename of filenames(week)) {
+  for (const filename of filenames(fileWeek)) {
     const repoPath = `${weekFolder}/${filename}`;
-    const markdown = await fetchPublicRaw(repoPath);
+    let markdown = await fetchPublicRaw(repoPath);
+
+    if (!markdown && projectWeek === 6 && folder === 6) {
+      markdown = await fetchPublicRaw(`${evidenceFolderPath(LEGACY_W6_FOLDER)}/${filename}`);
+    }
+
     if (!markdown) continue;
 
     const extras: Record<string, string> = {};
-    for (const extraName of EXTRA_CANDIDATES[agentId]?.(week) ?? []) {
+    for (const extraName of EXTRA_CANDIDATES[agentId]?.(fileWeek) ?? []) {
       const extraPath = `${weekFolder}/${extraName}`;
-      const extra = await fetchPublicRaw(extraPath);
+      let extra = await fetchPublicRaw(extraPath);
+      if (!extra && projectWeek === 6) {
+        extra = await fetchPublicRaw(`${evidenceFolderPath(LEGACY_W6_FOLDER)}/${extraName}`);
+      }
       if (extra) extras[extraName] = extra;
     }
 
     return {
-      week,
+      week: projectWeek,
       source: 'public_github',
       report: {
         filename,
@@ -316,10 +387,10 @@ export async function fetchEvidenceReport(
   }
 
   return {
-    week,
+    week: projectWeek,
     source: 'public_github',
     report: null,
-    message: `No files for week ${week}.`,
+    message: `No files for week ${projectWeek}.`,
   };
 }
 
@@ -407,14 +478,16 @@ async function fetchOptionalMarkdown(path: string): Promise<string | null> {
   return raw ? cleanReportMarkdown(raw) : null;
 }
 
-export async function fetchCalibrationArtifacts(week: number): Promise<{
+export async function fetchCalibrationArtifacts(projectWeek: number): Promise<{
   calibrationLog: string | null;
   learningLog: string | null;
   llmHorserace: string | null;
   pastAccuracyLog: string | null;
   humanScoreMarkdown: string | null;
 }> {
-  const weekFolder = weekFolderPath(week);
+  const { folder, fileWeek } = projectWeekToEvidenceTarget(projectWeek);
+  const weekFolder = evidenceFolderPath(folder);
+  const legacyFolder = projectWeek === 6 ? evidenceFolderPath(LEGACY_W6_FOLDER) : null;
 
   async function firstMatch(paths: string[]): Promise<string | null> {
     for (const path of paths) {
@@ -423,6 +496,8 @@ export async function fetchCalibrationArtifacts(week: number): Promise<{
     }
     return null;
   }
+
+  const fileTag = `2026-W${fileWeek}`;
 
   const [
     calibrationLog,
@@ -433,28 +508,31 @@ export async function fetchCalibrationArtifacts(week: number): Promise<{
     humanScoreMarkdown,
   ] = await Promise.all([
     firstMatch([
-      `${weekFolder}/calibration_log_2026-W${week}.md`,
-      `${weekFolder}/calibration_log_W${week}.md`,
+      `${weekFolder}/calibration_log_${fileTag}.md`,
+      `${weekFolder}/calibration_log_W${fileWeek}.md`,
       `${weekFolder}/calibration_log.md`,
+      ...(legacyFolder ? [`${legacyFolder}/calibration_log_${fileTag}.md`] : []),
       `evidence/calibration_log.md`,
     ]),
     firstMatch([
-      `${weekFolder}/learning_log_2026-W${week}.md`,
-      `${weekFolder}/learning_log_W${week}.md`,
+      `${weekFolder}/learning_log_${fileTag}.md`,
+      `${weekFolder}/learning_log_W${fileWeek}.md`,
       `${weekFolder}/learning_log.md`,
-      `evidence/learning_log_W${week}.md`,
+      `evidence/learning_log_W${fileWeek}.md`,
     ]),
     firstMatch([
-      `${weekFolder}/llm_horserace_2026-W${week}.md`,
-      `${weekFolder}/llm_horserace_W${week}.md`,
+      `${weekFolder}/llm_horserace_${fileTag}.md`,
+      `${weekFolder}/llm_horserace_W${fileWeek}.md`,
       `${weekFolder}/llm_horserace.md`,
       `evidence/llm_horserace.md`,
     ]),
     firstMatch([`${weekFolder}/past_accuracy_log.md`]),
     firstMatch([`evidence/past_accuracy_log.md`]),
     firstMatch([
-      `${weekFolder}/human_score_2026-W${week}.md`,
-      `evidence/human_score_2026-W${week}.md`,
+      `${weekFolder}/human_score_${fileTag}.md`,
+      `${weekFolder}/human_score_2026-W${projectWeek}.md`,
+      ...(legacyFolder ? [`${legacyFolder}/human_score_${fileTag}.md`] : []),
+      `evidence/human_score_${fileTag}.md`,
     ]),
   ]);
 

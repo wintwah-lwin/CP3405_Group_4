@@ -31,4 +31,4 @@ This report aggregates the weekly calibration, learning, and LLM horse-race evid
 | W23 | N/A | N/A | N/A | N/A |
 | W24 | N/A | N/A | N/A | N/A |
 | W25 | N/A | N/A | N/A | N/A |
-| W26 | N/A | N/A | N/A | N/A |
+| W6 | N/A | N/A | N/A | N/A |
