@@ -9,7 +9,7 @@ Sources:
 Outputs (scripts/output/):
   - macro_finviz_1w_{date}.json
   - macro_yahoo_sectors_{date}.json
-  - macro_report_w{week}.md
+  - macro_agent_2026-W{week}.md
   - macro_charts/macro_{symbol}_{date}.png
 """
 
@@ -41,7 +41,7 @@ CHARTS_DIR = OUTPUT_DIR / "macro_charts"
 
 FINVIZ_JSON = "macro_finviz_1w_{stamp}.json"
 SECTORS_JSON = "macro_yahoo_sectors_{stamp}.json"
-REPORT_MD = "macro_report_w{week}.md"
+REPORT_MD = "macro_agent_2026-W{week}.md"
 
 
 def detect_group_repo() -> Path | None:
