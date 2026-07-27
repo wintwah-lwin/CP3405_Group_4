@@ -1,5 +1,6 @@
 name: Auto Prediction
 
+# Single pipeline runner — evidence commits to this repo only.
 on:
   schedule:
     - cron: '0 20 * * 5' # Saturday 4:00 AM SGT
@@ -13,16 +14,22 @@ jobs:
       contents: write
 
     env:
+      SCRIPTS: ${{ github.workspace }}/TradeKyaMal/scripts
       PYTHONPATH: ${{ github.workspace }}/TradeKyaMal/scripts
       MPLBACKEND: Agg
       TZ: Asia/Singapore
 
     steps:
-      - name: Checkout repository
+      - name: Checkout group repository
         uses: actions/checkout@v4
         with:
           persist-credentials: true
           fetch-depth: 0
+
+      - name: Sync with remote
+        run: |
+          git fetch origin "${{ github.ref_name }}"
+          git reset --hard "origin/${{ github.ref_name }}"
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -59,28 +66,28 @@ jobs:
 
       - name: Run automated fetch (R6)
         run: |
-          python TradeKyaMal/scripts/run_weekly_fetch.py \
+          python "$SCRIPTS/run_weekly_fetch.py" \
             --week "${{ steps.week.outputs.week }}" \
             --repo "${{ github.workspace }}" \
             --no-push
 
       - name: Run Almanac Agent (R3)
         run: |
-          python TradeKyaMal/scripts/run_almanac_agent.py \
+          python "$SCRIPTS/run_almanac_agent.py" \
             --week "${{ steps.week.outputs.week }}" \
             --repo "${{ github.workspace }}" \
             --no-push
 
       - name: Run Macro Agent (R4)
         run: |
-          python TradeKyaMal/scripts/run_macro_agent.py \
+          python "$SCRIPTS/run_macro_agent.py" \
             --week "${{ steps.week.outputs.week }}" \
             --repo "${{ github.workspace }}" \
             --no-push
 
       - name: Run Technical Agent (R5)
         run: |
-          python TradeKyaMal/scripts/run_technical_agent.py \
+          python "$SCRIPTS/run_technical_agent.py" \
             --week "${{ steps.week.outputs.week }}" \
             --repo "${{ github.workspace }}" \
             --no-push
@@ -90,17 +97,16 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          python TradeKyaMal/scripts/run_llm_integration.py \
+          python "$SCRIPTS/run_llm_integration.py" \
             --week "${{ steps.week.outputs.week }}" \
             --repo "${{ github.workspace }}" \
             --no-push
 
       - name: Verify LLM API calls succeeded
         shell: bash
+        env:
+          WEEK: ${{ steps.week.outputs.week }}
         run: |
-          WEEK="${{ steps.week.outputs.week }}"
-          LOG="evidence/Week $WEEK/llm_responses_2026-W$WEEK.json"
-
           python - <<'PY'
           import json
           import os
@@ -120,32 +126,31 @@ jobs:
 
           print("OpenAI and Gemini both succeeded.")
           PY
-        env:
-          WEEK: ${{ steps.week.outputs.week }}
 
       - name: Generate final prediction
         run: |
-          python TradeKyaMal/scripts/run_final_prediction.py \
+          python "$SCRIPTS/run_final_prediction.py" \
             --week "${{ steps.week.outputs.week }}" \
             --repo "${{ github.workspace }}" \
             --no-push
 
       - name: Run Calibration Suite
         run: |
-          python TradeKyaMal/scripts/run_calibration_suite.py \
+          python "$SCRIPTS/run_calibration_suite.py" \
             --week "${{ steps.week.outputs.week }}" \
             --repo "${{ github.workspace }}"
 
       - name: Run Past Accuracy Report
         run: |
-          python TradeKyaMal/scripts/build_past_accuracy_report.py \
+          python "$SCRIPTS/build_past_accuracy_report.py" \
             --week "${{ steps.week.outputs.week }}" \
             --repo "${{ github.workspace }}"
 
       - name: Verify generated files
         shell: bash
+        env:
+          WEEK: ${{ steps.week.outputs.week }}
         run: |
-          WEEK="${{ steps.week.outputs.week }}"
           WEEK_DIR="evidence/Week $WEEK"
 
           test -f "$WEEK_DIR/almanac_agent_2026-W$WEEK.md"
@@ -160,6 +165,8 @@ jobs:
 
       - name: Auto-commit and push
         shell: bash
+        env:
+          WEEK: ${{ steps.week.outputs.week }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -171,8 +178,36 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Auto-commit: Pipeline execution (Week ${{ steps.week.outputs.week }})"
+          git commit -m "Auto-commit: Pipeline execution (Week $WEEK)"
+          BRANCH="${{ github.ref_name }}"
 
-          # Remote may have new commits from teammates — sync before push
-          git pull --rebase origin "${{ github.ref_name }}"
-          git push origin "HEAD:${{ github.ref_name }}"
+          for attempt in 1 2 3; do
+            echo "Push attempt $attempt..."
+            if git push origin "HEAD:$BRANCH"; then
+              echo "Push succeeded."
+              exit 0
+            fi
+
+            echo "Push rejected — merging remote, keeping this run's evidence files."
+            git fetch origin "$BRANCH"
+
+            if git merge "origin/$BRANCH" -X ours --no-edit; then
+              continue
+            fi
+
+            while IFS= read -r file; do
+              [ -z "$file" ] && continue
+              case "$file" in
+                evidence/*|incoming/*)
+                  git checkout --ours -- "$file" 2>/dev/null || true
+                  git add -- "$file" 2>/dev/null || true
+                  ;;
+              esac
+            done < <(git diff --name-only --diff-filter=U 2>/dev/null || true)
+
+            git add evidence/ incoming/ 2>/dev/null || true
+            git commit --no-edit || GIT_EDITOR=true git merge --continue
+          done
+
+          echo "Failed to push after 3 attempts."
+          exit 1
