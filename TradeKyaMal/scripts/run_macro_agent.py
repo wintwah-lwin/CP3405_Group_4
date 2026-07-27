@@ -9,7 +9,7 @@ Sources:
 Outputs (scripts/output/):
   - macro_finviz_1w_{date}.json
   - macro_yahoo_sectors_{date}.json
-  - macro_agent_2026-W{week}.md
+  - macro_report_w{week}.md
   - macro_charts/macro_{symbol}_{date}.png
 """
 
@@ -42,7 +42,7 @@ CHARTS_DIR = OUTPUT_DIR / "macro_charts"
 
 FINVIZ_JSON = "macro_finviz_1w_{stamp}.json"
 SECTORS_JSON = "macro_yahoo_sectors_{stamp}.json"
-REPORT_MD = "macro_agent_2026-W{week}.md"
+REPORT_MD = "macro_report_w{week}.md"
 
 
 def detect_group_repo() -> Path | None:
@@ -87,6 +87,15 @@ def copy_macro_evidence(week: int, repo_path: Path) -> Path:
         for chart in CHARTS_DIR.glob("*.png"):
             shutil.copy2(chart, charts_dest / chart.name)
 
+    incoming = repo_path / "incoming"
+    incoming.mkdir(exist_ok=True)
+    for f in week_dir.iterdir():
+        if f.is_file():
+            shutil.copy2(f, incoming / f.name)
+    if charts_dest.exists():
+        for chart in charts_dest.glob("*.png"):
+            shutil.copy2(chart, incoming / chart.name)
+
     return week_dir
 
 
@@ -99,7 +108,7 @@ def git_push(repo_path: Path, week: int) -> None:
     msg = f"chore(macro): live fetch W{week} — Finviz + Yahoo ({stamp})"
 
     subprocess.run(
-        ["git", "add", f"evidence/Week {week}/"],
+        ["git", "add", f"evidence/Week {week}/", "incoming/"],
         cwd=repo_path,
         check=True,
     )
@@ -214,7 +223,7 @@ def main() -> None:
             sync_to_repo=not used_local_repo or args.no_push,
         )
 
-    print("\nDone. Macro report generated with automated Fed rate, FOMC date, and macro bias.")
+    print("\nDone. Edit macro_report_w{0}.md for Fed, news, bias.".format(args.week))
 
 
 if __name__ == "__main__":

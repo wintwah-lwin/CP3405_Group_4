@@ -1,6 +1,7 @@
 name: Auto Prediction
 
 # Single pipeline runner — evidence commits to this repo only.
+# Push fix v3: reset --soft (no rebase). Use "Run workflow", not "Re-run failed jobs".
 on:
   schedule:
     - cron: '0 20 * * 5' # Saturday 4:00 AM SGT
