@@ -6,6 +6,10 @@ on:
     - cron: '0 20 * * 5' # Saturday 4:00 AM SGT
   workflow_dispatch:
 
+concurrency:
+  group: auto-prediction-evidence
+  cancel-in-progress: true
+
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
@@ -18,6 +22,7 @@ jobs:
       PYTHONPATH: ${{ github.workspace }}/TradeKyaMal/scripts
       MPLBACKEND: Agg
       TZ: Asia/Singapore
+      CI: "true"
 
     steps:
       - name: Checkout group repository
@@ -25,6 +30,13 @@ jobs:
         with:
           persist-credentials: true
           fetch-depth: 0
+
+      - name: Configure git (no rebase ever)
+        run: |
+          git config pull.rebase false
+          git config rebase.autoStash false
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Sync with remote
         run: |
@@ -168,28 +180,27 @@ jobs:
         env:
           WEEK: ${{ steps.week.outputs.week }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
+          set -euo pipefail
           BRANCH="${{ github.ref_name }}"
           MSG="Auto-commit: Pipeline execution (Week $WEEK)"
 
-          git add evidence/ incoming/
+          git config pull.rebase false
 
-          if git diff --staged --quiet; then
-            echo "No changes to commit."
+          if ! git diff --quiet evidence/ incoming/ 2>/dev/null; then
+            echo "Evidence changes detected."
+          else
+            echo "No evidence changes to commit."
             exit 0
           fi
 
-          # Never rebase/merge — always recommit pipeline output on top of latest remote.
           for attempt in 1 2 3 4 5; do
-            echo "Push attempt $attempt..."
+            echo "=== Push attempt $attempt ==="
             git fetch origin "$BRANCH"
             git reset --soft "origin/$BRANCH"
             git add evidence/ incoming/
 
             if git diff --staged --quiet; then
-              echo "No changes after sync with origin."
+              echo "Nothing to commit after sync."
               exit 0
             fi
 
@@ -200,7 +211,8 @@ jobs:
               exit 0
             fi
 
-            echo "Push rejected, retrying on latest origin/$BRANCH..."
+            echo "Push rejected — retrying..."
+            sleep 2
           done
 
           echo "Failed to push after 5 attempts."

@@ -17,6 +17,7 @@ Usage:
 
 import argparse
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -74,6 +75,10 @@ def copy_to_repo(week: int, repo_path: Path) -> Path:
 
 
 def git_push(repo_path: Path, week: int) -> None:
+    if os.environ.get("CI"):
+        print("CI=true — skipping git push (workflow handles commit).")
+        return
+
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M SGT")
     msg = f"chore(data): weekly fetch W{week} — Finviz + yfinance ({stamp})"
 

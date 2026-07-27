@@ -15,6 +15,7 @@ Outputs (scripts/output/):
 
 import argparse
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -90,6 +91,10 @@ def copy_macro_evidence(week: int, repo_path: Path) -> Path:
 
 
 def git_push(repo_path: Path, week: int) -> None:
+    if os.environ.get("CI"):
+        print("CI=true — skipping git push (workflow handles commit).")
+        return
+
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M SGT")
     msg = f"chore(macro): live fetch W{week} — Finviz + Yahoo ({stamp})"
 
