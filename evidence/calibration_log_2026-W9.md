@@ -10,9 +10,9 @@ Medium
 
 ## Actual Outcome
 
-SPX: +nan%
-NDX: +nan%
-IWM: +nan%
+SPX: -0.42%
+NDX: -1.66%
+IWM: -0.39%
 
 ## Calibration Assessment
 

@@ -1,0 +1,134 @@
+{
+  "W9": {
+    "summary_scores": {
+      "direction_accuracy": "5/10",
+      "magnitude_accuracy": "0/10",
+      "confidence_calibration": "3/10",
+      "overall_score": "2.7/10"
+    },
+    "predictors": {
+      "Macro": {
+        "prediction": "Unknown",
+        "accuracy": 0.0,
+        "correct": 0,
+        "partial": 0,
+        "wrong": 0,
+        "no_score": 3
+      },
+      "Almanac": {
+        "prediction": "Bearish",
+        "accuracy": 50.0,
+        "correct": 0,
+        "partial": 3,
+        "wrong": 0,
+        "no_score": 0
+      },
+      "Technical": {
+        "prediction": "Neutral-Bullish",
+        "accuracy": 50.0,
+        "correct": 0,
+        "partial": 3,
+        "wrong": 0,
+        "no_score": 0
+      },
+      "Human": {
+        "prediction": "Bearish",
+        "accuracy": 50.0,
+        "correct": 0,
+        "partial": 3,
+        "wrong": 0,
+        "no_score": 0
+      },
+      "Final Prediction": {
+        "prediction": "Neutral-Bullish",
+        "accuracy": 50.0,
+        "correct": 0,
+        "partial": 3,
+        "wrong": 0,
+        "no_score": 0
+      },
+      "GPT": {
+        "prediction": "Neutral",
+        "accuracy": 100.0,
+        "correct": 3,
+        "partial": 0,
+        "wrong": 0,
+        "no_score": 0
+      },
+      "Gemini": {
+        "prediction": "Neutral",
+        "accuracy": 100.0,
+        "correct": 3,
+        "partial": 0,
+        "wrong": 0,
+        "no_score": 0
+      }
+    }
+  },
+  "W10": {
+    "summary_scores": {
+      "direction_accuracy": "5/10",
+      "magnitude_accuracy": "0/10",
+      "confidence_calibration": "5/10",
+      "overall_score": "3.3/10"
+    },
+    "predictors": {
+      "Macro": {
+        "prediction": "Unknown",
+        "accuracy": 0.0,
+        "correct": 0,
+        "partial": 0,
+        "wrong": 0,
+        "no_score": 3
+      },
+      "Almanac": {
+        "prediction": "Bearish",
+        "accuracy": 100.0,
+        "correct": 3,
+        "partial": 0,
+        "wrong": 0,
+        "no_score": 0
+      },
+      "Technical": {
+        "prediction": "Neutral-Bullish",
+        "accuracy": 50.0,
+        "correct": 0,
+        "partial": 3,
+        "wrong": 0,
+        "no_score": 0
+      },
+      "Human": {
+        "prediction": "Neutral",
+        "accuracy": 50.0,
+        "correct": 0,
+        "partial": 3,
+        "wrong": 0,
+        "no_score": 0
+      },
+      "Final Prediction": {
+        "prediction": "Neutral-Bullish",
+        "accuracy": 50.0,
+        "correct": 0,
+        "partial": 3,
+        "wrong": 0,
+        "no_score": 0
+      },
+      "GPT": {
+        "prediction": "Neutral-Bullish",
+        "accuracy": 50.0,
+        "correct": 0,
+        "partial": 3,
+        "wrong": 0,
+        "no_score": 0
+      },
+      "Gemini": {
+        "prediction": "Neutral-Bearish",
+        "accuracy": 50.0,
+        "correct": 0,
+        "partial": 3,
+        "wrong": 0,
+        "no_score": 0
+      }
+    }
+  }
+}
