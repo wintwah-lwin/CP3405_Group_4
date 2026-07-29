@@ -17,9 +17,9 @@
       },
       "Almanac": {
         "prediction": "Bearish",
-        "accuracy": 50.0,
-        "correct": 0,
-        "partial": 3,
+        "accuracy": 100.0,
+        "correct": 3,
+        "partial": 0,
         "wrong": 0,
         "no_score": 0
       },
@@ -33,9 +33,9 @@
       },
       "Human": {
         "prediction": "Bearish",
-        "accuracy": 50.0,
-        "correct": 0,
-        "partial": 3,
+        "accuracy": 100.0,
+        "correct": 3,
+        "partial": 0,
         "wrong": 0,
         "no_score": 0
       },

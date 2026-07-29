@@ -15,4 +15,4 @@ This report aggregates the weekly calibration, learning, and LLM horse-race evid
 | W7 | N/A | N/A | N/A | N/A |
 | W8 | N/A | N/A | N/A | N/A |
 | W9 | 5/10 | 0/10 | 5/10 | 3.3/10 |
-| W10 | 5/10 | 0/10 | 5/10 | 3.3/10 |
+| W10 | 8/10 | 7/10 | 2/10 | 5.7/10 |

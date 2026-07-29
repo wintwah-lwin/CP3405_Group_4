@@ -3,16 +3,16 @@
 ## Team Forecast
 
 Overall View:
-Neutral-Bullish
+Bearish
 
 Confidence:
 Medium
 
 ## Actual Outcome
 
-SPX: -0.42%
-NDX: -1.66%
-IWM: -0.39%
+SPX: -0.94%
+NDX: -4.26%
+IWM: -0.14%
 
 ## Calibration Assessment
 
@@ -26,7 +26,7 @@ Reasonable
 
 ## Calibration Score
 
-Overall Score: 50.0%
+Overall Score: 83.3%
 
 ## Related Evidence
 

@@ -3,12 +3,12 @@
 ## Final Ranking
 
 ### 1. GPT
-- Accuracy: 50.0%
-- Extracted Bias: Neutral-Bullish
+- Accuracy: 66.7%
+- Extracted Bias: Neutral
 
 ### 2. Gemini
 - Accuracy: 50.0%
-- Extracted Bias: Neutral-Bearish
+- Extracted Bias: Neutral-Bullish
 
 ## Who's the Winner
 
