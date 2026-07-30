@@ -88,7 +88,7 @@ The confidence level is generated from weekly EMA alignment, price position and 
 - A weekly close below 27976.02 would shift the bias toward Bearish.
 
 **WATCH THIS WEEK:**  
-Can NDX hold above the 8 EMA around 28660.75 and continue toward the 30762.2–31069.82 resistance zone?
+Can NDX reclaim the weekly 8 EMA around 28660.75 and continue toward the 30762.2–31069.82 resistance zone?
 
 **Evidence chart:** `technical_NDX_W10.png`
 ---## INSTRUMENT: Russell 2000 / IWM (IWM), Weekly Chart
