@@ -37,6 +37,9 @@
 | 2026-07-30 | N/A | AAPL | $1.88 | time-after-hours |
 | 2026-07-30 | N/A | AMZN | $1.81 | time-after-hours |
 
+### Manual Review Note
+
+This week, investors are closely watching earnings from major technology companies including Microsoft, Meta, Apple and Amazon. Their results may significantly influence overall market sentiment.
 *Source: Nasdaq Earnings Calendar*
 
 ---
@@ -82,12 +85,6 @@
 - **Amazon, Meta and Microsoft face skeptical investors this week after Google report sparked sell-off**
   - Date: Tue, 28 Jul 2026 19:45:10 GMT
   - Source: https://www.cnbc.com/2026/07/28/hyperscalers-face-higher-capex-scrutiny-after-alphabet-report-panned.html
-- **Elon Musk's xAI sues Minnesota over law to ban 'nudify' apps**
-  - Date: Wed, 29 Jul 2026 02:27:03 GMT
-  - Source: https://www.cnbc.com/2026/07/28/spacexs-xai-sues-minnesota-over-law-to-ban-nudify-apps-.html
-- **Trump, DOJ ask Supreme Court to toss $83.3M defamation award to E. Jean Carroll**
-  - Date: Wed, 29 Jul 2026 01:17:13 GMT
-  - Source: https://www.cnbc.com/2026/07/28/trump-asks-supreme-court-to-toss-83point3m-defamation-award-to-e-jean-carroll.html
 
 *Sources: CNBC RSS, MarketWatch RSS, Yahoo Finance RSS*
 
@@ -101,9 +98,10 @@
 - Oil falling at -4.85%, reducing inflation pressure
 - Dollar rising at +0.20%, pressure on risk assets
 - Technology sector weak at -1.84%
+- Geopolitical tensions remain elevated following renewed conflict between the U.S. and Iran.
 
 ## MACRO BIAS: Cautious
-## PRIMARY DRIVER: S&P 500 futures weak at -1.23%
+## PRIMARY DRIVER: Weak equity futures together with renewed geopolitical tensions.
 ## CONFIDENCE: Medium
 ## INVALIDATION: Bias may change if inflation, Fed expectations, oil prices, dollar, or equity futures move strongly in the opposite direction.
 
