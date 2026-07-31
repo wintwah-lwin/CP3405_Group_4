@@ -1,11 +1,11 @@
 {
   "week": 10,
-  "generated_at": "2026-07-29T12:21:46.860270",
+  "generated_at": "2026-08-01T05:05:13.986634",
   "summary_scores": {
-    "direction_accuracy": "8/10",
-    "magnitude_accuracy": "7/10",
+    "direction_accuracy": "3/10",
+    "magnitude_accuracy": "3/10",
     "confidence_calibration": "2/10",
-    "overall_score": "5.7/10"
+    "overall_score": "2.7/10"
   },
   "predictions": {
     "Macro": "Unknown",
@@ -13,92 +13,92 @@
     "Technical": "Neutral-Bullish",
     "Human": "Neutral",
     "Final Prediction": "Bearish",
-    "GPT": "Neutral",
-    "Gemini": "Neutral-Bullish"
+    "GPT": "Neutral-Bullish",
+    "Gemini": "Neutral"
   },
   "actuals": {
     "SPX": {
-      "start": 7498.96,
-      "end": 7428.78,
-      "change_pct": -0.94,
-      "direction": "Bearish"
+      "start": 7413.18,
+      "end": 7489.72,
+      "change_pct": 1.03,
+      "direction": "Bullish"
     },
     "NDX": {
-      "start": 28998.1,
-      "end": 27763.13,
-      "change_pct": -4.26,
-      "direction": "Bearish"
+      "start": 28039.21,
+      "end": 28274.2,
+      "change_pct": 0.84,
+      "direction": "Bullish"
     },
     "IWM": {
-      "start": 293.79,
-      "end": 293.37,
-      "change_pct": -0.14,
-      "direction": "Neutral"
+      "start": 292.91,
+      "end": 291.2,
+      "change_pct": -0.58,
+      "direction": "Bearish"
     },
     "Technology": {
-      "start": 180.27,
-      "end": 171.09,
-      "change_pct": -5.09,
-      "direction": "Bearish"
+      "start": 174.3,
+      "end": 175.35,
+      "change_pct": 0.6,
+      "direction": "Bullish"
     },
     "Financials": {
-      "start": 56.05,
-      "end": 57.6,
-      "change_pct": 2.77,
-      "direction": "Bullish"
+      "start": 56.88,
+      "end": 56.94,
+      "change_pct": 0.11,
+      "direction": "Neutral"
     },
     "Healthcare": {
-      "start": 159.43,
-      "end": 167.26,
-      "change_pct": 4.91,
-      "direction": "Bullish"
-    },
-    "Energy": {
-      "start": 59.2,
-      "end": 57.57,
-      "change_pct": -2.75,
+      "start": 163.4,
+      "end": 162.55,
+      "change_pct": -0.52,
       "direction": "Bearish"
     },
-    "Industrials": {
-      "start": 178.85,
-      "end": 182.49,
+    "Energy": {
+      "start": 58.36,
+      "end": 59.55,
       "change_pct": 2.04,
       "direction": "Bullish"
     },
+    "Industrials": {
+      "start": 183.2,
+      "end": 179.84,
+      "change_pct": -1.83,
+      "direction": "Bearish"
+    },
     "Utilities": {
-      "start": 45.93,
-      "end": 45.52,
-      "change_pct": -0.89,
+      "start": 45.68,
+      "end": 44.35,
+      "change_pct": -2.91,
       "direction": "Bearish"
     },
     "Real Estate": {
-      "start": 45.01,
-      "end": 46.01,
-      "change_pct": 2.22,
-      "direction": "Bullish"
-    },
-    "Materials": {
-      "start": 50.82,
-      "end": 52.34,
-      "change_pct": 2.99,
-      "direction": "Bullish"
-    },
-    "Consumer Discretionary": {
-      "start": 114.02,
-      "end": 112.48,
-      "change_pct": -1.35,
+      "start": 45.76,
+      "end": 45.07,
+      "change_pct": -1.51,
       "direction": "Bearish"
     },
-    "Consumer Staples": {
-      "start": 84.38,
-      "end": 87.06,
-      "change_pct": 3.18,
+    "Materials": {
+      "start": 51.39,
+      "end": 50.43,
+      "change_pct": -1.87,
+      "direction": "Bearish"
+    },
+    "Consumer Discretionary": {
+      "start": 110.84,
+      "end": 116.09,
+      "change_pct": 4.74,
       "direction": "Bullish"
     },
+    "Consumer Staples": {
+      "start": 85.36,
+      "end": 85.05,
+      "change_pct": -0.36,
+      "direction": "Bearish"
+    },
     "Communication Services": {
-      "start": 109.2,
-      "end": 109.67,
-      "change_pct": 0.43,
+      "start": 107.66,
+      "end": 108.24,
+      "change_pct": 0.54,
       "direction": "Bullish"
     }
   },
@@ -109,24 +109,24 @@
         {
           "asset": "SPX",
           "prediction": "Unknown",
-          "actual_direction": "Bearish",
-          "actual_change_pct": -0.94,
+          "actual_direction": "Bullish",
+          "actual_change_pct": 1.03,
           "result": "No Score",
           "score": 0
         },
         {
           "asset": "NDX",
           "prediction": "Unknown",
-          "actual_direction": "Bearish",
-          "actual_change_pct": -4.26,
+          "actual_direction": "Bullish",
+          "actual_change_pct": 0.84,
           "result": "No Score",
           "score": 0
         },
         {
           "asset": "IWM",
           "prediction": "Unknown",
-          "actual_direction": "Neutral",
-          "actual_change_pct": -0.14,
+          "actual_direction": "Bearish",
+          "actual_change_pct": -0.58,
           "result": "No Score",
           "score": 0
         }
@@ -143,33 +143,33 @@
         {
           "asset": "SPX",
           "prediction": "Neutral",
-          "actual_direction": "Bearish",
-          "actual_change_pct": -0.94,
+          "actual_direction": "Bullish",
+          "actual_change_pct": 1.03,
           "result": "Partial",
           "score": 50
         },
         {
           "asset": "NDX",
           "prediction": "Neutral",
-          "actual_direction": "Bearish",
-          "actual_change_pct": -4.26,
+          "actual_direction": "Bullish",
+          "actual_change_pct": 0.84,
           "result": "Partial",
           "score": 50
         },
         {
           "asset": "IWM",
           "prediction": "Neutral",
-          "actual_direction": "Neutral",
-          "actual_change_pct": -0.14,
-          "result": "Correct",
-          "score": 100
+          "actual_direction": "Bearish",
+          "actual_change_pct": -0.58,
+          "result": "Partial",
+          "score": 50
         }
       ],
-      "correct": 1,
-      "partial": 2,
+      "correct": 0,
+      "partial": 3,
       "wrong": 0,
       "no_score": 0,
-      "accuracy": 66.7
+      "accuracy": 50.0
     },
     "Technical": {
       "prediction": "Neutral-Bullish",
@@ -177,24 +177,24 @@
         {
           "asset": "SPX",
           "prediction": "Neutral-Bullish",
-          "actual_direction": "Bearish",
-          "actual_change_pct": -0.94,
+          "actual_direction": "Bullish",
+          "actual_change_pct": 1.03,
           "result": "Partial",
           "score": 50
         },
         {
           "asset": "NDX",
           "prediction": "Neutral-Bullish",
-          "actual_direction": "Bearish",
-          "actual_change_pct": -4.26,
+          "actual_direction": "Bullish",
+          "actual_change_pct": 0.84,
           "result": "Partial",
           "score": 50
         },
         {
           "asset": "IWM",
           "prediction": "Neutral-Bullish",
-          "actual_direction": "Neutral",
-          "actual_change_pct": -0.14,
+          "actual_direction": "Bearish",
+          "actual_change_pct": -0.58,
           "result": "Partial",
           "score": 50
         }
@@ -211,33 +211,33 @@
         {
           "asset": "SPX",
           "prediction": "Neutral",
-          "actual_direction": "Bearish",
-          "actual_change_pct": -0.94,
+          "actual_direction": "Bullish",
+          "actual_change_pct": 1.03,
           "result": "Partial",
           "score": 50
         },
         {
           "asset": "NDX",
           "prediction": "Neutral",
-          "actual_direction": "Bearish",
-          "actual_change_pct": -4.26,
+          "actual_direction": "Bullish",
+          "actual_change_pct": 0.84,
           "result": "Partial",
           "score": 50
         },
         {
           "asset": "IWM",
           "prediction": "Neutral",
-          "actual_direction": "Neutral",
-          "actual_change_pct": -0.14,
-          "result": "Correct",
-          "score": 100
+          "actual_direction": "Bearish",
+          "actual_change_pct": -0.58,
+          "result": "Partial",
+          "score": 50
         }
       ],
-      "correct": 1,
-      "partial": 2,
+      "correct": 0,
+      "partial": 3,
       "wrong": 0,
       "no_score": 0,
-      "accuracy": 66.7
+      "accuracy": 50.0
     },
     "Final Prediction": {
       "prediction": "Bearish",
@@ -245,92 +245,92 @@
         {
           "asset": "SPX",
           "prediction": "Bearish",
-          "actual_direction": "Bearish",
-          "actual_change_pct": -0.94,
-          "result": "Correct",
-          "score": 100
+          "actual_direction": "Bullish",
+          "actual_change_pct": 1.03,
+          "result": "Wrong",
+          "score": 0
         },
         {
           "asset": "NDX",
           "prediction": "Bearish",
-          "actual_direction": "Bearish",
-          "actual_change_pct": -4.26,
-          "result": "Correct",
-          "score": 100
+          "actual_direction": "Bullish",
+          "actual_change_pct": 0.84,
+          "result": "Wrong",
+          "score": 0
         },
         {
           "asset": "IWM",
           "prediction": "Bearish",
-          "actual_direction": "Neutral",
-          "actual_change_pct": -0.14,
-          "result": "Partial",
-          "score": 50
-        }
-      ],
-      "correct": 2,
-      "partial": 1,
-      "wrong": 0,
-      "no_score": 0,
-      "accuracy": 83.3
-    },
-    "GPT": {
-      "prediction": "Neutral",
-      "rows": [
-        {
-          "asset": "SPX",
-          "prediction": "Neutral",
           "actual_direction": "Bearish",
-          "actual_change_pct": -0.94,
-          "result": "Partial",
-          "score": 50
-        },
-        {
-          "asset": "NDX",
-          "prediction": "Neutral",
-          "actual_direction": "Bearish",
-          "actual_change_pct": -4.26,
-          "result": "Partial",
-          "score": 50
-        },
-        {
-          "asset": "IWM",
-          "prediction": "Neutral",
-          "actual_direction": "Neutral",
-          "actual_change_pct": -0.14,
+          "actual_change_pct": -0.58,
           "result": "Correct",
           "score": 100
         }
       ],
       "correct": 1,
-      "partial": 2,
-      "wrong": 0,
+      "partial": 0,
+      "wrong": 2,
       "no_score": 0,
-      "accuracy": 66.7
+      "accuracy": 33.3
     },
-    "Gemini": {
+    "GPT": {
       "prediction": "Neutral-Bullish",
       "rows": [
         {
           "asset": "SPX",
           "prediction": "Neutral-Bullish",
-          "actual_direction": "Bearish",
-          "actual_change_pct": -0.94,
+          "actual_direction": "Bullish",
+          "actual_change_pct": 1.03,
           "result": "Partial",
           "score": 50
         },
         {
           "asset": "NDX",
           "prediction": "Neutral-Bullish",
-          "actual_direction": "Bearish",
-          "actual_change_pct": -4.26,
+          "actual_direction": "Bullish",
+          "actual_change_pct": 0.84,
           "result": "Partial",
           "score": 50
         },
         {
           "asset": "IWM",
           "prediction": "Neutral-Bullish",
-          "actual_direction": "Neutral",
-          "actual_change_pct": -0.14,
+          "actual_direction": "Bearish",
+          "actual_change_pct": -0.58,
+          "result": "Partial",
+          "score": 50
+        }
+      ],
+      "correct": 0,
+      "partial": 3,
+      "wrong": 0,
+      "no_score": 0,
+      "accuracy": 50.0
+    },
+    "Gemini": {
+      "prediction": "Neutral",
+      "rows": [
+        {
+          "asset": "SPX",
+          "prediction": "Neutral",
+          "actual_direction": "Bullish",
+          "actual_change_pct": 1.03,
+          "result": "Partial",
+          "score": 50
+        },
+        {
+          "asset": "NDX",
+          "prediction": "Neutral",
+          "actual_direction": "Bullish",
+          "actual_change_pct": 0.84,
+          "result": "Partial",
+          "score": 50
+        },
+        {
+          "asset": "IWM",
+          "prediction": "Neutral",
+          "actual_direction": "Bearish",
+          "actual_change_pct": -0.58,
           "result": "Partial",
           "score": 50
         }
@@ -411,10 +411,10 @@
     },
     "W10": {
       "summary_scores": {
-        "direction_accuracy": "8/10",
-        "magnitude_accuracy": "7/10",
+        "direction_accuracy": "3/10",
+        "magnitude_accuracy": "3/10",
         "confidence_calibration": "2/10",
-        "overall_score": "5.7/10"
+        "overall_score": "2.7/10"
       },
       "predictors": {
         "Macro": {
@@ -427,9 +427,9 @@
         },
         "Almanac": {
           "prediction": "Neutral",
-          "accuracy": 66.7,
-          "correct": 1,
-          "partial": 2,
+          "accuracy": 50.0,
+          "correct": 0,
+          "partial": 3,
           "wrong": 0,
           "no_score": 0
         },
@@ -443,30 +443,30 @@
         },
         "Human": {
           "prediction": "Neutral",
-          "accuracy": 66.7,
-          "correct": 1,
-          "partial": 2,
+          "accuracy": 50.0,
+          "correct": 0,
+          "partial": 3,
           "wrong": 0,
           "no_score": 0
         },
         "Final Prediction": {
           "prediction": "Bearish",
-          "accuracy": 83.3,
-          "correct": 2,
-          "partial": 1,
-          "wrong": 0,
+          "accuracy": 33.3,
+          "correct": 1,
+          "partial": 0,
+          "wrong": 2,
           "no_score": 0
         },
         "GPT": {
-          "prediction": "Neutral",
-          "accuracy": 66.7,
-          "correct": 1,
-          "partial": 2,
+          "prediction": "Neutral-Bullish",
+          "accuracy": 50.0,
+          "correct": 0,
+          "partial": 3,
           "wrong": 0,
           "no_score": 0
         },
         "Gemini": {
-          "prediction": "Neutral-Bullish",
+          "prediction": "Neutral",
           "accuracy": 50.0,
           "correct": 0,
           "partial": 3,

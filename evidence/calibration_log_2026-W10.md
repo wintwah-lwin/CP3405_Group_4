@@ -10,14 +10,14 @@ Medium
 
 ## Actual Outcome
 
-SPX: -0.94%
-NDX: -4.26%
-IWM: -0.14%
+SPX: +1.03%
+NDX: +0.84%
+IWM: -0.58%
 
 ## Calibration Assessment
 
 Direction:
-Aligned
+Needs Review
 
 The final directional view was compared with the realized weekly move in SPX, NDX and IWM.
 
@@ -26,7 +26,7 @@ Reasonable
 
 ## Calibration Score
 
-Overall Score: 83.3%
+Overall Score: 33.3%
 
 ## Related Evidence
 

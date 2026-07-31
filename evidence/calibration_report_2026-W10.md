@@ -1,6 +1,6 @@
 # Calibration Suite Report — W10
 
-**Generated:** 29 July 2026, 12:21 PM  
+**Generated:** 01 August 2026, 05:05 AM  
 **Mode:** Test mode uses latest available market data. Re-run after Friday market close for final W10 calibration.  
 
 ---
@@ -9,20 +9,20 @@
 
 | Asset | Start | End | Change % | Actual Direction |
 |---|---:|---:|---:|---|
-| SPX | 7498.96 | 7428.78 | -0.94% | Bearish |
-| NDX | 28998.1 | 27763.13 | -4.26% | Bearish |
-| IWM | 293.79 | 293.37 | -0.14% | Neutral |
-| Technology | 180.27 | 171.09 | -5.09% | Bearish |
-| Financials | 56.05 | 57.6 | +2.77% | Bullish |
-| Healthcare | 159.43 | 167.26 | +4.91% | Bullish |
-| Energy | 59.2 | 57.57 | -2.75% | Bearish |
-| Industrials | 178.85 | 182.49 | +2.04% | Bullish |
-| Utilities | 45.93 | 45.52 | -0.89% | Bearish |
-| Real Estate | 45.01 | 46.01 | +2.22% | Bullish |
-| Materials | 50.82 | 52.34 | +2.99% | Bullish |
-| Consumer Discretionary | 114.02 | 112.48 | -1.35% | Bearish |
-| Consumer Staples | 84.38 | 87.06 | +3.18% | Bullish |
-| Communication Services | 109.2 | 109.67 | +0.43% | Bullish |
+| SPX | 7413.18 | 7489.72 | +1.03% | Bullish |
+| NDX | 28039.21 | 28274.2 | +0.84% | Bullish |
+| IWM | 292.91 | 291.2 | -0.58% | Bearish |
+| Technology | 174.3 | 175.35 | +0.60% | Bullish |
+| Financials | 56.88 | 56.94 | +0.11% | Neutral |
+| Healthcare | 163.4 | 162.55 | -0.52% | Bearish |
+| Energy | 58.36 | 59.55 | +2.04% | Bullish |
+| Industrials | 183.2 | 179.84 | -1.83% | Bearish |
+| Utilities | 45.68 | 44.35 | -2.91% | Bearish |
+| Real Estate | 45.76 | 45.07 | -1.51% | Bearish |
+| Materials | 51.39 | 50.43 | -1.87% | Bearish |
+| Consumer Discretionary | 110.84 | 116.09 | +4.74% | Bullish |
+| Consumer Staples | 85.36 | 85.05 | -0.36% | Bearish |
+| Communication Services | 107.66 | 108.24 | +0.54% | Bullish |
 
 ---
 
@@ -35,8 +35,8 @@
 | Technical | Neutral-Bullish |
 | Human | Neutral |
 | Final Prediction | Bearish |
-| GPT | Neutral |
-| Gemini | Neutral-Bullish |
+| GPT | Neutral-Bullish |
+| Gemini | Neutral |
 
 ---
 
@@ -44,15 +44,15 @@
 
 | Rank | Predictor | Prediction | Correct | Partial | Wrong | Accuracy |
 |---:|---|---|---:|---:|---:|---:|
-| 1 | Final Prediction | Bearish | 2 | 1 | 0 | 83.3% |
-| 2 | Almanac | Neutral | 1 | 2 | 0 | 66.7% |
-| 3 | Human | Neutral | 1 | 2 | 0 | 66.7% |
-| 4 | GPT | Neutral | 1 | 2 | 0 | 66.7% |
-| 5 | Technical | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
-| 6 | Gemini | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
+| 1 | Almanac | Neutral | 0 | 3 | 0 | 50.0% |
+| 2 | Technical | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
+| 3 | Human | Neutral | 0 | 3 | 0 | 50.0% |
+| 4 | GPT | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
+| 5 | Gemini | Neutral | 0 | 3 | 0 | 50.0% |
+| 6 | Final Prediction | Bearish | 1 | 0 | 2 | 33.3% |
 | 7 | Macro | Unknown | 0 | 0 | 0 | 0.0% |
 
-**Best Performer:** Final Prediction  
+**Best Performer:** Almanac  
 **Lowest Performer:** Macro
 
 ---
@@ -63,9 +63,9 @@
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Unknown | Bearish | -0.94% | No Score | 0 |
-| NDX | Unknown | Bearish | -4.26% | No Score | 0 |
-| IWM | Unknown | Neutral | -0.14% | No Score | 0 |
+| SPX | Unknown | Bullish | +1.03% | No Score | 0 |
+| NDX | Unknown | Bullish | +0.84% | No Score | 0 |
+| IWM | Unknown | Bearish | -0.58% | No Score | 0 |
 
 **Accuracy:** 0.0%
 
@@ -73,19 +73,19 @@
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Neutral | Bearish | -0.94% | Partial | 50 |
-| NDX | Neutral | Bearish | -4.26% | Partial | 50 |
-| IWM | Neutral | Neutral | -0.14% | Correct | 100 |
+| SPX | Neutral | Bullish | +1.03% | Partial | 50 |
+| NDX | Neutral | Bullish | +0.84% | Partial | 50 |
+| IWM | Neutral | Bearish | -0.58% | Partial | 50 |
 
-**Accuracy:** 66.7%
+**Accuracy:** 50.0%
 
 ### Technical
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Neutral-Bullish | Bearish | -0.94% | Partial | 50 |
-| NDX | Neutral-Bullish | Bearish | -4.26% | Partial | 50 |
-| IWM | Neutral-Bullish | Neutral | -0.14% | Partial | 50 |
+| SPX | Neutral-Bullish | Bullish | +1.03% | Partial | 50 |
+| NDX | Neutral-Bullish | Bullish | +0.84% | Partial | 50 |
+| IWM | Neutral-Bullish | Bearish | -0.58% | Partial | 50 |
 
 **Accuracy:** 50.0%
 
@@ -93,39 +93,39 @@
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Neutral | Bearish | -0.94% | Partial | 50 |
-| NDX | Neutral | Bearish | -4.26% | Partial | 50 |
-| IWM | Neutral | Neutral | -0.14% | Correct | 100 |
+| SPX | Neutral | Bullish | +1.03% | Partial | 50 |
+| NDX | Neutral | Bullish | +0.84% | Partial | 50 |
+| IWM | Neutral | Bearish | -0.58% | Partial | 50 |
 
-**Accuracy:** 66.7%
+**Accuracy:** 50.0%
 
 ### Final Prediction
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Bearish | Bearish | -0.94% | Correct | 100 |
-| NDX | Bearish | Bearish | -4.26% | Correct | 100 |
-| IWM | Bearish | Neutral | -0.14% | Partial | 50 |
+| SPX | Bearish | Bullish | +1.03% | Wrong | 0 |
+| NDX | Bearish | Bullish | +0.84% | Wrong | 0 |
+| IWM | Bearish | Bearish | -0.58% | Correct | 100 |
 
-**Accuracy:** 83.3%
+**Accuracy:** 33.3%
 
 ### GPT
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Neutral | Bearish | -0.94% | Partial | 50 |
-| NDX | Neutral | Bearish | -4.26% | Partial | 50 |
-| IWM | Neutral | Neutral | -0.14% | Correct | 100 |
+| SPX | Neutral-Bullish | Bullish | +1.03% | Partial | 50 |
+| NDX | Neutral-Bullish | Bullish | +0.84% | Partial | 50 |
+| IWM | Neutral-Bullish | Bearish | -0.58% | Partial | 50 |
 
-**Accuracy:** 66.7%
+**Accuracy:** 50.0%
 
 ### Gemini
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Neutral-Bullish | Bearish | -0.94% | Partial | 50 |
-| NDX | Neutral-Bullish | Bearish | -4.26% | Partial | 50 |
-| IWM | Neutral-Bullish | Neutral | -0.14% | Partial | 50 |
+| SPX | Neutral | Bullish | +1.03% | Partial | 50 |
+| NDX | Neutral | Bullish | +0.84% | Partial | 50 |
+| IWM | Neutral | Bearish | -0.58% | Partial | 50 |
 
 **Accuracy:** 50.0%
 
