@@ -1,6 +1,6 @@
 # Final Weekly Prediction — W9
 
-**Generated:** 27 July 2026, 12:42 PM  
+**Generated:** 27 July 2026, 01:45 PM  
 **Output Type:** Automated final prediction after Macro, Almanac, Technical, LLM and Human Score review.
 
 ---
@@ -19,10 +19,10 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 
 | Source | Bias / Verdict | Confidence | Primary Driver |
 |---|---|---|---|
-| Macro | Cautious | Medium | S&P 500 futures weak at -0.67% |
+| Macro | Cautious | Medium | S&P 500 futures positive at +0.35% |
 | Almanac | Cautiously Bearish / High-Volatility | Medium | > The Almanac Agent combines live index momentum, volatility, sector returns, weekly breadth, current-week calendar events and date-based seasonal patterns. The final bias is gener... |
 | Technical | Neutral / Caution | Medium | Mixed signals |
-| Llm | Cautiously Bearish to Neutral-Cautious | Medium | Weakening technical momentum (prices breaking below weekly 8 EMA) coupled with rising geopolitical tensions and trade tariff threats. |
+| Llm | Cautiously Neutral to Bearish | Medium | Broad market momentum weakness and price action slipping below key technical supports (8-week EMA), combined with a spike in volatility (VIX +11.78%). |
 | Human | Neutral-Bearish | Medium | Mixed signals |
 
 ---
@@ -34,7 +34,7 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 | Macro | Cautious | Medium | -1.0 |
 | Almanac | Cautiously Bearish / High-Volatility | Medium | -1.0 |
 | Technical | Neutral / Caution | Medium | 0.0 |
-| Llm | Cautiously Bearish to Neutral-Cautious | Medium | -1.2 |
+| Llm | Cautiously Neutral to Bearish | Medium | -1.2 |
 | Human | Neutral-Bearish | Medium | -1.12 |
 | **Total** |  |  | **-4.33** |
 
@@ -48,14 +48,14 @@ The automated system gives a final **Bearish** outlook for Week 9. This means th
 
 ## 5. Key Risks to Monitor
 
-- **WTI Crude Oil**: weekly change +9.21%, direction: Rising
+- **WTI Crude Oil**: weekly change +2.80%, direction: Rising
 - | Rate / Yield | Value | Date |
 - | 2-Year Treasury Yield | 4.33% | 2026-07-24 |
 - | 10-Year Treasury Yield | 4.69% | 2026-07-24 |
 - | 30-Year Treasury Yield | 5.16% | 2026-07-24 |
 - *Source: U.S. Treasury Daily Treasury Yield Curve Rates*
 - *Source: Nasdaq Earnings Calendar*
-- **Oil shipments are under attack on multiple fronts as fighting escalates in Red Sea, Hormuz and Black Sea**
+- **Oil slides 5% as Iran reportedly signals halt to attacks if U.S. pause holds**
 
 ---
 

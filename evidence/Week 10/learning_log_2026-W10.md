@@ -2,15 +2,15 @@
 
 ## What We Believed
 
-The team expected the market to remain broadly directional with a Neutral-Bullish bias.
+The team expected the market to remain broadly directional with a Bearish bias.
 
 ## What Happened
 
 The weekly actual performance settled at:
 
-- SPX: -0.42%
-- NDX: -1.66%
-- IWM: -0.39%
+- SPX: +1.03%
+- NDX: +0.84%
+- IWM: -0.58%
 
 ## What We Learned
 

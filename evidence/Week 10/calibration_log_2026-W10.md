@@ -3,21 +3,21 @@
 ## Team Forecast
 
 Overall View:
-Neutral-Bullish
+Bearish
 
 Confidence:
 Medium
 
 ## Actual Outcome
 
-SPX: -0.42%
-NDX: -1.66%
-IWM: -0.39%
+SPX: +1.03%
+NDX: +0.84%
+IWM: -0.58%
 
 ## Calibration Assessment
 
 Direction:
-Aligned
+Needs Review
 
 The final directional view was compared with the realized weekly move in SPX, NDX and IWM.
 
@@ -26,7 +26,7 @@ Reasonable
 
 ## Calibration Score
 
-Overall Score: 50.0%
+Overall Score: 33.3%
 
 ## Related Evidence
 

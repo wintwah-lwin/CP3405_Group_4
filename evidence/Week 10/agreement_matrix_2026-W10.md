@@ -3,7 +3,7 @@
 | Model | API Success | Extracted Bias | Extracted Confidence |
 |---|---|---|---|
 | gpt-4.1-mini | True | Neutral-Bullish | Medium |
-| gemini-3-flash-preview | True | Neutral-Bearish | Medium |
+| gemini-3-flash-preview | True | Neutral | Medium |
 
 ## Agreement Check
 
