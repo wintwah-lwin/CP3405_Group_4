@@ -204,7 +204,7 @@ export function HumanScorePanel({ week, githubMarkdown }: HumanScorePanelProps) 
             onClick={handleSave}
             disabled={saving}
             className={clsx(
-              'flex items-center gap-1.5 rounded-lg bg-accent px-4 py-2 text-xs font-medium text-white',
+              'flex items-center gap-1.5 rounded-lg bg-accent px-4 py-2 text-xs font-semibold text-white shadow-sm shadow-accent/20 transition-opacity hover:opacity-90',
               saving && 'opacity-60'
             )}
           >

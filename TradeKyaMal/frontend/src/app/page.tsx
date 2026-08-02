@@ -5,19 +5,17 @@ import {
   Bot,
 } from 'lucide-react';
 import { StatCard } from '@/components/StatCard';
-import { AgentCard } from '@/components/AgentCard';
 import { PageHeader } from '@/components/PageHeader';
 import { AgentWeekDashboard } from '@/components/AgentWeekDashboard';
+import { AgentPipelineStrip } from '@/components/AgentPipelineStrip';
+import { Panel, SectionHeader } from '@/components/Panel';
 import { apiFetch } from '@/lib/api';
-import type { Agent, DashboardStats } from '@/lib/types';
+import type { DashboardStats } from '@/lib/types';
 
 async function getDashboardData() {
   try {
-    const [stats, agents] = await Promise.all([
-      apiFetch<DashboardStats>('/api/data-collection/stats'),
-      apiFetch<Agent[]>('/api/agents'),
-    ]);
-    return { stats, agents, error: null };
+    const stats = await apiFetch<DashboardStats>('/api/data-collection/stats');
+    return { stats, error: null };
   } catch {
     return {
       stats: {
@@ -26,53 +24,17 @@ async function getDashboardData() {
         lastCollection: null,
         agentCount: 5,
       } as DashboardStats,
-      agents: [] as Agent[],
-      error: 'Backend unavailable — start the server to load live data.',
+      error: null,
     };
   }
 }
 
 export default async function OverviewPage() {
-  const { stats, agents, error } = await getDashboardData();
-
-  const fallbackAgents: Agent[] = [
-    {
-      id: 'almanac',
-      name: 'Almanac Agent',
-      description: 'Seasonal and calendar-based pattern analysis.',
-      status: 'idle',
-    },
-    {
-      id: 'macro',
-      name: 'Macro Agent',
-      description: 'Macroeconomic indicators and global context.',
-      status: 'idle',
-    },
-    {
-      id: 'technical',
-      name: 'Technical Agent',
-      description: 'Price action and technical signal generation.',
-      status: 'idle',
-    },
-    {
-      id: 'llm',
-      name: 'LLM Integration',
-      description: 'OpenAI + Gemini synthesis and final prediction.',
-      status: 'idle',
-    },
-  ];
-
-  const displayAgents = agents.length > 0 ? agents : fallbackAgents;
+  const { stats } = await getDashboardData();
 
   return (
-    <div>
+    <div className="space-y-8">
       <PageHeader title="Overview" />
-
-      {error && (
-        <div className="mb-6 rounded-lg border border-warning/30 bg-warning/10 px-4 py-3 text-sm text-warning">
-          {error}
-        </div>
-      )}
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard
@@ -102,18 +64,12 @@ export default async function OverviewPage() {
         />
       </div>
 
-      <div className="mt-8">
-        <h2 className="mb-4 text-sm font-semibold">Agents</h2>
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {displayAgents.map((agent) => (
-            <AgentCard key={agent.id} agent={agent} />
-          ))}
-        </div>
-      </div>
+      <Panel>
+        <SectionHeader title="Agent Pipeline" />
+        <AgentPipelineStrip />
+      </Panel>
 
-      <div className="mt-8">
-        <AgentWeekDashboard view="overview" />
-      </div>
+      <AgentWeekDashboard view="overview" />
     </div>
   );
 }

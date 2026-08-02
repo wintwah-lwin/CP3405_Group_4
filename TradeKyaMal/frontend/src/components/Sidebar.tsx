@@ -43,15 +43,15 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="fixed left-0 top-0 flex h-screen w-60 flex-col border-r border-border-subtle bg-surface-raised">
+    <aside className="fixed left-0 top-0 z-20 flex h-screen w-60 flex-col border-r border-border-subtle bg-surface-raised/95 backdrop-blur-md">
       <div className="border-b border-border-subtle px-5 py-6">
-        <div className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent/15">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-accent/30 to-accent/10 ring-1 ring-accent/20">
             <Bot className="h-4 w-4 text-accent" />
           </div>
           <div>
             <h1 className="text-sm font-semibold tracking-tight">TradeKyaMal</h1>
-            <p className="text-[11px] text-text-muted">Weekly Market Intelligence</p>
+            <p className="text-[11px] text-text-muted">Market Intelligence</p>
           </div>
         </div>
       </div>
@@ -75,12 +75,15 @@ export function Sidebar() {
                     key={item.href}
                     href={item.href}
                     className={clsx(
-                      'flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors',
+                      'relative flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors',
                       isActive
-                        ? 'bg-accent-muted text-accent'
+                        ? 'bg-accent/10 font-medium text-accent'
                         : 'text-text-secondary hover:bg-surface-overlay hover:text-text-primary'
                     )}
                   >
+                    {isActive && (
+                      <span className="absolute left-0 top-1/2 h-5 w-0.5 -translate-y-1/2 rounded-full bg-accent" />
+                    )}
                     <Icon className="h-4 w-4 shrink-0" />
                     {item.label}
                   </Link>
@@ -92,7 +95,7 @@ export function Sidebar() {
       </nav>
 
       <div className="border-t border-border-subtle px-5 py-4">
-        <p className="text-[11px] text-text-muted">Multi-agent pipeline</p>
+        <p className="text-[10px] uppercase tracking-wider text-text-muted">Pipeline v1</p>
       </div>
     </aside>
   );

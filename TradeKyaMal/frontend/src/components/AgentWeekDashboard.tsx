@@ -7,6 +7,7 @@ import { MarkdownContent } from '@/components/MarkdownContent';
 import { CalibrationPanel } from '@/components/CalibrationPanel';
 import { HumanScorePanel } from '@/components/HumanScorePanel';
 import { FinalPredictionHero } from '@/components/FinalPredictionHero';
+import { Panel, SectionHeader } from '@/components/Panel';
 import {
   fetchPipelineStatus,
   formatRelativeTime,
@@ -48,7 +49,7 @@ function pctColor(value: number): string {
 }
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
-  return <h3 className="mb-4 text-sm font-semibold">{children}</h3>;
+  return <h3 className="mb-4 text-sm font-semibold tracking-tight">{children}</h3>;
 }
 
 function SectorBar({ name, symbol, pct }: { name: string; symbol: string; pct: number }) {
@@ -89,10 +90,10 @@ function SummaryCard({
   return (
     <div
       className={clsx(
-        'rounded-xl border p-5',
+        'rounded-2xl border p-5 shadow-sm shadow-black/10',
         highlight
           ? 'border-accent/30 bg-accent/5'
-          : 'border-border-subtle bg-surface-raised'
+          : 'border-border-subtle bg-surface-raised/80'
       )}
     >
       <p className="text-xs font-medium text-text-muted">{label}</p>
@@ -114,11 +115,11 @@ function ChartGrid({
   if (charts.length === 0) return null;
 
   return (
-    <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
-      <SectionTitle>{title}</SectionTitle>
+    <Panel>
+      <SectionHeader title={title} />
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {charts.map((chart) => (
-          <div key={chart.url} className="overflow-hidden rounded-lg border border-border-subtle bg-surface">
+          <div key={chart.url} className="overflow-hidden rounded-xl border border-border-subtle bg-surface">
             <div className="border-b border-border-subtle px-3 py-2 text-xs font-medium text-text-secondary">
               {chart.label}
             </div>
@@ -127,7 +128,7 @@ function ChartGrid({
           </div>
         ))}
       </div>
-    </section>
+    </Panel>
   );
 }
 
@@ -144,11 +145,11 @@ function ReportAccordion({
   if (!markdown) return null;
 
   return (
-    <section className="overflow-hidden rounded-xl border border-border-subtle bg-surface-raised">
+    <section className="overflow-hidden rounded-2xl border border-border-subtle bg-surface-raised/80 shadow-sm shadow-black/10">
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
-        className="flex w-full items-center justify-between px-5 py-4 text-left"
+        className="flex w-full items-center justify-between px-5 py-4 text-left transition-colors hover:bg-surface-overlay/50"
       >
         <span className="text-sm font-semibold">{title}</span>
         <ChevronDown className={clsx('h-4 w-4 text-text-muted transition-transform', open && 'rotate-180')} />
@@ -180,14 +181,14 @@ function WeekToolbar({
   onRefresh: () => void;
 }) {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-border-subtle bg-surface-raised px-5 py-4">
-      <div className="flex flex-wrap items-center gap-3">
-        <label className="flex items-center gap-2 text-sm text-text-muted">
-          Week
+    <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-border-subtle bg-surface-raised/80 px-5 py-4 shadow-sm shadow-black/10">
+      <div className="flex flex-wrap items-center gap-4">
+        <label className="flex items-center gap-2 text-sm">
+          <span className="text-text-muted">Week</span>
           <select
             value={week}
             onChange={(e) => onWeekChange(Number(e.target.value))}
-            className="rounded-md border border-border bg-surface px-2 py-1 font-mono text-sm"
+            className="rounded-lg border border-border bg-surface px-3 py-1.5 font-mono text-sm focus:border-accent/50 focus:outline-none"
           >
             {(availableWeeks.length ? availableWeeks : [week]).map((value) => (
               <option key={value} value={value}>
@@ -208,7 +209,7 @@ function WeekToolbar({
       <button
         type="button"
         onClick={onRefresh}
-        className="flex items-center gap-1.5 rounded-lg border border-border-subtle px-3 py-2 text-xs text-text-secondary hover:bg-surface-overlay"
+        className="flex items-center gap-1.5 rounded-lg border border-border-subtle bg-surface px-3 py-2 text-xs font-medium text-text-secondary transition-colors hover:border-accent/30 hover:text-text-primary"
       >
         <RefreshCw className="h-3.5 w-3.5" />
         Refresh
@@ -273,7 +274,7 @@ export function AgentWeekDashboard({ agentFilter, view: viewProp }: AgentWeekDas
 
   if (loading && !data) {
     return (
-      <div className="flex items-center justify-center gap-2 rounded-xl border border-border-subtle bg-surface-raised p-16 text-sm text-text-muted">
+      <div className="flex items-center justify-center gap-2 rounded-2xl border border-border-subtle bg-surface-raised/80 p-16 text-sm text-text-muted">
         <Loader2 className="h-4 w-4 animate-spin" />
         Loading...
       </div>
@@ -359,7 +360,7 @@ export function AgentWeekDashboard({ agentFilter, view: viewProp }: AgentWeekDas
           )}
 
           {showMacro && data.sectors.length > 0 && (
-            <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
+            <Panel>
               <SectionTitle>Sector Performance</SectionTitle>
               <div className="space-y-3">
                 {data.sectors.slice(0, 11).map((sector) => (
@@ -371,7 +372,7 @@ export function AgentWeekDashboard({ agentFilter, view: viewProp }: AgentWeekDas
                   />
                 ))}
               </div>
-            </section>
+            </Panel>
           )}
 
           {showTechnical && <ChartGrid title="Technical Charts" charts={data.technicalCharts} />}
@@ -472,7 +473,7 @@ export function AgentWeekDashboard({ agentFilter, view: viewProp }: AgentWeekDas
           )}
 
           {showMacro && data.sectors.length > 0 && (
-            <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
+            <Panel>
               <SectionTitle>Sector Performance</SectionTitle>
               <div className="space-y-3">
                 {data.sectors.slice(0, 11).map((sector) => (
@@ -484,7 +485,7 @@ export function AgentWeekDashboard({ agentFilter, view: viewProp }: AgentWeekDas
                   />
                 ))}
               </div>
-            </section>
+            </Panel>
           )}
 
           {showTechnical && <ChartGrid title="Technical Charts" charts={data.technicalCharts} />}

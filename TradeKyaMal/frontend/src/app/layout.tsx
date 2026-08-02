@@ -19,7 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Sidebar />
-        <main className="ml-60 min-h-screen p-8">{children}</main>
+        <main className="relative ml-60 min-h-screen">
+          <div className="mx-auto max-w-7xl px-8 py-8">{children}</div>
+        </main>
       </body>
     </html>
   );
