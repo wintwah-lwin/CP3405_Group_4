@@ -10,16 +10,33 @@ import {
   BarChart3,
   Calendar,
   Sparkles,
+  Target,
+  ClipboardCheck,
 } from 'lucide-react';
 import clsx from 'clsx';
 
-const navItems = [
-  { href: '/', label: 'Overview', icon: LayoutDashboard },
-  { href: '/data-collection', label: 'Data Collection', icon: Database },
-  { href: '/agents/almanac', label: 'Almanac', icon: Calendar },
-  { href: '/agents/macro', label: 'Macro', icon: BarChart3 },
-  { href: '/agents/technical', label: 'Technical', icon: TrendingUp },
-  { href: '/agents/llm', label: 'LLM / Final', icon: Sparkles },
+const navGroups = [
+  {
+    label: 'Platform',
+    items: [
+      { href: '/', label: 'Overview', icon: LayoutDashboard },
+      { href: '/data-collection', label: 'Data Collection', icon: Database },
+    ],
+  },
+  {
+    label: 'Agents',
+    items: [
+      { href: '/agents/almanac', label: 'Almanac', icon: Calendar },
+      { href: '/agents/macro', label: 'Macro', icon: BarChart3 },
+      { href: '/agents/technical', label: 'Technical', icon: TrendingUp },
+      { href: '/agents/llm', label: 'LLM', icon: Sparkles },
+      { href: '/agents/final', label: 'Final', icon: Target },
+    ],
+  },
+  {
+    label: 'Team',
+    items: [{ href: '/review', label: 'Review', icon: ClipboardCheck }],
+  },
 ];
 
 export function Sidebar() {
@@ -34,39 +51,48 @@ export function Sidebar() {
           </div>
           <div>
             <h1 className="text-sm font-semibold tracking-tight">TradeKyaMal</h1>
-            <p className="text-[11px] text-text-muted">Design Thinking 3</p>
+            <p className="text-[11px] text-text-muted">Weekly Market Intelligence</p>
           </div>
         </div>
       </div>
 
-      <nav className="flex-1 space-y-0.5 px-3 py-4">
-        {navItems.map((item) => {
-          const isActive =
-            item.href === '/'
-              ? pathname === '/'
-              : pathname.startsWith(item.href);
-          const Icon = item.icon;
+      <nav className="flex-1 overflow-y-auto px-3 py-4">
+        {navGroups.map((group) => (
+          <div key={group.label} className="mb-5 last:mb-0">
+            <p className="mb-1.5 px-3 text-[10px] font-semibold uppercase tracking-wider text-text-muted">
+              {group.label}
+            </p>
+            <div className="space-y-0.5">
+              {group.items.map((item) => {
+                const isActive =
+                  item.href === '/'
+                    ? pathname === '/'
+                    : pathname.startsWith(item.href);
+                const Icon = item.icon;
 
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={clsx(
-                'flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors',
-                isActive
-                  ? 'bg-accent-muted text-accent'
-                  : 'text-text-secondary hover:bg-surface-overlay hover:text-text-primary'
-              )}
-            >
-              <Icon className="h-4 w-4 shrink-0" />
-              {item.label}
-            </Link>
-          );
-        })}
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={clsx(
+                      'flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors',
+                      isActive
+                        ? 'bg-accent-muted text-accent'
+                        : 'text-text-secondary hover:bg-surface-overlay hover:text-text-primary'
+                    )}
+                  >
+                    <Icon className="h-4 w-4 shrink-0" />
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </nav>
 
       <div className="border-t border-border-subtle px-5 py-4">
-        <p className="text-[11px] text-text-muted">Trading Intelligence Platform</p>
+        <p className="text-[11px] text-text-muted">Multi-agent pipeline</p>
       </div>
     </aside>
   );

@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import { MarkdownContent } from '@/components/MarkdownContent';
 import { CalibrationPanel } from '@/components/CalibrationPanel';
 import { HumanScorePanel } from '@/components/HumanScorePanel';
+import { FinalPredictionHero } from '@/components/FinalPredictionHero';
 import {
   fetchPipelineStatus,
   formatRelativeTime,
@@ -14,9 +15,22 @@ import {
 } from '@/lib/evidenceClient';
 import type { AgentType, WeekDashboardData } from '@/lib/types';
 
+export type DashboardView = 'overview' | 'agent' | 'llm' | 'final' | 'review';
+
 interface AgentWeekDashboardProps {
   agentFilter?: AgentType | AgentType[];
-  showFinalHero?: boolean;
+  view?: DashboardView;
+}
+
+function resolveView(
+  agentFilter: AgentType | AgentType[] | undefined,
+  view: DashboardView | undefined
+): DashboardView {
+  if (view) return view;
+  if (!agentFilter) return 'overview';
+  const filters = Array.isArray(agentFilter) ? agentFilter : [agentFilter];
+  if (filters.length === 1 && filters[0] === 'llm') return 'llm';
+  return 'agent';
 }
 
 function biasTone(bias: string | null): string {
@@ -31,6 +45,10 @@ function pctColor(value: number): string {
   if (value > 0) return 'text-positive';
   if (value < 0) return 'text-negative';
   return 'text-text-muted';
+}
+
+function SectionTitle({ children }: { children: React.ReactNode }) {
+  return <h3 className="mb-4 text-sm font-semibold">{children}</h3>;
 }
 
 function SectorBar({ name, symbol, pct }: { name: string; symbol: string; pct: number }) {
@@ -61,14 +79,23 @@ function SummaryCard({
   label,
   value,
   sub,
+  highlight,
 }: {
   label: string;
   value: string | null;
   sub?: string | null;
+  highlight?: boolean;
 }) {
   return (
-    <div className="rounded-xl border border-border-subtle bg-surface-raised p-5">
-      <p className="text-xs font-medium uppercase tracking-wider text-text-muted">{label}</p>
+    <div
+      className={clsx(
+        'rounded-xl border p-5',
+        highlight
+          ? 'border-accent/30 bg-accent/5'
+          : 'border-border-subtle bg-surface-raised'
+      )}
+    >
+      <p className="text-xs font-medium text-text-muted">{label}</p>
       <p className={clsx('mt-2 text-lg font-semibold leading-snug', biasTone(value))}>
         {value ?? '—'}
       </p>
@@ -88,7 +115,7 @@ function ChartGrid({
 
   return (
     <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
-      <h3 className="mb-4 text-sm font-semibold">{title}</h3>
+      <SectionTitle>{title}</SectionTitle>
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {charts.map((chart) => (
           <div key={chart.url} className="overflow-hidden rounded-lg border border-border-subtle bg-surface">
@@ -107,11 +134,13 @@ function ChartGrid({
 function ReportAccordion({
   title,
   markdown,
+  defaultOpen = false,
 }: {
   title: string;
   markdown: string | null;
+  defaultOpen?: boolean;
 }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(defaultOpen);
   if (!markdown) return null;
 
   return (
@@ -133,10 +162,64 @@ function ReportAccordion({
   );
 }
 
-export function AgentWeekDashboard({
-  agentFilter,
-  showFinalHero = !agentFilter,
-}: AgentWeekDashboardProps) {
+function WeekToolbar({
+  week,
+  availableWeeks,
+  currentProjectWeek,
+  latestEvidenceWeek,
+  updatedAt,
+  onWeekChange,
+  onRefresh,
+}: {
+  week: number;
+  availableWeeks: number[];
+  currentProjectWeek: number;
+  latestEvidenceWeek: number | null;
+  updatedAt: string | null | undefined;
+  onWeekChange: (week: number) => void;
+  onRefresh: () => void;
+}) {
+  return (
+    <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-border-subtle bg-surface-raised px-5 py-4">
+      <div className="flex flex-wrap items-center gap-3">
+        <label className="flex items-center gap-2 text-sm text-text-muted">
+          Week
+          <select
+            value={week}
+            onChange={(e) => onWeekChange(Number(e.target.value))}
+            className="rounded-md border border-border bg-surface px-2 py-1 font-mono text-sm"
+          >
+            {(availableWeeks.length ? availableWeeks : [week]).map((value) => (
+              <option key={value} value={value}>
+                W{value}{value === currentProjectWeek ? ' (current)' : ''}
+              </option>
+            ))}
+          </select>
+        </label>
+        {latestEvidenceWeek && week !== latestEvidenceWeek && (
+          <span className="text-xs text-text-muted">Latest: W{latestEvidenceWeek}</span>
+        )}
+        {updatedAt && (
+          <span className="text-xs text-text-muted">
+            Updated {formatRelativeTime(updatedAt)}
+          </span>
+        )}
+      </div>
+      <button
+        type="button"
+        onClick={onRefresh}
+        className="flex items-center gap-1.5 rounded-lg border border-border-subtle px-3 py-2 text-xs text-text-secondary hover:bg-surface-overlay"
+      >
+        <RefreshCw className="h-3.5 w-3.5" />
+        Refresh
+      </button>
+    </div>
+  );
+}
+
+export function AgentWeekDashboard({ agentFilter, view: viewProp }: AgentWeekDashboardProps) {
+  const view = resolveView(agentFilter, viewProp);
+
   const [week, setWeek] = useState<number | null>(null);
   const [availableWeeks, setAvailableWeeks] = useState<number[]>([]);
   const [data, setData] = useState<WeekDashboardData | null>(null);
@@ -172,35 +255,27 @@ export function AgentWeekDashboard({
     loadDashboard(week);
   }, [week, loadDashboard]);
 
+  const filters = useMemo(
+    () => (agentFilter ? (Array.isArray(agentFilter) ? agentFilter : [agentFilter]) : []),
+    [agentFilter]
+  );
+
+  const showTechnical = view === 'overview' || filters.includes('technical');
+  const showMacro = view === 'overview' || filters.includes('macro');
+  const showAlmanac = view === 'overview' || filters.includes('almanac');
+
   const hasAgentData = Boolean(
     data?.agents.some((agent) => agent.bias || agent.reportMarkdown)
   );
   const latestEvidenceWeek = availableWeeks[0] ?? null;
   const currentProjectWeek = getProjectWeek();
-
-  const showTechnical = useMemo(() => {
-    if (!agentFilter) return true;
-    const filters = Array.isArray(agentFilter) ? agentFilter : [agentFilter];
-    return filters.includes('technical');
-  }, [agentFilter]);
-
-  const showMacro = useMemo(() => {
-    if (!agentFilter) return true;
-    const filters = Array.isArray(agentFilter) ? agentFilter : [agentFilter];
-    return filters.includes('macro');
-  }, [agentFilter]);
-
-  const showAlmanac = useMemo(() => {
-    if (!agentFilter) return true;
-    const filters = Array.isArray(agentFilter) ? agentFilter : [agentFilter];
-    return filters.includes('almanac');
-  }, [agentFilter]);
+  const finalAgent = data?.agents.find((a) => a.id === 'final');
 
   if (loading && !data) {
     return (
       <div className="flex items-center justify-center gap-2 rounded-xl border border-border-subtle bg-surface-raised p-16 text-sm text-text-muted">
         <Loader2 className="h-4 w-4 animate-spin" />
-        Loading dashboard...
+        Loading...
       </div>
     );
   }
@@ -211,42 +286,15 @@ export function AgentWeekDashboard({
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-border-subtle bg-surface-raised px-5 py-4">
-        <div className="flex flex-wrap items-center gap-3">
-          <label className="flex items-center gap-2 text-sm text-text-muted">
-            Week
-            <select
-              value={week}
-              onChange={(e) => setWeek(Number(e.target.value))}
-              className="rounded-md border border-border bg-surface px-2 py-1 font-mono text-sm"
-            >
-              {(availableWeeks.length ? availableWeeks : [week]).map((value) => (
-                <option key={value} value={value}>
-                  W{value}{value === currentProjectWeek ? ' (current)' : ''}
-                </option>
-              ))}
-            </select>
-          </label>
-          {latestEvidenceWeek && week !== latestEvidenceWeek && (
-            <span className="text-xs text-text-muted">
-              Latest evidence: W{latestEvidenceWeek}
-            </span>
-          )}
-          {data?.updatedAt && (
-            <span className="text-xs text-text-muted">
-              Updated {formatRelativeTime(data.updatedAt)}
-            </span>
-          )}
-        </div>
-        <button
-          type="button"
-          onClick={() => loadDashboard(week)}
-          className="flex items-center gap-1.5 rounded-lg border border-border-subtle px-3 py-2 text-xs text-text-secondary hover:bg-surface-overlay"
-        >
-          <RefreshCw className="h-3.5 w-3.5" />
-          Refresh
-        </button>
-      </div>
+      <WeekToolbar
+        week={week}
+        availableWeeks={availableWeeks}
+        currentProjectWeek={currentProjectWeek}
+        latestEvidenceWeek={latestEvidenceWeek}
+        updatedAt={data?.updatedAt}
+        onWeekChange={setWeek}
+        onRefresh={() => loadDashboard(week)}
+      />
 
       {error && (
         <p className="rounded-lg border border-warning/30 bg-warning/10 px-4 py-3 text-xs text-warning">
@@ -254,128 +302,127 @@ export function AgentWeekDashboard({
         </p>
       )}
 
-      {!hasAgentData && !loading && (
-        <div className="rounded-xl border border-dashed border-border-subtle bg-surface-raised p-10 text-center">
-          <p className="text-sm text-text-secondary">No reports for week {week} yet.</p>
-          <p className="mt-2 text-xs text-text-muted">
-            GitHub Actions runs every Saturday ~4 AM SGT.
-            {latestEvidenceWeek && latestEvidenceWeek !== week
-              ? ` Select W${latestEvidenceWeek} for the latest data.`
-              : ' Check back after the next pipeline run.'}
-          </p>
+      {!hasAgentData && !loading && view !== 'review' && (
+        <div className="rounded-xl border border-dashed border-border-subtle bg-surface-raised p-10 text-center text-sm text-text-secondary">
+          No reports for W{week} yet.
+          {latestEvidenceWeek && latestEvidenceWeek !== week && (
+            <span className="text-text-muted"> Try W{latestEvidenceWeek}.</span>
+          )}
         </div>
       )}
 
-      {data && data.agents.length > 0 && (
-        <section>
-          <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-text-muted">
-            Agent Summary
-          </h3>
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {data.agents
-              .filter((agent) => agent.id !== 'final')
-              .map((agent) => (
-                <SummaryCard
-                  key={agent.id}
-                  label={agent.label}
-                  value={agent.bias}
-                  sub={agent.confidence ? `Confidence: ${agent.confidence}` : undefined}
-                />
-              ))}
-          </div>
-        </section>
-      )}
-
-      {showAlmanac && data && data.indexRows.length > 0 && (
-        <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
-          <h3 className="mb-4 text-sm font-semibold">Market Snapshot</h3>
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-            {data.indexRows.map((row) => (
-              <div key={row.asset} className="rounded-lg border border-border-subtle bg-surface px-4 py-3">
-                <p className="text-xs text-text-muted">{row.asset}</p>
-                <p className={clsx('mt-1 font-mono text-sm font-semibold', biasTone(row.signal))}>
-                  {row.change}
-                </p>
-                <p className="mt-1 text-[11px] text-text-secondary">{row.signal}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {showMacro && data && data.sectors.length > 0 && (
-        <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
-          <h3 className="mb-4 text-sm font-semibold">Sector Performance (Day Return)</h3>
-          <div className="space-y-3">
-            {data.sectors.slice(0, 11).map((sector) => (
-              <SectorBar
-                key={sector.symbol}
-                name={sector.name}
-                symbol={sector.symbol}
-                pct={sector.pct}
-              />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {showTechnical && data && (
-        <ChartGrid title="Technical Charts" charts={data.technicalCharts} />
-      )}
-
-      {showMacro && data && (
-        <ChartGrid title="Macro Charts" charts={data.macroCharts} />
-      )}
-
-      {showFinalHero && data && data.risks.length > 0 && (
-        <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
-          <h3 className="mb-3 text-sm font-semibold">Key Risks</h3>
-          <ul className="space-y-2 text-sm text-text-secondary">
-            {data.risks.map((risk) => (
-              <li key={risk} className="flex gap-2">
-                <span className="text-accent">•</span>
-                <span>{risk}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {showFinalHero && data && (
+      {/* ── Overview ── */}
+      {view === 'overview' && data && (
         <>
-          <HumanScorePanel week={week} githubMarkdown={data.humanScoreMarkdown} />
-          <CalibrationPanel
-            calibrationLog={data.calibrationLog}
-            learningLog={data.learningLog}
-            llmHorserace={data.llmHorserace}
-            pastAccuracyLog={data.pastAccuracyLog}
-          />
+          {data.finalBias && (
+            <FinalPredictionHero
+              week={week}
+              bias={data.finalBias}
+              confidence={data.finalConfidence}
+              modelScore={data.modelScore}
+            />
+          )}
+
+          {data.agents.length > 0 && (
+            <section>
+              <SectionTitle>Agent Signals</SectionTitle>
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                {data.agents
+                  .filter((agent) => agent.id !== 'final')
+                  .map((agent) => (
+                    <SummaryCard
+                      key={agent.id}
+                      label={agent.label}
+                      value={agent.bias}
+                      sub={agent.confidence ?? undefined}
+                    />
+                  ))}
+              </div>
+            </section>
+          )}
+
+          {showAlmanac && data.indexRows.length > 0 && (
+            <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
+              <SectionTitle>Market Snapshot</SectionTitle>
+              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                {data.indexRows.map((row) => (
+                  <div key={row.asset} className="rounded-lg border border-border-subtle bg-surface px-4 py-3">
+                    <p className="text-xs text-text-muted">{row.asset}</p>
+                    <p className={clsx('mt-1 font-mono text-sm font-semibold', biasTone(row.signal))}>
+                      {row.change}
+                    </p>
+                    <p className="mt-1 text-[11px] text-text-secondary">{row.signal}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {showMacro && data.sectors.length > 0 && (
+            <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
+              <SectionTitle>Sector Performance</SectionTitle>
+              <div className="space-y-3">
+                {data.sectors.slice(0, 11).map((sector) => (
+                  <SectorBar
+                    key={sector.symbol}
+                    name={sector.name}
+                    symbol={sector.symbol}
+                    pct={sector.pct}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {showTechnical && <ChartGrid title="Technical Charts" charts={data.technicalCharts} />}
+          {showMacro && <ChartGrid title="Macro Charts" charts={data.macroCharts} />}
         </>
       )}
 
-      {showFinalHero && data && (data.finalBias || data.agents.find((a) => a.id === 'final')?.reportMarkdown) && (
-        <section className="space-y-4">
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
-            Final Prediction
-          </h2>
-          {data.finalBias && (
-            <div className="grid gap-4 lg:grid-cols-3">
-              <SummaryCard label="Final Market Bias" value={data.finalBias} />
-              <SummaryCard label="Confidence" value={data.finalConfidence} />
-              <SummaryCard label="Model Score" value={data.modelScore} />
-            </div>
+      {/* ── Agent (single agent tabs) ── */}
+      {view === 'agent' && data && (
+        <>
+          {filters.length === 1 && filters[0] === 'final' && (
+            <FinalPredictionHero
+              week={week}
+              bias={data.finalBias}
+              confidence={data.finalConfidence}
+              modelScore={data.modelScore}
+            />
           )}
-          {data.sourceRows.length > 0 && (
+
+          {data.agents.length > 0 && (
+            <section>
+              <SectionTitle>{filters[0] === 'final' ? 'Outlook' : 'Signal'}</SectionTitle>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {data.agents.map((agent) => (
+                  <SummaryCard
+                    key={agent.id}
+                    label={agent.label}
+                    value={agent.bias ?? data.finalBias}
+                    sub={
+                      (agent.confidence ?? data.finalConfidence)
+                        ? `Confidence: ${agent.confidence ?? data.finalConfidence}`
+                        : undefined
+                    }
+                    highlight
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {filters.length === 1 && filters[0] === 'final' && data.sourceRows.length > 0 && (
             <div className="rounded-xl border border-border-subtle bg-surface-raised p-5">
-              <h3 className="mb-4 text-sm font-semibold">Source Summary</h3>
+              <SectionTitle>Source Breakdown</SectionTitle>
               <div className="overflow-x-auto">
                 <table className="w-full min-w-[640px] text-left text-sm">
                   <thead>
-                    <tr className="border-b border-border-subtle text-xs uppercase tracking-wide text-text-muted">
-                      <th className="px-3 py-2">Source</th>
-                      <th className="px-3 py-2">Bias</th>
-                      <th className="px-3 py-2">Confidence</th>
-                      <th className="px-3 py-2">Driver</th>
+                    <tr className="border-b border-border-subtle text-xs text-text-muted">
+                      <th className="px-3 py-2 font-medium">Source</th>
+                      <th className="px-3 py-2 font-medium">Bias</th>
+                      <th className="px-3 py-2 font-medium">Confidence</th>
+                      <th className="px-3 py-2 font-medium">Driver</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -392,28 +439,173 @@ export function AgentWeekDashboard({
               </div>
             </div>
           )}
-          {data.agents.find((a) => a.id === 'final')?.reportMarkdown && (
+
+          {filters.length === 1 && filters[0] === 'final' && data.risks.length > 0 && (
+            <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
+              <SectionTitle>Key Risks</SectionTitle>
+              <ul className="space-y-2 text-sm text-text-secondary">
+                {data.risks.map((risk) => (
+                  <li key={risk} className="flex gap-2">
+                    <span className="text-accent">•</span>
+                    <span>{risk}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {showAlmanac && data.indexRows.length > 0 && (
+            <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
+              <SectionTitle>Market Snapshot</SectionTitle>
+              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                {data.indexRows.map((row) => (
+                  <div key={row.asset} className="rounded-lg border border-border-subtle bg-surface px-4 py-3">
+                    <p className="text-xs text-text-muted">{row.asset}</p>
+                    <p className={clsx('mt-1 font-mono text-sm font-semibold', biasTone(row.signal))}>
+                      {row.change}
+                    </p>
+                    <p className="mt-1 text-[11px] text-text-secondary">{row.signal}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {showMacro && data.sectors.length > 0 && (
+            <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
+              <SectionTitle>Sector Performance</SectionTitle>
+              <div className="space-y-3">
+                {data.sectors.slice(0, 11).map((sector) => (
+                  <SectorBar
+                    key={sector.symbol}
+                    name={sector.name}
+                    symbol={sector.symbol}
+                    pct={sector.pct}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {showTechnical && <ChartGrid title="Technical Charts" charts={data.technicalCharts} />}
+          {showMacro && <ChartGrid title="Macro Charts" charts={data.macroCharts} />}
+
+          {data.agents.map((agent) => (
+              <ReportAccordion
+                key={agent.id}
+                title={`${agent.label} Report`}
+                markdown={agent.reportMarkdown}
+                defaultOpen
+              />
+            ))}
+        </>
+      )}
+
+      {/* ── LLM ── */}
+      {view === 'llm' && data && (
+        <>
+          {data.agents
+            .filter((agent) => agent.id === 'llm')
+            .map((agent) => (
+              <SummaryCard
+                key={agent.id}
+                label={agent.label}
+                value={agent.bias}
+                sub={agent.confidence ?? undefined}
+                highlight
+              />
+            ))}
+
+          {data.agreementMarkdown && (
+            <ReportAccordion title="Agreement Matrix" markdown={data.agreementMarkdown} defaultOpen />
+          )}
+
+          {data.agents
+            .filter((agent) => agent.id === 'llm')
+            .map((agent) => (
+              <ReportAccordion
+                key={agent.id}
+                title="LLM Synthesis Report"
+                markdown={agent.reportMarkdown}
+              />
+            ))}
+        </>
+      )}
+
+      {/* ── Final Prediction ── */}
+      {view === 'final' && data && (
+        <>
+          <FinalPredictionHero
+            week={week}
+            bias={data.finalBias}
+            confidence={data.finalConfidence}
+            modelScore={data.modelScore}
+          />
+
+          {data.sourceRows.length > 0 && (
+            <div className="rounded-xl border border-border-subtle bg-surface-raised p-5">
+              <SectionTitle>Source Breakdown</SectionTitle>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[640px] text-left text-sm">
+                  <thead>
+                    <tr className="border-b border-border-subtle text-xs text-text-muted">
+                      <th className="px-3 py-2 font-medium">Source</th>
+                      <th className="px-3 py-2 font-medium">Bias</th>
+                      <th className="px-3 py-2 font-medium">Confidence</th>
+                      <th className="px-3 py-2 font-medium">Driver</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {data.sourceRows.map((row) => (
+                      <tr key={row.source} className="border-b border-border-subtle/60">
+                        <td className="px-3 py-2 font-medium">{row.source}</td>
+                        <td className={clsx('px-3 py-2', biasTone(row.bias))}>{row.bias}</td>
+                        <td className="px-3 py-2 text-text-secondary">{row.confidence}</td>
+                        <td className="px-3 py-2 text-text-secondary">{row.driver ?? '—'}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {data.risks.length > 0 && (
+            <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
+              <SectionTitle>Key Risks</SectionTitle>
+              <ul className="space-y-2 text-sm text-text-secondary">
+                {data.risks.map((risk) => (
+                  <li key={risk} className="flex gap-2">
+                    <span className="text-accent">•</span>
+                    <span>{risk}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {finalAgent?.reportMarkdown && (
             <ReportAccordion
-              title="Final Prediction Report"
-              markdown={data.agents.find((a) => a.id === 'final')?.reportMarkdown ?? null}
+              title="Full Report"
+              markdown={finalAgent.reportMarkdown}
+              defaultOpen
             />
           )}
-        </section>
+        </>
       )}
 
-      {data?.agreementMarkdown && (
-        <ReportAccordion title="Agreement Matrix" markdown={data.agreementMarkdown} />
+      {/* ── Team Review ── */}
+      {view === 'review' && data && (
+        <>
+          <HumanScorePanel week={week} githubMarkdown={data.humanScoreMarkdown} />
+          <CalibrationPanel
+            calibrationLog={data.calibrationLog}
+            learningLog={data.learningLog}
+            llmHorserace={data.llmHorserace}
+            pastAccuracyLog={data.pastAccuracyLog}
+          />
+        </>
       )}
-
-      {data?.agents
-        .filter((agent) => agent.id !== 'final')
-        .map((agent) => (
-        <ReportAccordion
-          key={agent.id}
-          title={`${agent.label} Report`}
-          markdown={agent.reportMarkdown}
-        />
-      ))}
     </div>
   );
 }

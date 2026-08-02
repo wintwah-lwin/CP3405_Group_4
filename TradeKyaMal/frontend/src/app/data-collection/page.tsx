@@ -59,10 +59,7 @@ export default function DataCollectionPage() {
 
   return (
     <div>
-      <PageHeader
-        title="Data Collection"
-        description="Fetch weekly scorecard data from Finviz, Yahoo Sectors, and TradingEconomics — visualize trends and export your dataset."
-      />
+      <PageHeader title="Data Collection" />
 
       {error && (
         <div className="mb-6 rounded-lg border border-negative/30 bg-negative/10 px-4 py-3 text-sm text-negative">

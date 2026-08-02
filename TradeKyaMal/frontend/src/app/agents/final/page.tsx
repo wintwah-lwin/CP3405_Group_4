@@ -1,11 +1,11 @@
 import { PageHeader } from '@/components/PageHeader';
 import { AgentWeekDashboard } from '@/components/AgentWeekDashboard';
 
-export default function TechnicalAgentPage() {
+export default function FinalPredictionPage() {
   return (
     <div>
-      <PageHeader title="Technical Agent" />
-      <AgentWeekDashboard agentFilter="technical" view="agent" />
+      <PageHeader title="Final Prediction" />
+      <AgentWeekDashboard agentFilter="final" view="agent" />
     </div>
   );
 }

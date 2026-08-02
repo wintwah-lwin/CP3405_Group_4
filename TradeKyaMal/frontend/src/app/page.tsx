@@ -66,10 +66,7 @@ export default async function OverviewPage() {
 
   return (
     <div>
-      <PageHeader
-        title="Overview"
-        description="Weekly agent summaries, human scores, calibration, and final prediction."
-      />
+      <PageHeader title="Overview" />
 
       {error && (
         <div className="mb-6 rounded-lg border border-warning/30 bg-warning/10 px-4 py-3 text-sm text-warning">
@@ -106,9 +103,7 @@ export default async function OverviewPage() {
       </div>
 
       <div className="mt-8">
-        <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-text-muted">
-          Trading Agents
-        </h2>
+        <h2 className="mb-4 text-sm font-semibold">Agents</h2>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {displayAgents.map((agent) => (
             <AgentCard key={agent.id} agent={agent} />
@@ -117,10 +112,7 @@ export default async function OverviewPage() {
       </div>
 
       <div className="mt-8">
-        <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-text-muted">
-          Weekly Dashboard
-        </h2>
-        <AgentWeekDashboard />
+        <AgentWeekDashboard view="overview" />
       </div>
     </div>
   );

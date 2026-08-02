@@ -78,7 +78,7 @@ function SectionEditor({
           onChange={(e) => onChange({ ...section, notes: e.target.value })}
           rows={3}
           className="rounded-md border border-border bg-surface-raised px-3 py-2 text-sm text-text-secondary"
-          placeholder="Why does the team agree or disagree with the AI?"
+          placeholder="Team notes"
         />
       </label>
     </div>
@@ -161,7 +161,7 @@ export function HumanScorePanel({ week, githubMarkdown }: HumanScorePanelProps) 
       );
       setPreviewMarkdown(response.markdown);
       setSource('saved');
-      setMessage(`Saved for W${week}. This feeds the final prediction agent (1.5× weight).`);
+      setMessage(`Saved for W${week}.`);
     } catch {
       setMessage('Could not save — check that the backend and MongoDB are running.');
     } finally {
@@ -184,15 +184,10 @@ export function HumanScorePanel({ week, githubMarkdown }: HumanScorePanelProps) 
     <div className="space-y-4">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
-            Human Score Entry
-          </h2>
-          <p className="mt-1 text-xs text-text-secondary">
-            Compare AI vs team scores for each agent layer, then set the overall bias for W{week}.
-          </p>
+          <h2 className="text-sm font-semibold">Human Score — W{week}</h2>
           {source !== 'empty' && (
             <p className="mt-1 text-[11px] text-text-muted">
-              Source: {source === 'saved' ? 'Saved in database' : 'Loaded from GitHub evidence'}
+              {source === 'saved' ? 'Saved' : 'From evidence'}
             </p>
           )}
         </div>
@@ -273,7 +268,7 @@ export function HumanScorePanel({ week, githubMarkdown }: HumanScorePanelProps) 
             value={form.recommendation}
             onChange={(e) => setForm((current) => ({ ...current, recommendation: e.target.value }))}
             rows={3}
-            placeholder="e.g. Maintain a cautious investment stance. Continue monitoring geopolitical developments..."
+            placeholder="Investment stance..."
             className="rounded-md border border-border bg-surface px-3 py-2 text-sm text-text-secondary"
           />
         </label>

@@ -6,8 +6,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'TradeKyaMal — Trading Intelligence Dashboard',
-  description: 'Design Thinking 3 — Trading data collection and agent platform',
+  title: 'TradeKyaMal — Weekly Market Intelligence',
+  description: 'Multi-agent trading intelligence platform',
 };
 
 export default function RootLayout({

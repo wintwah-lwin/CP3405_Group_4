@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Calendar, BarChart3, TrendingUp, Sparkles, ArrowRight } from 'lucide-react';
+import { Calendar, BarChart3, TrendingUp, Sparkles, Target, ArrowRight } from 'lucide-react';
 import clsx from 'clsx';
 import type { Agent, AgentType } from '@/lib/types';
 
@@ -8,7 +8,7 @@ const agentIcons: Record<AgentType, typeof Calendar> = {
   macro: BarChart3,
   technical: TrendingUp,
   llm: Sparkles,
-  final: Sparkles,
+  final: Target,
 };
 
 const agentLinks: Record<AgentType, string> = {
@@ -16,7 +16,7 @@ const agentLinks: Record<AgentType, string> = {
   macro: '/agents/macro',
   technical: '/agents/technical',
   llm: '/agents/llm',
-  final: '/agents/llm',
+  final: '/agents/final',
 };
 
 const statusStyles = {
@@ -50,9 +50,9 @@ export function AgentCard({ agent }: AgentCardProps) {
       </div>
 
       <h3 className="mt-4 text-sm font-semibold">{agent.name}</h3>
-      <p className="mt-1.5 text-xs leading-relaxed text-text-secondary">
-        {agent.summary ?? agent.description}
-      </p>
+      {agent.summary && (
+        <p className="mt-1.5 text-xs text-text-secondary">{agent.summary}</p>
+      )}
 
       <div className="mt-4 flex items-center justify-between border-t border-border-subtle pt-4">
         <p className="text-[11px] text-text-muted">
