@@ -1,14 +1,11 @@
 import { PageHeader } from '@/components/PageHeader';
-import { AgentPlaceholder } from '@/components/AgentPlaceholder';
+import { AgentWeekDashboard } from '@/components/AgentWeekDashboard';
 
 export default function TechnicalAgentPage() {
   return (
     <div>
-      <PageHeader
-        title="Technical Agent"
-        description="Technical indicator and price action signal generation."
-      />
-      <AgentPlaceholder agentId="technical" />
+      <PageHeader title="Technical Agent" description="Weekly bias, charts, and report." />
+      <AgentWeekDashboard agentFilter="technical" showFinalHero={false} />
     </div>
   );
 }

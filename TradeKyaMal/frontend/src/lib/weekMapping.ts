@@ -1,45 +1,34 @@
 /**
- * Maps project weeks (W1, W2, … from course start) to evidence folder/file naming.
+ * Maps course project weeks to evidence folders in CP3405_Group_4.
  *
- * The group repo pipeline often stores week N+1 data in folder "Week N+1" with
- * filenames *_2026-W{N+1}.* while the course project week is N (from May 25).
- * Legacy folder "Week 26" held project W6 data.
+ * Rule: project week N → evidence/Week N/ with *_2026-W{N}.* files.
+ * The filename week (W9, W10, …) is the course week — do not show W10
+ * in the UI until getProjectWeek() reaches 10.
+ *
+ * Legacy: folder "Week 26" was renamed to Week 6 (same W6 files).
  */
 
-/** @deprecated Legacy folder number before rename to Week 6 */
 export const LEGACY_W6_FOLDER = 26;
 
-/** Folders numbered 7+ use file week = folder number = project week + 1 */
-const PIPELINE_WEEK_OFFSET = 1;
+/** Max week shown in the dashboard (current course week, SGT). */
+export function maxSelectableProjectWeek(currentProjectWeek: number): number {
+  return currentProjectWeek;
+}
 
 export function projectWeekToEvidenceTarget(projectWeek: number): {
   folder: number;
   fileWeek: number;
 } {
-  if (projectWeek <= 5) {
-    return { folder: projectWeek, fileWeek: projectWeek };
-  }
-  if (projectWeek === 6) {
-    return { folder: 6, fileWeek: 6 };
-  }
-  const folder = projectWeek + PIPELINE_WEEK_OFFSET;
-  return { folder, fileWeek: folder };
+  return { folder: projectWeek, fileWeek: projectWeek };
 }
 
+/** Derive course week from an evidence folder + almanac filename. */
 export function folderAndFileWeekToProjectWeek(
   folder: number,
   fileWeek: number
 ): number {
-  if (folder === LEGACY_W6_FOLDER || (folder === 6 && fileWeek === 6)) {
-    return 6;
-  }
-  if (folder >= 7 && fileWeek === folder) {
-    return folder - PIPELINE_WEEK_OFFSET;
-  }
-  if (fileWeek >= 1 && fileWeek <= 30) {
-    return fileWeek;
-  }
-  return folder;
+  if (folder === LEGACY_W6_FOLDER && fileWeek === 6) return 6;
+  return fileWeek;
 }
 
 export function parseFileWeekFromName(filename: string): number | null {
@@ -59,7 +48,6 @@ export function evidencePathsForProjectWeek(
   const { folder } = projectWeekToEvidenceTarget(projectWeek);
   const paths = [evidenceFolderPath(folder, filename)];
 
-  // Legacy fallback until group repo rename lands everywhere
   if (projectWeek === 6) {
     paths.push(evidenceFolderPath(LEGACY_W6_FOLDER, filename));
   }

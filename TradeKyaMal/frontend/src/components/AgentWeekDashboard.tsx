@@ -9,6 +9,7 @@ import { HumanScorePanel } from '@/components/HumanScorePanel';
 import {
   fetchPipelineStatus,
   formatRelativeTime,
+  getProjectWeek,
   loadWeekDashboard,
 } from '@/lib/evidenceClient';
 import type { AgentType, WeekDashboardData } from '@/lib/types';
@@ -158,8 +159,11 @@ export function AgentWeekDashboard({
 
   useEffect(() => {
     fetchPipelineStatus().then((status) => {
-      setWeek(status.defaultWeek);
-      setAvailableWeeks(status.availableWeeks ?? []);
+      const current = status.projectWeek;
+      const weeks = status.availableWeeks ?? [];
+      const defaultWeek = weeks.includes(current) ? current : status.defaultWeek;
+      setWeek(defaultWeek);
+      setAvailableWeeks(weeks);
     });
   }, []);
 
@@ -172,6 +176,7 @@ export function AgentWeekDashboard({
     data?.agents.some((agent) => agent.bias || agent.reportMarkdown)
   );
   const latestEvidenceWeek = availableWeeks[0] ?? null;
+  const currentProjectWeek = getProjectWeek();
 
   const showTechnical = useMemo(() => {
     if (!agentFilter) return true;
@@ -217,7 +222,7 @@ export function AgentWeekDashboard({
             >
               {(availableWeeks.length ? availableWeeks : [week]).map((value) => (
                 <option key={value} value={value}>
-                  W{value}
+                  W{value}{value === currentProjectWeek ? ' (current)' : ''}
                 </option>
               ))}
             </select>
@@ -261,14 +266,6 @@ export function AgentWeekDashboard({
         </div>
       )}
 
-      {showFinalHero && data?.finalBias && (
-        <div className="grid gap-4 lg:grid-cols-3">
-          <SummaryCard label="Final Market Bias" value={data.finalBias} />
-          <SummaryCard label="Confidence" value={data.finalConfidence} />
-          <SummaryCard label="Model Score" value={data.modelScore} />
-        </div>
-      )}
-
       {data && data.agents.length > 0 && (
         <section>
           <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-text-muted">
@@ -285,34 +282,6 @@ export function AgentWeekDashboard({
                   sub={agent.confidence ? `Confidence: ${agent.confidence}` : undefined}
                 />
               ))}
-          </div>
-        </section>
-      )}
-
-      {showFinalHero && data && data.sourceRows.length > 0 && (
-        <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
-          <h3 className="mb-4 text-sm font-semibold">Source Summary</h3>
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[640px] text-left text-sm">
-              <thead>
-                <tr className="border-b border-border-subtle text-xs uppercase tracking-wide text-text-muted">
-                  <th className="px-3 py-2">Source</th>
-                  <th className="px-3 py-2">Bias</th>
-                  <th className="px-3 py-2">Confidence</th>
-                  <th className="px-3 py-2">Driver</th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.sourceRows.map((row) => (
-                  <tr key={row.source} className="border-b border-border-subtle/60">
-                    <td className="px-3 py-2 font-medium">{row.source}</td>
-                    <td className={clsx('px-3 py-2', biasTone(row.bias))}>{row.bias}</td>
-                    <td className="px-3 py-2 text-text-secondary">{row.confidence}</td>
-                    <td className="px-3 py-2 text-text-secondary">{row.driver ?? '—'}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
         </section>
       )}
@@ -336,7 +305,7 @@ export function AgentWeekDashboard({
 
       {showMacro && data && data.sectors.length > 0 && (
         <section className="rounded-xl border border-border-subtle bg-surface-raised p-5">
-          <h3 className="mb-4 text-sm font-semibold">Sector Performance</h3>
+          <h3 className="mb-4 text-sm font-semibold">Sector Performance (Day Return)</h3>
           <div className="space-y-3">
             {data.sectors.slice(0, 11).map((sector) => (
               <SectorBar
@@ -372,13 +341,6 @@ export function AgentWeekDashboard({
         </section>
       )}
 
-      {showFinalHero && data?.agents.find((a) => a.id === 'final')?.reportMarkdown && (
-        <ReportAccordion
-          title="Final Prediction Report"
-          markdown={data.agents.find((a) => a.id === 'final')?.reportMarkdown ?? null}
-        />
-      )}
-
       {showFinalHero && data && (
         <>
           <HumanScorePanel week={week} githubMarkdown={data.humanScoreMarkdown} />
@@ -389,6 +351,54 @@ export function AgentWeekDashboard({
             pastAccuracyLog={data.pastAccuracyLog}
           />
         </>
+      )}
+
+      {showFinalHero && data && (data.finalBias || data.agents.find((a) => a.id === 'final')?.reportMarkdown) && (
+        <section className="space-y-4">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
+            Final Prediction
+          </h2>
+          {data.finalBias && (
+            <div className="grid gap-4 lg:grid-cols-3">
+              <SummaryCard label="Final Market Bias" value={data.finalBias} />
+              <SummaryCard label="Confidence" value={data.finalConfidence} />
+              <SummaryCard label="Model Score" value={data.modelScore} />
+            </div>
+          )}
+          {data.sourceRows.length > 0 && (
+            <div className="rounded-xl border border-border-subtle bg-surface-raised p-5">
+              <h3 className="mb-4 text-sm font-semibold">Source Summary</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[640px] text-left text-sm">
+                  <thead>
+                    <tr className="border-b border-border-subtle text-xs uppercase tracking-wide text-text-muted">
+                      <th className="px-3 py-2">Source</th>
+                      <th className="px-3 py-2">Bias</th>
+                      <th className="px-3 py-2">Confidence</th>
+                      <th className="px-3 py-2">Driver</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {data.sourceRows.map((row) => (
+                      <tr key={row.source} className="border-b border-border-subtle/60">
+                        <td className="px-3 py-2 font-medium">{row.source}</td>
+                        <td className={clsx('px-3 py-2', biasTone(row.bias))}>{row.bias}</td>
+                        <td className="px-3 py-2 text-text-secondary">{row.confidence}</td>
+                        <td className="px-3 py-2 text-text-secondary">{row.driver ?? '—'}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+          {data.agents.find((a) => a.id === 'final')?.reportMarkdown && (
+            <ReportAccordion
+              title="Final Prediction Report"
+              markdown={data.agents.find((a) => a.id === 'final')?.reportMarkdown ?? null}
+            />
+          )}
+        </section>
       )}
 
       {data?.agreementMarkdown && (

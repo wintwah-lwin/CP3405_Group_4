@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Calendar, BarChart3, TrendingUp, ArrowRight } from 'lucide-react';
+import { Calendar, BarChart3, TrendingUp, Sparkles, ArrowRight } from 'lucide-react';
 import clsx from 'clsx';
 import type { Agent, AgentType } from '@/lib/types';
 
@@ -7,6 +7,16 @@ const agentIcons: Record<AgentType, typeof Calendar> = {
   almanac: Calendar,
   macro: BarChart3,
   technical: TrendingUp,
+  llm: Sparkles,
+  final: Sparkles,
+};
+
+const agentLinks: Record<AgentType, string> = {
+  almanac: '/agents/almanac',
+  macro: '/agents/macro',
+  technical: '/agents/technical',
+  llm: '/agents/llm',
+  final: '/agents/llm',
 };
 
 const statusStyles = {
@@ -48,10 +58,12 @@ export function AgentCard({ agent }: AgentCardProps) {
         <p className="text-[11px] text-text-muted">
           {agent.lastRun
             ? `Last run: ${new Date(agent.lastRun).toLocaleDateString()}`
-            : 'Not yet configured'}
+            : agent.scriptAvailable === false
+              ? 'Script not on server'
+              : 'Not yet run'}
         </p>
         <Link
-          href={`/agents/${agent.id}`}
+          href={agentLinks[agent.id]}
           className="flex items-center gap-1 text-xs text-accent hover:underline"
         >
           View <ArrowRight className="h-3 w-3" />

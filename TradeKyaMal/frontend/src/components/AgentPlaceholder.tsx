@@ -1,4 +1,4 @@
-import { Calendar, BarChart3, TrendingUp, Construction } from 'lucide-react';
+import { Calendar, BarChart3, TrendingUp, Sparkles, Construction } from 'lucide-react';
 import type { AgentType } from '@/lib/types';
 
 const agentConfig: Record<
@@ -39,6 +39,28 @@ const agentConfig: Record<
       'RSI, MACD, and momentum signals',
       'Support & resistance levels',
       'Volume profile analysis',
+    ],
+  },
+  llm: {
+    name: 'LLM Integration',
+    description: 'Synthesises agent reports with OpenAI and Gemini.',
+    icon: Sparkles,
+    features: [
+      'Dual-model synthesis',
+      'Agreement matrix',
+      'Calibration suite output',
+      'Human review triggers',
+    ],
+  },
+  final: {
+    name: 'Final Prediction',
+    description: 'Weighted final weekly market prediction.',
+    icon: Sparkles,
+    features: [
+      'Multi-agent bias scoring',
+      'Risk extraction',
+      'Executive summary',
+      'Evidence file traceability',
     ],
   },
 };
