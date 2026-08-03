@@ -519,6 +519,34 @@ export async function fetchCalibrationArtifacts(projectWeek: number): Promise<{
 
   const fileTag = `2026-W${fileWeek}`;
 
+  async function findHumanScoreMarkdown(): Promise<string | null> {
+    const staticPaths = [
+      `${weekFolder}/human_score_${fileTag}.md`,
+      `${weekFolder}/human_score_2026-W${projectWeek}.md`,
+      `${weekFolder}/human_score_2026_W${projectWeek}.md`,
+      `${weekFolder}/human_score_W${fileWeek}.md`,
+      `${weekFolder}/human-score_${fileTag}.md`,
+      `${weekFolder}/human-score-${fileTag}.md`,
+      `${weekFolder}/human-score-2026-W${projectWeek}.md`,
+      ...(legacyFolder ? [`${legacyFolder}/human_score_${fileTag}.md`] : []),
+      `evidence/human_score_${fileTag}.md`,
+    ];
+
+    const fromStatic = await firstMatch(staticPaths);
+    if (fromStatic) return fromStatic;
+
+    const files = await listWeekEvidenceFiles(projectWeek);
+    const humanFile = files
+      .filter((file) => file.type === 'file' && /human[-_]score/i.test(file.name) && /\.md$/i.test(file.name))
+      .sort((a, b) => b.name.localeCompare(a.name))[0];
+
+    if (humanFile) {
+      return fetchOptionalMarkdown(humanFile.path);
+    }
+
+    return null;
+  }
+
   const [
     calibrationLog,
     learningLog,
@@ -548,14 +576,7 @@ export async function fetchCalibrationArtifacts(projectWeek: number): Promise<{
     ]),
     firstMatch([`${weekFolder}/past_accuracy_log.md`]),
     firstMatch([`evidence/past_accuracy_log.md`]),
-    firstMatch([
-      `${weekFolder}/human_score_${fileTag}.md`,
-      `${weekFolder}/human_score_2026-W${projectWeek}.md`,
-      `${weekFolder}/human_score_2026_W${projectWeek}.md`,
-      `${weekFolder}/human_score_W${fileWeek}.md`,
-      ...(legacyFolder ? [`${legacyFolder}/human_score_${fileTag}.md`] : []),
-      `evidence/human_score_${fileTag}.md`,
-    ]),
+    findHumanScoreMarkdown(),
   ]);
 
   return {

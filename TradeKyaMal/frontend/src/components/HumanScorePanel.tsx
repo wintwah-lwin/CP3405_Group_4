@@ -262,7 +262,7 @@ export function HumanScorePanel({ week, githubMarkdown, agentBiases = {} }: Huma
 
       {!githubMarkdown && source === 'empty' && (
         <p className="rounded-lg border border-dashed border-border-subtle px-4 py-3 text-xs text-text-muted">
-          No evidence file for W{week} yet. Fill in scores and save — use Copy markdown to add to the repo.
+          No score file in evidence for W{week}. Enter scores below, then Save or Copy markdown.
         </p>
       )}
 

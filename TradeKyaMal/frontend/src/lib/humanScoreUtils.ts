@@ -33,8 +33,8 @@ export function biasToAiScore(bias: string | null | undefined): number {
 }
 
 function parseSectionScores(text: string): { aiScore: number; teamScore: number } {
-  const match = text.match(/AI Score:\s*([+-]?\d+)\s*\|\s*Team Score:\s*([+-]?\d+)/i)
-    ?? text.match(/\*\*AI Score:\s*([+-]?\d+)\s*\|\s*Team Score:\s*([+-]?\d+)\*\*/i);
+  const match = text.match(/\*\*AI Score:\s*([+-]?\d+)\s*\|\s*Team Score:\s*([+-]?\d+)\*\*/i)
+    ?? text.match(/AI Score:\s*([+-]?\d+)\s*\|\s*Team Score:\s*([+-]?\d+)/i);
   if (!match) return { aiScore: 0, teamScore: 0 };
   return { aiScore: Number(match[1]), teamScore: Number(match[2]) };
 }
@@ -45,7 +45,7 @@ function parseSectionBlock(markdown: string, titlePattern: RegExp): HumanScoreSe
 
   const start = match.index + match[0].length;
   const rest = markdown.slice(start);
-  const nextHeading = rest.search(/\n#{1,3} /);
+  const nextHeading = rest.search(/\n#{1,3}\s+\S/);
   const block = nextHeading >= 0 ? rest.slice(0, nextHeading) : rest;
   const scores = parseSectionScores(block);
   const notes = block
@@ -72,7 +72,7 @@ export function parseHumanScoreMarkdown(week: number, markdown: string): HumanSc
   const almanac = parseSectionBlock(markdown, /#{1,3}\s*Almanac[^\n]*/i);
   const llmConsensus = parseSectionBlock(
     markdown,
-    /#{1,3}\s*(AI Consensus|AI Model Agreement|LLM)[^\n]*/i
+    /#{1,3}\s*(AI Consensus|AI Model Agreement|LLM Integration|LLM)[^\n]*/i
   );
   const wildcard = parseSectionBlock(
     markdown,
@@ -93,10 +93,14 @@ export function parseHumanScoreMarkdown(week: number, markdown: string): HumanSc
     ?? markdown.match(/Confidence:\s*(.+)/i)?.[1]?.trim()
     ?? 'Medium';
 
+  const afterVerdict = markdown.match(/Verdict:\s*\*\*(.+?)\*\*\s*\n+\s*([\s\S]*?)(?=\n#{1,3}\s|\n## Citations|$)/i);
+
   const recommendation =
     markdown.match(/\*\*Recommendation:\*\*\s*(.+)/i)?.[1]?.trim()
     ?? parseMultilineHeading(markdown, 'Final Call')
+    ?? parseMultilineHeading(markdown, 'Final Calibration Summary')
     ?? parseMultilineHeading(markdown, 'Recommendation')
+    ?? afterVerdict?.[2]?.trim()
     ?? markdown.match(/Recommendation:\s*(.+)/i)?.[1]?.trim()
     ?? '';
 
