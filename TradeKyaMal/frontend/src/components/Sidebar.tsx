@@ -12,6 +12,7 @@ import {
   Sparkles,
   Target,
   ClipboardCheck,
+  PenLine,
 } from 'lucide-react';
 import clsx from 'clsx';
 
@@ -35,7 +36,10 @@ const navGroups = [
   },
   {
     label: 'Team',
-    items: [{ href: '/review', label: 'Review', icon: ClipboardCheck }],
+    items: [
+      { href: '/human-score', label: 'Human Score', icon: PenLine },
+      { href: '/review', label: 'Calibration', icon: ClipboardCheck },
+    ],
   },
 ];
 

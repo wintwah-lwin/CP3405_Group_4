@@ -1,11 +1,11 @@
 import { PageHeader } from '@/components/PageHeader';
 import { AgentWeekDashboard } from '@/components/AgentWeekDashboard';
 
-export default function ReviewPage() {
+export default function HumanScorePage() {
   return (
     <div className="space-y-6">
-      <PageHeader title="Calibration" />
-      <AgentWeekDashboard view="review" />
+      <PageHeader title="Human Score" />
+      <AgentWeekDashboard view="human-score" />
     </div>
   );
 }

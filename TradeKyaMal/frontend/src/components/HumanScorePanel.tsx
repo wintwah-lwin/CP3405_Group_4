@@ -1,16 +1,27 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
-import { Loader2, Save } from 'lucide-react';
+import { Copy, Loader2, Save } from 'lucide-react';
 import clsx from 'clsx';
 import { MarkdownContent } from '@/components/MarkdownContent';
+import { Panel } from '@/components/Panel';
 import { apiFetch } from '@/lib/api';
-import { emptyHumanScore, parseHumanScoreMarkdown, computeHumanScoreTotal, formatScoreBreakdown } from '@/lib/humanScoreUtils';
+import {
+  applyAgentBiases,
+  buildHumanScoreMarkdown,
+  computeHumanScoreTotal,
+  emptyHumanScore,
+  formatScoreBreakdown,
+  loadHumanScoreLocal,
+  parseHumanScoreMarkdown,
+  saveHumanScoreLocal,
+} from '@/lib/humanScoreUtils';
 import type { HumanScoreData, HumanScoreSection } from '@/lib/types';
 
 interface HumanScorePanelProps {
   week: number;
   githubMarkdown: string | null;
+  agentBiases?: Record<string, string | null | undefined>;
 }
 
 const SECTIONS: Array<{ key: keyof Pick<HumanScoreData, 'macro' | 'technical' | 'almanac' | 'llmConsensus'>; label: string }> = [
@@ -35,7 +46,7 @@ function ScoreField({
       <select
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="rounded-md border border-border bg-surface px-2 py-1.5 font-mono text-sm"
+        className="rounded-lg border border-border bg-surface px-2 py-1.5 font-mono text-sm focus:border-accent/50 focus:outline-none"
       >
         {[-2, -1, 0, 1, 2].map((score) => (
           <option key={score} value={score}>
@@ -57,7 +68,7 @@ function SectionEditor({
   onChange: (section: HumanScoreSection) => void;
 }) {
   return (
-    <div className="rounded-lg border border-border-subtle bg-surface p-4">
+    <div className="rounded-xl border border-border-subtle bg-surface p-4">
       <p className="mb-3 text-sm font-medium">{title}</p>
       <div className="grid gap-3 sm:grid-cols-2">
         <ScoreField
@@ -77,7 +88,7 @@ function SectionEditor({
           value={section.notes}
           onChange={(e) => onChange({ ...section, notes: e.target.value })}
           rows={3}
-          className="rounded-md border border-border bg-surface-raised px-3 py-2 text-sm text-text-secondary"
+          className="rounded-lg border border-border bg-surface-raised px-3 py-2 text-sm text-text-secondary focus:border-accent/50 focus:outline-none"
           placeholder="Team notes"
         />
       </label>
@@ -85,10 +96,10 @@ function SectionEditor({
   );
 }
 
-export function HumanScorePanel({ week, githubMarkdown }: HumanScorePanelProps) {
+export function HumanScorePanel({ week, githubMarkdown, agentBiases = {} }: HumanScorePanelProps) {
   const [form, setForm] = useState<HumanScoreData>(() => emptyHumanScore(week));
   const [previewMarkdown, setPreviewMarkdown] = useState<string | null>(null);
-  const [source, setSource] = useState<'saved' | 'github' | 'empty'>('empty');
+  const [source, setSource] = useState<'saved' | 'github' | 'local' | 'empty'>('empty');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
@@ -97,6 +108,7 @@ export function HumanScorePanel({ week, githubMarkdown }: HumanScorePanelProps) 
   const loadScores = useCallback(async () => {
     setLoading(true);
     setMessage('');
+
     try {
       const response = await apiFetch<{
         saved: boolean;
@@ -105,37 +117,39 @@ export function HumanScorePanel({ week, githubMarkdown }: HumanScorePanelProps) 
 
       if (response.saved && response.data) {
         setForm({ ...emptyHumanScore(week), ...response.data, week });
-        setPreviewMarkdown(response.data.markdown ?? null);
+        setPreviewMarkdown(response.data.markdown ?? buildHumanScoreMarkdown({ ...emptyHumanScore(week), ...response.data, week }));
         setSource('saved');
+        setLoading(false);
         return;
       }
-
-      if (githubMarkdown) {
-        const parsed = parseHumanScoreMarkdown(week, githubMarkdown);
-        setForm(parsed);
-        setPreviewMarkdown(githubMarkdown);
-        setSource('github');
-        return;
-      }
-
-      setForm(emptyHumanScore(week));
-      setPreviewMarkdown(null);
-      setSource('empty');
     } catch {
-      if (githubMarkdown) {
-        const parsed = parseHumanScoreMarkdown(week, githubMarkdown);
-        setForm(parsed);
-        setPreviewMarkdown(githubMarkdown);
-        setSource('github');
-      } else {
-        setForm(emptyHumanScore(week));
-        setSource('empty');
-      }
-      setMessage('Backend unavailable — scores will not persist until the API is online.');
-    } finally {
-      setLoading(false);
+      // fall through to github / local
     }
-  }, [week, githubMarkdown]);
+
+    if (githubMarkdown) {
+      const parsed = parseHumanScoreMarkdown(week, githubMarkdown);
+      setForm(parsed);
+      setPreviewMarkdown(githubMarkdown);
+      setSource('github');
+      setLoading(false);
+      return;
+    }
+
+    const local = loadHumanScoreLocal(week);
+    if (local) {
+      setForm(local);
+      setPreviewMarkdown(buildHumanScoreMarkdown(local));
+      setSource('local');
+      setLoading(false);
+      return;
+    }
+
+    const seeded = applyAgentBiases(emptyHumanScore(week), agentBiases);
+    setForm(seeded);
+    setPreviewMarkdown(null);
+    setSource('empty');
+    setLoading(false);
+  }, [week, githubMarkdown, agentBiases]);
 
   useEffect(() => {
     loadScores();
@@ -144,28 +158,45 @@ export function HumanScorePanel({ week, githubMarkdown }: HumanScorePanelProps) 
   async function handleSave() {
     setSaving(true);
     setMessage('');
+
+    const payload = {
+      macro: form.macro,
+      technical: form.technical,
+      almanac: form.almanac,
+      llmConsensus: form.llmConsensus,
+      wildcard: form.wildcard,
+      finalBias: form.finalBias.trim() || 'Pending',
+      confidence: form.confidence,
+      recommendation: form.recommendation,
+    };
+
+    const markdown = buildHumanScoreMarkdown({ ...form, ...payload, week });
+    saveHumanScoreLocal({ ...form, ...payload, week, markdown });
+    setPreviewMarkdown(markdown);
+
     try {
-      const payload = {
-        macro: form.macro,
-        technical: form.technical,
-        almanac: form.almanac,
-        llmConsensus: form.llmConsensus,
-        wildcard: form.wildcard,
-        finalBias: form.finalBias,
-        confidence: form.confidence,
-        recommendation: form.recommendation,
-      };
       const response = await apiFetch<{ markdown: string; updatedAt: string }>(
         `/api/human-score/${week}`,
         { method: 'PUT', body: JSON.stringify(payload) }
       );
       setPreviewMarkdown(response.markdown);
       setSource('saved');
-      setMessage(`Saved for W${week}.`);
+      setMessage(`Saved to database for W${week}.`);
     } catch {
-      setMessage('Could not save — check that the backend and MongoDB are running.');
+      setSource('local');
+      setMessage('Saved locally — backend offline. Copy markdown to commit to evidence.');
     } finally {
       setSaving(false);
+    }
+  }
+
+  async function handleCopyMarkdown() {
+    const markdown = previewMarkdown ?? buildHumanScoreMarkdown(form);
+    try {
+      await navigator.clipboard.writeText(markdown);
+      setMessage('Markdown copied to clipboard.');
+    } catch {
+      setMessage('Could not copy — use Preview markdown instead.');
     }
   }
 
@@ -173,9 +204,9 @@ export function HumanScorePanel({ week, githubMarkdown }: HumanScorePanelProps) 
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center gap-2 rounded-xl border border-border-subtle bg-surface-raised p-10 text-sm text-text-muted">
+      <div className="flex items-center justify-center gap-2 rounded-2xl border border-border-subtle bg-surface-raised/80 p-10 text-sm text-text-muted">
         <Loader2 className="h-4 w-4 animate-spin" />
-        Loading human scores...
+        Loading...
       </div>
     );
   }
@@ -184,27 +215,36 @@ export function HumanScorePanel({ week, githubMarkdown }: HumanScorePanelProps) 
     <div className="space-y-4">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h2 className="text-sm font-semibold">Human Score — W{week}</h2>
-          {source !== 'empty' && (
-            <p className="mt-1 text-[11px] text-text-muted">
-              {source === 'saved' ? 'Saved' : 'From evidence'}
-            </p>
-          )}
+          <h2 className="text-sm font-semibold">W{week} Scorecard</h2>
+          <p className="mt-1 text-[11px] text-text-muted">
+            {source === 'saved' && 'Saved in database'}
+            {source === 'github' && 'Loaded from evidence'}
+            {source === 'local' && 'Saved in browser'}
+            {source === 'empty' && 'New entry — AI scores pre-filled from agents'}
+          </p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           <button
             type="button"
             onClick={() => setShowPreview((value) => !value)}
-            className="rounded-lg border border-border-subtle px-3 py-2 text-xs text-text-secondary hover:bg-surface-overlay"
+            className="rounded-lg border border-border-subtle px-3 py-2 text-xs text-text-secondary hover:border-accent/30"
           >
-            {showPreview ? 'Hide preview' : 'Preview markdown'}
+            {showPreview ? 'Hide preview' : 'Preview'}
+          </button>
+          <button
+            type="button"
+            onClick={handleCopyMarkdown}
+            className="flex items-center gap-1.5 rounded-lg border border-border-subtle px-3 py-2 text-xs text-text-secondary hover:border-accent/30"
+          >
+            <Copy className="h-3.5 w-3.5" />
+            Copy markdown
           </button>
           <button
             type="button"
             onClick={handleSave}
             disabled={saving}
             className={clsx(
-              'flex items-center gap-1.5 rounded-lg bg-accent px-4 py-2 text-xs font-semibold text-white shadow-sm shadow-accent/20 transition-opacity hover:opacity-90',
+              'flex items-center gap-1.5 rounded-lg bg-accent px-4 py-2 text-xs font-semibold text-white shadow-sm shadow-accent/20',
               saving && 'opacity-60'
             )}
           >
@@ -217,6 +257,12 @@ export function HumanScorePanel({ week, githubMarkdown }: HumanScorePanelProps) 
       {message && (
         <p className="rounded-lg border border-border-subtle bg-surface px-4 py-3 text-xs text-text-secondary">
           {message}
+        </p>
+      )}
+
+      {!githubMarkdown && source === 'empty' && (
+        <p className="rounded-lg border border-dashed border-border-subtle px-4 py-3 text-xs text-text-muted">
+          No evidence file for W{week} yet. Fill in scores and save — use Copy markdown to add to the repo.
         </p>
       )}
 
@@ -237,55 +283,53 @@ export function HumanScorePanel({ week, githubMarkdown }: HumanScorePanelProps) 
         onChange={(wildcard) => setForm((current) => ({ ...current, wildcard }))}
       />
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        <label className="flex flex-col gap-1 text-xs sm:col-span-2">
-          <span className="text-text-muted">Verdict</span>
-          <input
-            type="text"
-            value={form.finalBias}
-            onChange={(e) => setForm((current) => ({ ...current, finalBias: e.target.value }))}
-            placeholder="e.g. Neutral-Bearish"
-            className="rounded-md border border-border bg-surface px-3 py-2 text-sm"
-          />
-        </label>
-        <label className="flex flex-col gap-1 text-xs">
-          <span className="text-text-muted">Confidence</span>
-          <select
-            value={form.confidence}
-            onChange={(e) => setForm((current) => ({ ...current, confidence: e.target.value }))}
-            className="rounded-md border border-border bg-surface px-3 py-2 text-sm"
-          >
-            {['Low', 'Medium', 'High', 'Very High'].map((level) => (
-              <option key={level} value={level}>
-                {level}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="flex flex-col gap-1 text-xs sm:col-span-2">
-          <span className="text-text-muted">Recommendation</span>
-          <textarea
-            value={form.recommendation}
-            onChange={(e) => setForm((current) => ({ ...current, recommendation: e.target.value }))}
-            rows={3}
-            placeholder="Investment stance..."
-            className="rounded-md border border-border bg-surface px-3 py-2 text-sm text-text-secondary"
-          />
-        </label>
-      </div>
+      <Panel>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <label className="flex flex-col gap-1 text-xs sm:col-span-2">
+            <span className="text-text-muted">Verdict</span>
+            <input
+              type="text"
+              value={form.finalBias}
+              onChange={(e) => setForm((current) => ({ ...current, finalBias: e.target.value }))}
+              placeholder="e.g. Neutral-Bearish"
+              className="rounded-lg border border-border bg-surface px-3 py-2 text-sm focus:border-accent/50 focus:outline-none"
+            />
+          </label>
+          <label className="flex flex-col gap-1 text-xs">
+            <span className="text-text-muted">Confidence</span>
+            <select
+              value={form.confidence}
+              onChange={(e) => setForm((current) => ({ ...current, confidence: e.target.value }))}
+              className="rounded-lg border border-border bg-surface px-3 py-2 text-sm focus:border-accent/50 focus:outline-none"
+            >
+              {['Low', 'Medium', 'High', 'Very High'].map((level) => (
+                <option key={level} value={level}>
+                  {level}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="flex flex-col gap-1 text-xs sm:col-span-2">
+            <span className="text-text-muted">Recommendation</span>
+            <textarea
+              value={form.recommendation}
+              onChange={(e) => setForm((current) => ({ ...current, recommendation: e.target.value }))}
+              rows={3}
+              placeholder="Investment stance..."
+              className="rounded-lg border border-border bg-surface px-3 py-2 text-sm text-text-secondary focus:border-accent/50 focus:outline-none"
+            />
+          </label>
+        </div>
+      </Panel>
 
-      <section className="rounded-xl border border-accent/30 bg-surface-raised p-5">
+      <Panel className="border-accent/30 bg-accent/5">
         <h3 className="text-sm font-semibold text-accent">Final Decision</h3>
-        {form.wildcard.notes.trim() && (
-          <div className="mt-4 rounded-lg border border-border-subtle bg-surface px-4 py-3">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-text-muted">Wild Card</p>
-            <MarkdownContent content={form.wildcard.notes} />
-          </div>
-        )}
         <div className="mt-4 grid gap-4 sm:grid-cols-3">
           <div>
             <p className="text-xs text-text-muted">Human Score</p>
-            <p className="mt-1 font-mono text-lg font-semibold">{humanScoreTotal >= 0 ? '+' : ''}{humanScoreTotal}</p>
+            <p className="mt-1 font-mono text-2xl font-semibold tabular-nums">
+              {humanScoreTotal >= 0 ? '+' : ''}{humanScoreTotal}
+            </p>
             <p className="mt-1 text-[11px] text-text-secondary">{formatScoreBreakdown(form)}</p>
           </div>
           <div>
@@ -298,18 +342,15 @@ export function HumanScorePanel({ week, githubMarkdown }: HumanScorePanelProps) 
           </div>
         </div>
         {form.recommendation.trim() && (
-          <p className="mt-4 text-sm leading-relaxed text-text-secondary">
-            <span className="font-medium text-text-primary">Recommendation: </span>
-            {form.recommendation}
-          </p>
+          <p className="mt-4 text-sm leading-relaxed text-text-secondary">{form.recommendation}</p>
         )}
-      </section>
+      </Panel>
 
-      {showPreview && previewMarkdown && (
-        <section className="rounded-xl border border-border-subtle bg-surface-raised px-5 py-4">
-          <h3 className="mb-3 text-sm font-semibold">Markdown preview</h3>
-          <MarkdownContent content={previewMarkdown} />
-        </section>
+      {showPreview && (
+        <Panel>
+          <h3 className="mb-3 text-sm font-semibold">Markdown</h3>
+          <MarkdownContent content={previewMarkdown ?? buildHumanScoreMarkdown(form)} />
+        </Panel>
       )}
     </div>
   );

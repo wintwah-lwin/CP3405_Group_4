@@ -17,8 +17,8 @@ const payloadSchema = z.object({
   almanac: sectionSchema,
   llmConsensus: sectionSchema,
   wildcard: sectionSchema,
-  finalBias: z.string().min(1).max(200),
-  confidence: z.string().min(1).max(100),
+  finalBias: z.string().max(200).optional().default('Pending'),
+  confidence: z.string().min(1).max(100).optional().default('Medium'),
   recommendation: z.string().max(4000).optional().default(''),
 });
 
@@ -71,7 +71,12 @@ router.put('/:week', async (req: Request, res: Response) => {
       return;
     }
 
-    const markdown = buildHumanScoreMarkdown({ week, ...parsed.data });
+    const markdown = buildHumanScoreMarkdown({
+      week,
+      ...parsed.data,
+      finalBias: parsed.data.finalBias?.trim() || 'Pending',
+      confidence: parsed.data.confidence?.trim() || 'Medium',
+    });
 
     const doc = await HumanScore.findOneAndUpdate(
       { week },

@@ -16,7 +16,7 @@ import {
 } from '@/lib/evidenceClient';
 import type { AgentType, WeekDashboardData } from '@/lib/types';
 
-export type DashboardView = 'overview' | 'agent' | 'llm' | 'final' | 'review';
+export type DashboardView = 'overview' | 'agent' | 'llm' | 'final' | 'review' | 'human-score';
 
 interface AgentWeekDashboardProps {
   agentFilter?: AgentType | AgentType[];
@@ -303,7 +303,7 @@ export function AgentWeekDashboard({ agentFilter, view: viewProp }: AgentWeekDas
         </p>
       )}
 
-      {!hasAgentData && !loading && view !== 'review' && (
+      {!hasAgentData && !loading && view !== 'review' && view !== 'human-score' && (
         <div className="rounded-xl border border-dashed border-border-subtle bg-surface-raised p-10 text-center text-sm text-text-secondary">
           No reports for W{week} yet.
           {latestEvidenceWeek && latestEvidenceWeek !== week && (
@@ -595,17 +595,27 @@ export function AgentWeekDashboard({ agentFilter, view: viewProp }: AgentWeekDas
         </>
       )}
 
-      {/* ── Team Review ── */}
+      {/* ── Human Score ── */}
+      {view === 'human-score' && data && (
+        <HumanScorePanel
+          week={week}
+          githubMarkdown={data.humanScoreMarkdown}
+          agentBiases={Object.fromEntries(
+            data.agents
+              .filter((a) => a.id !== 'final')
+              .map((a) => [a.id, a.bias])
+          )}
+        />
+      )}
+
+      {/* ── Calibration Review ── */}
       {view === 'review' && data && (
-        <>
-          <HumanScorePanel week={week} githubMarkdown={data.humanScoreMarkdown} />
-          <CalibrationPanel
-            calibrationLog={data.calibrationLog}
-            learningLog={data.learningLog}
-            llmHorserace={data.llmHorserace}
-            pastAccuracyLog={data.pastAccuracyLog}
-          />
-        </>
+        <CalibrationPanel
+          calibrationLog={data.calibrationLog}
+          learningLog={data.learningLog}
+          llmHorserace={data.llmHorserace}
+          pastAccuracyLog={data.pastAccuracyLog}
+        />
       )}
     </div>
   );

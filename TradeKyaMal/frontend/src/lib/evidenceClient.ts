@@ -551,6 +551,8 @@ export async function fetchCalibrationArtifacts(projectWeek: number): Promise<{
     firstMatch([
       `${weekFolder}/human_score_${fileTag}.md`,
       `${weekFolder}/human_score_2026-W${projectWeek}.md`,
+      `${weekFolder}/human_score_2026_W${projectWeek}.md`,
+      `${weekFolder}/human_score_W${fileWeek}.md`,
       ...(legacyFolder ? [`${legacyFolder}/human_score_${fileTag}.md`] : []),
       `evidence/human_score_${fileTag}.md`,
     ]),
