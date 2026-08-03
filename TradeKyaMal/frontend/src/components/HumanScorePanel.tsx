@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Copy, Loader2, Save } from 'lucide-react';
 import clsx from 'clsx';
 import { MarkdownContent } from '@/components/MarkdownContent';
@@ -104,6 +104,8 @@ export function HumanScorePanel({ week, githubMarkdown, agentBiases = {} }: Huma
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
   const [showPreview, setShowPreview] = useState(false);
+  const agentBiasesRef = useRef(agentBiases);
+  agentBiasesRef.current = agentBiases;
 
   const loadScores = useCallback(async () => {
     setLoading(true);
@@ -144,12 +146,12 @@ export function HumanScorePanel({ week, githubMarkdown, agentBiases = {} }: Huma
       return;
     }
 
-    const seeded = applyAgentBiases(emptyHumanScore(week), agentBiases);
+    const seeded = applyAgentBiases(emptyHumanScore(week), agentBiasesRef.current);
     setForm(seeded);
     setPreviewMarkdown(null);
     setSource('empty');
     setLoading(false);
-  }, [week, githubMarkdown, agentBiases]);
+  }, [week, githubMarkdown]);
 
   useEffect(() => {
     loadScores();
@@ -259,6 +261,23 @@ export function HumanScorePanel({ week, githubMarkdown, agentBiases = {} }: Huma
           {message}
         </p>
       )}
+
+      <Panel className="border-accent/30 bg-accent/5">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <p className="text-xs text-text-muted">Live Human Score</p>
+            <p className="mt-1 font-mono text-3xl font-bold tabular-nums text-accent">
+              {humanScoreTotal >= 0 ? '+' : ''}{humanScoreTotal}
+            </p>
+            <p className="mt-1 text-[11px] text-text-secondary">{formatScoreBreakdown(form)}</p>
+          </div>
+          <div className="text-right">
+            <p className="text-xs text-text-muted">Verdict</p>
+            <p className="mt-1 text-lg font-semibold">{form.finalBias || '—'}</p>
+            <p className="mt-1 text-xs text-text-secondary">{form.confidence}</p>
+          </div>
+        </div>
+      </Panel>
 
       {!githubMarkdown && source === 'empty' && (
         <p className="rounded-lg border border-dashed border-border-subtle px-4 py-3 text-xs text-text-muted">

@@ -79,7 +79,10 @@ def load_prediction_files(repo_path, week):
         ],
         "Human": [
             f"human_score_2026-W{week}.md",
+            f"human-score-2026-W{week}.md",
+            f"human-score_2026-W{week}.md",
             f"*human*w{week}*.md",
+            f"*human*score*.md",
             f"*human*.md"
         ],
     }
@@ -125,16 +128,32 @@ def parse_direction(text):
         return "Neutral-Bullish"
     elif "neutral-bearish" in text_lower or "neutral bearish" in text_lower:
         return "Neutral-Bearish"
+    elif "cautious" in text_lower or "defensive" in text_lower:
+        return "Neutral-Bearish"
     elif "neutral" in text_lower:
         return "Neutral"
     return "Unknown"
+
+def parse_human_direction(text):
+    if not text:
+        return "Unknown"
+    verdict = re.search(r"Verdict:\s*\*\*(.+?)\*\*", text, re.IGNORECASE)
+    if verdict:
+        return parse_direction(verdict.group(1))
+    heading = re.search(r"#{1,3}\s*Verdict\s*\n+([^\n#]+)", text, re.IGNORECASE)
+    if heading:
+        return parse_direction(heading.group(1))
+    return parse_direction(text)
 
 def extract_predictions(loaded_files):
     predictions = {}
     
     for key in ["Macro", "Almanac", "Technical", "Human", "Final Prediction"]:
         if key in loaded_files:
-            predictions[key] = parse_direction(loaded_files[key]["text"])
+            if key == "Human":
+                predictions[key] = parse_human_direction(loaded_files[key]["text"])
+            else:
+                predictions[key] = parse_direction(loaded_files[key]["text"])
         else:
             predictions[key] = "Unknown"
 

@@ -611,10 +611,12 @@ export function AgentWeekDashboard({ agentFilter, view: viewProp }: AgentWeekDas
       {/* ── Calibration Review ── */}
       {view === 'review' && data && (
         <CalibrationPanel
+          week={week}
           calibrationLog={data.calibrationLog}
           learningLog={data.learningLog}
           llmHorserace={data.llmHorserace}
           pastAccuracyLog={data.pastAccuracyLog}
+          humanScoreMarkdown={data.humanScoreMarkdown}
         />
       )}
     </div>
