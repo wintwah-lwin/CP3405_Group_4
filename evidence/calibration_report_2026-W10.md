@@ -1,6 +1,6 @@
 # Calibration Suite Report — W10
 
-**Generated:** 01 August 2026, 05:05 AM  
+**Generated:** 03 August 2026, 01:06 PM  
 **Mode:** Test mode uses latest available market data. Re-run after Friday market close for final W10 calibration.  
 
 ---
@@ -30,12 +30,12 @@
 
 | Predictor | Extracted Direction |
 |---|---|
-| Macro | Unknown |
+| Macro | Neutral-Bearish |
 | Almanac | Neutral |
 | Technical | Neutral-Bullish |
-| Human | Neutral |
+| Human | Neutral-Bearish |
 | Final Prediction | Bearish |
-| GPT | Neutral-Bullish |
+| GPT | Neutral |
 | Gemini | Neutral |
 
 ---
@@ -44,16 +44,16 @@
 
 | Rank | Predictor | Prediction | Correct | Partial | Wrong | Accuracy |
 |---:|---|---|---:|---:|---:|---:|
-| 1 | Almanac | Neutral | 0 | 3 | 0 | 50.0% |
-| 2 | Technical | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
-| 3 | Human | Neutral | 0 | 3 | 0 | 50.0% |
-| 4 | GPT | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
-| 5 | Gemini | Neutral | 0 | 3 | 0 | 50.0% |
-| 6 | Final Prediction | Bearish | 1 | 0 | 2 | 33.3% |
-| 7 | Macro | Unknown | 0 | 0 | 0 | 0.0% |
+| 1 | Macro | Neutral-Bearish | 0 | 3 | 0 | 50.0% |
+| 2 | Almanac | Neutral | 0 | 3 | 0 | 50.0% |
+| 3 | Technical | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
+| 4 | Human | Neutral-Bearish | 0 | 3 | 0 | 50.0% |
+| 5 | GPT | Neutral | 0 | 3 | 0 | 50.0% |
+| 6 | Gemini | Neutral | 0 | 3 | 0 | 50.0% |
+| 7 | Final Prediction | Bearish | 1 | 0 | 2 | 33.3% |
 
-**Best Performer:** Almanac  
-**Lowest Performer:** Macro
+**Best Performer:** Macro  
+**Lowest Performer:** Final Prediction
 
 ---
 
@@ -63,11 +63,11 @@
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Unknown | Bullish | +1.03% | No Score | 0 |
-| NDX | Unknown | Bullish | +0.84% | No Score | 0 |
-| IWM | Unknown | Bearish | -0.58% | No Score | 0 |
+| SPX | Neutral-Bearish | Bullish | +1.03% | Partial | 50 |
+| NDX | Neutral-Bearish | Bullish | +0.84% | Partial | 50 |
+| IWM | Neutral-Bearish | Bearish | -0.58% | Partial | 50 |
 
-**Accuracy:** 0.0%
+**Accuracy:** 50.0%
 
 ### Almanac
 
@@ -93,9 +93,9 @@
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Neutral | Bullish | +1.03% | Partial | 50 |
-| NDX | Neutral | Bullish | +0.84% | Partial | 50 |
-| IWM | Neutral | Bearish | -0.58% | Partial | 50 |
+| SPX | Neutral-Bearish | Bullish | +1.03% | Partial | 50 |
+| NDX | Neutral-Bearish | Bullish | +0.84% | Partial | 50 |
+| IWM | Neutral-Bearish | Bearish | -0.58% | Partial | 50 |
 
 **Accuracy:** 50.0%
 
@@ -113,9 +113,9 @@
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Neutral-Bullish | Bullish | +1.03% | Partial | 50 |
-| NDX | Neutral-Bullish | Bullish | +0.84% | Partial | 50 |
-| IWM | Neutral-Bullish | Bearish | -0.58% | Partial | 50 |
+| SPX | Neutral | Bullish | +1.03% | Partial | 50 |
+| NDX | Neutral | Bullish | +0.84% | Partial | 50 |
+| IWM | Neutral | Bearish | -0.58% | Partial | 50 |
 
 **Accuracy:** 50.0%
 
@@ -138,5 +138,5 @@
 - **Almanac:** `/home/runner/work/CP3405_Group_4/CP3405_Group_4/evidence/Week 10/almanac_agent_2026-W10.md`
 - **Technical:** `/home/runner/work/CP3405_Group_4/CP3405_Group_4/evidence/Week 10/technical_agent_2026-W10.md`
 - **LLM:** `/home/runner/work/CP3405_Group_4/CP3405_Group_4/evidence/Week 10/llm_integration_2026-W10.md`
-- **Human:** `/home/runner/work/CP3405_Group_4/CP3405_Group_4/evidence/human_score_2026-W22.md`
+- **Human:** `/home/runner/work/CP3405_Group_4/CP3405_Group_4/evidence/Week 10/human-score-2026-W31.md`
 - **Final Prediction:** `/home/runner/work/CP3405_Group_4/CP3405_Group_4/evidence/Week 9/final_prediction_2026-W9.md`

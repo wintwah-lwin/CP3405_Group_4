@@ -69,17 +69,17 @@
     "summary_scores": {
       "direction_accuracy": "3/10",
       "magnitude_accuracy": "3/10",
-      "confidence_calibration": "2/10",
-      "overall_score": "2.7/10"
+      "confidence_calibration": "1/10",
+      "overall_score": "2.3/10"
     },
     "predictors": {
       "Macro": {
-        "prediction": "Unknown",
-        "accuracy": 0.0,
+        "prediction": "Neutral-Bearish",
+        "accuracy": 50.0,
         "correct": 0,
-        "partial": 0,
+        "partial": 3,
         "wrong": 0,
-        "no_score": 3
+        "no_score": 0
       },
       "Almanac": {
         "prediction": "Neutral",
@@ -98,7 +98,7 @@
         "no_score": 0
       },
       "Human": {
-        "prediction": "Neutral",
+        "prediction": "Neutral-Bearish",
         "accuracy": 50.0,
         "correct": 0,
         "partial": 3,
@@ -114,7 +114,7 @@
         "no_score": 0
       },
       "GPT": {
-        "prediction": "Neutral-Bullish",
+        "prediction": "Neutral",
         "accuracy": 50.0,
         "correct": 0,
         "partial": 3,

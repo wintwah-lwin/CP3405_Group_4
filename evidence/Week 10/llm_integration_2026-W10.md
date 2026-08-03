@@ -1,6 +1,6 @@
 # W10 — LLM Integration + Calibration Suite
 
-**Generated:** 01 Aug 2026, 05:05 AM
+**Generated:** 03 Aug 2026, 01:06 PM
 
 ## Models Called
 
@@ -16,52 +16,46 @@
 # LLM Market Prediction — W10
 
 ## 1. Executive Summary
-- Overall Market Bias: Neutral
+- Overall Market Bias: Neutral to Slightly Bullish
 - Confidence: Medium
-- Primary Driver: Mixed index performance combined with declining oil and dollar prices, alongside mixed sector signals and technical EMA caution.
+- Primary Driver: Mixed signals from futures and price action; SPX showing bullish technicals and futures strength, but weakness in Nasdaq and small caps offset enthusiasm.
 
 ## 2. Index Predictions
-
-| Instrument | Direction     | Confidence | Reason                                                                                                 |
-|------------|---------------|------------|--------------------------------------------------------------------------------------------------------|
-| SPX        | Neutral-Bullish | Medium     | Price just below 8 EMA but both 8 EMA and 21 EMA aligned bullishly; macro showing positive S&P futures; tech weak; needs to hold 8 EMA support near 7432.39. |
-| NDX        | Neutral-Bearish | Medium     | Price below 8 EMA with weak short-term momentum; EMA alignment mixed; almanac and momentum negative; needs to reclaim 8 EMA (28660.75) to improve outlook.       |
-| IWM        | Bullish        | Medium-High| Price above 8 EMA with strong bullish EMA alignment; macro small caps weak but price and technicals confirm short-term momentum; watch 8 EMA support (292.27).     |
+| Instrument | Direction | Confidence | Reason |
+|---|---|---|---|
+| SPX | Bullish | Medium-High | Price above 8 and 21 EMA indicates bullish weekly trend; S&P 500 futures strong at +1.55%; support from falling dollar and oil reducing inflationary pressure |
+| NDX | Neutral | Medium | Price below 8 EMA but EMA alignment mixed; Nasdaq futures positive but index lost short-term momentum; mixed sector performance in tech; breadth mixed with some weak large-cap tech stocks |
+| IWM | Neutral | Medium | Price just below 8 EMA with mixed EMA alignment; Russell 2000 futures flat; small-cap participation weak; watch if IWM can hold above weekly EMA support levels |
 
 ## 3. Sector Predictions
-
-| Sector                 | Direction | Confidence | Reason                                                                                              |
-|------------------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| Technology             | Neutral   | Medium     | Macro: weak (-0.22%); Almanac: slightly positive (+0.60%); Technical breadth mixed with big losers and leaders, overall neutral. |
-| Financials             | Neutral   | Medium     | Macro: slightly negative (-0.11%); Almanac: slightly positive (+0.11%); mixed factors, no clear momentum.                      |
-| Healthcare             | Bearish   | Medium     | Macro: weak (-0.59%); Almanac: negative (-0.52%); technical leaders (LLY +6.43%, JNJ +7.20%) exist but breadth mixed overall. |
-| Energy                 | Bullish   | Medium     | Macro: price falling oil (-5.20%) but energy ETFs up +1.0%; almanac positive (+2.04%); mixed signals but sector showing strength. |
-| Industrials            | Bearish   | Medium     | Macro positive but almanac sector weak (-1.83%); technical breadth shows weak major tickers like CAT -8.91%.                     |
-| Utilities               | Bearish   | Medium     | Macro negative (-0.69%); almanac strongly negative (-2.91%); lacks supporting momentum.                                            |
-| Real Estate             | Bearish   | Medium     | Macro negative (-0.51%); almanac negative (-1.51%); no contrary technical signal noted.                                          |
-| Materials               | Bearish   | Medium     | Macro strongly negative (-2.34%); almanac negative (-1.87%); technical broad weakness evident.                                 |
-| Consumer Discretionary  | Bullish   | Medium     | Macro very strong (+3.29%); almanac strongly positive (+4.74%); supported by strong major stock moves (AMZN +16.23%, ADBE +18%). |
-| Consumer Staples        | Bearish   | Medium     | Macro negative (-0.49%); almanac negative (-0.36%); weak momentum.                                                         |
-| Communication Services  | Neutral   | Medium     | Macro positive (+1.56%); almanac positive (+0.54%) but technical breadth weak (META -8.12%).                                  |
+| Sector | Direction | Confidence | Reason |
+|---|---|---|---|
+| Technology | Neutral | Medium | Weakness in major tech stocks (NVDA, AAPL, AMD) offsets strength in MSFT; technical and macro show mixed signals |
+| Financials | Neutral to Bullish | Medium | Small positive recent returns; futures net neutral; macro shows cautious optimism |
+| Healthcare | Bearish | Medium | Negative recent returns; weak sentiment from healthcare ETFs; technical breadth weak among large healthcare stocks |
+| Energy | Bullish | Medium | Positive weekly returns; oil prices falling but still positive on Brent oil; energy stocks showing modest gains |
+| Industrials | Bearish | Medium | Negative recent returns; weak sector performance persisting |
+| Utilities | Bearish | Medium | Negative recent returns; weakest sector per almanac; defensive demand low |
+| Real Estate | Bearish | Medium | Negative recent returns; weak sentiment in XLRE ETF |
+| Materials | Bearish | Medium | Negative returns; weak sector performance |
+| Consumer Discretionary | Bullish | Medium-High | Strong recent returns; clear outperformer in overall market; supported by strong earnings and retail data |
+| Consumer Staples | Bearish | Medium | Small negative returns; defensive sectors under pressure |
+| Communication Services | Neutral | Medium | Slightly positive returns but weak big names like META drag on strength |
 
 ## 4. Key Agreement / Disagreement
 - Where Macro, Almanac and Technical agree:  
-  - Consumer Discretionary and Energy show bullish or positive signals from both macro and almanac perspectives; technical supports some related strong leaders.  
-  - Utilities, Materials, Real Estate, and Healthcare generally show bearishness or weakness in all three analyses.
-
+  - Neutral overall market bias with cautious optimism for SPX.  
+  - Consumer Discretionary and Energy sectors showing strength.  
 - Where they disagree:  
-  - Technology is neutral with mixed signals: macro and almanac slightly positive but technical breadth is mixed to weak.  
-  - Financials show neutral signals with small differences between slight macro negativity and almanac positivity.  
-  - IWM (small caps) is bullish technically but macro shows weak small cap futures and almanac shows slight weakness.
-
+  - Macro and Technical see SPX as bullish, while Almanac notes mixed signals especially from Nasdaq and small caps.  
+  - Technology sector view is mixed; Macro indicates weakness while Almanac shows slight positive returns, Technical shows caution due to breadth weakness in major tech stocks.  
 - Main risk:  
-  - Market key levels: failure of SPX and NDX to hold above their weekly 8 EMAs could shift the trend bearish.  
-  - Inflation, Fed rate expectations, or dollar & oil price swings contrary to current signals could invalidate the neutral bias.
+  - Potential breakdown of key weekly EMA supports (SPX 7445.93, NDX 28774.32, IWM 291.79) which would shift bias to bearish. Also, geopolitical risks and inflation/drivers not clearly resolved.
 
 ## 5. Final Prediction
-- Final Bias: Neutral with cautious bullish tilt on SPX and IWM, cautious bearish on NDX.
+- Final Bias: Neutral to Slightly Bullish
 - Human Review Needed: Yes
-- Reason: Mixed signals across indexes and sectors, with technical EMA levels critical for confirmation; macro drivers such as oil, dollar, and inflation data could quickly alter the outlook. Human oversight advised to interpret incoming economic reports and sector earnings.
+- Reason: Mixed signals across major indexes and sectors suggest careful monitoring is needed, especially for Nasdaq and small caps. The market is in a delicate position where breaches of key supports could change the outlook quickly.
 
 ---
 
@@ -70,41 +64,41 @@
 # LLM Market Prediction — W10
 
 ## 1. Executive Summary
-- **Overall Market Bias:** Neutral / Caution
+- **Overall Market Bias:** Neutral
 - **Confidence:** Medium
-- **Primary Driver:** Divergence between resilient broad-market indices (SPX/IWM technicals) and significant weakness in the Technology sector/Nasdaq momentum, coupled with falling volatility (VIX -14.49%).
+- **Primary Driver:** Index divergence and technical caution; S&P 500 futures show strength (+1.55%), but NDX and IWM are struggling below key short-term moving averages (8 EMA).
 
 ## 2. Index Predictions
 | Instrument | Direction | Confidence | Reason |
 |---|---|---|---|
-| SPX | Neutral | Medium | Price (7428.78) is slightly below the 8 EMA (7432.39). While the weekly change was +1.10%, it is at a "battleground" level technically. |
-| NDX | Bearish | Medium | Significant technical breakdown; price is ~897 points below the weekly 8 EMA. Weekly performance was negative (-0.63%) despite positive S&P futures. |
-| IWM | Bullish | Medium | Strongest technical structure (Zone 1 Bullish). Price remains above both the 8 EMA and 21 EMA, despite a slight weekly decline of -0.30%. |
+| SPX | Bullish/Neutral | Medium | Price remains above the 8 and 21 EMA (Zone 1); futures are positive (+1.55%), but momentum is slowing. |
+| NDX | Neutral | Medium | Price is below the weekly 8 EMA (28774.32). Significant weakness in semiconductors (MU -16.88%, AMD -11.77%) offsets mega-cap gains. |
+| IWM | Neutral | Medium | Price closed below the 8 EMA (291.79); small-cap participation is weak (+0.00% in futures) showing low risk appetite. |
 
 ## 3. Sector Predictions
 | Sector | Direction | Confidence | Reason |
 |---|---|---|---|
-| Technology | Bearish | Medium | Technical breakdown in NDX; weak weekly performance (-0.22% to +0.60% across reports) and heavy individual stock losses (INTC, AMD, MU). |
-| Financials | Bullish | Medium | Strong breadth leadership (JPM +5.44%, BAC +3.64%) and relatively stable performance (+0.11%). |
-| Healthcare | Bullish | Medium | Significant positive breadth (AMGN +7.94%, JNJ +7.20%, LLY +6.43%) despite slight ETF price declines. |
-| Energy | Bullish | Low | Strong sector return (+1.0% to +2.04%), though falling WTI oil (-5.2%) creates a macro headwind. |
-| Industrials | Bearish | Medium | Significant weekly decline (-1.83%) and weak breadth in key components like Caterpillar (-8.91%). |
-| Utilities | Bearish | Medium | Weakest sector performance according to Almanac report (-2.91%) and negative macro daily return (-0.69%). |
-| Real Estate | Bearish | Medium | Consistent negative performance across macro (-0.51%) and almanac (-1.51%) reports. |
-| Materials | Bearish | High | Significant multi-day decline (-2.34%) and weak almanac signal (-1.87%). |
-| Consumer Discretionary | Bullish | High | Strongest sector performance (+3.29% to +4.74%) with heavy-weight AMZN showing strong gains (+16.23% in one report, though -7.65% in another, requiring caution). |
-| Consumer Staples | Bearish | Medium | Negative weekly performance (-0.36% to -0.49%) and lack of upward momentum. |
-| Communication Services | Bullish | Medium | Positive daily return (+1.56%) and positive weekly return (+0.54%). |
+| Technology | Neutral | Medium | Mixed breadth; MSFT (+21.79%) is strong, but NVDA, AAPL, and META are down. Sector ETF (XLK) showed a -0.22% return. |
+| Financials | Neutral | Medium | Low volatility; XLF return -0.11%. BAC (+1.09%) and JPM (+0.54%) are slightly positive but lack momentum. |
+| Healthcare | Bearish | Medium | Negative returns (-0.59%) and LLY (-3.12%) contributing to downward pressure. |
+| Energy | Bullish | Low | XLE gained +1.0% to +2.04% despite falling oil prices (-3.69%); likely driven by CVX and COP strength. |
+| Industrials | Bearish | Medium | Almanac signal is negative (-1.83% return); weakness in CAT (-8.91%) is a major drag. |
+| Utilities | Bearish | High | Weakest sector in the Almanac report (-2.91%) and Macro report (-0.69%). |
+| Real Estate | Bearish | Medium | Consistent negative returns across reports (-0.51% to -1.51%). |
+| Materials | Bearish | High | Strong negative return (-2.34%) and classified as a "weak area" in the Almanac report. |
+| Consumer Discretionary | Bullish | High | Strongest sector performance (+3.29% to +4.74%) led by AMZN (+16.23%). |
+| Consumer Staples | Bearish | Medium | Negative return of -0.49%; Almanac signal is negative. |
+| Communication Services | Bullish | Medium | Positive sector return (+1.56%) supported by GOOGL (+12.10%) and NFLX (+4.09%). |
 
 ## 4. Key Agreement / Disagreement
-- **Where Macro, Almanac and Technical agree:** The VIX has fallen significantly (-14.49%), suggesting a reduction in immediate panic. The US Dollar and Oil are both falling, which is traditionally supportive for risk assets.
-- **Where they disagree:** Breadth data shows major conflicts (e.g., AMZN and GOOGL show massive gains in Almanac breadth but sharp losses in Technical breadth), likely due to different data windows within the week. IWM has the best technical chart but the weakest macro momentum.
-- **Main Risk:** Potential Fed rate hike mentioned in Macro news (Kevin Warsh) and the fallout from the $45 billion AI hedge fund fire sale (Aschenbrenner).
+- **Where Macro, Almanac and Technical agree:** The S&P 500 (SPX) is the strongest index; Volatility (VIX) has decreased significantly (-14.49%); the US Dollar is falling (-1.76%), which is typically supportive of risk.
+- **Where they disagree:** Macro futures are highly bullish (+1.55% for SPX), but the Technical Agent notes that NDX and IWM are in "Caution" zones (Zone 2) because prices are below their weekly 8 EMAs.
+- **Main risk:** Semiconductor/Hardware weakness (INTC, AMD, MU, NVDA) dragging down the Nasdaq and preventing a broader market rally.
 
 ## 5. Final Prediction
-- **Final Bias:** Neutral / Caution
+- **Final Bias:** Neutral
 - **Human Review Needed:** Yes
-- **Reason:** There are significant discrepancies in the breadth data for Mega-cap Tech (AMZN, GOOGL) between the Almanac and Technical reports. Furthermore, the Technical "Caution" signal on SPX/NDX conflicts with the falling VIX and falling Dollar macro tailwinds.
+- **Reason:** There is a significant conflict between bullish S&P 500 futures/mega-cap tech (MSFT/AMZN) and the technical breakdown of the Nasdaq 100 and Russell 2000 below their short-term EMA supports. Concentration of gains in a few tickers masks underlying breadth weakness.
 
 ---
 
@@ -112,14 +106,14 @@
 
 | Model | API Success | Extracted Bias | Extracted Confidence |
 |---|---|---|---|
-| gpt-4.1-mini | True | Neutral-Bullish | Medium |
+| gpt-4.1-mini | True | Neutral | Medium |
 | gemini-3-flash-preview | True | Neutral | Medium |
 
 ## Agreement Check
 
-- Bias Agreement: No
+- Bias Agreement: Yes
 - Confidence Agreement: Yes
-- Disagreement Zone Flagged: Yes
+- Disagreement Zone Flagged: No
 
 ## Human Review Trigger
 

@@ -8,9 +8,9 @@ The team expected the market to remain broadly directional with a Bearish bias.
 
 The weekly actual performance settled at:
 
-- SPX: -0.94%
-- NDX: -4.26%
-- IWM: -0.14%
+- SPX: +1.03%
+- NDX: +0.84%
+- IWM: -0.58%
 
 ## What We Learned
 
