@@ -2,7 +2,7 @@
 ## Forecast for the Week of 03 August 2026 — W10
 
 **Prepared on:** 03 Aug 2026  
-**Fresh market data collected:** 03 August 2026, 01:05 PM  
+**Fresh market data collected:** 03 August 2026, 01:45 PM  
 **Completed market period used:** Latest available 1-week market data  
 **Forecast period:** 2026-08-03 to 2026-08-07  
 
@@ -20,10 +20,10 @@
 | S&P 500 | +1.10% | Positive |
 | Dow Jones | +1.50% | Positive |
 | VIX | -14.49% | Lower fear |
-| WTI Crude Oil | -3.68% | Negative |
+| WTI Crude Oil | -3.81% | Negative |
 | Brent Crude Oil | +1.99% | Positive |
-| Gold | +1.19% | Positive |
-| U.S. Dollar | -1.77% | Negative |
+| Gold | +0.92% | Positive |
+| U.S. Dollar | -1.80% | Negative |
 
 ---
 
@@ -91,11 +91,11 @@
 | 2026-08-03 | S&P Global Manufacturing PMI | N/A | 54.7 |
 | 2026-08-03 | MI Inflation Gauge | N/A | -0.4% |
 | 2026-08-03 | RatingDog Manufacturing PMI | N/A | 51.7 |
+| 2026-08-03 | ANZ Job Advertisements | N/A | -0.2% |
 | 2026-08-03 | Russia - Non Trading Day | N/A |   |
-| 2026-08-04 | HSBC India Manufacturing PMI | N/A | 53.9 |
-| 2026-08-04 | German Retail Sales | N/A | 1.1% |
-| 2026-08-04 | German Retail Sales | N/A | 1.8% |
-| 2026-08-04 | S&P Global Manufacturing PMI | N/A | 50.3 |
+| 2026-08-04 | Commodity Prices | N/A | 16.9% |
+| 2026-08-04 | French Government Budget Balance | N/A | -93.3B |
+| 2026-08-04 | Spanish Unemployment Change | N/A | -28.7K |
 
 ---
 

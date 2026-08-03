@@ -1,6 +1,6 @@
 {
   "week": 10,
-  "generated_at": "2026-08-03T13:06:28.129483",
+  "generated_at": "2026-08-03T13:46:31.290433",
   "summary_scores": {
     "direction_accuracy": "3/10",
     "magnitude_accuracy": "3/10",
@@ -13,8 +13,8 @@
     "Technical": "Neutral-Bullish",
     "Human": "Neutral-Bearish",
     "Final Prediction": "Bearish",
-    "GPT": "Neutral",
-    "Gemini": "Neutral"
+    "GPT": "Neutral-Bullish",
+    "Gemini": "Neutral-Bullish"
   },
   "actuals": {
     "SPX": {
@@ -274,11 +274,11 @@
       "accuracy": 33.3
     },
     "GPT": {
-      "prediction": "Neutral",
+      "prediction": "Neutral-Bullish",
       "rows": [
         {
           "asset": "SPX",
-          "prediction": "Neutral",
+          "prediction": "Neutral-Bullish",
           "actual_direction": "Bullish",
           "actual_change_pct": 1.03,
           "result": "Partial",
@@ -286,7 +286,7 @@
         },
         {
           "asset": "NDX",
-          "prediction": "Neutral",
+          "prediction": "Neutral-Bullish",
           "actual_direction": "Bullish",
           "actual_change_pct": 0.84,
           "result": "Partial",
@@ -294,7 +294,7 @@
         },
         {
           "asset": "IWM",
-          "prediction": "Neutral",
+          "prediction": "Neutral-Bullish",
           "actual_direction": "Bearish",
           "actual_change_pct": -0.58,
           "result": "Partial",
@@ -308,11 +308,11 @@
       "accuracy": 50.0
     },
     "Gemini": {
-      "prediction": "Neutral",
+      "prediction": "Neutral-Bullish",
       "rows": [
         {
           "asset": "SPX",
-          "prediction": "Neutral",
+          "prediction": "Neutral-Bullish",
           "actual_direction": "Bullish",
           "actual_change_pct": 1.03,
           "result": "Partial",
@@ -320,7 +320,7 @@
         },
         {
           "asset": "NDX",
-          "prediction": "Neutral",
+          "prediction": "Neutral-Bullish",
           "actual_direction": "Bullish",
           "actual_change_pct": 0.84,
           "result": "Partial",
@@ -328,7 +328,7 @@
         },
         {
           "asset": "IWM",
-          "prediction": "Neutral",
+          "prediction": "Neutral-Bullish",
           "actual_direction": "Bearish",
           "actual_change_pct": -0.58,
           "result": "Partial",
@@ -458,7 +458,7 @@
           "no_score": 0
         },
         "GPT": {
-          "prediction": "Neutral",
+          "prediction": "Neutral-Bullish",
           "accuracy": 50.0,
           "correct": 0,
           "partial": 3,
@@ -466,7 +466,7 @@
           "no_score": 0
         },
         "Gemini": {
-          "prediction": "Neutral",
+          "prediction": "Neutral-Bullish",
           "accuracy": 50.0,
           "correct": 0,
           "partial": 3,

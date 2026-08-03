@@ -1,8 +1,8 @@
 # TECHNICAL AGENT OUTPUT — W10
 
 **Source:** R5 Technical Agent  
-**Report Date:** 01 August 2026  
-**Trading Week Covered:** 2026-07-27–2026-07-31 (W10)
+**Report Date:** 03 August 2026  
+**Trading Week Covered:** 2026-08-03–2026-08-07 (W10)
 
 **Evidence Used:**
 - Automatically generated weekly EMA charts for SPX, NDX and IWM
@@ -194,4 +194,4 @@ For the market to maintain bullish structure, SPX, NDX and IWM need to hold abov
 - Python-generated support and resistance levels.
 - Python-generated breadth ranking from selected large-cap and sector-relevant tickers.
 
-**Prepared and accessed:** 01 August 2026
+**Prepared and accessed:** 03 August 2026

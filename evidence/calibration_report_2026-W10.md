@@ -1,6 +1,6 @@
 # Calibration Suite Report — W10
 
-**Generated:** 03 August 2026, 01:06 PM  
+**Generated:** 03 August 2026, 01:46 PM  
 **Mode:** Test mode uses latest available market data. Re-run after Friday market close for final W10 calibration.  
 
 ---
@@ -35,8 +35,8 @@
 | Technical | Neutral-Bullish |
 | Human | Neutral-Bearish |
 | Final Prediction | Bearish |
-| GPT | Neutral |
-| Gemini | Neutral |
+| GPT | Neutral-Bullish |
+| Gemini | Neutral-Bullish |
 
 ---
 
@@ -48,8 +48,8 @@
 | 2 | Almanac | Neutral | 0 | 3 | 0 | 50.0% |
 | 3 | Technical | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
 | 4 | Human | Neutral-Bearish | 0 | 3 | 0 | 50.0% |
-| 5 | GPT | Neutral | 0 | 3 | 0 | 50.0% |
-| 6 | Gemini | Neutral | 0 | 3 | 0 | 50.0% |
+| 5 | GPT | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
+| 6 | Gemini | Neutral-Bullish | 0 | 3 | 0 | 50.0% |
 | 7 | Final Prediction | Bearish | 1 | 0 | 2 | 33.3% |
 
 **Best Performer:** Macro  
@@ -113,9 +113,9 @@
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Neutral | Bullish | +1.03% | Partial | 50 |
-| NDX | Neutral | Bullish | +0.84% | Partial | 50 |
-| IWM | Neutral | Bearish | -0.58% | Partial | 50 |
+| SPX | Neutral-Bullish | Bullish | +1.03% | Partial | 50 |
+| NDX | Neutral-Bullish | Bullish | +0.84% | Partial | 50 |
+| IWM | Neutral-Bullish | Bearish | -0.58% | Partial | 50 |
 
 **Accuracy:** 50.0%
 
@@ -123,9 +123,9 @@
 
 | Asset | Prediction | Actual | Change % | Result | Score |
 |---|---|---|---:|---|---:|
-| SPX | Neutral | Bullish | +1.03% | Partial | 50 |
-| NDX | Neutral | Bullish | +0.84% | Partial | 50 |
-| IWM | Neutral | Bearish | -0.58% | Partial | 50 |
+| SPX | Neutral-Bullish | Bullish | +1.03% | Partial | 50 |
+| NDX | Neutral-Bullish | Bullish | +0.84% | Partial | 50 |
+| IWM | Neutral-Bullish | Bearish | -0.58% | Partial | 50 |
 
 **Accuracy:** 50.0%
 

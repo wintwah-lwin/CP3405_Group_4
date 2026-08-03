@@ -1,6 +1,6 @@
 # Final Weekly Prediction — W10
 
-**Generated:** 01 August 2026, 05:05 AM  
+**Generated:** 03 August 2026, 01:06 PM  
 **Output Type:** Automated final prediction after Macro, Almanac, Technical, LLM and Human Score review.
 
 ---
@@ -9,7 +9,7 @@
 
 **FINAL MARKET BIAS:** Neutral-Bearish  
 **CONFIDENCE:** Medium  
-**MODEL SCORE:** -1.2
+**MODEL SCORE:** -1.8
 
 The final prediction combines the automated Macro Agent, Almanac Agent, Technical Agent, LLM Integration output and the manual Human Score override. The Human Score is weighted more heavily because it represents final team judgement after reviewing the automated outputs.
 
@@ -19,11 +19,11 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 
 | Source | Bias / Verdict | Confidence | Primary Driver |
 |---|---|---|---|
-| Macro | Neutral | Medium | S&P 500 futures positive at +0.96% |
+| Macro | Neutral | Medium | S&P 500 futures positive at +1.55% |
 | Almanac | Neutral / Mixed | Medium | > The Almanac Agent combines live index momentum, volatility, sector returns, weekly breadth, current-week calendar events and date-based seasonal patterns. The final bias is gener... |
-| Technical | Neutral / Caution | Medium | Mixed signals |
-| Llm | Neutral to Cautious | Medium | Geopolitical escalation in the Middle East (Iran missile attack) combined with skeptical investor sentiment ahead of major Mega-Cap Technology earnings (MSFT, META, AAPL, AMZN). |
-| Human | Missing | Missing | Report not found |
+| Technical | Neutral / Caution | Medium-High | Mixed signals |
+| Llm | Neutral | Medium | Divergence between resilient broad-market indices (SPX/IWM technicals) and significant weakness in the Technology sector/Nasdaq momentum, coupled with falling volatility (VIX -14.4... |
+| Human | Cautious | High | Mixed signals |
 
 ---
 
@@ -33,10 +33,10 @@ The final prediction combines the automated Macro Agent, Almanac Agent, Technica
 |---|---|---|---:|
 | Macro | Neutral | Medium | 0.0 |
 | Almanac | Neutral / Mixed | Medium | 0.0 |
-| Technical | Neutral / Caution | Medium | 0.0 |
-| Llm | Neutral to Cautious | Medium | -1.2 |
-| Human | Missing | Missing | 0.0 |
-| **Total** |  |  | **-1.2** |
+| Technical | Neutral / Caution | Medium-High | 0.0 |
+| Llm | Neutral | Medium | 0.0 |
+| Human | Cautious | High | -1.8 |
+| **Total** |  |  | **-1.8** |
 
 ---
 
@@ -48,14 +48,14 @@ The automated system gives a final **Neutral-Bearish** outlook for Week 10. This
 
 ## 5. Key Risks to Monitor
 
-- **WTI Crude Oil**: weekly change -5.20%, direction: Falling
+- **WTI Crude Oil**: weekly change -3.69%, direction: Falling
 - | Rate / Yield | Value | Date |
 - | 2-Year Treasury Yield | 4.28% | 2026-07-31 |
 - | 10-Year Treasury Yield | 4.75% | 2026-07-31 |
 - | 30-Year Treasury Yield | 5.27% | 2026-07-31 |
 - *Source: U.S. Treasury Daily Treasury Yield Curve Rates*
 - *Source: Nasdaq Earnings Calendar*
-- **As Warsh’s Fed faces pressure to act on inflation, these indicators show it’s at its lowest in years**
+- | 2026-08-03 | MI Inflation Gauge | 1.0% | N/A | -0.4% |
 
 ---
 
@@ -83,6 +83,7 @@ The final prediction should be reviewed again if:
 - Technical: `technical_agent_2026-W10.md`
 - Llm: `llm_integration_2026-W10.md`
 - Agreement: `agreement_matrix_2026-W10.md`
+- Human: `human-score-2026-W31.md`
 
 ---
 
